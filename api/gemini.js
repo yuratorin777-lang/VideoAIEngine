@@ -4,22 +4,6 @@ import fs from "fs";
 import path from "path";
 import os from "os";
 
-// Отключаем автоматический bodyParser Vercel, чтобы забрать сырой body без конфликтов
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
-// Вспомогательная функция для безопасного чтения тела запроса
-async function getRawBody(req) {
-  const chunks = [];
-  for await (const chunk of req) {
-    chunks.push(typeof chunk === "string" ? Buffer.from(chunk) : chunk);
-  }
-  return Buffer.concat(chunks).toString("utf8");
-}
-
 export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -39,19 +23,17 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Безопасно парсим body
-    let body = {};
-    try {
-      const rawBody = await getRawBody(req);
-      if (rawBody) {
-        body = JSON.parse(rawBody);
+    // В Vercel req.body уже автоматически распарсен
+    let bodyData = req.body;
+    if (typeof bodyData === "string") {
+      try {
+        bodyData = JSON.parse(bodyData);
+      } catch (e) {
+        // Оставляем как есть, если не JSON string
       }
-    } catch (e) {
-      console.error("Error parsing body:", e);
-      return res.status(400).json({ error: "Invalid JSON body" });
     }
 
-    const { prompt, videoUrl } = body;
+    const { prompt, videoUrl } = bodyData || {};
 
     if (!videoUrl) {
       return res.status(400).json({ error: "videoUrl parameter is required" });
@@ -59,7 +41,7 @@ export default async function handler(req, res) {
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const fileManager = new GoogleAIFileManager(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     console.log("Processing URL:", videoUrl);
     
@@ -104,7 +86,6 @@ export default async function handler(req, res) {
       fs.unlinkSync(tempFilePath);
     }
 
-    // Ожидание, пока видео обработается серверами Google и станет ACTIVE
     console.log("Waiting for video processing...");
     while (fileState.file.state === "PROCESSING") {
       await new Promise((resolve) => setTimeout(resolve, 5000));
