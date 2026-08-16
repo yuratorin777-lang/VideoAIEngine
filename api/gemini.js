@@ -1,19 +1,17 @@
-﻿import { GoogleGenAI } from "@google/genai";
+﻿export const runtime = "nodejs";
+
+import { GoogleGenAI } from "@google/genai";
 
 export default async function handler(req, res) {
-  if (req.method === "OPTIONS") {
-    return res.status(200).end();
-  }
-
   if (req.method !== "POST") {
     return res.status(405).json({
       status: "ERROR",
-      message: "Method not allowed"
+      message: "Use POST"
     });
   }
 
   try {
-    const { prompt, model } = req.body || {};
+    const { prompt } = req.body || {};
 
     if (!prompt) {
       return res.status(400).json({
@@ -27,7 +25,7 @@ export default async function handler(req, res) {
     });
 
     const response = await ai.models.generateContent({
-      model: model || "gemini-2.5-flash",
+      model: "gemini-2.5-flash",
       contents: prompt
     });
 
@@ -37,7 +35,7 @@ export default async function handler(req, res) {
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("Gemini error:", error);
 
     return res.status(500).json({
       status: "ERROR",
