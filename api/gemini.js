@@ -39,14 +39,12 @@ export default async function handler(req, res) {
     if (videoUrl.includes("drive.google.com")) {
       const fileId = videoUrl.match(/\/d\/([^\/]+)/)?.[1] || videoUrl.match(/id=([^&]+)/)?.[1];
       if (fileId) {
-        // Использование прямого эндпоинта скачивания файла Google Drive
         downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
       }
     }
 
     let response = await fetch(downloadUrl);
     
-    // Переход по редиректам/печенькам подтверждения большого файла при необходимости
     if (response.headers.get("content-type")?.includes("text/html")) {
       const htmlText = await response.text();
       const confirmCode = htmlText.match(/confirm=([a-zA-Z0-9_]+)/)?.[1];
@@ -69,7 +67,7 @@ export default async function handler(req, res) {
     fs.writeFileSync(tempFilePath, Buffer.from(buffer));
 
     console.log("Uploading file to Google File API...");
-    const uploadResult = await fileManager.uploadFile(tempFilePath, {
+    let fileState = await fileManager.uploadFile(tempFilePath, {
       mimeType: mimeType,
       displayName: "Uploaded Video",
     });
@@ -78,12 +76,23 @@ export default async function handler(req, res) {
       fs.unlinkSync(tempFilePath);
     }
 
+    // Ожидание, пока видео обработается серверами Google и станет ACTIVE
+    console.log("Waiting for video processing...");
+    while (fileState.file.state === "PROCESSING") {
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+      fileState = { file: await fileManager.getFile(fileState.file.name) };
+    }
+
+    if (fileState.file.state === "FAILED") {
+      throw new Error("Video processing failed on Google servers.");
+    }
+
     console.log("Generating response from Gemini...");
     const result = await model.generateContent([
       {
         fileData: {
-          mimeType: uploadResult.file.mimeType,
-          fileUri: uploadResult.file.uri,
+          mimeType: fileState.file.mimeType,
+          fileUri: fileState.file.uri,
         },
       },
       { text: prompt || "Опиши подробно, что происходит на этом видео." },
