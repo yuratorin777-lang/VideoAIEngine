@@ -1,9 +1,1 @@
-﻿{
-  "name": "gemini-vercel-proxy",
-  "version": "1.0.0",
-  "description": "Vercel Proxy for Gemini API",
-  "main": "api/gemini.js",
-  "dependencies": {
-    "@google/genai": "^0.1.2"
-  }
-}
+{"name":"gemini-vercel-proxy","version":"1.0.0","description":"Vercel Proxy for Gemini API","main":"api/gemini.js","dependencies":{"@google/genai":"^0.1.2"}}
