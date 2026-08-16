@@ -6,7 +6,6 @@ import os from "os";
 import axios from "axios";
 
 export default async function handler(req, res) {
-  // Настройка CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -25,14 +24,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Безопасное получение req.body в Vercel
     let bodyData = req.body;
     if (typeof bodyData === "string") {
       try {
         bodyData = JSON.parse(bodyData);
-      } catch (e) {
-        // Оставляем как есть, если распарсить не удалось
-      }
+      } catch (e) {}
     }
 
     const { prompt, videoUrl } = bodyData || {};
@@ -47,60 +43,74 @@ export default async function handler(req, res) {
 
     console.log("Processing URL:", videoUrl);
 
-    // Преобразуем прямую ссылку Google Drive
-    let downloadUrl = videoUrl;
+    // Извлекаем ID файла из Google Drive
+    let fileId = null;
     if (videoUrl.includes("drive.google.com")) {
-      const fileId = videoUrl.match(/\/d\/([^\/]+)/)?.[1] || videoUrl.match(/id=([^&]+)/)?.[1];
-      if (fileId) {
-        downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+      fileId = videoUrl.match(/\/d\/([^\/]+)/)?.[1] || videoUrl.match(/id=([^&]+)/)?.[1];
+    }
+
+    let downloadUrl = fileId 
+      ? `https://drive.google.com/uc?export=download&id=${fileId}` 
+      : videoUrl;
+
+    // Инициализируем Axios сессию
+    const client = axios.create({
+      timeout: 30000,
+      maxRedirects: 5,
+    });
+
+    let response = await client.get(downloadUrl, { responseType: "arraybuffer" });
+
+    // Проверяем, не вернул ли Google Drive HTML-страницу подтверждения скачивания
+    const contentTypeHeader = response.headers["content-type"] || "";
+    if (contentTypeHeader.includes("text/html") && fileId) {
+      const htmlContent = Buffer.from(response.data).toString("utf8");
+      // Ищем токен подтверждения вирусов
+      const confirmCode = htmlContent.match(/confirm=([a-zA-Z0-9_]+)/)?.[1] ||
+                          htmlContent.match(/name="confirm" value="([^"]+)"/)?.[1];
+
+      if (confirmCode) {
+        const confirmUrl = `https://drive.google.com/uc?export=download&confirm=${confirmCode}&id=${fileId}`;
+        response = await client.get(confirmUrl, { responseType: "arraybuffer" });
       }
     }
 
-    // Скачиваем файл во временную директорию через Axios Stream
+    const videoBuffer = Buffer.from(response.data);
+
+    // Проверяем, что скачан именно бинарный файл, а не HTML с ошибкой
+    if (videoBuffer.slice(0, 100).toString("utf8").includes("<!DOCTYPE html>")) {
+      throw new Error("Failed to download video file from Google Drive (received HTML instead of video binary). Make sure the file access is set to 'Anyone with the link'.");
+    }
+
     const tempFilePath = path.join(os.tmpdir(), `video_${Date.now()}.mov`);
-    
-    let downloadResponse = await axios({
-      method: "get",
-      url: downloadUrl,
-      responseType: "stream",
-      validateStatus: (status) => status < 400,
-    });
-
-    const writer = fs.createWriteStream(tempFilePath);
-    downloadResponse.data.pipe(writer);
-
-    await new Promise((resolve, reject) => {
-      writer.on("finish", resolve);
-      writer.on("error", reject);
-    });
-
-    // Определяем MIME-тип
-    const contentType = downloadResponse.headers["content-type"] || "video/quicktime";
-    const mimeType = contentType.includes("video") ? contentType.split(";")[0] : "video/quicktime";
+    fs.writeFileSync(tempFilePath, videoBuffer);
 
     console.log("Uploading file to Google File API...", tempFilePath);
     let fileState = await fileManager.uploadFile(tempFilePath, {
-      mimeType: mimeType,
+      mimeType: "video/quicktime",
       displayName: "Uploaded Video",
     });
 
-    // Удаляем временный файл
     if (fs.existsSync(tempFilePath)) {
       fs.unlinkSync(tempFilePath);
     }
 
-    // Ожидание обработки видео Google API
     console.log("Waiting for video processing...");
+    let attempts = 0;
     while (fileState.file.state === "PROCESSING") {
+      if (attempts > 30) { // Ограничение ожидания 2.5 минуты
+        throw new Error("Video processing timeout on Google servers.");
+      }
       await new Promise((resolve) => setTimeout(resolve, 5000));
       fileState = { file: await fileManager.getFile(fileState.file.name) };
+      attempts++;
     }
 
     if (fileState.file.state === "FAILED") {
-      throw new Error("Video processing failed on Google servers.");
+      throw new Error("Video processing failed on Google servers. File format or codec may not be supported by Gemini.");
     }
 
-    console.log("Generating content with Gemini...");
+    console.log("Generating response from Gemini...");
     const result = await model.generateContent([
       {
         fileData: {
