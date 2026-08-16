@@ -39,14 +39,30 @@ export default async function handler(req, res) {
     if (videoUrl.includes("drive.google.com")) {
       const fileId = videoUrl.match(/\/d\/([^\/]+)/)?.[1] || videoUrl.match(/id=([^&]+)/)?.[1];
       if (fileId) {
-        downloadUrl = `https://drive.google.com/uc?export=download&confirm=no_antivirus&id=${fileId}`;
+        // Использование прямого эндпоинта скачивания файла Google Drive
+        downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
       }
     }
 
-    const response = await fetch(downloadUrl);
+    let response = await fetch(downloadUrl);
+    
+    // Переход по редиректам/печенькам подтверждения большого файла при необходимости
+    if (response.headers.get("content-type")?.includes("text/html")) {
+      const htmlText = await response.text();
+      const confirmCode = htmlText.match(/confirm=([a-zA-Z0-9_]+)/)?.[1];
+      if (confirmCode && videoUrl.includes("drive.google.com")) {
+        const fileId = videoUrl.match(/\/d\/([^\/]+)/)?.[1] || videoUrl.match(/id=([^&]+)/)?.[1];
+        downloadUrl = `https://drive.google.com/uc?export=download&confirm=${confirmCode}&id=${fileId}`;
+        response = await fetch(downloadUrl);
+      }
+    }
+
     if (!response.ok) {
       throw new Error(`Failed to download video from URL, HTTP status: ${response.status}`);
     }
+
+    const contentType = response.headers.get("content-type") || "video/quicktime";
+    const mimeType = contentType.includes("video") ? contentType.split(";")[0] : "video/quicktime";
 
     const buffer = await response.arrayBuffer();
     const tempFilePath = path.join(os.tmpdir(), `video_${Date.now()}.mov`);
@@ -54,7 +70,7 @@ export default async function handler(req, res) {
 
     console.log("Uploading file to Google File API...");
     const uploadResult = await fileManager.uploadFile(tempFilePath, {
-      mimeType: "video/quicktime",
+      mimeType: mimeType,
       displayName: "Uploaded Video",
     });
 
