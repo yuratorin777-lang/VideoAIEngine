@@ -4,6 +4,22 @@ import fs from "fs";
 import path from "path";
 import os from "os";
 
+// Отключаем автоматический bodyParser Vercel, чтобы забрать сырой body без конфликтов
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+};
+
+// Вспомогательная функция для безопасного чтения тела запроса
+async function getRawBody(req) {
+  const chunks = [];
+  for await (const chunk of req) {
+    chunks.push(typeof chunk === "string" ? Buffer.from(chunk) : chunk);
+  }
+  return Buffer.concat(chunks).toString("utf8");
+}
+
 export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
@@ -23,7 +39,19 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { prompt, videoUrl } = req.body;
+    // Безопасно парсим body
+    let body = {};
+    try {
+      const rawBody = await getRawBody(req);
+      if (rawBody) {
+        body = JSON.parse(rawBody);
+      }
+    } catch (e) {
+      console.error("Error parsing body:", e);
+      return res.status(400).json({ error: "Invalid JSON body" });
+    }
+
+    const { prompt, videoUrl } = body;
 
     if (!videoUrl) {
       return res.status(400).json({ error: "videoUrl parameter is required" });
