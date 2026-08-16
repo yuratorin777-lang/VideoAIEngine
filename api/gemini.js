@@ -3,8 +3,10 @@ import { GoogleAIFileManager } from "@google/generative-ai/server";
 import fs from "fs";
 import path from "path";
 import os from "os";
+import axios from "axios";
 
 export default async function handler(req, res) {
+  // Настройка CORS
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
@@ -23,13 +25,13 @@ export default async function handler(req, res) {
   }
 
   try {
-    // В Vercel req.body уже автоматически распарсен
+    // Безопасное получение req.body в Vercel
     let bodyData = req.body;
     if (typeof bodyData === "string") {
       try {
         bodyData = JSON.parse(bodyData);
       } catch (e) {
-        // Оставляем как есть, если не JSON string
+        // Оставляем как есть, если распарсить не удалось
       }
     }
 
@@ -44,7 +46,8 @@ export default async function handler(req, res) {
     const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
     console.log("Processing URL:", videoUrl);
-    
+
+    // Преобразуем прямую ссылку Google Drive
     let downloadUrl = videoUrl;
     if (videoUrl.includes("drive.google.com")) {
       const fileId = videoUrl.match(/\/d\/([^\/]+)/)?.[1] || videoUrl.match(/id=([^&]+)/)?.[1];
@@ -53,39 +56,40 @@ export default async function handler(req, res) {
       }
     }
 
-    let response = await fetch(downloadUrl);
+    // Скачиваем файл во временную директорию через Axios Stream
+    const tempFilePath = path.join(os.tmpdir(), `video_${Date.now()}.mov`);
     
-    if (response.headers.get("content-type")?.includes("text/html")) {
-      const htmlText = await response.text();
-      const confirmCode = htmlText.match(/confirm=([a-zA-Z0-9_]+)/)?.[1];
-      if (confirmCode && videoUrl.includes("drive.google.com")) {
-        const fileId = videoUrl.match(/\/d\/([^\/]+)/)?.[1] || videoUrl.match(/id=([^&]+)/)?.[1];
-        downloadUrl = `https://drive.google.com/uc?export=download&confirm=${confirmCode}&id=${fileId}`;
-        response = await fetch(downloadUrl);
-      }
-    }
+    let downloadResponse = await axios({
+      method: "get",
+      url: downloadUrl,
+      responseType: "stream",
+      validateStatus: (status) => status < 400,
+    });
 
-    if (!response.ok) {
-      throw new Error(`Failed to download video from URL, HTTP status: ${response.status}`);
-    }
+    const writer = fs.createWriteStream(tempFilePath);
+    downloadResponse.data.pipe(writer);
 
-    const contentType = response.headers.get("content-type") || "video/quicktime";
+    await new Promise((resolve, reject) => {
+      writer.on("finish", resolve);
+      writer.on("error", reject);
+    });
+
+    // Определяем MIME-тип
+    const contentType = downloadResponse.headers["content-type"] || "video/quicktime";
     const mimeType = contentType.includes("video") ? contentType.split(";")[0] : "video/quicktime";
 
-    const buffer = await response.arrayBuffer();
-    const tempFilePath = path.join(os.tmpdir(), `video_${Date.now()}.mov`);
-    fs.writeFileSync(tempFilePath, Buffer.from(buffer));
-
-    console.log("Uploading file to Google File API...");
+    console.log("Uploading file to Google File API...", tempFilePath);
     let fileState = await fileManager.uploadFile(tempFilePath, {
       mimeType: mimeType,
       displayName: "Uploaded Video",
     });
 
+    // Удаляем временный файл
     if (fs.existsSync(tempFilePath)) {
       fs.unlinkSync(tempFilePath);
     }
 
+    // Ожидание обработки видео Google API
     console.log("Waiting for video processing...");
     while (fileState.file.state === "PROCESSING") {
       await new Promise((resolve) => setTimeout(resolve, 5000));
@@ -96,7 +100,7 @@ export default async function handler(req, res) {
       throw new Error("Video processing failed on Google servers.");
     }
 
-    console.log("Generating response from Gemini...");
+    console.log("Generating content with Gemini...");
     const result = await model.generateContent([
       {
         fileData: {
@@ -111,6 +115,6 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error("Proxy Error:", error);
-    return res.status(500).json({ error: error.message });
+    return res.status(500).json({ error: error.message || "Internal server error" });
   }
 }
