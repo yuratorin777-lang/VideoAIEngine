@@ -38,6 +38,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install mediapipe
+          pip install mediapipe easyocr
           pip install -r requirements.txt
 
       - name: 6. Запуск пайплайна сборки видео
