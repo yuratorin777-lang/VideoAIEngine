@@ -1376,6 +1376,59 @@ def parse_json_response(
 
     return data
 
+import difflib
+
+def sanitize_plan_ids(plan: dict[str, Any], candidates: list[dict[str, Any]]) -> None:
+    """
+    Автоматически исправляет опечатки Gemini в file_id и восстанавливает
+    несоответствия между file_id и filename на основе кандидатов.
+    """
+    if not isinstance(plan, dict) or "cuts" not in plan:
+        return
+
+    candidate_by_file_id = {c["file_id"]: c for c in candidates if c.get("file_id")}
+    candidate_by_filename = {c["filename"]: c for c in candidates if c.get("filename")}
+    valid_file_ids = list(candidate_by_file_id.keys())
+
+    for index, cut in enumerate(plan.get("cuts", []), start=1):
+        if not isinstance(cut, dict):
+            continue
+
+        file_id = cut.get("file_id")
+        filename = cut.get("filename")
+
+        # 1. Если file_id нет или он невалиден, пробуем восстановить по filename
+        if (not file_id or file_id not in candidate_by_file_id) and filename in candidate_by_filename:
+            correct_id = candidate_by_filename[filename]["file_id"]
+            print(f"[Autofix] Cut #{index}: восстановлен file_id по filename ({filename}): {file_id} -> {correct_id}")
+            cut["file_id"] = correct_id
+            file_id = correct_id
+
+        # 2. Если file_id всё ещё не найден, ищем опечатки через нечеткий поиск (Fuzzy Match / Substring)
+        if file_id and file_id not in candidate_by_file_id:
+            # Попытка А: Подстрока (например, лишний символ в начале '11z...' vs '1z...')
+            matches = [vid for vid in valid_file_ids if vid in file_id or file_id in vid]
+            
+            # Попытка Б: Нечеткое совпадение Левенштейна
+            if not matches:
+                matches = difflib.get_close_matches(file_id, valid_file_ids, n=1, cutoff=0.7)
+
+            if matches:
+                correct_id = matches[0]
+                matched_candidate = candidate_by_file_id[correct_id]
+                print(f"[Autofix] Cut #{index}: исправлена опечатка в file_id: {file_id} -> {correct_id}")
+                cut["file_id"] = correct_id
+                # Принудительно синхронизируем filename
+                cut["filename"] = matched_candidate["filename"]
+                continue
+
+        # 3. Если file_id валиден, но filename расходится с кандидатом — исправляем filename
+        if file_id in candidate_by_file_id:
+            expected_filename = candidate_by_file_id[file_id]["filename"]
+            if filename != expected_filename:
+                print(f"[Autofix] Cut #{index}: исправлен рассинхрон filename для {file_id}: {filename} -> {expected_filename}")
+                cut["filename"] = expected_filename
+
 # ============================================================
 # ATTACH RELEVANT SEGMENTS TO CUTS
 # ============================================================
@@ -2266,6 +2319,13 @@ end - start
         raw_response
     )
 
+    # 1. Сначала исправляем возможные опечатки Gemini в file_id / filename
+    sanitize_plan_ids(
+        plan,
+        candidates,
+    )
+
+    # 2. Теперь безопасно привязываем сегменты и проверяем
     attach_relevant_segments(
         plan,
         candidates,
@@ -2274,6 +2334,24 @@ end - start
     validate_plan(
         plan,
         candidates,
+    )
+
+    validate_plan_structure(
+        plan,
+    )
+
+    repair_plan_duration(
+        plan,
+    )
+
+    # После автоматического repair всё равно выполняем
+    # строгую финальную проверку.
+    validate_plan_duration(
+        plan,
+    )
+
+    save_plan(
+        plan
     )
 
     validate_plan_structure(
