@@ -3,7 +3,12 @@ from __future__ import annotations
 from typing import List
 
 import cv2
-import easyocr
+
+try:
+    import easyocr
+except ModuleNotFoundError:
+    easyocr = None
+    print("[TextDetector] WARNING: easyocr is not installed. Text detection will be skipped.")
 
 from .models import (
     BoundingBox,
@@ -28,12 +33,18 @@ class TextDetector:
 
         self.languages = languages or ["en", "ru"]
         self.confidence = confidence
+        self.reader = None
 
-        self.reader = easyocr.Reader(
-            self.languages,
-            gpu=False,
-            verbose=False,
-        )
+        if easyocr is not None:
+            try:
+                self.reader = easyocr.Reader(
+                    self.languages,
+                    gpu=False,
+                    verbose=False,
+                )
+            except Exception as e:
+                print(f"[TextDetector] Failed to initialize EasyOCR reader: {e}")
+                self.reader = None
 
     def detect(
         self,
@@ -42,13 +53,20 @@ class TextDetector:
         timestamp: float = 0.0,
     ) -> List[Detection]:
 
+        if self.reader is None:
+            return []
+
         height, width = frame.shape[:2]
 
-        results = self.reader.readtext(
-            frame,
-            detail=1,
-            paragraph=False,
-        )
+        try:
+            results = self.reader.readtext(
+                frame,
+                detail=1,
+                paragraph=False,
+            )
+        except Exception as e:
+            print(f"[TextDetector] Error during OCR processing: {e}")
+            return []
 
         detections: List[Detection] = []
 
