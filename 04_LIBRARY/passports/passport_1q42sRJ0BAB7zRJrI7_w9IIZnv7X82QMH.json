@@ -1,0 +1,389 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-14T08:29:15.741562+00:00",
+  "updated_at": "2026-09-14T08:29:15.741598+00:00",
+  "video": {
+    "file_id": "1q42sRJ0BAB7zRJrI7_w9IIZnv7X82QMH",
+    "filename": "document_5197459153181777147.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "event",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "behind_the_scenes",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая музыка турнира и гул в помещении"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка соревнований и окружающие звуки зала",
+    "music_description": "Ритмичная музыка для танцевальных выступлений",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 17.0,
+      "duration": 17.0,
+      "description": "Тренер показывает детям позиции рук для бальных танцев",
+      "subjects": [
+        "тренер",
+        "дети в бальных костюмах"
+      ],
+      "actions": [
+        {
+          "action": "вытягивание рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "фиксация осанки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "построение в линию",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "вытягивание рук в стороны",
+        "фиксация осанки",
+        "построение в линию"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "тренер обучает детей",
+      "visual_tags": [
+        "бальные танцы",
+        "дети",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "тренер обучает детей танцам",
+        "дети в бальных костюмах на репетиции"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 17.0,
+      "end": 52.0,
+      "duration": 35.0,
+      "description": "Тренер корректирует положение рук участников, на заднем плане танцуют другие пары",
+      "subjects": [
+        "тренер",
+        "дети",
+        "участники соревнований"
+      ],
+      "actions": [
+        {
+          "action": "поправление плеч",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "танцевальные движения на фоне",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "поправление плеч",
+        "взаимодействие в паре",
+        "танцевальные движения на фоне"
+      ],
+      "dance_elements": [],
+      "camera": "панорамирование",
+      "composition": "средний и общий план",
+      "emotion": [
+        "спокойствие"
+      ],
+      "location": [],
+      "interaction": "подготовка к выступлению",
+      "visual_tags": [
+        "соревнования",
+        "паркет",
+        "танцоры"
+      ],
+      "search_phrases": [
+        "тренер поправляет осанку танцорам",
+        "детские танцевальные соревнования"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 17.0,
+      "duration": 17.0,
+      "semantic_description": "Тренер показывает детям позиции рук для бальных танцев",
+      "subjects": [
+        "тренер",
+        "дети в бальных костюмах"
+      ],
+      "actions": [
+        {
+          "action": "вытягивание рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "фиксация осанки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "построение в линию",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "бальные танцы",
+        "дети",
+        "тренировка"
+      ],
+      "search_tags": [
+        "бальные танцы",
+        "дети",
+        "тренировка",
+        "вытягивание рук в стороны",
+        "фиксация осанки",
+        "построение в линию",
+        "тренер",
+        "дети в бальных костюмах",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "тренер обучает детей танцам",
+        "дети в бальных костюмах на репетиции"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 17.0,
+      "end": 52.0,
+      "duration": 35.0,
+      "semantic_description": "Тренер корректирует положение рук участников, на заднем плане танцуют другие пары",
+      "subjects": [
+        "тренер",
+        "дети",
+        "участники соревнований"
+      ],
+      "actions": [
+        {
+          "action": "поправление плеч",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "танцевальные движения на фоне",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "спокойствие"
+      ],
+      "camera": "панорамирование",
+      "visual_tags": [
+        "соревнования",
+        "паркет",
+        "танцоры"
+      ],
+      "search_tags": [
+        "соревнования",
+        "паркет",
+        "танцоры",
+        "поправление плеч",
+        "взаимодействие в паре",
+        "танцевальные движения на фоне",
+        "тренер",
+        "дети",
+        "участники соревнований",
+        "спокойствие"
+      ],
+      "search_phrases": [
+        "тренер поправляет осанку танцорам",
+        "детские танцевальные соревнования"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777147.mp4",
+    "keywords": [
+      "бальные танцы",
+      "дети",
+      "тренировка",
+      "тренер",
+      "дети в бальных костюмах",
+      "соревнования",
+      "паркет",
+      "танцоры",
+      "участники соревнований",
+      "вытягивание рук в стороны",
+      "фиксация осанки",
+      "построение в линию",
+      "сосредоточенность",
+      "поправление плеч",
+      "взаимодействие в паре",
+      "танцевальные движения на фоне",
+      "спокойствие"
+    ],
+    "actions": [
+      "вытягивание рук в стороны",
+      "фиксация осанки",
+      "построение в линию",
+      "поправление плеч",
+      "взаимодействие в паре",
+      "танцевальные движения на фоне"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 2,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "спокойствие"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "тренер обучает детей танцам",
+      "дети в бальных костюмах на репетиции",
+      "тренер поправляет осанку танцорам",
+      "детские танцевальные соревнования"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-14T08:29:53.879606+00:00",
+  "updated_at": "2026-09-14T08:29:53.879634+00:00",
+  "video": {
+    "file_id": "1k2hXTTUuhwoKZXFIcs490C2WsP7TBXu6",
+    "filename": "document_5197459153181777142.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "lifestyle",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "dance",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Так, настрой. Хорошо. Точно? Да. Хорошо будем танцевать? Да. Точно? Прическу нравится? Да. Не прям вау-вау-вау. Поладили. Причесон. Осталось еще классно потанцевать, да?",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 19.0,
+        "speaker": "Speaker 1",
+        "text": "Так, настрой. Хорошо. Точно? Да. Хорошо будем танцевать? Да. Точно? Прическу нравится? Да. Не прям вау-вау-вау. Поладили. Причесон. Осталось еще классно потанцевать, да?"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Записана разговорная речь оператора и девочки в помещении"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Разговорный диалог между оператором за кадром и девочкой в кадре, фоновый звук помещения",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 19.0,
+      "duration": 19.0,
+      "description": "Девочка в розовом костюме стоит в танцевальном зале и общается с оператором",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "улыбка в камеру",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "постановка рук в боки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "переминание с ноги на ногу",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "улыбка в камеру",
+        "постановка рук в боки",
+        "переминание с ноги на ногу"
+      ],
+      "dance_elements": [],
+      "camera": "ручная камера, средний план",
+      "composition": "девочка в центре кадра",
+      "emotion": [
+        "радость",
+        "уверенность",
+        "игривость"
+      ],
+      "location": [],
+      "interaction": "диалог с оператором за кадром",
+      "visual_tags": [
+        "ребенок",
+        "танец",
+        "розовый костюм",
+        "прическа"
+      ],
+      "search_phrases": [
+        "маленькая девочка в розовом костюме в танцевальном зале",
+        "девочка общается с оператором перед выступлением"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "speech"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 19.0,
+      "duration": 19.0,
+      "semantic_description": "Девочка в розовом костюме стоит в танцевальном зале и общается с оператором",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "улыбка в камеру",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "постановка рук в боки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "переминание с ноги на ногу",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "радость",
+        "уверенность",
+        "игривость"
+      ],
+      "camera": "ручная камера, средний план",
+      "visual_tags": [
+        "ребенок",
+        "танец",
+        "розовый костюм",
+        "прическа"
+      ],
+      "search_tags": [
+        "ребенок",
+        "танец",
+        "розовый костюм",
+        "прическа",
+        "улыбка в камеру",
+        "постановка рук в боки",
+        "переминание с ноги на ногу",
+        "девочка",
+        "радость",
+        "уверенность",
+        "игривость"
+      ],
+      "search_phrases": [
+        "маленькая девочка в розовом костюме в танцевальном зале",
+        "девочка общается с оператором перед выступлением"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 19.0,
+          "speaker": "Speaker 1",
+          "text": "Так, настрой. Хорошо. Точно? Да. Хорошо будем танцевать? Да. Точно? Прическу нравится? Да. Не прям вау-вау-вау. Поладили. Причесон. Осталось еще классно потанцевать, да?"
+        }
+      ],
+      "spoken_text": "Так, настрой. Хорошо. Точно? Да. Хорошо будем танцевать? Да. Точно? Прическу нравится? Да. Не прям вау-вау-вау. Поладили. Причесон. Осталось еще классно потанцевать, да?",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777142.mp4",
+    "keywords": [
+      "ребенок",
+      "танец",
+      "розовый костюм",
+      "прическа",
+      "девочка",
+      "улыбка в камеру",
+      "постановка рук в боки",
+      "переминание с ноги на ногу",
+      "радость",
+      "уверенность",
+      "игривость"
+    ],
+    "actions": [
+      "улыбка в камеру",
+      "постановка рук в боки",
+      "переминание с ноги на ногу"
+    ],
+    "spoken_text": "Так, настрой. Хорошо. Точно? Да. Хорошо будем танцевать? Да. Точно? Прическу нравится? Да. Не прям вау-вау-вау. Поладили. Причесон. Осталось еще классно потанцевать, да?",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "радость",
+      "уверенность",
+      "игривость"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "маленькая девочка в розовом костюме в танцевальном зале",
+      "девочка общается с оператором перед выступлением"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

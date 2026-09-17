@@ -1,0 +1,270 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-14T08:29:33.324111+00:00",
+  "updated_at": "2026-09-14T08:29:33.324174+00:00",
+  "video": {
+    "file_id": "1xfwQfuloN01dBD4RB2O2ZGp7UCGeyONZ",
+    "filename": "document_5197459153181777143.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "иди сюда",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 7.0,
+        "speaker": "Speaker 1",
+        "text": "иди сюда"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна речь человека в зале и звуки обстановки танцевального класса."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Записана живая речь в помещении и звуки детской танцевальной тренировки.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 7.0,
+      "duration": 7.0,
+      "description": "Дети на занятии по хореографии в зале выполняют упражнения на полу и перемещаются под руководством преподавателя.",
+      "subjects": [
+        "дети",
+        "хореограф"
+      ],
+      "actions": [
+        {
+          "action": "упражнение на полу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подъем из положения сидя",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "перемещение по залу",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "упражнение на полу",
+        "подъем из положения сидя",
+        "перемещение по залу"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера с небольшим панорамированием",
+      "composition": "общий план танцевального зала",
+      "emotion": [
+        "увлеченность",
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "дети выполняют упражнения под контролем преподавателя",
+      "visual_tags": [
+        "танец",
+        "дети",
+        "хореография",
+        "зал"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "детская хореография тренировка",
+        "хореограф занимается с детьми"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 7.0,
+      "duration": 7.0,
+      "semantic_description": "Дети на занятии по хореографии в зале выполняют упражнения на полу и перемещаются под руководством преподавателя.",
+      "subjects": [
+        "дети",
+        "хореограф"
+      ],
+      "actions": [
+        {
+          "action": "упражнение на полу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подъем из положения сидя",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "перемещение по залу",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "увлеченность",
+        "концентрация"
+      ],
+      "camera": "статичная камера с небольшим панорамированием",
+      "visual_tags": [
+        "танец",
+        "дети",
+        "хореография",
+        "зал"
+      ],
+      "search_tags": [
+        "танец",
+        "дети",
+        "хореография",
+        "зал",
+        "упражнение на полу",
+        "подъем из положения сидя",
+        "перемещение по залу",
+        "хореограф",
+        "увлеченность",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "детская хореография тренировка",
+        "хореограф занимается с детьми"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 7.0,
+          "speaker": "Speaker 1",
+          "text": "иди сюда"
+        }
+      ],
+      "spoken_text": "иди сюда",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777143.mp4",
+    "keywords": [
+      "танец",
+      "дети",
+      "хореография",
+      "зал",
+      "хореограф",
+      "упражнение на полу",
+      "подъем из положения сидя",
+      "перемещение по залу",
+      "увлеченность",
+      "концентрация"
+    ],
+    "actions": [
+      "упражнение на полу",
+      "подъем из положения сидя",
+      "перемещение по залу"
+    ],
+    "spoken_text": "иди сюда",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "увлеченность",
+      "концентрация"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами в зале",
+      "детская хореография тренировка",
+      "хореограф занимается с детьми"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

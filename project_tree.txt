@@ -1,0 +1,197 @@
+VideoAIEngine
+├── .vscode
+│   └── settings.json
+├── 00_SYSTEM
+│   ├── ARCHITECTURE.md
+│   ├── DEVELOPMENT_RULES.md
+│   ├── README.md
+│   ├── SYSTEM_INDEX.md
+│   └── WORKFLOW.md
+├── 01_INPUT
+│   └── README.md
+├── 02_PROCESSING
+│   ├── temp_audio
+│   │   ├── README.md
+│   │   ├── subtitles.srt
+│   │   └── voiceover.mp3
+│   └── README.md
+├── 03_ANALYSIS
+│   └── README.md
+├── 04_LIBRARY
+│   ├── audio
+│   │   ├── calm.mp3
+│   │   ├── energetic.mp3
+│   │   ├── kids_fun.mp3
+│   │   ├── README.md
+│   │   └── upbeat.mp3
+│   ├── brands
+│   │   └── dance_kids
+│   │       ├── brand_config.json
+│   │       ├── logo1 .png
+│   │       └── logo2.png
+│   ├── models
+│   │   ├── blaze_face_short_range.tflite
+│   │   └── pose_landmarker_lite.task
+│   ├── passports
+│   │   ├── passport_1_KDokCF9hdROX4VAwOsk8GQ-8uug2Jqe.json
+│   │   ├── passport_1-ANDAJrTRdwCLn60x7FE6umEMdib_veS.json
+│   │   ├── passport_118fxi1HftKdoSfWU1NeqvHkGigz4F0rW.json
+│   │   ├── passport_12_VesFDxJ2Yvk7LJ8rHxLRP6FtELO6Es.json
+│   │   ├── passport_12nexUZ_Md4yOKdddQLmeV7QBHhg3xO30.json
+│   │   ├── passport_162_N4IaHUYmw9wJHBELqMh1W63bTFSHO.json
+│   │   ├── passport_176I0gRJ7J5EBOHLpyWrKf9DK-nxd6ise.json
+│   │   ├── passport_1893W9mx1zkX-h0CtXEJ19QKXXgON2XGW.json
+│   │   ├── passport_192oVpedUYP7q7nKBkUBa59xJ942ltXLY.json
+│   │   ├── passport_19FHSTutmwlC3xaXor3ijcgUp_HHsxhZA.json
+│   │   ├── passport_1AF-zcGo2tErTMPsb6sTucLi_ez1eZQxV.json
+│   │   ├── passport_1AJr6xRM64APGMrhxQTWZkEtHtPhlHBbd.json
+│   │   ├── passport_1ar2DYC4fjRFjbRN_oj8BDyFLlT2aY-6O.json
+│   │   ├── passport_1cU_ff8tUN2eeBQHIHAjVKW-8h3LAPNAb.json
+│   │   ├── passport_1f0yIPILi-hTENjYnrojpSwNXx-mgqo0V.json
+│   │   ├── passport_1FqgrWpsrHnE9LvBWrrM6dNpIb6-dQgY3.json
+│   │   ├── passport_1go9ZPSOKo8OOrA9V0z8cqf3Y-XPR7BVQ.json
+│   │   ├── passport_1gzndwS--L7cdPYb_1QSimgqFn7UneoB2.json
+│   │   ├── passport_1HjPmBxNeZG0pclthH2XH3tqWijKkNZC9.json
+│   │   ├── passport_1hmXS_ygJPdU4vLVQu_G9yU8NtJ0VSfy6.json
+│   │   ├── passport_1hTEx_7vkch3v21bu6z-J15sMBGjKPdaf.json
+│   │   ├── passport_1iaMOar6DKZEpJUS2raNQpC9tY7gI9Sgq.json
+│   │   ├── passport_1Io5-Zp9JxGv__1b_YnZ_BCP5mh-wjORt.json
+│   │   ├── passport_1JmT3dyXnwOXSMqx3ttFdc0cx6mlIwbiA.json
+│   │   ├── passport_1k2hXTTUuhwoKZXFIcs490C2WsP7TBXu6.json
+│   │   ├── passport_1L1bwfbGV15rvQadhb9LA0wHYBXq2eAwt.json
+│   │   ├── passport_1li1_e_PgxWtJ8dnbA65EuTk7lfLvleWy.json
+│   │   ├── passport_1q42sRJ0BAB7zRJrI7_w9IIZnv7X82QMH.json
+│   │   ├── passport_1qYfH0dBhzTPcxH4ex3o35dE6IK7o4bX3.json
+│   │   ├── passport_1R_Q1VKBU4Wd57cqXSUlVsTe5nrOfqPNi.json
+│   │   ├── passport_1rOP8ZwQcm7eKRnF06nVspGp7c7CUWm5o.json
+│   │   ├── passport_1tu9_klClREhl-ClYjfenyPJiiTm8NQCN.json
+│   │   ├── passport_1WcgH1urte0Cn9OVHfvWY_tL9Wq86PDr1.json
+│   │   ├── passport_1wJQ1Sz7Hmw7955R9vVDkbQ8ymr0vJyDq.json
+│   │   ├── passport_1WoJTEKvO0Z94NW8qaKggXM7F13doQhuC.json
+│   │   ├── passport_1WU82M6F9o5d4kATK_UylZOiCRHiI0Se5.json
+│   │   ├── passport_1xfwQfuloN01dBD4RB2O2ZGp7UCGeyONZ.json
+│   │   ├── passport_1XgTbyQqpor_jUgZWAlowomCOkpk1-Emb.json
+│   │   └── passport_1z9n6fUnKvCOqjdeYxLdxNPR95LQO5c0E.json
+│   ├── document_5375407404965992403_passport.json
+│   ├── README.md
+│   └── video_2025-08-28_07-45-21_passport.json
+├── 05_RETRIEVER
+│   └── README.md
+├── 06_COMPOSER
+│   ├── montage_plan.json
+│   └── README.md
+├── 07_OUTPUT
+│   ├── 14.09 горизонт.mp4
+│   ├── открыт набор.mp4
+│   ├── README.md
+│   ├── temp_rendered_reel.mp4
+│   └── test_rendered_reel.mp4
+├── 08_LOGS
+│   ├── processed_files.json
+│   └── README.md
+├── gemini-vercel-proxy
+│   ├── api
+│   │   ├── gemini.js
+│   │   ├── generate.js
+│   │   └── models.js
+│   ├── .gitignore
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── test_files_api.py
+│   ├── test_gdrive.py
+│   ├── test_proxy_video.py
+│   └── test_video_frames.py
+├── src
+│   ├── analyzer
+│   │   ├── __init__.py
+│   │   └── README.md
+│   ├── classifier
+│   │   ├── __init__.py
+│   │   └── README.md
+│   ├── composer
+│   │   ├── __init__.py
+│   │   ├── assembler.py
+│   │   ├── branding.py
+│   │   ├── README.md
+│   │   ├── subtitle_layout.py
+│   │   ├── subtitle_style_selector.py
+│   │   ├── subtitle_styles.py
+│   │   └── voiceover.py
+│   ├── core
+│   │   ├── smart_framing
+│   │   │   ├── __init__.py
+│   │   │   ├── analyzer.py
+│   │   │   ├── crop_engine.py
+│   │   │   ├── detector.py
+│   │   │   ├── face_detector.py
+│   │   │   ├── models.py
+│   │   │   ├── person_detector.py
+│   │   │   ├── README.md
+│   │   │   └── text_detector.py
+│   │   ├── __init__.py
+│   │   ├── pipeline.py
+│   │   ├── production_pipeline.py
+│   │   └── README.md
+│   ├── downloader
+│   │   └── drive_downloader.py
+│   ├── formatter
+│   │   ├── __init__.py
+│   │   ├── format_profiles.py
+│   │   └── video_normalizer.py
+│   ├── gemini
+│   │   ├── __init__.py
+│   │   ├── README.md
+│   │   ├── test_gemini.py
+│   │   └── vercel_client.py
+│   ├── library
+│   │   ├── __init__.py
+│   │   ├── passport_store.py
+│   │   └── README.md
+│   ├── retriever
+│   │   ├── __init__.py
+│   │   ├── README.md
+│   │   └── retriever.py
+│   ├── watcher
+│   │   ├── __init__.py
+│   │   ├── drive_watcher.py
+│   │   └── README.md
+│   └── __init__.py
+├── temp_downloads
+│   ├── 1_KDokCF9hdROX4VAwOsk8GQ-8uug2Jqe.mp4
+│   ├── 1893W9mx1zkX-h0CtXEJ19QKXXgON2XGW.mp4
+│   ├── 18hKSaPaEpikpnbfIpmTjjM1oCeCo195i.mp4
+│   ├── 19FHSTutmwlC3xaXor3ijcgUp_HHsxhZA.mp4
+│   ├── 1AF-zcGo2tErTMPsb6sTucLi_ez1eZQxV.MOV
+│   ├── 1AJr6xRM64APGMrhxQTWZkEtHtPhlHBbd.MOV
+│   ├── 1cU_ff8tUN2eeBQHIHAjVKW-8h3LAPNAb.mp4
+│   ├── 1go9ZPSOKo8OOrA9V0z8cqf3Y-XPR7BVQ.MOV
+│   ├── 1gzndwS--L7cdPYb_1QSimgqFn7UneoB2.mp4
+│   ├── 1HjPmBxNeZG0pclthH2XH3tqWijKkNZC9.mp4
+│   ├── 1JmT3dyXnwOXSMqx3ttFdc0cx6mlIwbiA.mp4
+│   ├── 1k2hXTTUuhwoKZXFIcs490C2WsP7TBXu6.mp4
+│   ├── 1L1bwfbGV15rvQadhb9LA0wHYBXq2eAwt.MOV
+│   ├── 1li1_e_PgxWtJ8dnbA65EuTk7lfLvleWy.mp4
+│   ├── 1qYfH0dBhzTPcxH4ex3o35dE6IK7o4bX3.mp4
+│   ├── 1tu9_klClREhl-ClYjfenyPJiiTm8NQCN.mp4
+│   ├── 1WoJTEKvO0Z94NW8qaKggXM7F13doQhuC.mp4
+│   ├── 1xfwQfuloN01dBD4RB2O2ZGp7UCGeyONZ.mp4
+│   ├── 1XgTbyQqpor_jUgZWAlowomCOkpk1-Emb.mp4
+│   └── 1z9n6fUnKvCOqjdeYxLdxNPR95LQO5c0E.MOV
+├── temp_normalized
+│   └── cut_001.mp4
+├── test_media
+│   └── problem.mp4
+├── .env
+├── .env.example
+├── .gitignore
+├── check_drive_file.py
+├── generate-adhoc-post.ps1
+├── processed_videos.json
+├── prompt_dump.txt
+├── README.md
+├── requirements.txt
+├── run_cloud.py
+├── service_account.json
+├── test_proxy_video.py
+├── test_smart_framing.py
+└── test_video.MOV

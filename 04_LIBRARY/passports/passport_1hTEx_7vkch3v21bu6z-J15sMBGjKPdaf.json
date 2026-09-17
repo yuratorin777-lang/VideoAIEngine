@@ -1,0 +1,167 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-08-20T04:35:58.016196+00:00",
+  "video": {
+    "file_id": "1hTEx_7vkch3v21bu6z-J15sMBGjKPdaf",
+    "filename": "video_2025-08-28_07-43-20.mp4",
+    "drive_url": "https://drive.google.com/uc?export=download&id=1hTEx_7vkch3v21bu6z-J15sMBGjKPdaf",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "categories": [],
+    "confidence": null
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "и пунч и теперь пубум и назад раз коленочко вот этих вот эта стопа выталкивается вот этой коленочкой вперед собрала выросла раз",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 21.0,
+        "speaker": "Педагог",
+        "text": "и пунч и теперь пубум и назад раз коленочко вот этих вот эта стопа выталкивается вот этой коленочкой вперед собрала выросла раз"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "description": "Педагог показывает и объясняет хореографическое движение, поправляя стопу и ногу девочки, остальные дети наблюдают или стоят рядом.",
+      "subjects": [
+        "Педагог",
+        "Девочки-ученицы"
+      ],
+      "actions": [
+        "Педагог приседает рядом с ученицей и поправляет положение ее стопы и колена",
+        "Дети стоят в позициях и слушают указания"
+      ],
+      "camera": "medium_shot",
+      "emotion": [
+        "сосредоточенность",
+        "внимание"
+      ],
+      "visual_tags": [
+        "танец",
+        "дети",
+        "педагог",
+        "репетиция",
+        "хореография"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "semantic_description": "Педагог показывает и объясняет хореографическое движение, поправляя стопу и ногу девочки, остальные дети наблюдают или стоят рядом.",
+      "subjects": [
+        "Педагог",
+        "Девочки-ученицы"
+      ],
+      "actions": [
+        "Педагог приседает рядом с ученицей и поправляет положение ее стопы и колена",
+        "Дети стоят в позициях и слушают указания"
+      ],
+      "emotions": [
+        "сосредоточенность",
+        "внимание"
+      ],
+      "camera": "medium_shot",
+      "visual_tags": [
+        "танец",
+        "дети",
+        "педагог",
+        "репетиция",
+        "хореография"
+      ],
+      "search_tags": [
+        "танец",
+        "дети",
+        "педагог",
+        "репетиция",
+        "хореография",
+        "Педагог приседает рядом с ученицей и поправляет положение ее стопы и колена",
+        "Дети стоят в позициях и слушают указания",
+        "Педагог",
+        "Девочки-ученицы",
+        "сосредоточенность",
+        "внимание"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 21.0,
+          "speaker": "Педагог",
+          "text": "и пунч и теперь пубум и назад раз коленочко вот этих вот эта стопа выталкивается вот этой коленочкой вперед собрала выросла раз"
+        }
+      ],
+      "spoken_text": "и пунч и теперь пубум и назад раз коленочко вот этих вот эта стопа выталкивается вот этой коленочкой вперед собрала выросла раз",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "video_2025-08-28_07-43-20.mp4",
+    "keywords": [
+      "танец",
+      "дети",
+      "педагог",
+      "репетиция",
+      "хореография",
+      "Педагог приседает рядом с ученицей и поправляет положение ее стопы и колена",
+      "Дети стоят в позициях и слушают указания",
+      "Педагог",
+      "Девочки-ученицы",
+      "сосредоточенность",
+      "внимание"
+    ],
+    "spoken_text": "и пунч и теперь пубум и назад раз коленочко вот этих вот эта стопа выталкивается вот этой коленочкой вперед собрала выросла раз",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "preserve_original_audio": true,
+    "segment_count": 1
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

@@ -1,0 +1,38 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+
+# Environment variables
+.env
+.env.*
+service_account.json
+
+# Temporary working directories (GitHub Actions & Local)
+temp_downloads/
+temp_normalized/
+
+# Processing & Temp files
+02_PROCESSING/*
+!02_PROCESSING/README.md
+
+# Logs
+08_LOGS/*
+!08_LOGS/README.md
+
+# Output (Игнорируем локально сгенерированные видео)
+07_OUTPUT/*
+!07_OUTPUT/README.md
+!07_OUTPUT/.gitkeep
+
+# Global media ignores for root/source dirs
+*.tmp
+*.temp
+
+# IDE & OS
+.vscode/
+.DS_Store
+Thumbs.db

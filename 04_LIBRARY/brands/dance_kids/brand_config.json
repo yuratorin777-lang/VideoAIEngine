@@ -1,0 +1,38 @@
+{
+  "project_id": "dance_kids",
+  "default_preset": "dance_kids_end",
+  "presets": {
+    "dance_kids_end": {
+      "file": "logo2.png",
+      "mode": "end",
+      "position": "center",
+      "logo_width": 320,
+      "display_duration": 3.0,
+      "fade_duration": 0.5
+    },
+    "baby_dance_end": {
+      "file": "logo1.png",
+      "mode": "end",
+      "position": "center",
+      "logo_width": 320,
+      "display_duration": 3.0,
+      "fade_duration": 0.5
+    },
+    "dance_kids_corner": {
+      "file": "logo2.png",
+      "mode": "full",
+      "position": ["right", "bottom"],
+      "logo_width": 180,
+      "display_duration": 0,
+      "fade_duration": 0.3
+    },
+    "baby_dance_corner": {
+      "file": "logo1.png",
+      "mode": "full",
+      "position": ["right", "bottom"],
+      "logo_width": 180,
+      "display_duration": 0,
+      "fade_duration": 0.3
+    }
+  }
+}

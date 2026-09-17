@@ -1,0 +1,266 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-08T09:23:07.779848+00:00",
+  "updated_at": "2026-09-08T09:23:07.779884+00:00",
+  "video": {
+    "file_id": "1WoJTEKvO0Z94NW8qaKggXM7F13doQhuC",
+    "filename": "Видео от Yuriy Torin",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "sports_action",
+      "event"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая танцевальная музыка и атмосферные шумы зала."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка для танцев и гул арены.",
+    "music_description": "Инструментальная танцевальная музыка.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "description": "Две девочки выполняют танцевальные шаги и позиции на паркете спортивной арены.",
+      "subjects": [
+        "девочки-танцорки"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги в сторону",
+        "взаимодействие в паре",
+        "синхронное движение ног",
+        "позирование"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера общего плана",
+      "composition": "Общий план, участники по центру кадра",
+      "emotion": [
+        "сконцентрированность",
+        "серьезность"
+      ],
+      "location": [],
+      "interaction": "синхронное исполнение танца",
+      "visual_tags": [
+        "танцевальный спорт",
+        "соревнования",
+        "паркет",
+        "арена"
+      ],
+      "search_phrases": [
+        "дети танцуют на паркете",
+        "соревнования по спортивным танцам",
+        "девочки в ярких платьях на турнире"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "semantic_description": "Две девочки выполняют танцевальные шаги и позиции на паркете спортивной арены.",
+      "subjects": [
+        "девочки-танцорки"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированность",
+        "серьезность"
+      ],
+      "camera": "Статичная камера общего плана",
+      "visual_tags": [
+        "танцевальный спорт",
+        "соревнования",
+        "паркет",
+        "арена"
+      ],
+      "search_tags": [
+        "танцевальный спорт",
+        "соревнования",
+        "паркет",
+        "арена",
+        "ритмичные шаги в сторону",
+        "взаимодействие в паре",
+        "синхронное движение ног",
+        "позирование",
+        "девочки-танцорки",
+        "сконцентрированность",
+        "серьезность"
+      ],
+      "search_phrases": [
+        "дети танцуют на паркете",
+        "соревнования по спортивным танцам",
+        "девочки в ярких платьях на турнире"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "Видео от Yuriy Torin",
+    "keywords": [
+      "танцевальный спорт",
+      "соревнования",
+      "паркет",
+      "арена",
+      "девочки-танцорки",
+      "ритмичные шаги в сторону",
+      "взаимодействие в паре",
+      "синхронное движение ног",
+      "позирование",
+      "сконцентрированность",
+      "серьезность"
+    ],
+    "actions": [
+      "ритмичные шаги в сторону",
+      "взаимодействие в паре",
+      "синхронное движение ног",
+      "позирование"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сконцентрированность",
+      "серьезность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети танцуют на паркете",
+      "соревнования по спортивным танцам",
+      "девочки в ярких платьях на турнире"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

@@ -1,0 +1,650 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-14T08:27:12.224707+00:00",
+  "updated_at": "2026-09-14T08:27:12.224728+00:00",
+  "video": {
+    "file_id": "19FHSTutmwlC3xaXor3ijcgUp_HHsxhZA",
+    "filename": "document_5197459153181777158.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "sports_action",
+      "event"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "social_media",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Фоновая музыка соревнований и гул зала"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Ритмичная музыка для бальных танцев и фоновый шум зала",
+    "music_description": "Танцевальная фоновая музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 3.0,
+      "duration": 3.0,
+      "description": "Пара детей исполняет бальный танец на паркете крупным планом, на заднем плане другие пары",
+      "subjects": [
+        "пара танцоров",
+        "девочка в бордовом платье",
+        "мальчик в белой рубашке и черных брюках"
+      ],
+      "actions": [
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "танцевальная позиция рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движение по паркету",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "взаимодействие в паре",
+        "танцевальная позиция рук",
+        "движение по паркету"
+      ],
+      "dance_elements": [],
+      "camera": "средний план",
+      "composition": "центральная композиция",
+      "emotion": [
+        "сосредоточенность",
+        "энергичность"
+      ],
+      "location": [],
+      "interaction": "танцевальное партнерство",
+      "visual_tags": [
+        "бальные танцы",
+        "соревнования"
+      ],
+      "search_phrases": [
+        "дети танцуют бальные танцы на соревнованиях",
+        "пара танцоров на паркете"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 3.0,
+      "end": 5.0,
+      "duration": 2.0,
+      "description": "Общий план соревнований, несколько пар танцуют на паркете",
+      "subjects": [
+        "несколько пар танцоров",
+        "участники в ярких платьях"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение пар",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "синхронное движение пар",
+        "повороты"
+      ],
+      "dance_elements": [],
+      "camera": "общий план",
+      "composition": "панорамный кадр",
+      "emotion": [
+        "динамика"
+      ],
+      "location": [],
+      "interaction": "групповое выступление на паркете",
+      "visual_tags": [
+        "бальные танцы",
+        "массовый танец"
+      ],
+      "search_phrases": [
+        "несколько пар танцуют на паркете",
+        "соревнования по бальным танцам общий план"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "start": 5.0,
+      "end": 9.5,
+      "duration": 4.5,
+      "description": "Крупный план пары танцоров (девочка в бордовом платье, мальчик в белой рубашке), выполняющих поддерживающие движения",
+      "subjects": [
+        "пара танцоров",
+        "мальчик с номером 344 на спине"
+      ],
+      "actions": [
+        {
+          "action": "поддержка в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот корпуса",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "поддержка в паре",
+        "позирование",
+        "поворот корпуса"
+      ],
+      "dance_elements": [],
+      "camera": "средний крупный план",
+      "composition": "в центре кадра пара танцоров",
+      "emotion": [
+        "концентрация",
+        "грациозность"
+      ],
+      "location": [],
+      "interaction": "парный танец",
+      "visual_tags": [
+        "бальные танцы",
+        "пара крупным планом"
+      ],
+      "search_phrases": [
+        "пара детей танцует бальный танец крупным планом",
+        "мальчик и девочка на танцевальном турнире"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    },
+    {
+      "id": "scene_004",
+      "start": 9.5,
+      "end": 12.0,
+      "duration": 2.5,
+      "description": "Вид со спины на мальчика с номером 344 во время танцевального движения с партнершей",
+      "subjects": [
+        "пара танцоров",
+        "мальчик с номером 344"
+      ],
+      "actions": [
+        {
+          "action": "движение в парах",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание за руки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "движение в парах",
+        "удержание за руки",
+        "поворот"
+      ],
+      "dance_elements": [],
+      "camera": "вид сзади",
+      "composition": "ракурс из-за спины партнера",
+      "emotion": [
+        "динамичность"
+      ],
+      "location": [],
+      "interaction": "парное взаимодействие",
+      "visual_tags": [
+        "бальные танцы",
+        "номер участника"
+      ],
+      "search_phrases": [
+        "участники соревнований по бальным танцам со спины",
+        "дети на паркете турнира по танцам"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 3.0,
+      "duration": 3.0,
+      "semantic_description": "Пара детей исполняет бальный танец на паркете крупным планом, на заднем плане другие пары",
+      "subjects": [
+        "пара танцоров",
+        "девочка в бордовом платье",
+        "мальчик в белой рубашке и черных брюках"
+      ],
+      "actions": [
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "танцевальная позиция рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движение по паркету",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "энергичность"
+      ],
+      "camera": "средний план",
+      "visual_tags": [
+        "бальные танцы",
+        "соревнования"
+      ],
+      "search_tags": [
+        "бальные танцы",
+        "соревнования",
+        "взаимодействие в паре",
+        "танцевальная позиция рук",
+        "движение по паркету",
+        "пара танцоров",
+        "девочка в бордовом платье",
+        "мальчик в белой рубашке и черных брюках",
+        "сосредоточенность",
+        "энергичность"
+      ],
+      "search_phrases": [
+        "дети танцуют бальные танцы на соревнованиях",
+        "пара танцоров на паркете"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 3.0,
+      "end": 5.0,
+      "duration": 2.0,
+      "semantic_description": "Общий план соревнований, несколько пар танцуют на паркете",
+      "subjects": [
+        "несколько пар танцоров",
+        "участники в ярких платьях"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение пар",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "динамика"
+      ],
+      "camera": "общий план",
+      "visual_tags": [
+        "бальные танцы",
+        "массовый танец"
+      ],
+      "search_tags": [
+        "бальные танцы",
+        "массовый танец",
+        "синхронное движение пар",
+        "повороты",
+        "несколько пар танцоров",
+        "участники в ярких платьях",
+        "динамика"
+      ],
+      "search_phrases": [
+        "несколько пар танцуют на паркете",
+        "соревнования по бальным танцам общий план"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_003",
+      "start": 5.0,
+      "end": 9.5,
+      "duration": 4.5,
+      "semantic_description": "Крупный план пары танцоров (девочка в бордовом платье, мальчик в белой рубашке), выполняющих поддерживающие движения",
+      "subjects": [
+        "пара танцоров",
+        "мальчик с номером 344 на спине"
+      ],
+      "actions": [
+        {
+          "action": "поддержка в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот корпуса",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "концентрация",
+        "грациозность"
+      ],
+      "camera": "средний крупный план",
+      "visual_tags": [
+        "бальные танцы",
+        "пара крупным планом"
+      ],
+      "search_tags": [
+        "бальные танцы",
+        "пара крупным планом",
+        "поддержка в паре",
+        "позирование",
+        "поворот корпуса",
+        "пара танцоров",
+        "мальчик с номером 344 на спине",
+        "концентрация",
+        "грациозность"
+      ],
+      "search_phrases": [
+        "пара детей танцует бальный танец крупным планом",
+        "мальчик и девочка на танцевальном турнире"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_004",
+      "start": 9.5,
+      "end": 12.0,
+      "duration": 2.5,
+      "semantic_description": "Вид со спины на мальчика с номером 344 во время танцевального движения с партнершей",
+      "subjects": [
+        "пара танцоров",
+        "мальчик с номером 344"
+      ],
+      "actions": [
+        {
+          "action": "движение в парах",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание за руки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "динамичность"
+      ],
+      "camera": "вид сзади",
+      "visual_tags": [
+        "бальные танцы",
+        "номер участника"
+      ],
+      "search_tags": [
+        "бальные танцы",
+        "номер участника",
+        "движение в парах",
+        "удержание за руки",
+        "поворот",
+        "пара танцоров",
+        "мальчик с номером 344",
+        "динамичность"
+      ],
+      "search_phrases": [
+        "участники соревнований по бальным танцам со спины",
+        "дети на паркете турнира по танцам"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777158.mp4",
+    "keywords": [
+      "бальные танцы",
+      "соревнования",
+      "пара танцоров",
+      "девочка в бордовом платье",
+      "мальчик в белой рубашке и черных брюках",
+      "массовый танец",
+      "несколько пар танцоров",
+      "участники в ярких платьях",
+      "пара крупным планом",
+      "мальчик с номером 344 на спине",
+      "номер участника",
+      "мальчик с номером 344",
+      "взаимодействие в паре",
+      "танцевальная позиция рук",
+      "движение по паркету",
+      "сосредоточенность",
+      "энергичность",
+      "синхронное движение пар",
+      "повороты",
+      "динамика",
+      "поддержка в паре",
+      "позирование",
+      "поворот корпуса",
+      "концентрация",
+      "грациозность",
+      "движение в парах",
+      "удержание за руки",
+      "поворот",
+      "динамичность"
+    ],
+    "actions": [
+      "взаимодействие в паре",
+      "танцевальная позиция рук",
+      "движение по паркету",
+      "синхронное движение пар",
+      "повороты",
+      "поддержка в паре",
+      "позирование",
+      "поворот корпуса",
+      "движение в парах",
+      "удержание за руки",
+      "поворот"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 4,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "энергичность",
+      "динамика",
+      "концентрация",
+      "грациозность",
+      "динамичность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети танцуют бальные танцы на соревнованиях",
+      "пара танцоров на паркете",
+      "несколько пар танцуют на паркете",
+      "соревнования по бальным танцам общий план",
+      "пара детей танцует бальный танец крупным планом",
+      "мальчик и девочка на танцевальном турнире",
+      "участники соревнований по бальным танцам со спины",
+      "дети на паркете турнира по танцам"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

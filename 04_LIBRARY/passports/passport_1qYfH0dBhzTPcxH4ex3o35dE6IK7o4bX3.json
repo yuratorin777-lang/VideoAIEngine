@@ -1,0 +1,300 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-02T12:39:55.276031+00:00",
+  "updated_at": "2026-09-02T12:39:55.276633+00:00",
+  "video": {
+    "file_id": "1qYfH0dBhzTPcxH4ex3o35dE6IK7o4bX3",
+    "filename": "VID_20260822_100949.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "шесть и семь и восемь и раз и два и раз и два и раз и два и раз и два и три четыре пять шесть семь восемь раз два",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 6.0,
+        "speaker": "Тренер",
+        "text": "шесть и семь и восемь и раз и два"
+      },
+      {
+        "start": 7.0,
+        "end": 14.0,
+        "speaker": "Тренер",
+        "text": "раз и два и раз и два"
+      },
+      {
+        "start": 20.0,
+        "end": 26.0,
+        "speaker": "Тренер",
+        "text": "раз и два три четыре пять шесть семь восемь"
+      }
+    ],
+    "segment_count": 3
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Запись голоса тренера, считающего в зале."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос тренера, считающего ритм танца в помещении.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 30.0,
+      "duration": 30.0,
+      "description": "Дети на тренировке выполняют приседания и танцевальные движения под счет тренера.",
+      "subjects": [
+        "Дети",
+        "Тренер"
+      ],
+      "actions": [
+        {
+          "action": "приседания",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "пружинка коленями",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание рук на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичное движение",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "приседания",
+        "пружинка коленями",
+        "удержание рук на поясе",
+        "ритмичное движение"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера",
+      "composition": "Средний и общий план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "Дети повторяют упражнения за тренером",
+      "visual_tags": [
+        "танцевальный класс",
+        "тренировка",
+        "дети"
+      ],
+      "search_phrases": [
+        "дети на танцевальной тренировке",
+        "девочка делает упражнения в зале",
+        "танцевальный класс занятие"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 30.0,
+      "duration": 30.0,
+      "semantic_description": "Дети на тренировке выполняют приседания и танцевальные движения под счет тренера.",
+      "subjects": [
+        "Дети",
+        "Тренер"
+      ],
+      "actions": [
+        {
+          "action": "приседания",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "пружинка коленями",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание рук на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичное движение",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "Статичная камера",
+      "visual_tags": [
+        "танцевальный класс",
+        "тренировка",
+        "дети"
+      ],
+      "search_tags": [
+        "танцевальный класс",
+        "тренировка",
+        "дети",
+        "приседания",
+        "пружинка коленями",
+        "удержание рук на поясе",
+        "ритмичное движение",
+        "Дети",
+        "Тренер",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети на танцевальной тренировке",
+        "девочка делает упражнения в зале",
+        "танцевальный класс занятие"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 6.0,
+          "speaker": "Тренер",
+          "text": "шесть и семь и восемь и раз и два"
+        },
+        {
+          "start": 7.0,
+          "end": 14.0,
+          "speaker": "Тренер",
+          "text": "раз и два и раз и два"
+        },
+        {
+          "start": 20.0,
+          "end": 26.0,
+          "speaker": "Тренер",
+          "text": "раз и два три четыре пять шесть семь восемь"
+        }
+      ],
+      "spoken_text": "шесть и семь и восемь и раз и два раз и два и раз и два раз и два три четыре пять шесть семь восемь",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20260822_100949.mp4",
+    "keywords": [
+      "танцевальный класс",
+      "тренировка",
+      "дети",
+      "Дети",
+      "Тренер",
+      "приседания",
+      "пружинка коленями",
+      "удержание рук на поясе",
+      "ритмичное движение",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "приседания",
+      "пружинка коленями",
+      "удержание рук на поясе",
+      "ритмичное движение"
+    ],
+    "spoken_text": "шесть и семь и восемь и раз и два и раз и два и раз и два и раз и два и три четыре пять шесть семь восемь раз два",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети на танцевальной тренировке",
+      "девочка делает упражнения в зале",
+      "танцевальный класс занятие"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

@@ -1,0 +1,713 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-08-19T17:32:20.283246+00:00",
+  "video": {
+    "file_id": "118fxi1HftKdoSfWU1NeqvHkGigz4F0rW",
+    "filename": "document_5199710952995467039.mp4",
+    "drive_url": "https://drive.google.com/uc?export=download&id=118fxi1HftKdoSfWU1NeqvHkGigz4F0rW",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "categories": [],
+    "confidence": null
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "7 8 И раз ещё 2 3 4 5 6 7 8 Ручки. Раз 2 1 2 3 1 2 3 1 2 3 Ручки на пояс. Подскоки. Раз 2 3 4 Ручки. Раз 2 1 2 3 Ещё раз. Раз и 2 3 4 5 6 7 8 Раз 2 3 4 5 6 7 8",
+    "segments": [
+      {
+        "start": 0.005,
+        "end": 0.085,
+        "speaker": "Instructor",
+        "text": "7 8"
+      },
+      {
+        "start": 0.085,
+        "end": 0.165,
+        "speaker": "Instructor",
+        "text": "И"
+      },
+      {
+        "start": 0.285,
+        "end": 0.545,
+        "speaker": "Instructor",
+        "text": "раз ещё"
+      },
+      {
+        "start": 0.815,
+        "end": 1.135,
+        "speaker": "Instructor",
+        "text": "2"
+      },
+      {
+        "start": 1.485,
+        "end": 1.775,
+        "speaker": "Instructor",
+        "text": "3"
+      },
+      {
+        "start": 2.225,
+        "end": 2.475,
+        "speaker": "Instructor",
+        "text": "4"
+      },
+      {
+        "start": 2.945,
+        "end": 3.205,
+        "speaker": "Instructor",
+        "text": "5"
+      },
+      {
+        "start": 3.735,
+        "end": 4.025,
+        "speaker": "Instructor",
+        "text": "6"
+      },
+      {
+        "start": 4.545,
+        "end": 4.835,
+        "speaker": "Instructor",
+        "text": "7"
+      },
+      {
+        "start": 5.175,
+        "end": 5.755,
+        "speaker": "Instructor",
+        "text": "8"
+      },
+      {
+        "start": 5.865,
+        "end": 6.305,
+        "speaker": "Instructor",
+        "text": "Ручки."
+      },
+      {
+        "start": 6.885,
+        "end": 7.145,
+        "speaker": "Instructor",
+        "text": "Раз"
+      },
+      {
+        "start": 7.605,
+        "end": 7.915,
+        "speaker": "Instructor",
+        "text": "2"
+      },
+      {
+        "start": 8.165,
+        "end": 8.635,
+        "speaker": "Instructor",
+        "text": "1 2 3"
+      },
+      {
+        "start": 9.455,
+        "end": 9.945,
+        "speaker": "Instructor",
+        "text": "1 2 3"
+      },
+      {
+        "start": 10.975,
+        "end": 11.455,
+        "speaker": "Instructor",
+        "text": "1 2 3"
+      },
+      {
+        "start": 11.645,
+        "end": 12.395,
+        "speaker": "Instructor",
+        "text": "Ручки на пояс."
+      },
+      {
+        "start": 12.785,
+        "end": 13.275,
+        "speaker": "Instructor",
+        "text": "Подскоки."
+      },
+      {
+        "start": 13.795,
+        "end": 14.155,
+        "speaker": "Instructor",
+        "text": "Раз"
+      },
+      {
+        "start": 14.735,
+        "end": 15.025,
+        "speaker": "Instructor",
+        "text": "2"
+      },
+      {
+        "start": 15.655,
+        "end": 15.935,
+        "speaker": "Instructor",
+        "text": "3"
+      },
+      {
+        "start": 16.585,
+        "end": 16.925,
+        "speaker": "Instructor",
+        "text": "4"
+      },
+      {
+        "start": 17.155,
+        "end": 17.585,
+        "speaker": "Instructor",
+        "text": "Ручки."
+      },
+      {
+        "start": 18.065,
+        "end": 18.345,
+        "speaker": "Instructor",
+        "text": "Раз"
+      },
+      {
+        "start": 18.815,
+        "end": 19.145,
+        "speaker": "Instructor",
+        "text": "2"
+      },
+      {
+        "start": 19.465,
+        "end": 19.955,
+        "speaker": "Instructor",
+        "text": "1 2 3"
+      },
+      {
+        "start": 20.375,
+        "end": 20.915,
+        "speaker": "Instructor",
+        "text": "Ещё раз."
+      },
+      {
+        "start": 21.365,
+        "end": 21.685,
+        "speaker": "Instructor",
+        "text": "Раз"
+      },
+      {
+        "start": 22.115,
+        "end": 22.445,
+        "speaker": "Instructor",
+        "text": "и 2"
+      },
+      {
+        "start": 22.955,
+        "end": 23.235,
+        "speaker": "Instructor",
+        "text": "3"
+      },
+      {
+        "start": 23.705,
+        "end": 23.975,
+        "speaker": "Instructor",
+        "text": "4"
+      },
+      {
+        "start": 24.395,
+        "end": 24.645,
+        "speaker": "Instructor",
+        "text": "5"
+      },
+      {
+        "start": 25.135,
+        "end": 25.465,
+        "speaker": "Instructor",
+        "text": "6"
+      },
+      {
+        "start": 25.965,
+        "end": 26.295,
+        "speaker": "Instructor",
+        "text": "7"
+      },
+      {
+        "start": 26.655,
+        "end": 27.245,
+        "speaker": "Instructor",
+        "text": "8"
+      },
+      {
+        "start": 27.605,
+        "end": 27.915,
+        "speaker": "Instructor",
+        "text": "Раз"
+      },
+      {
+        "start": 28.325,
+        "end": 28.605,
+        "speaker": "Instructor",
+        "text": "2"
+      },
+      {
+        "start": 29.085,
+        "end": 29.355,
+        "speaker": "Instructor",
+        "text": "3"
+      },
+      {
+        "start": 29.775,
+        "end": 30.085,
+        "speaker": "Instructor",
+        "text": "4"
+      },
+      {
+        "start": 30.495,
+        "end": 30.765,
+        "speaker": "Instructor",
+        "text": "5"
+      },
+      {
+        "start": 31.205,
+        "end": 31.485,
+        "speaker": "Instructor",
+        "text": "6"
+      },
+      {
+        "start": 31.915,
+        "end": 32.225,
+        "speaker": "Instructor",
+        "text": "7"
+      },
+      {
+        "start": 32.655,
+        "end": 33.025,
+        "speaker": "Instructor",
+        "text": "8"
+      }
+    ],
+    "segment_count": 43
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 56.44,
+      "duration": 56.44,
+      "description": "Двое маленьких детей, мальчик и девочка, выполняют комплекс физических упражнений и танцевальных движений под руководством невидимого педагога. Видео снято в светлом помещении с деревянным полом и однотонными стенами. Дети активно и с энтузиазмом следуют командам, выполняя приседания, подъемы ног, махи руками и подскоки.",
+      "subjects": [
+        "мальчик",
+        "девочка",
+        "дети"
+      ],
+      "actions": [
+        "выполнение упражнений",
+        "танцевальные движения",
+        "слушание команд",
+        "приседания",
+        "подъемы ног",
+        "махи руками",
+        "подскоки"
+      ],
+      "camera": "medium_shot",
+      "emotion": [
+        "engaged",
+        "focused",
+        "energetic",
+        "happy"
+      ],
+      "visual_tags": [
+        "дети",
+        "танцы",
+        "упражнения",
+        "спортивное занятие",
+        "детский фитнес",
+        "улыбка",
+        "радость",
+        "движение"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 56.44,
+      "duration": 56.44,
+      "semantic_description": "Двое маленьких детей, мальчик и девочка, выполняют комплекс физических упражнений и танцевальных движений под руководством невидимого педагога. Видео снято в светлом помещении с деревянным полом и однотонными стенами. Дети активно и с энтузиазмом следуют командам, выполняя приседания, подъемы ног, махи руками и подскоки.",
+      "subjects": [
+        "мальчик",
+        "девочка",
+        "дети"
+      ],
+      "actions": [
+        "выполнение упражнений",
+        "танцевальные движения",
+        "слушание команд",
+        "приседания",
+        "подъемы ног",
+        "махи руками",
+        "подскоки"
+      ],
+      "emotions": [
+        "engaged",
+        "focused",
+        "energetic",
+        "happy"
+      ],
+      "camera": "medium_shot",
+      "visual_tags": [
+        "дети",
+        "танцы",
+        "упражнения",
+        "спортивное занятие",
+        "детский фитнес",
+        "улыбка",
+        "радость",
+        "движение"
+      ],
+      "search_tags": [
+        "дети",
+        "танцы",
+        "упражнения",
+        "спортивное занятие",
+        "детский фитнес",
+        "улыбка",
+        "радость",
+        "движение",
+        "выполнение упражнений",
+        "танцевальные движения",
+        "слушание команд",
+        "приседания",
+        "подъемы ног",
+        "махи руками",
+        "подскоки",
+        "мальчик",
+        "девочка",
+        "engaged",
+        "focused",
+        "energetic",
+        "happy"
+      ],
+      "speech": [
+        {
+          "start": 0.005,
+          "end": 0.085,
+          "speaker": "Instructor",
+          "text": "7 8"
+        },
+        {
+          "start": 0.085,
+          "end": 0.165,
+          "speaker": "Instructor",
+          "text": "И"
+        },
+        {
+          "start": 0.285,
+          "end": 0.545,
+          "speaker": "Instructor",
+          "text": "раз ещё"
+        },
+        {
+          "start": 0.815,
+          "end": 1.135,
+          "speaker": "Instructor",
+          "text": "2"
+        },
+        {
+          "start": 1.485,
+          "end": 1.775,
+          "speaker": "Instructor",
+          "text": "3"
+        },
+        {
+          "start": 2.225,
+          "end": 2.475,
+          "speaker": "Instructor",
+          "text": "4"
+        },
+        {
+          "start": 2.945,
+          "end": 3.205,
+          "speaker": "Instructor",
+          "text": "5"
+        },
+        {
+          "start": 3.735,
+          "end": 4.025,
+          "speaker": "Instructor",
+          "text": "6"
+        },
+        {
+          "start": 4.545,
+          "end": 4.835,
+          "speaker": "Instructor",
+          "text": "7"
+        },
+        {
+          "start": 5.175,
+          "end": 5.755,
+          "speaker": "Instructor",
+          "text": "8"
+        },
+        {
+          "start": 5.865,
+          "end": 6.305,
+          "speaker": "Instructor",
+          "text": "Ручки."
+        },
+        {
+          "start": 6.885,
+          "end": 7.145,
+          "speaker": "Instructor",
+          "text": "Раз"
+        },
+        {
+          "start": 7.605,
+          "end": 7.915,
+          "speaker": "Instructor",
+          "text": "2"
+        },
+        {
+          "start": 8.165,
+          "end": 8.635,
+          "speaker": "Instructor",
+          "text": "1 2 3"
+        },
+        {
+          "start": 9.455,
+          "end": 9.945,
+          "speaker": "Instructor",
+          "text": "1 2 3"
+        },
+        {
+          "start": 10.975,
+          "end": 11.455,
+          "speaker": "Instructor",
+          "text": "1 2 3"
+        },
+        {
+          "start": 11.645,
+          "end": 12.395,
+          "speaker": "Instructor",
+          "text": "Ручки на пояс."
+        },
+        {
+          "start": 12.785,
+          "end": 13.275,
+          "speaker": "Instructor",
+          "text": "Подскоки."
+        },
+        {
+          "start": 13.795,
+          "end": 14.155,
+          "speaker": "Instructor",
+          "text": "Раз"
+        },
+        {
+          "start": 14.735,
+          "end": 15.025,
+          "speaker": "Instructor",
+          "text": "2"
+        },
+        {
+          "start": 15.655,
+          "end": 15.935,
+          "speaker": "Instructor",
+          "text": "3"
+        },
+        {
+          "start": 16.585,
+          "end": 16.925,
+          "speaker": "Instructor",
+          "text": "4"
+        },
+        {
+          "start": 17.155,
+          "end": 17.585,
+          "speaker": "Instructor",
+          "text": "Ручки."
+        },
+        {
+          "start": 18.065,
+          "end": 18.345,
+          "speaker": "Instructor",
+          "text": "Раз"
+        },
+        {
+          "start": 18.815,
+          "end": 19.145,
+          "speaker": "Instructor",
+          "text": "2"
+        },
+        {
+          "start": 19.465,
+          "end": 19.955,
+          "speaker": "Instructor",
+          "text": "1 2 3"
+        },
+        {
+          "start": 20.375,
+          "end": 20.915,
+          "speaker": "Instructor",
+          "text": "Ещё раз."
+        },
+        {
+          "start": 21.365,
+          "end": 21.685,
+          "speaker": "Instructor",
+          "text": "Раз"
+        },
+        {
+          "start": 22.115,
+          "end": 22.445,
+          "speaker": "Instructor",
+          "text": "и 2"
+        },
+        {
+          "start": 22.955,
+          "end": 23.235,
+          "speaker": "Instructor",
+          "text": "3"
+        },
+        {
+          "start": 23.705,
+          "end": 23.975,
+          "speaker": "Instructor",
+          "text": "4"
+        },
+        {
+          "start": 24.395,
+          "end": 24.645,
+          "speaker": "Instructor",
+          "text": "5"
+        },
+        {
+          "start": 25.135,
+          "end": 25.465,
+          "speaker": "Instructor",
+          "text": "6"
+        },
+        {
+          "start": 25.965,
+          "end": 26.295,
+          "speaker": "Instructor",
+          "text": "7"
+        },
+        {
+          "start": 26.655,
+          "end": 27.245,
+          "speaker": "Instructor",
+          "text": "8"
+        },
+        {
+          "start": 27.605,
+          "end": 27.915,
+          "speaker": "Instructor",
+          "text": "Раз"
+        },
+        {
+          "start": 28.325,
+          "end": 28.605,
+          "speaker": "Instructor",
+          "text": "2"
+        },
+        {
+          "start": 29.085,
+          "end": 29.355,
+          "speaker": "Instructor",
+          "text": "3"
+        },
+        {
+          "start": 29.775,
+          "end": 30.085,
+          "speaker": "Instructor",
+          "text": "4"
+        },
+        {
+          "start": 30.495,
+          "end": 30.765,
+          "speaker": "Instructor",
+          "text": "5"
+        },
+        {
+          "start": 31.205,
+          "end": 31.485,
+          "speaker": "Instructor",
+          "text": "6"
+        },
+        {
+          "start": 31.915,
+          "end": 32.225,
+          "speaker": "Instructor",
+          "text": "7"
+        },
+        {
+          "start": 32.655,
+          "end": 33.025,
+          "speaker": "Instructor",
+          "text": "8"
+        }
+      ],
+      "spoken_text": "7 8 И раз ещё 2 3 4 5 6 7 8 Ручки. Раз 2 1 2 3 1 2 3 1 2 3 Ручки на пояс. Подскоки. Раз 2 3 4 Ручки. Раз 2 1 2 3 Ещё раз. Раз и 2 3 4 5 6 7 8 Раз 2 3 4 5 6 7 8",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5199710952995467039.mp4",
+    "keywords": [
+      "дети",
+      "танцы",
+      "упражнения",
+      "спортивное занятие",
+      "детский фитнес",
+      "улыбка",
+      "радость",
+      "движение",
+      "выполнение упражнений",
+      "танцевальные движения",
+      "слушание команд",
+      "приседания",
+      "подъемы ног",
+      "махи руками",
+      "подскоки",
+      "мальчик",
+      "девочка",
+      "engaged",
+      "focused",
+      "energetic",
+      "happy"
+    ],
+    "spoken_text": "7 8 И раз ещё 2 3 4 5 6 7 8 Ручки. Раз 2 1 2 3 1 2 3 1 2 3 Ручки на пояс. Подскоки. Раз 2 3 4 Ручки. Раз 2 1 2 3 Ещё раз. Раз и 2 3 4 5 6 7 8 Раз 2 3 4 5 6 7 8",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "preserve_original_audio": true,
+    "segment_count": 1
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

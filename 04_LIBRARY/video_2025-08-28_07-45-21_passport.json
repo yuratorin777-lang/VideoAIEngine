@@ -1,0 +1,63 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-08-21T04:10:11.139118+00:00",
+  "video": {
+    "filename": "video_2025-08-28_07-45-21.mp4",
+    "filepath": "C:\\Users\\User\\Desktop\\VideoAIEngine\\temp_downloads\\video_2025-08-28_07-45-21.mp4",
+    "size_bytes": 4070499,
+    "width": 578,
+    "height": 1280,
+    "fps": 47.92,
+    "aspect_ratio": 0.45,
+    "duration": 24.04
+  },
+  "source": {
+    "duration_seconds": 24.04,
+    "language": "ru",
+    "content_summary": "",
+    "video_format": "unknown",
+    "is_edited": false
+  },
+  "classification": {},
+  "transcription": {
+    "has_speech": false,
+    "has_voice_over": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {},
+  "editing": {},
+  "visual": {},
+  "scenes": [],
+  "segments": [],
+  "search_index": {
+    "filename": "video_2025-08-28_07-45-21.mp4",
+    "keywords": [],
+    "actions": [],
+    "subjects": [],
+    "important_phrases": [],
+    "spoken_text": "",
+    "has_visual_content": false,
+    "has_audio": false,
+    "has_speech": false,
+    "has_music": false,
+    "has_ambient_sound": false,
+    "preserve_original_audio": false,
+    "segment_count": 0
+  },
+  "usage": {
+    "can_use_visual": false,
+    "can_use_audio": false,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini-1.5-flash",
+    "analysis_status": "failed",
+    "passport_status": "failed",
+    "transcription_status": "no_speech_detected"
+  }
+}

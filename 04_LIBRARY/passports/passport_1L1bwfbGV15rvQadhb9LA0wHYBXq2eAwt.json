@@ -1,0 +1,284 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-08T14:17:37.801425+00:00",
+  "updated_at": "2026-09-08T14:17:37.801998+00:00",
+  "video": {
+    "file_id": "1L1bwfbGV15rvQadhb9LA0wHYBXq2eAwt",
+    "filename": "IMG_7205.MOV",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "sports_action",
+      "event"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна музыкальное сопровождение танцевального турнира и фоновый шум арены."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Музыкальное сопровождение соревнований и акустика просторного спортивного зала.",
+    "music_description": "Ритмичная турнирная музыка",
+    "voice_over_description": "",
+    "notes": "Оригинальный звук арены с фоновой музыкой."
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 23.33,
+      "duration": 23.33,
+      "description": "Девочка в зеленом платье исполняет танцевальные элементы на паркете спортивной арены во время соревнований.",
+      "subjects": [
+        "девочка-танцор",
+        "другие участники",
+        "судьи"
+      ],
+      "actions": [
+        {
+          "action": "вращения на месте",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование с поднятыми руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения в танцевальном стиле",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "вращения на месте",
+        "шаги в сторону",
+        "позирование с поднятыми руками",
+        "движения в танцевальном стиле"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера с панорамированием вслед за движением танцора",
+      "composition": "Общий план спортивной арены, центрирование на участнице в зеленом платье",
+      "emotion": [
+        "сконцентрированность",
+        "целеустремленность"
+      ],
+      "location": [],
+      "interaction": "Участница выступает перед судьями и зрителями",
+      "visual_tags": [
+        "танцевальные соревнования",
+        "паркет",
+        "зеленое платье",
+        "номер 38",
+        "судейские столы",
+        "трибуны"
+      ],
+      "search_phrases": [
+        "девочка танцует на паркете на соревнованиях",
+        "детский турнир по спортивным танцам",
+        "танцор в зеленом платье выступает на арене"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 23.33,
+      "duration": 23.33,
+      "semantic_description": "Девочка в зеленом платье исполняет танцевальные элементы на паркете спортивной арены во время соревнований.",
+      "subjects": [
+        "девочка-танцор",
+        "другие участники",
+        "судьи"
+      ],
+      "actions": [
+        {
+          "action": "вращения на месте",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование с поднятыми руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения в танцевальном стиле",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированность",
+        "целеустремленность"
+      ],
+      "camera": "Статичная камера с панорамированием вслед за движением танцора",
+      "visual_tags": [
+        "танцевальные соревнования",
+        "паркет",
+        "зеленое платье",
+        "номер 38",
+        "судейские столы",
+        "трибуны"
+      ],
+      "search_tags": [
+        "танцевальные соревнования",
+        "паркет",
+        "зеленое платье",
+        "номер 38",
+        "судейские столы",
+        "трибуны",
+        "вращения на месте",
+        "шаги в сторону",
+        "позирование с поднятыми руками",
+        "движения в танцевальном стиле",
+        "девочка-танцор",
+        "другие участники",
+        "судьи",
+        "сконцентрированность",
+        "целеустремленность"
+      ],
+      "search_phrases": [
+        "девочка танцует на паркете на соревнованиях",
+        "детский турнир по спортивным танцам",
+        "танцор в зеленом платье выступает на арене"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "IMG_7205.MOV",
+    "keywords": [
+      "танцевальные соревнования",
+      "паркет",
+      "зеленое платье",
+      "номер 38",
+      "судейские столы",
+      "трибуны",
+      "девочка-танцор",
+      "другие участники",
+      "судьи",
+      "вращения на месте",
+      "шаги в сторону",
+      "позирование с поднятыми руками",
+      "движения в танцевальном стиле",
+      "сконцентрированность",
+      "целеустремленность"
+    ],
+    "actions": [
+      "вращения на месте",
+      "шаги в сторону",
+      "позирование с поднятыми руками",
+      "движения в танцевальном стиле"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сконцентрированность",
+      "целеустремленность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка танцует на паркете на соревнованиях",
+      "детский турнир по спортивным танцам",
+      "танцор в зеленом платье выступает на арене"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

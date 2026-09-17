@@ -1,0 +1,276 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-08T14:18:20.278182+00:00",
+  "updated_at": "2026-09-08T14:18:20.278217+00:00",
+  "video": {
+    "file_id": "1AF-zcGo2tErTMPsb6sTucLi_ez1eZQxV",
+    "filename": "IMG_7202.MOV",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "sports_action",
+      "event"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Играет фоновая ритмичная танцевальная музыка, слышен слабый гул помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка с арены турнира",
+    "music_description": "Ритмичная танцевальная музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 41.5,
+      "duration": 41.5,
+      "description": "Дети исполняют танцевальные движения на паркете спортивной арены во время соревнований перед судьями и трибунами.",
+      "subjects": [
+        "Дети-танцоры",
+        "Судьи"
+      ],
+      "actions": [
+        {
+          "action": "танцевальные движения на паркете",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование в паре и соло",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "вращения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "танцевальные движения на паркете",
+        "позирование в паре и соло",
+        "ритмичные шаги",
+        "вращения"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера с общего плана",
+      "composition": "Центральная композиция, общий план арены",
+      "emotion": [
+        "сосредоточенность",
+        "уверенность"
+      ],
+      "location": [],
+      "interaction": "Танцоры на паркете, жюри за столами",
+      "visual_tags": [
+        "танцевальный турнир",
+        "дети",
+        "паркет",
+        "трибуны",
+        "судьи"
+      ],
+      "search_phrases": [
+        "дети танцуют на паркете соревнований",
+        "танцевальный турнир общий план",
+        "выступление юных танцоров на арене"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 41.5,
+      "duration": 41.5,
+      "semantic_description": "Дети исполняют танцевальные движения на паркете спортивной арены во время соревнований перед судьями и трибунами.",
+      "subjects": [
+        "Дети-танцоры",
+        "Судьи"
+      ],
+      "actions": [
+        {
+          "action": "танцевальные движения на паркете",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование в паре и соло",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "вращения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "уверенность"
+      ],
+      "camera": "Статичная камера с общего плана",
+      "visual_tags": [
+        "танцевальный турнир",
+        "дети",
+        "паркет",
+        "трибуны",
+        "судьи"
+      ],
+      "search_tags": [
+        "танцевальный турнир",
+        "дети",
+        "паркет",
+        "трибуны",
+        "судьи",
+        "танцевальные движения на паркете",
+        "позирование в паре и соло",
+        "ритмичные шаги",
+        "вращения",
+        "Дети-танцоры",
+        "Судьи",
+        "сосредоточенность",
+        "уверенность"
+      ],
+      "search_phrases": [
+        "дети танцуют на паркете соревнований",
+        "танцевальный турнир общий план",
+        "выступление юных танцоров на арене"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "IMG_7202.MOV",
+    "keywords": [
+      "танцевальный турнир",
+      "дети",
+      "паркет",
+      "трибуны",
+      "судьи",
+      "Дети-танцоры",
+      "Судьи",
+      "танцевальные движения на паркете",
+      "позирование в паре и соло",
+      "ритмичные шаги",
+      "вращения",
+      "сосредоточенность",
+      "уверенность"
+    ],
+    "actions": [
+      "танцевальные движения на паркете",
+      "позирование в паре и соло",
+      "ритмичные шаги",
+      "вращения"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "уверенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети танцуют на паркете соревнований",
+      "танцевальный турнир общий план",
+      "выступление юных танцоров на арене"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

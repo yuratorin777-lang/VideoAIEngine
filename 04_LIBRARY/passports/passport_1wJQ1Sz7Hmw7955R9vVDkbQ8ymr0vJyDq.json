@@ -1,0 +1,87 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-14T08:28:10.384885+00:00",
+  "updated_at": "2026-09-14T08:28:10.384935+00:00",
+  "video": {
+    "file_id": "1wJQ1Sz7Hmw7955R9vVDkbQ8ymr0vJyDq",
+    "filename": "document_5197459153181777152.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": null,
+    "confidence": null,
+    "categories": [],
+    "secondary_categories": [],
+    "possible_use_cases": []
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": false,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": false,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [],
+      "confidence_notes": ""
+    },
+    "original_audio_present": false,
+    "preserve_original_audio": false,
+    "audio_description": "",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [],
+  "segments": [],
+  "search_index": {
+    "filename": "document_5197459153181777152.mp4",
+    "keywords": [],
+    "actions": [],
+    "spoken_text": "",
+    "has_visual_content": false,
+    "has_audio": false,
+    "has_speech": false,
+    "has_music": false,
+    "has_ambient_sound": false,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 0,
+    "locations": [],
+    "emotions": [],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": []
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": false,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

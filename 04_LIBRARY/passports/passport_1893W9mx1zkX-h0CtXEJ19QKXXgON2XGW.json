@@ -1,0 +1,275 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-08T09:23:28.391987+00:00",
+  "updated_at": "2026-09-08T09:23:28.392023+00:00",
+  "video": {
+    "file_id": "1893W9mx1zkX-h0CtXEJ19QKXXgON2XGW",
+    "filename": "Видео от Yuriy Torin",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "sports_action",
+      "event"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Фоновая музыка играет на арене во время танцевального выступления."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Рыночная или ареноподобная фоновая музыка с примесью окружающих звуков помещения.",
+    "music_description": "Мелодичная фоновая музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 54.0,
+      "duration": 54.0,
+      "description": "Участники танцевального турнира на паркете арены исполняют сольные элементы, на переднем плане девочка в ярко-салатовом платье.",
+      "subjects": [
+        "дети-участники",
+        "девочка в салатовом платье"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги в сторону",
+        "поворот через плечо",
+        "жестикуляция руками",
+        "позирование"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "центральная композиция, фигура участницы на переднем плане",
+      "emotion": [
+        "сосредоточенность",
+        "энергичность"
+      ],
+      "location": [],
+      "interaction": "соревновательное выступление",
+      "visual_tags": [
+        "соревнования",
+        "танцы",
+        "дети",
+        "арена",
+        "нагрудный номер"
+      ],
+      "search_phrases": [
+        "дети выступают на танцевальном турнире",
+        "девочка в ярко-салатовом платье танцует на паркете",
+        "соревнования по танцам на арене"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 54.0,
+      "duration": 54.0,
+      "semantic_description": "Участники танцевального турнира на паркете арены исполняют сольные элементы, на переднем плане девочка в ярко-салатовом платье.",
+      "subjects": [
+        "дети-участники",
+        "девочка в салатовом платье"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "энергичность"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "соревнования",
+        "танцы",
+        "дети",
+        "арена",
+        "нагрудный номер"
+      ],
+      "search_tags": [
+        "соревнования",
+        "танцы",
+        "дети",
+        "арена",
+        "нагрудный номер",
+        "ритмичные шаги в сторону",
+        "поворот через плечо",
+        "жестикуляция руками",
+        "позирование",
+        "дети-участники",
+        "девочка в салатовом платье",
+        "сосредоточенность",
+        "энергичность"
+      ],
+      "search_phrases": [
+        "дети выступают на танцевальном турнире",
+        "девочка в ярко-салатовом платье танцует на паркете",
+        "соревнования по танцам на арене"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "Видео от Yuriy Torin",
+    "keywords": [
+      "соревнования",
+      "танцы",
+      "дети",
+      "арена",
+      "нагрудный номер",
+      "дети-участники",
+      "девочка в салатовом платье",
+      "ритмичные шаги в сторону",
+      "поворот через плечо",
+      "жестикуляция руками",
+      "позирование",
+      "сосредоточенность",
+      "энергичность"
+    ],
+    "actions": [
+      "ритмичные шаги в сторону",
+      "поворот через плечо",
+      "жестикуляция руками",
+      "позирование"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "энергичность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети выступают на танцевальном турнире",
+      "девочка в ярко-салатовом платье танцует на паркете",
+      "соревнования по танцам на арене"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

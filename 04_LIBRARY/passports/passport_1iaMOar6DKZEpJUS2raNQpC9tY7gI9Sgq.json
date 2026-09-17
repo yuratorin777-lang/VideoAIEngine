@@ -1,0 +1,586 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-11T08:30:56.336807+00:00",
+  "updated_at": "2026-09-11T08:30:56.336849+00:00",
+  "video": {
+    "file_id": "1iaMOar6DKZEpJUS2raNQpC9tY7gI9Sgq",
+    "filename": "document_5269212654945215357.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "sports_action",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "educational",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "два, три, четыре, пять, шесть, семь, восемь",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 16.0,
+        "speaker": "Инструктор",
+        "text": "два, три, четыре, пять, шесть, семь, восемь"
+      },
+      {
+        "start": 20.0,
+        "end": 36.0,
+        "speaker": "Инструктор",
+        "text": "два, три, четыре, пять, шесть, семь, восемь"
+      },
+      {
+        "start": 36.0,
+        "end": 43.5,
+        "speaker": "Инструктор",
+        "text": "два, три, четыре, пять, шесть, семь, восемь"
+      }
+    ],
+    "segment_count": 3
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": false,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "speech",
+        "music"
+      ],
+      "confidence_notes": "Присутствует фоновая музыка и счет инструктора"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая ритмичная музыка и голос инструктора, ведущего счет",
+    "music_description": "Ритмичная электронная фоновая музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 17.0,
+      "duration": 17.0,
+      "description": "Девочка в розовой футболке лежит на спине и ритмично поднимает прямые ноги вверх",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "подъем прямых ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание равновесия",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "подъем прямых ног",
+        "удержание равновесия"
+      ],
+      "dance_elements": [],
+      "camera": "статичная верхняя точка",
+      "composition": "крупный план",
+      "emotion": [
+        "сконцентрированная"
+      ],
+      "location": [],
+      "interaction": "нет",
+      "visual_tags": [
+        "тренировка",
+        "упражнение"
+      ],
+      "search_phrases": [
+        "ребенок делает упражнение на пресс",
+        "девочка поднимает ноги лежа"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": false,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 17.0,
+      "end": 20.0,
+      "duration": 3.0,
+      "description": "Смена кадра, другая девочка в белой футболке лежит на полу",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "исходное положение для упражнения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "исходное положение для упражнения"
+      ],
+      "dance_elements": [],
+      "camera": "статичная верхняя точка",
+      "composition": "общий план",
+      "emotion": [
+        "спокойная"
+      ],
+      "location": [],
+      "interaction": "нет",
+      "visual_tags": [
+        "спортзал",
+        "дети"
+      ],
+      "search_phrases": [
+        "ребенок лежит на полу в спортзале"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": false,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "start": 20.0,
+      "end": 25.0,
+      "duration": 5.0,
+      "description": "Девочка в розовой футболке выполняет подъем ног с другого ракурса",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "подъем ног вверх",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "подъем ног вверх"
+      ],
+      "dance_elements": [],
+      "camera": "статичная верхняя точка",
+      "composition": "средний план",
+      "emotion": [
+        "серьезная"
+      ],
+      "location": [],
+      "interaction": "нет",
+      "visual_tags": [
+        "фитнес",
+        "дети"
+      ],
+      "search_phrases": [
+        "детская тренировка упражнение на пресс"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": false,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    },
+    {
+      "id": "scene_004",
+      "start": 25.0,
+      "end": 43.5,
+      "duration": 18.5,
+      "description": "Смена кадров с девочкой в белой футболке и девочкой в розовой футболке, выполняющими упражнения",
+      "subjects": [
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "синхронные упражнения",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подъем ног",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "синхронные упражнения",
+        "подъем ног"
+      ],
+      "dance_elements": [],
+      "camera": "динамичная смена ракурсов",
+      "composition": "общий и средний план",
+      "emotion": [
+        "усердные"
+      ],
+      "location": [],
+      "interaction": "нет",
+      "visual_tags": [
+        "тренировка",
+        "упражнения для детей"
+      ],
+      "search_phrases": [
+        "дети занимаются спортом на полу"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": false,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 17.0,
+      "duration": 17.0,
+      "semantic_description": "Девочка в розовой футболке лежит на спине и ритмично поднимает прямые ноги вверх",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "подъем прямых ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание равновесия",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированная"
+      ],
+      "camera": "статичная верхняя точка",
+      "visual_tags": [
+        "тренировка",
+        "упражнение"
+      ],
+      "search_tags": [
+        "тренировка",
+        "упражнение",
+        "подъем прямых ног",
+        "удержание равновесия",
+        "девочка",
+        "сконцентрированная"
+      ],
+      "search_phrases": [
+        "ребенок делает упражнение на пресс",
+        "девочка поднимает ноги лежа"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 16.0,
+          "speaker": "Инструктор",
+          "text": "два, три, четыре, пять, шесть, семь, восемь"
+        }
+      ],
+      "spoken_text": "два, три, четыре, пять, шесть, семь, восемь",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": true,
+        "has_ambient_sound": false,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 17.0,
+      "end": 20.0,
+      "duration": 3.0,
+      "semantic_description": "Смена кадра, другая девочка в белой футболке лежит на полу",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "исходное положение для упражнения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "спокойная"
+      ],
+      "camera": "статичная верхняя точка",
+      "visual_tags": [
+        "спортзал",
+        "дети"
+      ],
+      "search_tags": [
+        "спортзал",
+        "дети",
+        "исходное положение для упражнения",
+        "девочка",
+        "спокойная"
+      ],
+      "search_phrases": [
+        "ребенок лежит на полу в спортзале"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": false,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_003",
+      "start": 20.0,
+      "end": 25.0,
+      "duration": 5.0,
+      "semantic_description": "Девочка в розовой футболке выполняет подъем ног с другого ракурса",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "подъем ног вверх",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "серьезная"
+      ],
+      "camera": "статичная верхняя точка",
+      "visual_tags": [
+        "фитнес",
+        "дети"
+      ],
+      "search_tags": [
+        "фитнес",
+        "дети",
+        "подъем ног вверх",
+        "девочка",
+        "серьезная"
+      ],
+      "search_phrases": [
+        "детская тренировка упражнение на пресс"
+      ],
+      "speech": [
+        {
+          "start": 20.0,
+          "end": 36.0,
+          "speaker": "Инструктор",
+          "text": "два, три, четыре, пять, шесть, семь, восемь"
+        }
+      ],
+      "spoken_text": "два, три, четыре, пять, шесть, семь, восемь",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": true,
+        "has_ambient_sound": false,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_004",
+      "start": 25.0,
+      "end": 43.5,
+      "duration": 18.5,
+      "semantic_description": "Смена кадров с девочкой в белой футболке и девочкой в розовой футболке, выполняющими упражнения",
+      "subjects": [
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "синхронные упражнения",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подъем ног",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "усердные"
+      ],
+      "camera": "динамичная смена ракурсов",
+      "visual_tags": [
+        "тренировка",
+        "упражнения для детей"
+      ],
+      "search_tags": [
+        "тренировка",
+        "упражнения для детей",
+        "синхронные упражнения",
+        "подъем ног",
+        "дети",
+        "усердные"
+      ],
+      "search_phrases": [
+        "дети занимаются спортом на полу"
+      ],
+      "speech": [
+        {
+          "start": 20.0,
+          "end": 36.0,
+          "speaker": "Инструктор",
+          "text": "два, три, четыре, пять, шесть, семь, восемь"
+        },
+        {
+          "start": 36.0,
+          "end": 43.5,
+          "speaker": "Инструктор",
+          "text": "два, три, четыре, пять, шесть, семь, восемь"
+        }
+      ],
+      "spoken_text": "два, три, четыре, пять, шесть, семь, восемь два, три, четыре, пять, шесть, семь, восемь",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": true,
+        "has_ambient_sound": false,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5269212654945215357.mp4",
+    "keywords": [
+      "тренировка",
+      "упражнение",
+      "девочка",
+      "спортзал",
+      "дети",
+      "фитнес",
+      "упражнения для детей",
+      "подъем прямых ног",
+      "удержание равновесия",
+      "сконцентрированная",
+      "исходное положение для упражнения",
+      "спокойная",
+      "подъем ног вверх",
+      "серьезная",
+      "синхронные упражнения",
+      "подъем ног",
+      "усердные"
+    ],
+    "actions": [
+      "подъем прямых ног",
+      "удержание равновесия",
+      "исходное положение для упражнения",
+      "подъем ног вверх",
+      "синхронные упражнения",
+      "подъем ног"
+    ],
+    "spoken_text": "два, три, четыре, пять, шесть, семь, восемь",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": true,
+    "has_ambient_sound": false,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 4,
+    "locations": [],
+    "emotions": [
+      "сконцентрированная",
+      "спокойная",
+      "серьезная",
+      "усердные"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "ребенок делает упражнение на пресс",
+      "девочка поднимает ноги лежа",
+      "ребенок лежит на полу в спортзале",
+      "детская тренировка упражнение на пресс",
+      "дети занимаются спортом на полу"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-11T08:32:01.658451+00:00",
+  "updated_at": "2026-09-11T08:32:01.658483+00:00",
+  "video": {
+    "file_id": "1JmT3dyXnwOXSMqx3ttFdc0cx6mlIwbiA",
+    "filename": "document_5269212654945215351.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "И носочек. И носочек. И пять, шесть, семь, прыжок. И пять. И носочек. Богдан, выше коленочки. Пять. Носочек. И пять, шесть, семь, прыжок.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 15.0,
+        "speaker": "Преподаватель",
+        "text": "И носочек. И носочек. И пять, шесть, семь, прыжок."
+      },
+      {
+        "start": 15.0,
+        "end": 29.0,
+        "speaker": "Преподаватель",
+        "text": "И пять. И носочек. Богдан, выше коленочки. Пять. Носочек. И пять, шесть, семь, прыжок."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Голос преподавателя на фоне звуков помещения и шагов"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос тренера, дающего указания и считающего такты, а также звуки шагов на деревянном полу.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 29.0,
+      "duration": 29.0,
+      "description": "Преподаватель проводит занятие танцами для детей в зале, дети повторяют движения под счет.",
+      "subjects": [
+        "преподаватель",
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "выставление носочка",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "прыжки на месте",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "шаги в сторону",
+        "выставление носочка",
+        "прыжки на месте",
+        "синхронное движение ног",
+        "руки на поясе"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера, панорамирование за детьми",
+      "composition": "общий план танцевального зала",
+      "emotion": [
+        "сосредоточенность",
+        "активность"
+      ],
+      "location": [],
+      "interaction": "преподаватель инструктирует детей, дети выполняют движения",
+      "visual_tags": [
+        "дети",
+        "танцы",
+        "тренировка",
+        "педагог"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "преподаватель ведет танцевальный урок",
+        "дети выполняют танцевальные движения под счет"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 29.0,
+      "duration": 29.0,
+      "semantic_description": "Преподаватель проводит занятие танцами для детей в зале, дети повторяют движения под счет.",
+      "subjects": [
+        "преподаватель",
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "выставление носочка",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "прыжки на месте",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "активность"
+      ],
+      "camera": "статичная камера, панорамирование за детьми",
+      "visual_tags": [
+        "дети",
+        "танцы",
+        "тренировка",
+        "педагог"
+      ],
+      "search_tags": [
+        "дети",
+        "танцы",
+        "тренировка",
+        "педагог",
+        "шаги в сторону",
+        "выставление носочка",
+        "прыжки на месте",
+        "синхронное движение ног",
+        "руки на поясе",
+        "преподаватель",
+        "сосредоточенность",
+        "активность"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "преподаватель ведет танцевальный урок",
+        "дети выполняют танцевальные движения под счет"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 15.0,
+          "speaker": "Преподаватель",
+          "text": "И носочек. И носочек. И пять, шесть, семь, прыжок."
+        },
+        {
+          "start": 15.0,
+          "end": 29.0,
+          "speaker": "Преподаватель",
+          "text": "И пять. И носочек. Богдан, выше коленочки. Пять. Носочек. И пять, шесть, семь, прыжок."
+        }
+      ],
+      "spoken_text": "И носочек. И носочек. И пять, шесть, семь, прыжок. И пять. И носочек. Богдан, выше коленочки. Пять. Носочек. И пять, шесть, семь, прыжок.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5269212654945215351.mp4",
+    "keywords": [
+      "дети",
+      "танцы",
+      "тренировка",
+      "педагог",
+      "преподаватель",
+      "шаги в сторону",
+      "выставление носочка",
+      "прыжки на месте",
+      "синхронное движение ног",
+      "руки на поясе",
+      "сосредоточенность",
+      "активность"
+    ],
+    "actions": [
+      "шаги в сторону",
+      "выставление носочка",
+      "прыжки на месте",
+      "синхронное движение ног",
+      "руки на поясе"
+    ],
+    "spoken_text": "И носочек. И носочек. И пять, шесть, семь, прыжок. И пять. И носочек. Богдан, выше коленочки. Пять. Носочек. И пять, шесть, семь, прыжок.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "активность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами в зале",
+      "преподаватель ведет танцевальный урок",
+      "дети выполняют танцевальные движения под счет"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

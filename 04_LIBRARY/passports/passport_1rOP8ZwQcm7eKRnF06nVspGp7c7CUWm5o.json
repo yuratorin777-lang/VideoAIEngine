@@ -1,0 +1,271 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-11T08:34:43.437383+00:00",
+  "updated_at": "2026-09-11T08:34:43.437419+00:00",
+  "video": {
+    "file_id": "1rOP8ZwQcm7eKRnF06nVspGp7c7CUWm5o",
+    "filename": "2_5260508985324248277.MOV",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "event",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "event",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая музыка мероприятия и акустика помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка в помещении и пространственный шум спортивного зала.",
+    "music_description": "Ритмичная музыка для танцевального выступления.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 32.0,
+      "duration": 32.0,
+      "description": "Участницы танцевального турнира выполняют движения на паркете спортивного зала.",
+      "subjects": [
+        "девочки-танцовщицы",
+        "судьи"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "бальные танцы",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги в сторону",
+        "поворот через плечо",
+        "позирование",
+        "бальные танцы"
+      ],
+      "dance_elements": [],
+      "camera": "статичная съемка с рук с панорамированием",
+      "composition": "общий план",
+      "emotion": [
+        "сконцентрированность",
+        "целеустремленность"
+      ],
+      "location": [],
+      "interaction": "выступление на паркете перед судьями",
+      "visual_tags": [
+        "танцевальный турнир",
+        "дети",
+        "паркет",
+        "соревнования"
+      ],
+      "search_phrases": [
+        "девочка танцует на паркете",
+        "танцевальные соревнования детей",
+        "выступление на турнире"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 32.0,
+      "duration": 32.0,
+      "semantic_description": "Участницы танцевального турнира выполняют движения на паркете спортивного зала.",
+      "subjects": [
+        "девочки-танцовщицы",
+        "судьи"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "бальные танцы",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированность",
+        "целеустремленность"
+      ],
+      "camera": "статичная съемка с рук с панорамированием",
+      "visual_tags": [
+        "танцевальный турнир",
+        "дети",
+        "паркет",
+        "соревнования"
+      ],
+      "search_tags": [
+        "танцевальный турнир",
+        "дети",
+        "паркет",
+        "соревнования",
+        "ритмичные шаги в сторону",
+        "поворот через плечо",
+        "позирование",
+        "бальные танцы",
+        "девочки-танцовщицы",
+        "судьи",
+        "сконцентрированность",
+        "целеустремленность"
+      ],
+      "search_phrases": [
+        "девочка танцует на паркете",
+        "танцевальные соревнования детей",
+        "выступление на турнире"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "2_5260508985324248277.MOV",
+    "keywords": [
+      "танцевальный турнир",
+      "дети",
+      "паркет",
+      "соревнования",
+      "девочки-танцовщицы",
+      "судьи",
+      "ритмичные шаги в сторону",
+      "поворот через плечо",
+      "позирование",
+      "бальные танцы",
+      "сконцентрированность",
+      "целеустремленность"
+    ],
+    "actions": [
+      "ритмичные шаги в сторону",
+      "поворот через плечо",
+      "позирование",
+      "бальные танцы"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сконцентрированность",
+      "целеустремленность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка танцует на паркете",
+      "танцевальные соревнования детей",
+      "выступление на турнире"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

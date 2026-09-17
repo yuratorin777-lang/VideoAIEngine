@@ -1,0 +1,755 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-11T08:39:34.292428+00:00",
+  "updated_at": "2026-09-11T08:39:34.292459+00:00",
+  "video": {
+    "file_id": "1FqgrWpsrHnE9LvBWrrM6dNpIb6-dQgY3",
+    "filename": "document_5269212654945215365.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "sports_action",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "educational",
+      "behind_the_scenes",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Давай. Тянемся, тянемся. Давай, молодец, Амил. А Милана у нас молодец.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 8.0,
+        "speaker": "Тренер",
+        "text": "Давай. Тянемся, тянемся."
+      },
+      {
+        "start": 8.0,
+        "end": 14.0,
+        "speaker": "Тренер",
+        "text": "Давай, молодец, Амил."
+      },
+      {
+        "start": 14.0,
+        "end": 18.0,
+        "speaker": "Тренер",
+        "text": "А Милана у нас молодец."
+      }
+    ],
+    "segment_count": 3
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышны голоса детей и тренера, а также звуки обстановки спортивного зала."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос тренера, дающего указания детям, звуки зала.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 4.0,
+      "duration": 4.0,
+      "description": "Девочка в розовой футболке и шортах делает растяжку сидя на полу.",
+      "subjects": [
+        "ребенок",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "наклон вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание ног прямыми",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "наклон вперед",
+        "удержание ног прямыми",
+        "растяжка"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "средний план",
+      "emotion": [
+        "усердие",
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "растяжка",
+        "дети",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "ребенок делает растяжку на полу",
+        "детская тренировка по гимнастике"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 4.0,
+      "end": 7.0,
+      "duration": 3.0,
+      "description": "Маленькая девочка в белой футболке сидит на полу в зале, опираясь руками назад.",
+      "subjects": [
+        "ребенок",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "опора руками сзади",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "улыбка в камеру",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "опора руками сзади",
+        "улыбка в камеру"
+      ],
+      "dance_elements": [],
+      "camera": "динамичный кадр",
+      "composition": "средний план",
+      "emotion": [
+        "радость",
+        "улыбка"
+      ],
+      "location": [],
+      "interaction": "взаимодействие с камерой",
+      "visual_tags": [
+        "ребенок улыбается",
+        "детская тренировка"
+      ],
+      "search_phrases": [
+        "маленькая девочка улыбается на тренировке"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "start": 7.0,
+      "end": 10.0,
+      "duration": 3.0,
+      "description": "Продолжение упражнения на растяжку девочки в розовом.",
+      "subjects": [
+        "ребенок"
+      ],
+      "actions": [
+        {
+          "action": "растяжка ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "наклоны",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "растяжка ног",
+        "наклоны"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "крупный план",
+      "emotion": [
+        "старание"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "гимнастика",
+        "растяжка"
+      ],
+      "search_phrases": [
+        "дети занимаются гимнастикой"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    },
+    {
+      "id": "scene_004",
+      "start": 10.0,
+      "end": 17.0,
+      "duration": 7.0,
+      "description": "Другой ребенок сидит на полу и тянется вперед под одобрение тренера.",
+      "subjects": [
+        "ребенок",
+        "тренер"
+      ],
+      "actions": [
+        {
+          "action": "наклон вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "наклон вперед",
+        "растяжка"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "старание"
+      ],
+      "location": [],
+      "interaction": "тренер хвалит ребенка",
+      "visual_tags": [
+        "тренер и дети",
+        "растяжка"
+      ],
+      "search_phrases": [
+        "тренер хвалит ребенка на тренировке"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    },
+    {
+      "id": "scene_005",
+      "start": 17.0,
+      "end": 18.0,
+      "duration": 1.0,
+      "description": "Девочка в розовом продолжает тянуться к ногам.",
+      "subjects": [
+        "ребенок"
+      ],
+      "actions": [
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "растяжка"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "крупный план",
+      "emotion": [
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "растяжка"
+      ],
+      "search_phrases": [
+        "финальный кадр растяжки"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 4.0,
+      "duration": 4.0,
+      "semantic_description": "Девочка в розовой футболке и шортах делает растяжку сидя на полу.",
+      "subjects": [
+        "ребенок",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "наклон вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание ног прямыми",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "усердие",
+        "концентрация"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "растяжка",
+        "дети",
+        "тренировка"
+      ],
+      "search_tags": [
+        "растяжка",
+        "дети",
+        "тренировка",
+        "наклон вперед",
+        "удержание ног прямыми",
+        "ребенок",
+        "девочка",
+        "усердие",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "ребенок делает растяжку на полу",
+        "детская тренировка по гимнастике"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 8.0,
+          "speaker": "Тренер",
+          "text": "Давай. Тянемся, тянемся."
+        }
+      ],
+      "spoken_text": "Давай. Тянемся, тянемся.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 4.0,
+      "end": 7.0,
+      "duration": 3.0,
+      "semantic_description": "Маленькая девочка в белой футболке сидит на полу в зале, опираясь руками назад.",
+      "subjects": [
+        "ребенок",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "опора руками сзади",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "улыбка в камеру",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "радость",
+        "улыбка"
+      ],
+      "camera": "динамичный кадр",
+      "visual_tags": [
+        "ребенок улыбается",
+        "детская тренировка"
+      ],
+      "search_tags": [
+        "ребенок улыбается",
+        "детская тренировка",
+        "опора руками сзади",
+        "улыбка в камеру",
+        "ребенок",
+        "девочка",
+        "радость",
+        "улыбка"
+      ],
+      "search_phrases": [
+        "маленькая девочка улыбается на тренировке"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 8.0,
+          "speaker": "Тренер",
+          "text": "Давай. Тянемся, тянемся."
+        }
+      ],
+      "spoken_text": "Давай. Тянемся, тянемся.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_003",
+      "start": 7.0,
+      "end": 10.0,
+      "duration": 3.0,
+      "semantic_description": "Продолжение упражнения на растяжку девочки в розовом.",
+      "subjects": [
+        "ребенок"
+      ],
+      "actions": [
+        {
+          "action": "растяжка ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "наклоны",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "старание"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "гимнастика",
+        "растяжка"
+      ],
+      "search_tags": [
+        "гимнастика",
+        "растяжка",
+        "растяжка ног",
+        "наклоны",
+        "ребенок",
+        "старание"
+      ],
+      "search_phrases": [
+        "дети занимаются гимнастикой"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 8.0,
+          "speaker": "Тренер",
+          "text": "Давай. Тянемся, тянемся."
+        },
+        {
+          "start": 8.0,
+          "end": 14.0,
+          "speaker": "Тренер",
+          "text": "Давай, молодец, Амил."
+        }
+      ],
+      "spoken_text": "Давай. Тянемся, тянемся. Давай, молодец, Амил.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_004",
+      "start": 10.0,
+      "end": 17.0,
+      "duration": 7.0,
+      "semantic_description": "Другой ребенок сидит на полу и тянется вперед под одобрение тренера.",
+      "subjects": [
+        "ребенок",
+        "тренер"
+      ],
+      "actions": [
+        {
+          "action": "наклон вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "старание"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "тренер и дети",
+        "растяжка"
+      ],
+      "search_tags": [
+        "тренер и дети",
+        "растяжка",
+        "наклон вперед",
+        "ребенок",
+        "тренер",
+        "старание"
+      ],
+      "search_phrases": [
+        "тренер хвалит ребенка на тренировке"
+      ],
+      "speech": [
+        {
+          "start": 8.0,
+          "end": 14.0,
+          "speaker": "Тренер",
+          "text": "Давай, молодец, Амил."
+        },
+        {
+          "start": 14.0,
+          "end": 18.0,
+          "speaker": "Тренер",
+          "text": "А Милана у нас молодец."
+        }
+      ],
+      "spoken_text": "Давай, молодец, Амил. А Милана у нас молодец.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_005",
+      "start": 17.0,
+      "end": 18.0,
+      "duration": 1.0,
+      "semantic_description": "Девочка в розовом продолжает тянуться к ногам.",
+      "subjects": [
+        "ребенок"
+      ],
+      "actions": [
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "концентрация"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "растяжка"
+      ],
+      "search_tags": [
+        "растяжка",
+        "ребенок",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "финальный кадр растяжки"
+      ],
+      "speech": [
+        {
+          "start": 14.0,
+          "end": 18.0,
+          "speaker": "Тренер",
+          "text": "А Милана у нас молодец."
+        }
+      ],
+      "spoken_text": "А Милана у нас молодец.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5269212654945215365.mp4",
+    "keywords": [
+      "растяжка",
+      "дети",
+      "тренировка",
+      "ребенок",
+      "девочка",
+      "ребенок улыбается",
+      "детская тренировка",
+      "гимнастика",
+      "тренер и дети",
+      "тренер",
+      "наклон вперед",
+      "удержание ног прямыми",
+      "усердие",
+      "концентрация",
+      "опора руками сзади",
+      "улыбка в камеру",
+      "радость",
+      "улыбка",
+      "растяжка ног",
+      "наклоны",
+      "старание"
+    ],
+    "actions": [
+      "наклон вперед",
+      "удержание ног прямыми",
+      "растяжка",
+      "опора руками сзади",
+      "улыбка в камеру",
+      "растяжка ног",
+      "наклоны"
+    ],
+    "spoken_text": "Давай. Тянемся, тянемся. Давай, молодец, Амил. А Милана у нас молодец.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 5,
+    "locations": [],
+    "emotions": [
+      "усердие",
+      "концентрация",
+      "радость",
+      "улыбка",
+      "старание"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "ребенок делает растяжку на полу",
+      "детская тренировка по гимнастике",
+      "маленькая девочка улыбается на тренировке",
+      "дети занимаются гимнастикой",
+      "тренер хвалит ребенка на тренировке",
+      "финальный кадр растяжки"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

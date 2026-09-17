@@ -1,0 +1,266 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-08T09:22:50.249951+00:00",
+  "updated_at": "2026-09-08T09:22:50.251010+00:00",
+  "video": {
+    "file_id": "1_KDokCF9hdROX4VAwOsk8GQ-8uug2Jqe",
+    "filename": "Видео от Yuriy Torin",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "event",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая музыка турнира и легкий гул помещения"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка соревнований и атмосферный шум просторного зала",
+    "music_description": "Танцевальная фоновая музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 34.0,
+      "duration": 34.0,
+      "description": "Девочка в ярко-желтом платье танцует сольный танец на паркетной площадке спортивного комплекса во время соревнований.",
+      "subjects": [
+        "девочка-танцор",
+        "судьи",
+        "трибуны"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование с поднятой рукой",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "передвижение по паркету",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги в сторону",
+        "позирование с поднятой рукой",
+        "передвижение по паркету"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера с панорамированием вслед за танцором",
+      "composition": "Общий план спортивного зала с центральным размещением объекта",
+      "emotion": [
+        "сконцентрированность",
+        "энергичность"
+      ],
+      "location": [],
+      "interaction": "участие в танцевальном соревновании перед судьями",
+      "visual_tags": [
+        "танец",
+        "соревнования",
+        "девочка",
+        "желтое платье",
+        "паркет"
+      ],
+      "search_phrases": [
+        "девочка танцует на паркете в желтом платье",
+        "детские танцевальные соревнования на арене",
+        "сольное выступление на турнире по танцам"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 34.0,
+      "duration": 34.0,
+      "semantic_description": "Девочка в ярко-желтом платье танцует сольный танец на паркетной площадке спортивного комплекса во время соревнований.",
+      "subjects": [
+        "девочка-танцор",
+        "судьи",
+        "трибуны"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование с поднятой рукой",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "передвижение по паркету",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированность",
+        "энергичность"
+      ],
+      "camera": "Статичная камера с панорамированием вслед за танцором",
+      "visual_tags": [
+        "танец",
+        "соревнования",
+        "девочка",
+        "желтое платье",
+        "паркет"
+      ],
+      "search_tags": [
+        "танец",
+        "соревнования",
+        "девочка",
+        "желтое платье",
+        "паркет",
+        "ритмичные шаги в сторону",
+        "позирование с поднятой рукой",
+        "передвижение по паркету",
+        "девочка-танцор",
+        "судьи",
+        "трибуны",
+        "сконцентрированность",
+        "энергичность"
+      ],
+      "search_phrases": [
+        "девочка танцует на паркете в желтом платье",
+        "детские танцевальные соревнования на арене",
+        "сольное выступление на турнире по танцам"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "Видео от Yuriy Torin",
+    "keywords": [
+      "танец",
+      "соревнования",
+      "девочка",
+      "желтое платье",
+      "паркет",
+      "девочка-танцор",
+      "судьи",
+      "трибуны",
+      "ритмичные шаги в сторону",
+      "позирование с поднятой рукой",
+      "передвижение по паркету",
+      "сконцентрированность",
+      "энергичность"
+    ],
+    "actions": [
+      "ритмичные шаги в сторону",
+      "позирование с поднятой рукой",
+      "передвижение по паркету"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сконцентрированность",
+      "энергичность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка танцует на паркете в желтом платье",
+      "детские танцевальные соревнования на арене",
+      "сольное выступление на турнире по танцам"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

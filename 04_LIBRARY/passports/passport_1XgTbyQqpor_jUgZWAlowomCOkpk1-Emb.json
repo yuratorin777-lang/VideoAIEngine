@@ -1,0 +1,403 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-11T08:39:53.479960+00:00",
+  "updated_at": "2026-09-11T08:39:53.480005+00:00",
+  "video": {
+    "file_id": "1XgTbyQqpor_jUgZWAlowomCOkpk1-Emb",
+    "filename": "document_5269212654945215363.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "sports_action",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "educational",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Алина, ты молодец. Умничка, молодец. Молодцы.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 8.0,
+        "speaker": "Тренер",
+        "text": "Алина, ты молодец. Умничка, молодец."
+      },
+      {
+        "start": 15.0,
+        "end": 15.6,
+        "speaker": "Тренер",
+        "text": "Молодцы."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Записана речь тренера в помещении"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Речь тренера, подбадривающая детей во время занятий",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 9.0,
+      "duration": 9.0,
+      "description": "Крупный план девочки в розовой одежде, выполняющей растяжку на полу в помещении.",
+      "subjects": [
+        "девочка",
+        "тренер"
+      ],
+      "actions": [
+        {
+          "action": "наклон вперед сидя на полу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание позы",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "наклон вперед сидя на полу",
+        "растяжка ног",
+        "удержание позы"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера, крупный план",
+      "composition": "низкий ракурс, ребенок в центре кадра",
+      "emotion": [
+        "старание",
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "тренер помогает или хвалит за кадром",
+      "visual_tags": [
+        "растяжка",
+        "дети",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "ребенок делает растяжку на полу",
+        "девочка на занятии по растяжке"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 9.0,
+      "end": 15.6,
+      "duration": 6.6,
+      "description": "Общий план зала, где несколько детей занимаются растяжкой на полу.",
+      "subjects": [
+        "дети",
+        "мальчик",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "упражнение на растяжку",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "дети в зале",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "упражнение на растяжку",
+        "дети в зале"
+      ],
+      "dance_elements": [],
+      "camera": "общий план, панорама",
+      "composition": "дети распределены по залу",
+      "emotion": [
+        "спокойствие"
+      ],
+      "location": [],
+      "interaction": "самостоятельное выполнение упражнений",
+      "visual_tags": [
+        "детская тренировка",
+        "общий план"
+      ],
+      "search_phrases": [
+        "дети на тренировке по растяжке",
+        "общий план детского зала"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 9.0,
+      "duration": 9.0,
+      "semantic_description": "Крупный план девочки в розовой одежде, выполняющей растяжку на полу в помещении.",
+      "subjects": [
+        "девочка",
+        "тренер"
+      ],
+      "actions": [
+        {
+          "action": "наклон вперед сидя на полу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание позы",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "старание",
+        "концентрация"
+      ],
+      "camera": "статичная камера, крупный план",
+      "visual_tags": [
+        "растяжка",
+        "дети",
+        "тренировка"
+      ],
+      "search_tags": [
+        "растяжка",
+        "дети",
+        "тренировка",
+        "наклон вперед сидя на полу",
+        "растяжка ног",
+        "удержание позы",
+        "девочка",
+        "тренер",
+        "старание",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "ребенок делает растяжку на полу",
+        "девочка на занятии по растяжке"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 8.0,
+          "speaker": "Тренер",
+          "text": "Алина, ты молодец. Умничка, молодец."
+        }
+      ],
+      "spoken_text": "Алина, ты молодец. Умничка, молодец.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 9.0,
+      "end": 15.6,
+      "duration": 6.6,
+      "semantic_description": "Общий план зала, где несколько детей занимаются растяжкой на полу.",
+      "subjects": [
+        "дети",
+        "мальчик",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "упражнение на растяжку",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "дети в зале",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "спокойствие"
+      ],
+      "camera": "общий план, панорама",
+      "visual_tags": [
+        "детская тренировка",
+        "общий план"
+      ],
+      "search_tags": [
+        "детская тренировка",
+        "общий план",
+        "упражнение на растяжку",
+        "дети в зале",
+        "дети",
+        "мальчик",
+        "девочка",
+        "спокойствие"
+      ],
+      "search_phrases": [
+        "дети на тренировке по растяжке",
+        "общий план детского зала"
+      ],
+      "speech": [
+        {
+          "start": 15.0,
+          "end": 15.6,
+          "speaker": "Тренер",
+          "text": "Молодцы."
+        }
+      ],
+      "spoken_text": "Молодцы.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5269212654945215363.mp4",
+    "keywords": [
+      "растяжка",
+      "дети",
+      "тренировка",
+      "девочка",
+      "тренер",
+      "детская тренировка",
+      "общий план",
+      "мальчик",
+      "наклон вперед сидя на полу",
+      "растяжка ног",
+      "удержание позы",
+      "старание",
+      "концентрация",
+      "упражнение на растяжку",
+      "дети в зале",
+      "спокойствие"
+    ],
+    "actions": [
+      "наклон вперед сидя на полу",
+      "растяжка ног",
+      "удержание позы",
+      "упражнение на растяжку",
+      "дети в зале"
+    ],
+    "spoken_text": "Алина, ты молодец. Умничка, молодец. Молодцы.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 2,
+    "locations": [],
+    "emotions": [
+      "старание",
+      "концентрация",
+      "спокойствие"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "ребенок делает растяжку на полу",
+      "девочка на занятии по растяжке",
+      "дети на тренировке по растяжке",
+      "общий план детского зала"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

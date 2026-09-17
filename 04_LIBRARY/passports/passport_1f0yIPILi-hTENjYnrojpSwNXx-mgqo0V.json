@@ -1,0 +1,314 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-14T08:28:29.717724+00:00",
+  "updated_at": "2026-09-14T08:28:29.717831+00:00",
+  "video": {
+    "file_id": "1f0yIPILi-hTENjYnrojpSwNXx-mgqo0V",
+    "filename": "document_5197459153181777149.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Сейчас палочки. И расправь сильно палочки. Всё, замерли, ручки замерли, только ножка, два. Три, четыре. Пять, стоп. Ручки замерли, только носочек. Шесть, ручки замерли, семь. Всё, хлопаем.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.1,
+        "speaker": "Speaker 1",
+        "text": "Сейчас палочки. И расправь сильно палочки."
+      },
+      {
+        "start": 5.2,
+        "end": 12.0,
+        "speaker": "Speaker 1",
+        "text": "Всё, замерли, ручки замерли, только ножка, два. Три, четыре. Пять, стоп."
+      },
+      {
+        "start": 13.5,
+        "end": 19.5,
+        "speaker": "Speaker 1",
+        "text": "Ручки замерли, только носочек. Шесть, ручки замерли, семь."
+      },
+      {
+        "start": 19.8,
+        "end": 21.0,
+        "speaker": "Speaker 1",
+        "text": "Всё, хлопаем."
+      }
+    ],
+    "segment_count": 4
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Запись голоса инструктора в помещении с естественной акустикой."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос инструктора, дающего указания девочке, и хлопки в конце.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 21.8,
+      "duration": 21.8,
+      "description": "Девочка под руководством тренера выполняет танцевальные позиции рук и ног в зале.",
+      "subjects": [
+        "девочка",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "разведение рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаг в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "фиксация положения ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "хлопки в ладоши",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "разведение рук в стороны",
+        "шаг в сторону",
+        "фиксация положения ног",
+        "хлопки в ладоши"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "средний план",
+      "emotion": [
+        "сконцентрированность",
+        "радость"
+      ],
+      "location": [],
+      "interaction": "тренер дает устные указания, девочка повторяет движения",
+      "visual_tags": [
+        "танец",
+        "тренировка",
+        "дети"
+      ],
+      "search_phrases": [
+        "девочка занимается танцами в зале",
+        "тренер обучает ребенка танцевальным движениям"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "speech"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 21.8,
+      "duration": 21.8,
+      "semantic_description": "Девочка под руководством тренера выполняет танцевальные позиции рук и ног в зале.",
+      "subjects": [
+        "девочка",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "разведение рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаг в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "фиксация положения ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "хлопки в ладоши",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированность",
+        "радость"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "танец",
+        "тренировка",
+        "дети"
+      ],
+      "search_tags": [
+        "танец",
+        "тренировка",
+        "дети",
+        "разведение рук в стороны",
+        "шаг в сторону",
+        "фиксация положения ног",
+        "хлопки в ладоши",
+        "девочка",
+        "мальчик",
+        "сконцентрированность",
+        "радость"
+      ],
+      "search_phrases": [
+        "девочка занимается танцами в зале",
+        "тренер обучает ребенка танцевальным движениям"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 2.1,
+          "speaker": "Speaker 1",
+          "text": "Сейчас палочки. И расправь сильно палочки."
+        },
+        {
+          "start": 5.2,
+          "end": 12.0,
+          "speaker": "Speaker 1",
+          "text": "Всё, замерли, ручки замерли, только ножка, два. Три, четыре. Пять, стоп."
+        },
+        {
+          "start": 13.5,
+          "end": 19.5,
+          "speaker": "Speaker 1",
+          "text": "Ручки замерли, только носочек. Шесть, ручки замерли, семь."
+        },
+        {
+          "start": 19.8,
+          "end": 21.0,
+          "speaker": "Speaker 1",
+          "text": "Всё, хлопаем."
+        }
+      ],
+      "spoken_text": "Сейчас палочки. И расправь сильно палочки. Всё, замерли, ручки замерли, только ножка, два. Три, четыре. Пять, стоп. Ручки замерли, только носочек. Шесть, ручки замерли, семь. Всё, хлопаем.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777149.mp4",
+    "keywords": [
+      "танец",
+      "тренировка",
+      "дети",
+      "девочка",
+      "мальчик",
+      "разведение рук в стороны",
+      "шаг в сторону",
+      "фиксация положения ног",
+      "хлопки в ладоши",
+      "сконцентрированность",
+      "радость"
+    ],
+    "actions": [
+      "разведение рук в стороны",
+      "шаг в сторону",
+      "фиксация положения ног",
+      "хлопки в ладоши"
+    ],
+    "spoken_text": "Сейчас палочки. И расправь сильно палочки. Всё, замерли, ручки замерли, только ножка, два. Три, четыре. Пять, стоп. Ручки замерли, только носочек. Шесть, ручки замерли, семь. Всё, хлопаем.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сконцентрированность",
+      "радость"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка занимается танцами в зале",
+      "тренер обучает ребенка танцевальным движениям"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

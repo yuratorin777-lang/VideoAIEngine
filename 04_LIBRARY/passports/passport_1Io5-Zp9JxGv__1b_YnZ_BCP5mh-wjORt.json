@@ -1,0 +1,152 @@
+{
+  "passport_version": "1.0",
+  "created_at": "2026-08-18T04:49:17.923132Z",
+  "video": {
+    "file_id": "1Io5-Zp9JxGv__1b_YnZ_BCP5mh-wjORt",
+    "filename": "document_5197459153181777137.mp4",
+    "drive_url": "",
+    "size_bytes": 0,
+    "created_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage"
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.091,
+        "speaker": "UNKNOWN",
+        "text": "Алиса"
+      },
+      {
+        "start": 0.091,
+        "end": 0.581,
+        "speaker": "UNKNOWN",
+        "text": "На втором месте"
+      },
+      {
+        "start": 0.581,
+        "end": 0.821,
+        "speaker": "UNKNOWN",
+        "text": "Яровая"
+      },
+      {
+        "start": 0.821,
+        "end": 1.151,
+        "speaker": "UNKNOWN",
+        "text": "Дарьята"
+      },
+      {
+        "start": 2.291,
+        "end": 2.761,
+        "speaker": "UNKNOWN",
+        "text": "на первом месте"
+      },
+      {
+        "start": 2.761,
+        "end": 3.491,
+        "speaker": "UNKNOWN",
+        "text": "Калина София"
+      },
+      {
+        "start": 4.091,
+        "end": 4.601,
+        "speaker": "UNKNOWN",
+        "text": "На третьем месте"
+      },
+      {
+        "start": 4.601,
+        "end": 5.251,
+        "speaker": "UNKNOWN",
+        "text": "Грига Мишель"
+      },
+      {
+        "start": 6.041,
+        "end": 6.541,
+        "speaker": "UNKNOWN",
+        "text": "София"
+      },
+      {
+        "start": 6.841,
+        "end": 7.371,
+        "speaker": "UNKNOWN",
+        "text": "и победитель"
+      },
+      {
+        "start": 8.161,
+        "end": 8.741,
+        "speaker": "UNKNOWN",
+        "text": "Дарина"
+      }
+    ]
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "scenes": [
+    {
+      "start": 0.0,
+      "end": 19.333,
+      "description": "This is a video of children in a dancing competition, waiting for the results on the stage, and then they are awarded medals and certificates. They are smiling and looking happy.",
+      "subjects": [
+        "children",
+        "adults",
+        "audience"
+      ],
+      "actions": [
+        "standing",
+        "walking",
+        "giving medals",
+        "receiving medals",
+        "clapping"
+      ],
+      "camera": "medium_shot",
+      "emotion": [
+        "happy",
+        "excited",
+        "proud"
+      ],
+      "visual_tags": [
+        "dancing competition",
+        "awards ceremony",
+        "medals",
+        "certificates",
+        "stage",
+        "children in colorful dresses",
+        "audience",
+        "sports hall"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 19.333,
+      "semantic_description": "This is a video of children in a dancing competition, waiting for the results on the stage, and then they are awarded medals and certificates. They are smiling and looking happy.",
+      "search_tags": [
+        "dancing competition",
+        "awards ceremony",
+        "medals",
+        "certificates",
+        "stage",
+        "children in colorful dresses",
+        "audience",
+        "sports hall",
+        "standing",
+        "walking",
+        "giving medals",
+        "receiving medals",
+        "clapping"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-11T08:32:43.384913+00:00",
+  "updated_at": "2026-09-11T08:32:43.384946+00:00",
+  "video": {
+    "file_id": "1ar2DYC4fjRFjbRN_oj8BDyFLlT2aY-6O",
+    "filename": "document_5269212654945215348.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "красиво стоим длинны длинны длинны",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "speaker": "Speaker 1",
+        "text": "красиво стоим длинны длинны длинны"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Записан голос человека, дающего указания за кадром, и фоновый шум помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Голос инструктора за кадром, дающий указания детям",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "description": "Дети выстроены в колонну в танцевальном зале, на переднем плане девочка в розовом держит руки на поясе, оператор перемещается вокруг детей.",
+      "subjects": [
+        "дети",
+        "девочка в розовом"
+      ],
+      "actions": [
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование в кадре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "построение в колонну",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "руки на поясе",
+        "позирование в кадре",
+        "построение в колонну"
+      ],
+      "dance_elements": [],
+      "camera": "динамичная съемка с рук",
+      "composition": "средний и общий план",
+      "emotion": [
+        "сосредоточенность",
+        "спокойствие"
+      ],
+      "location": [],
+      "interaction": "взаимодействие с камерой взглядом",
+      "visual_tags": [
+        "дети",
+        "танцевальный зал",
+        "колонна"
+      ],
+      "search_phrases": [
+        "дети стоят в колонне в танцевальном зале",
+        "девочка в розовом смотрит в камеру"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "semantic_description": "Дети выстроены в колонну в танцевальном зале, на переднем плане девочка в розовом держит руки на поясе, оператор перемещается вокруг детей.",
+      "subjects": [
+        "дети",
+        "девочка в розовом"
+      ],
+      "actions": [
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование в кадре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "построение в колонну",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "спокойствие"
+      ],
+      "camera": "динамичная съемка с рук",
+      "visual_tags": [
+        "дети",
+        "танцевальный зал",
+        "колонна"
+      ],
+      "search_tags": [
+        "дети",
+        "танцевальный зал",
+        "колонна",
+        "руки на поясе",
+        "позирование в кадре",
+        "построение в колонну",
+        "девочка в розовом",
+        "сосредоточенность",
+        "спокойствие"
+      ],
+      "search_phrases": [
+        "дети стоят в колонне в танцевальном зале",
+        "девочка в розовом смотрит в камеру"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "speaker": "Speaker 1",
+          "text": "красиво стоим длинны длинны длинны"
+        }
+      ],
+      "spoken_text": "красиво стоим длинны длинны длинны",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5269212654945215348.mp4",
+    "keywords": [
+      "дети",
+      "танцевальный зал",
+      "колонна",
+      "девочка в розовом",
+      "руки на поясе",
+      "позирование в кадре",
+      "построение в колонну",
+      "сосредоточенность",
+      "спокойствие"
+    ],
+    "actions": [
+      "руки на поясе",
+      "позирование в кадре",
+      "построение в колонну"
+    ],
+    "spoken_text": "красиво стоим длинны длинны длинны",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "спокойствие"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети стоят в колонне в танцевальном зале",
+      "девочка в розовом смотрит в камеру"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

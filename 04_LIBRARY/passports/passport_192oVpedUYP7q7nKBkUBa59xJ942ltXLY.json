@@ -1,0 +1,400 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-11T08:40:34.791932+00:00",
+  "updated_at": "2026-09-11T08:40:34.791966+00:00",
+  "video": {
+    "file_id": "192oVpedUYP7q7nKBkUBa59xJ942ltXLY",
+    "filename": "document_5269212654945215358.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "educational",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "lifestyle",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "educational",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Ну вот получилось. Выпрямляй ножки. Ножки вместе.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 9.0,
+        "speaker": "Speaker 1",
+        "text": "Ну вот получилось."
+      },
+      {
+        "start": 9.0,
+        "end": 19.0,
+        "speaker": "Speaker 1",
+        "text": "Выпрямляй ножки. Ножки вместе."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Присутствует разговорная речь и звуки помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Запись голоса инструктора или человека за кадром, общающегося с детьми, звуки студии.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 9.0,
+      "duration": 9.0,
+      "description": "Девочка в розовой футболке и шортах сидит на полу на ковре, выполняя упражнение на растяжку, наклонившись вперед.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "наклон вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "сидит на полу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "наклон вперед",
+        "сидит на полу",
+        "растяжка"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера, крупный/средний план",
+      "composition": "центральная композиция",
+      "emotion": [
+        "спокойствие",
+        "старание"
+      ],
+      "location": [],
+      "interaction": "взаимодействие с невидимым тренером или партнером за кадром",
+      "visual_tags": [
+        "дети",
+        "растяжка",
+        "гимнастика",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "девочка делает растяжку на полу",
+        "ребенок занимается гимнастикой"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "speech"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 9.0,
+      "end": 19.0,
+      "duration": 10.0,
+      "description": "Смена ракурса: показан зал с детьми и инструктором, затем девочка лежит на спине на полу.",
+      "subjects": [
+        "дети",
+        "инструктор"
+      ],
+      "actions": [
+        {
+          "action": "лежит на полу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "выпрямляет ноги",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "лежит на полу",
+        "выпрямляет ноги"
+      ],
+      "dance_elements": [],
+      "camera": "панорамный/общий план с переходом на средний",
+      "composition": "общий план зала",
+      "emotion": [
+        "спокойствие"
+      ],
+      "location": [],
+      "interaction": "инструктор руководит процессом",
+      "visual_tags": [
+        "детская тренировка",
+        "зал",
+        "упражнение лежа"
+      ],
+      "search_phrases": [
+        "дети на занятиях в зале",
+        "ребенок лежит на полу во время тренировки"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "speech"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 9.0,
+      "duration": 9.0,
+      "semantic_description": "Девочка в розовой футболке и шортах сидит на полу на ковре, выполняя упражнение на растяжку, наклонившись вперед.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "наклон вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "сидит на полу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "спокойствие",
+        "старание"
+      ],
+      "camera": "статичная камера, крупный/средний план",
+      "visual_tags": [
+        "дети",
+        "растяжка",
+        "гимнастика",
+        "тренировка"
+      ],
+      "search_tags": [
+        "дети",
+        "растяжка",
+        "гимнастика",
+        "тренировка",
+        "наклон вперед",
+        "сидит на полу",
+        "девочка",
+        "спокойствие",
+        "старание"
+      ],
+      "search_phrases": [
+        "девочка делает растяжку на полу",
+        "ребенок занимается гимнастикой"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 9.0,
+          "speaker": "Speaker 1",
+          "text": "Ну вот получилось."
+        }
+      ],
+      "spoken_text": "Ну вот получилось.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 9.0,
+      "end": 19.0,
+      "duration": 10.0,
+      "semantic_description": "Смена ракурса: показан зал с детьми и инструктором, затем девочка лежит на спине на полу.",
+      "subjects": [
+        "дети",
+        "инструктор"
+      ],
+      "actions": [
+        {
+          "action": "лежит на полу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "выпрямляет ноги",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "спокойствие"
+      ],
+      "camera": "панорамный/общий план с переходом на средний",
+      "visual_tags": [
+        "детская тренировка",
+        "зал",
+        "упражнение лежа"
+      ],
+      "search_tags": [
+        "детская тренировка",
+        "зал",
+        "упражнение лежа",
+        "лежит на полу",
+        "выпрямляет ноги",
+        "дети",
+        "инструктор",
+        "спокойствие"
+      ],
+      "search_phrases": [
+        "дети на занятиях в зале",
+        "ребенок лежит на полу во время тренировки"
+      ],
+      "speech": [
+        {
+          "start": 9.0,
+          "end": 19.0,
+          "speaker": "Speaker 1",
+          "text": "Выпрямляй ножки. Ножки вместе."
+        }
+      ],
+      "spoken_text": "Выпрямляй ножки. Ножки вместе.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5269212654945215358.mp4",
+    "keywords": [
+      "дети",
+      "растяжка",
+      "гимнастика",
+      "тренировка",
+      "девочка",
+      "детская тренировка",
+      "зал",
+      "упражнение лежа",
+      "инструктор",
+      "наклон вперед",
+      "сидит на полу",
+      "спокойствие",
+      "старание",
+      "лежит на полу",
+      "выпрямляет ноги"
+    ],
+    "actions": [
+      "наклон вперед",
+      "сидит на полу",
+      "растяжка",
+      "лежит на полу",
+      "выпрямляет ноги"
+    ],
+    "spoken_text": "Ну вот получилось. Выпрямляй ножки. Ножки вместе.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 2,
+    "locations": [],
+    "emotions": [
+      "спокойствие",
+      "старание"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка делает растяжку на полу",
+      "ребенок занимается гимнастикой",
+      "дети на занятиях в зале",
+      "ребенок лежит на полу во время тренировки"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

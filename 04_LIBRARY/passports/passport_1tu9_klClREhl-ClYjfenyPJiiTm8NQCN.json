@@ -1,0 +1,490 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-12T09:30:01.613129+00:00",
+  "updated_at": "2026-09-12T09:30:01.613162+00:00",
+  "video": {
+    "file_id": "1tu9_klClREhl-ClYjfenyPJiiTm8NQCN",
+    "filename": "document_5271528514196121044.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "educational",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Раз, два, три, четыре. Раз, два, три, четыре.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 4.0,
+        "speaker": "Тренер",
+        "text": "Раз, два, три, четыре."
+      },
+      {
+        "start": 4.0,
+        "end": 15.0,
+        "speaker": "Тренер",
+        "text": "Раз, два, три, четыре."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышны голос тренера, ведущего счет, и акустика помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Запись голоса тренера в зале с естественной реверберацией.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 3.9,
+      "duration": 3.9,
+      "description": "Мальчик в футболке с рисунком повторяет движения за кадром под счет тренера.",
+      "subjects": [
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "поднятие руки в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичное движение",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "поднятие руки в сторону",
+        "ритмичное движение"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "средний план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "выполнение упражнения под руководством тренера",
+      "visual_tags": [
+        "ребенок",
+        "танец",
+        "упражнение"
+      ],
+      "search_phrases": [
+        "мальчик занимается танцами",
+        "ребенок выполняет упражнение в зале"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "montage_source"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 3.9,
+      "end": 13.0,
+      "duration": 9.1,
+      "description": "Смена ракурса: две маленькие девочки в зале делают упражнения с руками под счет тренера.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "разведение рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "разведение рук в стороны",
+        "синхронное движение"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "старание"
+      ],
+      "location": [],
+      "interaction": "занятие хореографией в группе",
+      "visual_tags": [
+        "дети",
+        "хореография",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "дети занимаются хореографией",
+        "девочки на танцевальной тренировке"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "montage_source"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "start": 13.0,
+      "end": 15.0,
+      "duration": 2.0,
+      "description": "Смена плана обратно на мальчика, продолжающего выполнять упражнение.",
+      "subjects": [
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "вытягивание руки в сторону",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "вытягивание руки в сторону"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "средний план",
+      "emotion": [
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "урок хореографии",
+      "visual_tags": [
+        "ребенок",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "мальчик на занятии танцами"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 3.9,
+      "duration": 3.9,
+      "semantic_description": "Мальчик в футболке с рисунком повторяет движения за кадром под счет тренера.",
+      "subjects": [
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "поднятие руки в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичное движение",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "ребенок",
+        "танец",
+        "упражнение"
+      ],
+      "search_tags": [
+        "ребенок",
+        "танец",
+        "упражнение",
+        "поднятие руки в сторону",
+        "ритмичное движение",
+        "мальчик",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "мальчик занимается танцами",
+        "ребенок выполняет упражнение в зале"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 4.0,
+          "speaker": "Тренер",
+          "text": "Раз, два, три, четыре."
+        }
+      ],
+      "spoken_text": "Раз, два, три, четыре.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 3.9,
+      "end": 13.0,
+      "duration": 9.1,
+      "semantic_description": "Смена ракурса: две маленькие девочки в зале делают упражнения с руками под счет тренера.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "разведение рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "старание"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "дети",
+        "хореография",
+        "тренировка"
+      ],
+      "search_tags": [
+        "дети",
+        "хореография",
+        "тренировка",
+        "разведение рук в стороны",
+        "синхронное движение",
+        "девочки",
+        "старание"
+      ],
+      "search_phrases": [
+        "дети занимаются хореографией",
+        "девочки на танцевальной тренировке"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 4.0,
+          "speaker": "Тренер",
+          "text": "Раз, два, три, четыре."
+        },
+        {
+          "start": 4.0,
+          "end": 15.0,
+          "speaker": "Тренер",
+          "text": "Раз, два, три, четыре."
+        }
+      ],
+      "spoken_text": "Раз, два, три, четыре. Раз, два, три, четыре.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_003",
+      "start": 13.0,
+      "end": 15.0,
+      "duration": 2.0,
+      "semantic_description": "Смена плана обратно на мальчика, продолжающего выполнять упражнение.",
+      "subjects": [
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "вытягивание руки в сторону",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "концентрация"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "ребенок",
+        "тренировка"
+      ],
+      "search_tags": [
+        "ребенок",
+        "тренировка",
+        "вытягивание руки в сторону",
+        "мальчик",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "мальчик на занятии танцами"
+      ],
+      "speech": [
+        {
+          "start": 4.0,
+          "end": 15.0,
+          "speaker": "Тренер",
+          "text": "Раз, два, три, четыре."
+        }
+      ],
+      "spoken_text": "Раз, два, три, четыре.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5271528514196121044.mp4",
+    "keywords": [
+      "ребенок",
+      "танец",
+      "упражнение",
+      "мальчик",
+      "дети",
+      "хореография",
+      "тренировка",
+      "девочки",
+      "поднятие руки в сторону",
+      "ритмичное движение",
+      "сосредоточенность",
+      "разведение рук в стороны",
+      "синхронное движение",
+      "старание",
+      "вытягивание руки в сторону",
+      "концентрация"
+    ],
+    "actions": [
+      "поднятие руки в сторону",
+      "ритмичное движение",
+      "разведение рук в стороны",
+      "синхронное движение",
+      "вытягивание руки в сторону"
+    ],
+    "spoken_text": "Раз, два, три, четыре. Раз, два, три, четыре.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 3,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "старание",
+      "концентрация"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "мальчик занимается танцами",
+      "ребенок выполняет упражнение в зале",
+      "дети занимаются хореографией",
+      "девочки на танцевальной тренировке",
+      "мальчик на занятии танцами"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

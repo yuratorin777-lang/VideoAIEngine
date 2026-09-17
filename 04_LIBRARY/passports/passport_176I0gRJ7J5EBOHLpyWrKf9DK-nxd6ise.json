@@ -1,0 +1,279 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-11T08:34:04.795436+00:00",
+  "updated_at": "2026-09-11T08:34:04.795466+00:00",
+  "video": {
+    "file_id": "176I0gRJ7J5EBOHLpyWrKf9DK-nxd6ise",
+    "filename": "2_5260508985324248279.MOV",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "sports_action",
+      "event"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая танцевальная музыка и легкий гул зала."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка для танцев и акустика большого спортивного зала",
+    "music_description": "Ритмичная музыка для спортивных бальных танцев",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 40.0,
+      "duration": 40.0,
+      "description": "Девочка в ярко-зеленом платье танцует на паркете спортивной арены во время соревнований по бальным танцам, на заднем плане видны трибуны и судьи за столом.",
+      "subjects": [
+        "девочка-танцор",
+        "судьи",
+        "трибуны"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позиции рук и ног бальных танцев",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения в сольном исполнении",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги",
+        "повороты",
+        "позиции рук и ног бальных танцев",
+        "движения в сольном исполнении"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера, общий план",
+      "composition": "Центральная композиция, танцор в центре кадра на паркете",
+      "emotion": [
+        "сосредоточенность",
+        "уверенность"
+      ],
+      "location": [],
+      "interaction": "выступление перед судьями на соревнованиях",
+      "visual_tags": [
+        "бальные танцы",
+        "соревнования",
+        "дети",
+        "паркет",
+        "спортивный зал"
+      ],
+      "search_phrases": [
+        "девочка танцует бальные танцы на соревнованиях",
+        "ребенок выступает на паркете спортивного зала",
+        "соревнования по спортивным танцам общий план"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 40.0,
+      "duration": 40.0,
+      "semantic_description": "Девочка в ярко-зеленом платье танцует на паркете спортивной арены во время соревнований по бальным танцам, на заднем плане видны трибуны и судьи за столом.",
+      "subjects": [
+        "девочка-танцор",
+        "судьи",
+        "трибуны"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позиции рук и ног бальных танцев",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения в сольном исполнении",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "уверенность"
+      ],
+      "camera": "Статичная камера, общий план",
+      "visual_tags": [
+        "бальные танцы",
+        "соревнования",
+        "дети",
+        "паркет",
+        "спортивный зал"
+      ],
+      "search_tags": [
+        "бальные танцы",
+        "соревнования",
+        "дети",
+        "паркет",
+        "спортивный зал",
+        "ритмичные шаги",
+        "повороты",
+        "позиции рук и ног бальных танцев",
+        "движения в сольном исполнении",
+        "девочка-танцор",
+        "судьи",
+        "трибуны",
+        "сосредоточенность",
+        "уверенность"
+      ],
+      "search_phrases": [
+        "девочка танцует бальные танцы на соревнованиях",
+        "ребенок выступает на паркете спортивного зала",
+        "соревнования по спортивным танцам общий план"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "2_5260508985324248279.MOV",
+    "keywords": [
+      "бальные танцы",
+      "соревнования",
+      "дети",
+      "паркет",
+      "спортивный зал",
+      "девочка-танцор",
+      "судьи",
+      "трибуны",
+      "ритмичные шаги",
+      "повороты",
+      "позиции рук и ног бальных танцев",
+      "движения в сольном исполнении",
+      "сосредоточенность",
+      "уверенность"
+    ],
+    "actions": [
+      "ритмичные шаги",
+      "повороты",
+      "позиции рук и ног бальных танцев",
+      "движения в сольном исполнении"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "уверенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка танцует бальные танцы на соревнованиях",
+      "ребенок выступает на паркете спортивного зала",
+      "соревнования по спортивным танцам общий план"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-14T08:26:25.248946+00:00",
+  "updated_at": "2026-09-14T08:26:25.249524+00:00",
+  "video": {
+    "file_id": "1WU82M6F9o5d4kATK_UylZOiCRHiI0Se5",
+    "filename": "IMG_6719.MOV",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "educational",
+      "behind_the_scenes",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Три на полочке, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь. Еще по две, еще лицо для TikTok. Раз, два, три, четыре, пять, шесть, раз, два, три, четыре, пять, шесть, четыре, колени прямые. Раз, два, три, четыре, раз, два, три, четыре. Ноги вместе. Раз, два, три, четыре, пять, шесть, семь, восемь.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 16.0,
+        "speaker": "Тренер",
+        "text": "Три на полочке, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь. Еще по две, еще лицо для TikTok."
+      },
+      {
+        "start": 16.5,
+        "end": 26.0,
+        "speaker": "Тренер",
+        "text": "Раз, два, три, четыре, пять, шесть, раз, два, три, четыре, пять, шесть."
+      },
+      {
+        "start": 26.0,
+        "end": 42.0,
+        "speaker": "Тренер",
+        "text": "Четыре, колени прямые. Раз, два, три, четыре, раз, два, три, четыре. Ноги вместе. Раз, два, три, четыре."
+      }
+    ],
+    "segment_count": 3
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": false,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "music"
+      ],
+      "confidence_notes": "Слышен голос тренера, считающего и дающего указания, а также фоновая музыка/ритмичный звук."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос тренера на фоне ритмичной музыки и звуков шагов в зале.",
+    "music_description": "Ритмичная фоновая музыка для тренировки.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 61.0,
+      "duration": 61.0,
+      "description": "Четыре девочки выполняют разминку и наклоны под счет и указания тренера в танцевальном зале.",
+      "subjects": [
+        "девочки-танцовщицы"
+      ],
+      "actions": [
+        {
+          "action": "наклоны вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "наклоны вперед",
+        "синхронное движение ног",
+        "растяжка"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера",
+      "composition": "Общий план группы девочек в полный рост",
+      "emotion": [
+        "усердие",
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "Девочки синхронно повторяют движения разминки",
+      "visual_tags": [
+        "танцевальная тренировка",
+        "дети",
+        "разминка"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "разминка перед тренировкой",
+        "девочки делают наклоны"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": false,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "educational"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 61.0,
+      "duration": 61.0,
+      "semantic_description": "Четыре девочки выполняют разминку и наклоны под счет и указания тренера в танцевальном зале.",
+      "subjects": [
+        "девочки-танцовщицы"
+      ],
+      "actions": [
+        {
+          "action": "наклоны вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "растяжка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "усердие",
+        "концентрация"
+      ],
+      "camera": "Статичная камера",
+      "visual_tags": [
+        "танцевальная тренировка",
+        "дети",
+        "разминка"
+      ],
+      "search_tags": [
+        "танцевальная тренировка",
+        "дети",
+        "разминка",
+        "наклоны вперед",
+        "синхронное движение ног",
+        "растяжка",
+        "девочки-танцовщицы",
+        "усердие",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "разминка перед тренировкой",
+        "девочки делают наклоны"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 16.0,
+          "speaker": "Тренер",
+          "text": "Три на полочке, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь. Еще по две, еще лицо для TikTok."
+        },
+        {
+          "start": 16.5,
+          "end": 26.0,
+          "speaker": "Тренер",
+          "text": "Раз, два, три, четыре, пять, шесть, раз, два, три, четыре, пять, шесть."
+        },
+        {
+          "start": 26.0,
+          "end": 42.0,
+          "speaker": "Тренер",
+          "text": "Четыре, колени прямые. Раз, два, три, четыре, раз, два, три, четыре. Ноги вместе. Раз, два, три, четыре."
+        }
+      ],
+      "spoken_text": "Три на полочке, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь. Еще по две, еще лицо для TikTok. Раз, два, три, четыре, пять, шесть, раз, два, три, четыре, пять, шесть. Четыре, колени прямые. Раз, два, три, четыре, раз, два, три, четыре. Ноги вместе. Раз, два, три, четыре.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": true,
+        "has_ambient_sound": false,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": true
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "IMG_6719.MOV",
+    "keywords": [
+      "танцевальная тренировка",
+      "дети",
+      "разминка",
+      "девочки-танцовщицы",
+      "наклоны вперед",
+      "синхронное движение ног",
+      "растяжка",
+      "усердие",
+      "концентрация"
+    ],
+    "actions": [
+      "наклоны вперед",
+      "синхронное движение ног",
+      "растяжка"
+    ],
+    "spoken_text": "Три на полочке, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь. Еще по две, еще лицо для TikTok. Раз, два, три, четыре, пять, шесть, раз, два, три, четыре, пять, шесть, четыре, колени прямые. Раз, два, три, четыре, раз, два, три, четыре. Ноги вместе. Раз, два, три, четыре, пять, шесть, семь, восемь.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": true,
+    "has_ambient_sound": false,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "усердие",
+      "концентрация"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами в зале",
+      "разминка перед тренировкой",
+      "девочки делают наклоны"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": true,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

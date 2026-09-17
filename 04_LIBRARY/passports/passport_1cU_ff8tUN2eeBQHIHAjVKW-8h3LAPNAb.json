@@ -1,0 +1,272 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-08T09:32:20.441219+00:00",
+  "updated_at": "2026-09-08T09:32:20.441733+00:00",
+  "video": {
+    "file_id": "1cU_ff8tUN2eeBQHIHAjVKW-8h3LAPNAb",
+    "filename": "Видео от Yuriy Torin",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "event",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Фоновая музыка и окружающий звук помещения"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая инструментальная музыка и атмосфера спортивного зала",
+    "music_description": "Инструментальная фоновая музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "description": "Дети в платьях исполняют движение на паркете спортивного зала перед судьями",
+      "subjects": [
+        "дети",
+        "судьи"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "синхронное движение ног",
+        "поворот через плечо",
+        "ритмичные шаги",
+        "жестикуляция руками"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план с небольшим панорамированием",
+      "composition": "общий план",
+      "emotion": [
+        "сосредоточенность",
+        "воодушевление"
+      ],
+      "location": [],
+      "interaction": "взаимодействие детей друг с другом на площадке",
+      "visual_tags": [
+        "соревнования",
+        "паркет",
+        "дети",
+        "судьи",
+        "номера на спине"
+      ],
+      "search_phrases": [
+        "дети выступают на соревнованиях",
+        "танцевальный номер на паркете",
+        "соревнования по фигурному катанию или танцам"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "semantic_description": "Дети в платьях исполняют движение на паркете спортивного зала перед судьями",
+      "subjects": [
+        "дети",
+        "судьи"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "воодушевление"
+      ],
+      "camera": "статичный общий план с небольшим панорамированием",
+      "visual_tags": [
+        "соревнования",
+        "паркет",
+        "дети",
+        "судьи",
+        "номера на спине"
+      ],
+      "search_tags": [
+        "соревнования",
+        "паркет",
+        "дети",
+        "судьи",
+        "номера на спине",
+        "синхронное движение ног",
+        "поворот через плечо",
+        "ритмичные шаги",
+        "жестикуляция руками",
+        "сосредоточенность",
+        "воодушевление"
+      ],
+      "search_phrases": [
+        "дети выступают на соревнованиях",
+        "танцевальный номер на паркете",
+        "соревнования по фигурному катанию или танцам"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "Видео от Yuriy Torin",
+    "keywords": [
+      "соревнования",
+      "паркет",
+      "дети",
+      "судьи",
+      "номера на спине",
+      "синхронное движение ног",
+      "поворот через плечо",
+      "ритмичные шаги",
+      "жестикуляция руками",
+      "сосредоточенность",
+      "воодушевление"
+    ],
+    "actions": [
+      "синхронное движение ног",
+      "поворот через плечо",
+      "ритмичные шаги",
+      "жестикуляция руками"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "воодушевление"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети выступают на соревнованиях",
+      "танцевальный номер на паркете",
+      "соревнования по фигурному катанию или танцам"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

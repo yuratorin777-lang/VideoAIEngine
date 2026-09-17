@@ -1,0 +1,634 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-02T12:40:38.925973+00:00",
+  "updated_at": "2026-09-02T12:40:38.926014+00:00",
+  "video": {
+    "file_id": "1z9n6fUnKvCOqjdeYxLdxNPR95LQO5c0E",
+    "filename": "IMG_1488.MOV",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "event",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "competition_content",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая танцевальная музыка и звуки шагов/атмосферы зала"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка для танцев и окружающие звуки зала",
+    "music_description": "Инструментальная ритмичная музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "description": "Дети стоят в исходных позициях в танцевальном зале и начинают движение под музыку",
+      "subjects": [
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "исходная позиция",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "начало движения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "исходная позиция",
+        "начало движения"
+      ],
+      "dance_elements": [],
+      "camera": "статичный план с легким панорамированием",
+      "composition": "общий план танцевального зала",
+      "emotion": [
+        "сконцентрированность",
+        "усердие"
+      ],
+      "location": [],
+      "interaction": "дети синхронно выполняют движения",
+      "visual_tags": [
+        "дети",
+        "танцы",
+        "соревнования"
+      ],
+      "search_phrases": [
+        "дети занимаются бальными танцами в зале",
+        "детский танцевальный турнир"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 10.0,
+      "end": 25.0,
+      "duration": 15.0,
+      "description": "Дети исполняют танцевальные элементы, перемещаясь по паркету",
+      "subjects": [
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "танцевальные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения рук на поясе",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "танцевальные шаги",
+        "повороты",
+        "движения рук на поясе"
+      ],
+      "dance_elements": [],
+      "camera": "общий план",
+      "composition": "участники на паркете",
+      "emotion": [
+        "уверенность"
+      ],
+      "location": [],
+      "interaction": "групповое выступление",
+      "visual_tags": [
+        "танцы",
+        "паркет",
+        "дети"
+      ],
+      "search_phrases": [
+        "дети танцуют на паркете",
+        "выступление по бальным танцам"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "start": 25.0,
+      "end": 45.0,
+      "duration": 20.0,
+      "description": "Продолжение танцевальной композиции, участники демонстрируют движения",
+      "subjects": [
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "синхронное движение ног",
+        "жестикуляция"
+      ],
+      "dance_elements": [],
+      "camera": "общий план",
+      "composition": "участники двигаются по площадке",
+      "emotion": [
+        "старание"
+      ],
+      "location": [],
+      "interaction": "синхронное исполнение",
+      "visual_tags": [
+        "танец",
+        "дети"
+      ],
+      "search_phrases": [
+        "дети исполняют танец",
+        "танцевальный мастер-класс"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    },
+    {
+      "id": "scene_004",
+      "start": 45.0,
+      "end": 56.0,
+      "duration": 11.0,
+      "description": "Завершение танцевального номера, участники принимают финальные позы",
+      "subjects": [
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "финальный поклон",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позиция рук",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "финальный поклон",
+        "позиция рук"
+      ],
+      "dance_elements": [],
+      "camera": "общий план",
+      "composition": "участники на переднем плане зала",
+      "emotion": [
+        "радость",
+        "облегчение"
+      ],
+      "location": [],
+      "interaction": "окончание выступления",
+      "visual_tags": [
+        "финал",
+        "танцы"
+      ],
+      "search_phrases": [
+        "финал детского танца",
+        "завершение выступления"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "semantic_description": "Дети стоят в исходных позициях в танцевальном зале и начинают движение под музыку",
+      "subjects": [
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "исходная позиция",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "начало движения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированность",
+        "усердие"
+      ],
+      "camera": "статичный план с легким панорамированием",
+      "visual_tags": [
+        "дети",
+        "танцы",
+        "соревнования"
+      ],
+      "search_tags": [
+        "дети",
+        "танцы",
+        "соревнования",
+        "исходная позиция",
+        "начало движения",
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик",
+        "сконцентрированность",
+        "усердие"
+      ],
+      "search_phrases": [
+        "дети занимаются бальными танцами в зале",
+        "детский танцевальный турнир"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 10.0,
+      "end": 25.0,
+      "duration": 15.0,
+      "semantic_description": "Дети исполняют танцевальные элементы, перемещаясь по паркету",
+      "subjects": [
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "танцевальные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения рук на поясе",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "уверенность"
+      ],
+      "camera": "общий план",
+      "visual_tags": [
+        "танцы",
+        "паркет",
+        "дети"
+      ],
+      "search_tags": [
+        "танцы",
+        "паркет",
+        "дети",
+        "танцевальные шаги",
+        "повороты",
+        "движения рук на поясе",
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик",
+        "уверенность"
+      ],
+      "search_phrases": [
+        "дети танцуют на паркете",
+        "выступление по бальным танцам"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_003",
+      "start": 25.0,
+      "end": 45.0,
+      "duration": 20.0,
+      "semantic_description": "Продолжение танцевальной композиции, участники демонстрируют движения",
+      "subjects": [
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "старание"
+      ],
+      "camera": "общий план",
+      "visual_tags": [
+        "танец",
+        "дети"
+      ],
+      "search_tags": [
+        "танец",
+        "дети",
+        "синхронное движение ног",
+        "жестикуляция",
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик",
+        "старание"
+      ],
+      "search_phrases": [
+        "дети исполняют танец",
+        "танцевальный мастер-класс"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_004",
+      "start": 45.0,
+      "end": 56.0,
+      "duration": 11.0,
+      "semantic_description": "Завершение танцевального номера, участники принимают финальные позы",
+      "subjects": [
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "финальный поклон",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позиция рук",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "радость",
+        "облегчение"
+      ],
+      "camera": "общий план",
+      "visual_tags": [
+        "финал",
+        "танцы"
+      ],
+      "search_tags": [
+        "финал",
+        "танцы",
+        "финальный поклон",
+        "позиция рук",
+        "девочка в красном платье",
+        "девочка в розовом платье",
+        "мальчик",
+        "радость",
+        "облегчение"
+      ],
+      "search_phrases": [
+        "финал детского танца",
+        "завершение выступления"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "IMG_1488.MOV",
+    "keywords": [
+      "дети",
+      "танцы",
+      "соревнования",
+      "девочка в красном платье",
+      "девочка в розовом платье",
+      "мальчик",
+      "паркет",
+      "танец",
+      "финал",
+      "исходная позиция",
+      "начало движения",
+      "сконцентрированность",
+      "усердие",
+      "танцевальные шаги",
+      "повороты",
+      "движения рук на поясе",
+      "уверенность",
+      "синхронное движение ног",
+      "жестикуляция",
+      "старание",
+      "финальный поклон",
+      "позиция рук",
+      "радость",
+      "облегчение"
+    ],
+    "actions": [
+      "исходная позиция",
+      "начало движения",
+      "танцевальные шаги",
+      "повороты",
+      "движения рук на поясе",
+      "синхронное движение ног",
+      "жестикуляция",
+      "финальный поклон",
+      "позиция рук"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 4,
+    "locations": [],
+    "emotions": [
+      "сконцентрированность",
+      "усердие",
+      "уверенность",
+      "старание",
+      "радость",
+      "облегчение"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются бальными танцами в зале",
+      "детский танцевальный турнир",
+      "дети танцуют на паркете",
+      "выступление по бальным танцам",
+      "дети исполняют танец",
+      "танцевальный мастер-класс",
+      "финал детского танца",
+      "завершение выступления"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

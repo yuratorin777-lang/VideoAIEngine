@@ -1,0 +1,207 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-08-19T08:42:07.434549+00:00",
+  "video": {
+    "file_id": "1AJr6xRM64APGMrhxQTWZkEtHtPhlHBbd",
+    "filename": "IMG_6715.MOV",
+    "drive_url": "https://drive.google.com/uc?export=download&id=1AJr6xRM64APGMrhxQTWZkEtHtPhlHBbd",
+    "mime_type": "video/quicktime",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "categories": [],
+    "confidence": null
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Раз, два, три, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь.",
+    "segments": [
+      {
+        "start": 0.697,
+        "end": 5.187,
+        "speaker": "Instructor",
+        "text": "Раз, два, три, четыре, пять, шесть, семь, восемь."
+      },
+      {
+        "start": 5.347,
+        "end": 9.917,
+        "speaker": "Instructor",
+        "text": "Раз, два, три, четыре, пять, шесть, семь, восемь."
+      },
+      {
+        "start": 10.057,
+        "end": 17.387,
+        "speaker": "Instructor",
+        "text": "Раз, два, три, четыре, пять, шесть, семь, восемь."
+      }
+    ],
+    "segment_count": 3
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": true,
+    "has_ambient_sound": false,
+    "preserve_original_audio": true
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 17.4,
+      "duration": 17.4,
+      "description": "Пять девочек в танцевальном зале выполняют серию синхронных упражнений для рук под счет невидимого педагога и фоновую музыку. Девочки сосредоточены на движениях.",
+      "subjects": [
+        "пять_девочек",
+        "дети"
+      ],
+      "actions": [
+        "выполняют_движения_руками",
+        "танцуют",
+        "практикуются",
+        "повторяют_за_педагогом"
+      ],
+      "camera": "medium_wide_shot",
+      "emotion": [
+        "фокус",
+        "концентрация",
+        "внимание"
+      ],
+      "visual_tags": [
+        "танцевальная_студия",
+        "детский_танец",
+        "групповое_занятие",
+        "урок_танцев",
+        "хореография_для_детей",
+        "упражнения"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 17.4,
+      "duration": 17.4,
+      "semantic_description": "Пять девочек в танцевальном зале выполняют серию синхронных упражнений для рук под счет невидимого педагога и фоновую музыку. Девочки сосредоточены на движениях.",
+      "subjects": [
+        "пять_девочек",
+        "дети"
+      ],
+      "actions": [
+        "выполняют_движения_руками",
+        "танцуют",
+        "практикуются",
+        "повторяют_за_педагогом"
+      ],
+      "emotions": [
+        "фокус",
+        "концентрация",
+        "внимание"
+      ],
+      "camera": "medium_wide_shot",
+      "visual_tags": [
+        "танцевальная_студия",
+        "детский_танец",
+        "групповое_занятие",
+        "урок_танцев",
+        "хореография_для_детей",
+        "упражнения"
+      ],
+      "search_tags": [
+        "танцевальная_студия",
+        "детский_танец",
+        "групповое_занятие",
+        "урок_танцев",
+        "хореография_для_детей",
+        "упражнения",
+        "выполняют_движения_руками",
+        "танцуют",
+        "практикуются",
+        "повторяют_за_педагогом",
+        "пять_девочек",
+        "дети",
+        "фокус",
+        "концентрация",
+        "внимание"
+      ],
+      "speech": [
+        {
+          "start": 0.697,
+          "end": 5.187,
+          "speaker": "Instructor",
+          "text": "Раз, два, три, четыре, пять, шесть, семь, восемь."
+        },
+        {
+          "start": 5.347,
+          "end": 9.917,
+          "speaker": "Instructor",
+          "text": "Раз, два, три, четыре, пять, шесть, семь, восемь."
+        },
+        {
+          "start": 10.057,
+          "end": 17.387,
+          "speaker": "Instructor",
+          "text": "Раз, два, три, четыре, пять, шесть, семь, восемь."
+        }
+      ],
+      "spoken_text": "Раз, два, три, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": true,
+        "has_ambient_sound": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "IMG_6715.MOV",
+    "keywords": [
+      "танцевальная_студия",
+      "детский_танец",
+      "групповое_занятие",
+      "урок_танцев",
+      "хореография_для_детей",
+      "упражнения",
+      "выполняют_движения_руками",
+      "танцуют",
+      "практикуются",
+      "повторяют_за_педагогом",
+      "пять_девочек",
+      "дети",
+      "фокус",
+      "концентрация",
+      "внимание"
+    ],
+    "spoken_text": "Раз, два, три, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь. Раз, два, три, четыре, пять, шесть, семь, восемь.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": true,
+    "has_ambient_sound": false,
+    "preserve_original_audio": true,
+    "segment_count": 1
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

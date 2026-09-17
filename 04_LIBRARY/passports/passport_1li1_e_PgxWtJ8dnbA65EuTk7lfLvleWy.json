@@ -1,0 +1,393 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-05T09:15:01.139182+00:00",
+  "updated_at": "2026-09-05T09:15:01.140041+00:00",
+  "video": {
+    "file_id": "1li1_e_PgxWtJ8dnbA65EuTk7lfLvleWy",
+    "filename": "VID_20260904_175246.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.9,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "раз, два, три, и раз, два, три, раз, два, три",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 20.0,
+        "speaker": "Speaker 1",
+        "text": "раз, два, три"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышны указания счета и звуки в помещении"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Запись голоса преподавателя, ведущего счет занятий, и естественная акустика танцевального зала",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "description": "Дети занимаются хореографией в зале под счет преподавателя",
+      "subjects": [
+        "дети",
+        "преподаватель"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание осанки",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги",
+        "синхронное движение ног",
+        "удержание осанки"
+      ],
+      "dance_elements": [],
+      "camera": "статичная или слегка панорамирующая камера",
+      "composition": "общий план танцевального зала",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "преподаватель руководит занятием группы детей",
+      "visual_tags": [
+        "танцевальный класс",
+        "дети",
+        "урок"
+      ],
+      "search_phrases": [
+        "дети на занятии хореографией в зале",
+        "репетиция танцев в студии"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 21.0,
+      "end": 44.0,
+      "duration": 23.0,
+      "description": "Продолжение занятия, смена ракурсов и крупные планы участников в зале",
+      "subjects": [
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позиции рук на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "передвижение по залу",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "повороты",
+        "позиции рук на поясе",
+        "передвижение по залу"
+      ],
+      "dance_elements": [],
+      "camera": "динамичная съемка участников крупным и средним планом",
+      "composition": "средний и крупный планы",
+      "emotion": [
+        "серьезность"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "дети",
+        "тренировка",
+        "танцы"
+      ],
+      "search_phrases": [
+        "дети занимаются хореографией крупный план",
+        "ученики танцевальной студии на тренировке"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "semantic_description": "Дети занимаются хореографией в зале под счет преподавателя",
+      "subjects": [
+        "дети",
+        "преподаватель"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание осанки",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная или слегка панорамирующая камера",
+      "visual_tags": [
+        "танцевальный класс",
+        "дети",
+        "урок"
+      ],
+      "search_tags": [
+        "танцевальный класс",
+        "дети",
+        "урок",
+        "ритмичные шаги",
+        "синхронное движение ног",
+        "удержание осанки",
+        "преподаватель",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети на занятии хореографией в зале",
+        "репетиция танцев в студии"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 20.0,
+          "speaker": "Speaker 1",
+          "text": "раз, два, три"
+        }
+      ],
+      "spoken_text": "раз, два, три",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 21.0,
+      "end": 44.0,
+      "duration": 23.0,
+      "semantic_description": "Продолжение занятия, смена ракурсов и крупные планы участников в зале",
+      "subjects": [
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позиции рук на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "передвижение по залу",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "серьезность"
+      ],
+      "camera": "динамичная съемка участников крупным и средним планом",
+      "visual_tags": [
+        "дети",
+        "тренировка",
+        "танцы"
+      ],
+      "search_tags": [
+        "дети",
+        "тренировка",
+        "танцы",
+        "повороты",
+        "позиции рук на поясе",
+        "передвижение по залу",
+        "серьезность"
+      ],
+      "search_phrases": [
+        "дети занимаются хореографией крупный план",
+        "ученики танцевальной студии на тренировке"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20260904_175246.mp4",
+    "keywords": [
+      "танцевальный класс",
+      "дети",
+      "урок",
+      "преподаватель",
+      "тренировка",
+      "танцы",
+      "ритмичные шаги",
+      "синхронное движение ног",
+      "удержание осанки",
+      "сосредоточенность",
+      "повороты",
+      "позиции рук на поясе",
+      "передвижение по залу",
+      "серьезность"
+    ],
+    "actions": [
+      "ритмичные шаги",
+      "синхронное движение ног",
+      "удержание осанки",
+      "повороты",
+      "позиции рук на поясе",
+      "передвижение по залу"
+    ],
+    "spoken_text": "раз, два, три, и раз, два, три, раз, два, три",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 2,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "серьезность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети на занятии хореографией в зале",
+      "репетиция танцев в студии",
+      "дети занимаются хореографией крупный план",
+      "ученики танцевальной студии на тренировке"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

@@ -1,0 +1,683 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-14T08:27:46.450614+00:00",
+  "updated_at": "2026-09-14T08:27:46.450640+00:00",
+  "video": {
+    "file_id": "12_VesFDxJ2Yvk7LJ8rHxLRP6FtELO6Es",
+    "filename": "document_5197459153181777157.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "sports_action",
+      "event",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "promotional",
+      "competition_content",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Фоновая ритмичная танцевальная музыка и общая атмосфера зала."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Динамичная фоновая музыка, сопровождающая танцевальные выступления.",
+    "music_description": "Ритмичная музыка для спортивных бальных танцев.",
+    "voice_over_description": "",
+    "notes": "Оригинальный звук заменен или дополнен фоновой музыкой и атмосферой соревнований."
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 11.0,
+      "duration": 11.0,
+      "description": "Пара детей танцует на паркете, девочка в ярком желтом платье.",
+      "subjects": [
+        "девочка в желтом платье",
+        "мальчик в белой рубашке с номером 561"
+      ],
+      "actions": [
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "вращение",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "взаимодействие в паре",
+        "вращение",
+        "ритмичные шаги в сторону"
+      ],
+      "dance_elements": [],
+      "camera": "средний план",
+      "composition": "центральная компоновка",
+      "emotion": [
+        "удовольствие",
+        "сконцентрированность"
+      ],
+      "location": [],
+      "interaction": "парный танец",
+      "visual_tags": [
+        "бальные танцы",
+        "дети",
+        "соревнования"
+      ],
+      "search_phrases": [
+        "дети танцуют бальные танцы на паркете",
+        "пара в желтом платье выступает на турнире"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 11.0,
+      "end": 25.0,
+      "duration": 14.0,
+      "description": "Общий план нескольких пар на паркете во время турнира.",
+      "subjects": [
+        "несколько танцевальных пар"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "массовое выступление",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "синхронное движение ног",
+        "массовое выступление",
+        "повороты"
+      ],
+      "dance_elements": [],
+      "camera": "общий план",
+      "composition": "панорамный кадр",
+      "emotion": [
+        "динамика",
+        "энергичность"
+      ],
+      "location": [],
+      "interaction": "групповое выступление на турнире",
+      "visual_tags": [
+        "турнир",
+        "массовый танец",
+        "паркет"
+      ],
+      "search_phrases": [
+        "группа детей выступает на танцевальном турнире",
+        "общий план танцевальных пар на паркете"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "montage_source"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "start": 25.0,
+      "end": 47.0,
+      "duration": 22.0,
+      "description": "Пара в бордовом платье исполняет вальс на фоне трибун.",
+      "subjects": [
+        "девочка в бордовом платье",
+        "мальчик в белой рубашке с номером 344"
+      ],
+      "actions": [
+        {
+          "action": "поддержка в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "плавные вращения",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "классическая позиция рук",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "поддержка в паре",
+        "плавные вращения",
+        "классическая позиция рук"
+      ],
+      "dance_elements": [],
+      "camera": "средний план",
+      "composition": "динамичный центр",
+      "emotion": [
+        "грациозность",
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "парный танец",
+      "visual_tags": [
+        "вальс",
+        "бордовое платье",
+        "соревнования"
+      ],
+      "search_phrases": [
+        "пара детей танцует вальс на турнире",
+        "девочка в бордовом платье кружится с партнером"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    },
+    {
+      "id": "scene_004",
+      "start": 47.0,
+      "end": 68.0,
+      "duration": 21.0,
+      "description": "Выступление пар на фоне цифрового табло с результатами соревнований.",
+      "subjects": [
+        "танцевальные пары",
+        "судьи на заднем плане"
+      ],
+      "actions": [
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "повороты",
+        "взаимодействие в паре",
+        "позирование"
+      ],
+      "dance_elements": [],
+      "camera": "средний и общий план",
+      "composition": "план с табло в фоновом режиме",
+      "emotion": [
+        "торжественность",
+        "уверенность"
+      ],
+      "location": [],
+      "interaction": "выступление перед жюри",
+      "visual_tags": [
+        "табло",
+        "соревнования",
+        "финал"
+      ],
+      "search_phrases": [
+        "танцевальные пары на фоне соревновательного табло",
+        "финальный танец на турнире"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 11.0,
+      "duration": 11.0,
+      "semantic_description": "Пара детей танцует на паркете, девочка в ярком желтом платье.",
+      "subjects": [
+        "девочка в желтом платье",
+        "мальчик в белой рубашке с номером 561"
+      ],
+      "actions": [
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "вращение",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "удовольствие",
+        "сконцентрированность"
+      ],
+      "camera": "средний план",
+      "visual_tags": [
+        "бальные танцы",
+        "дети",
+        "соревнования"
+      ],
+      "search_tags": [
+        "бальные танцы",
+        "дети",
+        "соревнования",
+        "взаимодействие в паре",
+        "вращение",
+        "ритмичные шаги в сторону",
+        "девочка в желтом платье",
+        "мальчик в белой рубашке с номером 561",
+        "удовольствие",
+        "сконцентрированность"
+      ],
+      "search_phrases": [
+        "дети танцуют бальные танцы на паркете",
+        "пара в желтом платье выступает на турнире"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 11.0,
+      "end": 25.0,
+      "duration": 14.0,
+      "semantic_description": "Общий план нескольких пар на паркете во время турнира.",
+      "subjects": [
+        "несколько танцевальных пар"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "массовое выступление",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "динамика",
+        "энергичность"
+      ],
+      "camera": "общий план",
+      "visual_tags": [
+        "турнир",
+        "массовый танец",
+        "паркет"
+      ],
+      "search_tags": [
+        "турнир",
+        "массовый танец",
+        "паркет",
+        "синхронное движение ног",
+        "массовое выступление",
+        "повороты",
+        "несколько танцевальных пар",
+        "динамика",
+        "энергичность"
+      ],
+      "search_phrases": [
+        "группа детей выступает на танцевальном турнире",
+        "общий план танцевальных пар на паркете"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_003",
+      "start": 25.0,
+      "end": 47.0,
+      "duration": 22.0,
+      "semantic_description": "Пара в бордовом платье исполняет вальс на фоне трибун.",
+      "subjects": [
+        "девочка в бордовом платье",
+        "мальчик в белой рубашке с номером 344"
+      ],
+      "actions": [
+        {
+          "action": "поддержка в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "плавные вращения",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "классическая позиция рук",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "грациозность",
+        "сосредоточенность"
+      ],
+      "camera": "средний план",
+      "visual_tags": [
+        "вальс",
+        "бордовое платье",
+        "соревнования"
+      ],
+      "search_tags": [
+        "вальс",
+        "бордовое платье",
+        "соревнования",
+        "поддержка в паре",
+        "плавные вращения",
+        "классическая позиция рук",
+        "девочка в бордовом платье",
+        "мальчик в белой рубашке с номером 344",
+        "грациозность",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "пара детей танцует вальс на турнире",
+        "девочка в бордовом платье кружится с партнером"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_004",
+      "start": 47.0,
+      "end": 68.0,
+      "duration": 21.0,
+      "semantic_description": "Выступление пар на фоне цифрового табло с результатами соревнований.",
+      "subjects": [
+        "танцевальные пары",
+        "судьи на заднем плане"
+      ],
+      "actions": [
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "торжественность",
+        "уверенность"
+      ],
+      "camera": "средний и общий план",
+      "visual_tags": [
+        "табло",
+        "соревнования",
+        "финал"
+      ],
+      "search_tags": [
+        "табло",
+        "соревнования",
+        "финал",
+        "повороты",
+        "взаимодействие в паре",
+        "позирование",
+        "танцевальные пары",
+        "судьи на заднем плане",
+        "торжественность",
+        "уверенность"
+      ],
+      "search_phrases": [
+        "танцевальные пары на фоне соревновательного табло",
+        "финальный танец на турнире"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777157.mp4",
+    "keywords": [
+      "бальные танцы",
+      "дети",
+      "соревнования",
+      "девочка в желтом платье",
+      "мальчик в белой рубашке с номером 561",
+      "турнир",
+      "массовый танец",
+      "паркет",
+      "несколько танцевальных пар",
+      "вальс",
+      "бордовое платье",
+      "девочка в бордовом платье",
+      "мальчик в белой рубашке с номером 344",
+      "табло",
+      "финал",
+      "танцевальные пары",
+      "судьи на заднем плане",
+      "взаимодействие в паре",
+      "вращение",
+      "ритмичные шаги в сторону",
+      "удовольствие",
+      "сконцентрированность",
+      "синхронное движение ног",
+      "массовое выступление",
+      "повороты",
+      "динамика",
+      "энергичность",
+      "поддержка в паре",
+      "плавные вращения",
+      "классическая позиция рук",
+      "грациозность",
+      "сосредоточенность",
+      "позирование",
+      "торжественность",
+      "уверенность"
+    ],
+    "actions": [
+      "взаимодействие в паре",
+      "вращение",
+      "ритмичные шаги в сторону",
+      "синхронное движение ног",
+      "массовое выступление",
+      "повороты",
+      "поддержка в паре",
+      "плавные вращения",
+      "классическая позиция рук",
+      "позирование"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 4,
+    "locations": [],
+    "emotions": [
+      "удовольствие",
+      "сконцентрированность",
+      "динамика",
+      "энергичность",
+      "грациозность",
+      "сосредоточенность",
+      "торжественность",
+      "уверенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети танцуют бальные танцы на паркете",
+      "пара в желтом платье выступает на турнире",
+      "группа детей выступает на танцевальном турнире",
+      "общий план танцевальных пар на паркете",
+      "пара детей танцует вальс на турнире",
+      "девочка в бордовом платье кружится с партнером",
+      "танцевальные пары на фоне соревновательного табло",
+      "финальный танец на турнире"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

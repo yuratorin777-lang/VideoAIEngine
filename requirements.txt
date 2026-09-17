@@ -1,0 +1,9 @@
+google-genai
+python-dotenv
+opencv-python
+ultralytics
+numpy
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+requests
