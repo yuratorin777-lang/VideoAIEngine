@@ -1455,11 +1455,13 @@ class VideoNormalizer:
             "ffmpeg",
             "-y",
 
-            # Явно разрешаем обработку display rotation.
-            "-autorotate",
-
+            # Быстрая перемотка ДО открытия входного файла (-i)
             "-ss",
             str(start),
+
+            # Флаг -autorotate по умолчанию равен 1 (включен). 
+            # Если нужно указать явно, ставим СТРОГО перед -i:
+            "-autorotate",
 
             "-i",
             str(source_path),
