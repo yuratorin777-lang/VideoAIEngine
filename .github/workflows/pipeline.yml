@@ -22,10 +22,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 3. Установка системных зависимостей (FFmpeg + OpenGL/EGL)
+      - name: 3. Установка системных зависимостей (FFmpeg + OpenGL/EGL/GLES)
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg libgl1 libegl1 libglib2.0-0
+          sudo apt-get install -y ffmpeg libgl1 libegl1 libgles2 libglib2.0-0
 
       - name: 4. Воссоздание service_account.json из Secrets
         env:
