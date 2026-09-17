@@ -7,7 +7,11 @@ import cv2
 from .models import FrameAnalysis
 from .person_detector import PersonDetector
 from .face_detector import FaceDetector
-from .text_detector import TextDetector
+try:
+    from .text_detector import TextDetector
+except ModuleNotFoundError:
+    TextDetector = None
+    print("[LocalObjectDetector] WARNING: TextDetector unavailable. Text detection will be skipped.")
 
 
 class LocalObjectDetector:
@@ -48,10 +52,10 @@ class LocalObjectDetector:
         )
 
         self.text_detector = (
-            TextDetector()
-            if enable_text
-            else None
-        )
+    TextDetector()
+    if enable_text and TextDetector is not None
+    else None
+)
 
     def detect_frame(
         self,
