@@ -4,7 +4,12 @@ from pathlib import Path
 from typing import List
 
 import cv2
-import mediapipe as mp
+
+try:
+    import mediapipe as mp
+except ModuleNotFoundError:
+    mp = None
+    print("[PersonDetector] WARNING: mediapipe is not installed.")
 
 from .models import BoundingBox, Detection, DetectionType
 
@@ -24,33 +29,42 @@ class PersonDetector:
     ) -> None:
         self.model_path = Path(model_path)
         self.min_detection_confidence = min_detection_confidence
-
-        if not self.model_path.exists():
-            raise FileNotFoundError(
-                f"Pose model not found: {self.model_path}"
-            )
-
         self._landmarker = None
+        self._failed_to_load = False
 
     def _load_model(self):
-        if self._landmarker is not None:
+        if self._landmarker is not None or self._failed_to_load:
             return self._landmarker
 
-        BaseOptions = mp.tasks.BaseOptions
-        PoseLandmarker = mp.tasks.vision.PoseLandmarker
-        PoseLandmarkerOptions = mp.tasks.vision.PoseLandmarkerOptions
-        VisionRunningMode = mp.tasks.vision.RunningMode
+        if mp is None:
+            self._failed_to_load = True
+            return None
 
-        options = PoseLandmarkerOptions(
-            base_options=BaseOptions(
-                model_asset_path=str(self.model_path.resolve())
-            ),
-            running_mode=VisionRunningMode.IMAGE,
-            min_pose_detection_confidence=self.min_detection_confidence,
-            min_pose_presence_confidence=self.min_detection_confidence,
-        )
+        if not self.model_path.exists():
+            print(f"[PersonDetector] WARNING: Pose model not found: {self.model_path}")
+            self._failed_to_load = True
+            return None
 
-        self._landmarker = PoseLandmarker.create_from_options(options)
+        try:
+            BaseOptions = mp.tasks.BaseOptions
+            PoseLandmarker = mp.tasks.vision.PoseLandmarker
+            PoseLandmarkerOptions = mp.tasks.vision.PoseLandmarkerOptions
+            VisionRunningMode = mp.tasks.vision.RunningMode
+
+            options = PoseLandmarkerOptions(
+                base_options=BaseOptions(
+                    model_asset_path=str(self.model_path.resolve())
+                ),
+                running_mode=VisionRunningMode.IMAGE,
+                min_pose_detection_confidence=self.min_detection_confidence,
+                min_pose_presence_confidence=self.min_detection_confidence,
+            )
+
+            self._landmarker = PoseLandmarker.create_from_options(options)
+        except Exception as e:
+            print(f"[PersonDetector] WARNING: Failed to initialize MediaPipe PoseLandmarker ({e}). Skipping person detection.")
+            self._failed_to_load = True
+            self._landmarker = None
 
         return self._landmarker
 
@@ -70,15 +84,21 @@ class PersonDetector:
             return []
 
         landmarker = self._load_model()
+        if landmarker is None:
+            return []
 
-        rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        try:
+            rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-        mp_image = mp.Image(
-            image_format=mp.ImageFormat.SRGB,
-            data=rgb,
-        )
+            mp_image = mp.Image(
+                image_format=mp.ImageFormat.SRGB,
+                data=rgb,
+            )
 
-        result = landmarker.detect(mp_image)
+            result = landmarker.detect(mp_image)
+        except Exception as e:
+            print(f"[PersonDetector] WARNING: Error during pose detection ({e}).")
+            return []
 
         detections: List[Detection] = []
 
