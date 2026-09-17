@@ -10,3 +10,4 @@ requests
 edge-tts
 mediapipe
 easyocr
+moviepy
