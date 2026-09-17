@@ -562,6 +562,25 @@ async def generate_phrase_audio(
     output_path: Path,
 ) -> list[dict]:
 
+    word_boundaries = []
+
+    async def _fetch_chunks(comm: edge_tts.Communicate) -> list[dict]:
+        boundaries = []
+        with open(output_path, "wb") as file:
+            async for chunk in comm.stream():
+                if chunk["type"] == "audio":
+                    file.write(chunk["data"])
+                elif chunk["type"] == "WordBoundary":
+                    boundaries.append(
+                        {
+                            "text": chunk["text"],
+                            "offset": chunk["offset"],
+                            "duration": chunk["duration"],
+                        }
+                    )
+        return boundaries
+
+    # 1-я попытка: с тонкими настройками prosody (pitch/rate/volume)
     communicate = edge_tts.Communicate(
         phrase,
         voice,
@@ -571,30 +590,18 @@ async def generate_phrase_audio(
         boundary="WordBoundary",
     )
 
-    word_boundaries = []
-
-    with open(
-        output_path,
-        "wb",
-    ) as file:
-
-        async for chunk in communicate.stream():
-
-            if chunk["type"] == "audio":
-
-                file.write(
-                    chunk["data"]
-                )
-
-            elif chunk["type"] == "WordBoundary":
-
-                word_boundaries.append(
-                    {
-                        "text": chunk["text"],
-                        "offset": chunk["offset"],
-                        "duration": chunk["duration"],
-                    }
-                )
+    try:
+        word_boundaries = await _fetch_chunks(communicate)
+    except Exception as e:
+        print(f"[!] Ошибка edge-tts ({e}) при генерации фразы. Перезапускаем без pitch/rate...")
+        
+        # 2-я попытка (Fallback): чистый запрос без падающих параметров prosody
+        fallback_communicate = edge_tts.Communicate(
+            phrase,
+            voice,
+            boundary="WordBoundary",
+        )
+        word_boundaries = await _fetch_chunks(fallback_communicate)
 
     return word_boundaries
 
