@@ -45,9 +45,11 @@ def run_command(command: list[str], title: str):
         f"[Pipeline] Запуск: {' '.join(command)}"
     )
 
+    # Передаем env=os.environ.copy(), чтобы дочерний Python видел все пакеты и PYTHONPATH
     result = subprocess.run(
         command,
         cwd=BASE_DIR,
+        env=os.environ.copy(),
     )
 
     if result.returncode != 0:
