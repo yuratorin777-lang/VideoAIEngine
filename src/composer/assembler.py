@@ -148,23 +148,16 @@ def generate_cover_image(
     video_path: str | Path,
     cover_title: str,
     brand_name: str = "dance_kids",
+    is_landscape: bool = False,  # True для 16:9, False для 9:16
     output_png_path: str | Path = "temp_downloads/cover_generated.png",
 ) -> Path:
-    """Генерирует PNG обложку:
-
-    1. Пробует вырезать кадр из видео. 2. Если кадр не вырезался — ищет случайный
-    фон в 04_LIBRARY/brands/{brand_name}/backgrounds/ 3. Берёт логотип из
-    04_LIBRARY/brands/{brand_name}/logo.png (или logo_white.png) 4. Генерирует
-    PNG через OverlayGenerator
-    """
     out_path = resolve_path(str(output_png_path))
     temp_frame = out_path.parent / "temp_cover_bg.jpg"
 
-    # 1. Извлекаем кадр из видео
+    # 1. Вырезаем кадр из видео
     extract_frame_from_video(video_path, temp_frame)
 
     bg_path = temp_frame
-    # 2. Если извлечь кадр не удалось, ищем запасные фоны в бренде
     if not temp_frame.exists() or temp_frame.stat().st_size == 0:
         bg_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}/backgrounds"
         if bg_dir.exists():
@@ -176,22 +169,39 @@ def generate_cover_image(
             if bg_files:
                 bg_path = random.choice(bg_files)
 
-    # 3. Поиск логотипа бренда
+    # 2. Выбор логотипа
     brand_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}"
-    logo_path = brand_dir / "logo.png"
-    if not logo_path.exists():
-        logo_path = brand_dir / "logo_white.png"
+    logo_files = [
+        f
+        for f in brand_dir.glob("logo*.*")
+        if f.suffix.lower() in [".png", ".jpg", ".jpeg", ".svg"]
+    ]
+    logo_path = random.choice(logo_files) if logo_files else ""
 
-    # 4. Формирование контекста и запуск OverlayGenerator
+    # 3. Выбор пула шаблонов под ориентацию экрана
+    if is_landscape:
+        cover_templates = ["cover_landscape_classic.html"]
+    else:
+        cover_templates = [
+            "cover_classic.html",
+            "cover_badge.html",
+            "cover_bold.html",
+        ]
+
+    selected_template = random.choice(cover_templates)
+
+    # 4. Рендер через Playwright
     generator = OverlayGenerator()
     context = {
         "background_path": bg_path,
-        "logo_path": logo_path if logo_path.exists() else "",
+        "logo_path": logo_path,
         "title": cover_title,
     }
 
     generator.generate_image(
-        template_name="cover.html", context=context, output_path=str(out_path)
+        template_name=selected_template,
+        context=context,
+        output_path=str(out_path),
     )
 
     if temp_frame.exists():
