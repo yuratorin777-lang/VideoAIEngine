@@ -1,51 +1,35 @@
-import os
 import json
+import os
+import random
+import re
 import shutil
 import subprocess
-import re
-import random
 from pathlib import Path
-from src.composer.branding import apply_brand_logo
 
 import imageio_ffmpeg
-
+import moviepy.audio.fx as afx
 from moviepy import (
-    VideoFileClip,
     AudioFileClip,
     CompositeAudioClip,
+    VideoFileClip,
     concatenate_videoclips,
 )
 
-import moviepy.audio.fx as afx
-
+from src.composer.branding import apply_brand_logo
+from src.composer.subtitle_layout import layout_subtitle_text
+from src.composer.subtitle_style_selector import select_subtitle_style
 from src.composer.subtitle_styles import (
-    get_subtitle_style,
     calculate_font_size,
     calculate_margin_bottom,
+    get_subtitle_style,
 )
-
-from src.composer.subtitle_layout import (
-    layout_subtitle_text,
-)
-
-from src.composer.subtitle_style_selector import (
-    select_subtitle_style,
-)
-
 from src.graphics.overlay_generator import OverlayGenerator
-
 
 # ============================================================
 # BASE DIRECTORY
 # ============================================================
 
-BASE_DIR = (
-    Path(__file__)
-    .resolve()
-    .parent
-    .parent
-    .parent
-)
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # ============================================================
@@ -89,10 +73,8 @@ DEFAULT_TARGET_DURATION = 20.0
 # PATH RESOLVER
 # ============================================================
 
-def resolve_path(
-    relative_or_absolute_path: str,
-) -> Path:
 
+def resolve_path(relative_or_absolute_path: str) -> Path:
     path = Path(relative_or_absolute_path)
 
     if not path.is_absolute():
@@ -104,6 +86,7 @@ def resolve_path(
 # ============================================================
 # FFmpeg RESOLVER
 # ============================================================
+
 
 def get_ffmpeg_path() -> str:
     """Возвращает путь к FFmpeg от imageio_ffmpeg или системный."""
@@ -117,6 +100,7 @@ def get_ffmpeg_path() -> str:
 # COVER & FRAME EXTRACTION PROCESSING
 # ============================================================
 
+
 def extract_frame_from_video(
     video_path: str | Path,
     output_frame_path: str | Path,
@@ -128,19 +112,29 @@ def extract_frame_from_video(
     ffmpeg_bin = get_ffmpeg_path()
 
     cmd = [
-        ffmpeg_bin, "-y",
-        "-ss", str(time_offset),
-        "-i", str(video),
-        "-vframes", "1",
-        "-q:v", "2",
-        str(output_frame)
+        ffmpeg_bin,
+        "-y",
+        "-ss",
+        str(time_offset),
+        "-i",
+        str(video),
+        "-vframes",
+        "1",
+        "-q:v",
+        "2",
+        str(output_frame),
     ]
-    
+
     try:
-        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(
+            cmd,
+            check=True,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
     except Exception as e:
         print(f"[FrameExtract] Ошибка при вырезании кадра: {e}")
-    
+
     return output_frame
 
 
@@ -214,10 +208,10 @@ def apply_cover_overlay(
     input_video_path: str | Path,
     cover_image_path: str | Path,
     output_video_path: str | Path,
-    duration: float = 3.0,
+    duration: float = 1.5,  # Держать обложку на первых 1.5 сек роликах
 ) -> Path:
-    """
-    Накладывает PNG-обложку (cover_image_path) на первые duration секунд
+    """Накладывает PNG-обложку (cover_image_path) на первые duration секунд
+
     готового видео (input_video_path) и сохраняет итог в output_video_path.
     """
     input_video = resolve_path(str(input_video_path))
@@ -225,11 +219,13 @@ def apply_cover_overlay(
     output_video = resolve_path(str(output_video_path))
 
     if not cover_image.exists():
-        print(f"[CoverOverlay] Предупреждение: Файл обложки {cover_image} не найден. Пропуск.")
+        print(
+            f"[CoverOverlay] Предупреждение: Файл обложки {cover_image} не найден. Пропуск."
+        )
         return input_video
 
     ffmpeg_bin = get_ffmpeg_path()
-    
+
     temp_output = output_video.parent / f"temp_cover_{output_video.name}"
 
     filter_complex = f"[0:v][1:v]overlay=0:0:enable='between(t,0,{duration})'[v]"
@@ -237,27 +233,38 @@ def apply_cover_overlay(
     cmd = [
         ffmpeg_bin,
         "-y",
-        "-i", str(input_video),
-        "-i", str(cover_image),
-        "-filter_complex", filter_complex,
-        "-map", "[v]",
-        "-map", "0:a?",
-        "-c:v", VIDEO_CODEC,
-        "-preset", VIDEO_PRESET,
-        "-crf", VIDEO_CRF,
-        "-pix_fmt", VIDEO_PIXEL_FORMAT,
-        "-c:a", "copy",
+        "-i",
+        str(input_video),
+        "-i",
+        str(cover_image),
+        "-filter_complex",
+        filter_complex,
+        "-map",
+        "[v]",
+        "-map",
+        "0:a?",
+        "-c:v",
+        VIDEO_CODEC,
+        "-preset",
+        VIDEO_PRESET,
+        "-crf",
+        VIDEO_CRF,
+        "-pix_fmt",
+        VIDEO_PIXEL_FORMAT,
+        "-c:a",
+        "copy",
         str(temp_output),
     ]
 
-    print(f"[CoverOverlay] Наложение обложки на {duration} сек...")
-    subprocess.run(cmd, check=True)
+    print(
+        f"[CoverOverlay] Автоматическое наложение обложки на первые {duration} сек..."
+    )
+    subprocess.run(
+        cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+    )
 
     if temp_output.exists():
-        if temp_output != output_video and input_video == output_video:
-            shutil.move(str(temp_output), str(output_video))
-        elif temp_output != output_video:
-            shutil.move(str(temp_output), str(output_video))
+        shutil.move(str(temp_output), str(output_video))
 
     return output_video
 

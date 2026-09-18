@@ -5,6 +5,7 @@ import json
 import re
 import hashlib
 from pathlib import Path
+from src.composer.assembler import apply_cover_overlay, generate_cover_image
 import requests
 
 
@@ -2148,6 +2149,64 @@ def run_pipeline(
         ],
         "ASSEMBLER",
     )
+
+    # ---------------------------------------------------------
+    # 7.1 COVER GENERATOR & OVERLAY (Генерация и вклейка обложки)
+    # ---------------------------------------------------------
+    print(
+        "\n======================================================================"
+    )
+    print(" COVER GENERATOR & OVERLAY")
+    print(
+        "======================================================================"
+    )
+
+    try:
+        # Безопасно получаем контракт и локальные переменные без ошибок Pylance
+        local_vars = locals()
+        current_contract = local_vars.get("job_contract") or local_vars.get(
+            "contract", {}
+        )
+
+        is_landscape = (
+            current_contract.get("output", {}).get("format") == "landscape"
+        )
+
+        cover_title = (
+            current_contract.get("script", {}).get("title")
+            or "ОТКРЫТ НАБОР В НОВЫЕ ГРУППЫ!"
+        )
+
+        target_video_path = local_vars.get("final_video_path") or local_vars.get(
+            "output_video_path"
+        )
+
+        if not target_video_path:
+            raise ValueError(
+                "Не найден путь к скомпонованному видеофайлу для наложения обложки."
+            )
+
+        # 1. Генерируем PNG-файл обложки
+        cover_png = generate_cover_image(
+            video_path=target_video_path,
+            cover_title=cover_title,
+            brand_name="dance_kids",
+            is_landscape=is_landscape,
+            output_png_path="07_OUTPUT/video_cover.png",
+        )
+        print(f"[Pipeline] ✓ Сохранена статичная обложка: {cover_png}")
+
+        # 2. Накладываем её на первые 1.5 сек самого ролика
+        apply_cover_overlay(
+            input_video_path=target_video_path,
+            cover_image_path=cover_png,
+            output_video_path=target_video_path,
+            duration=1.5,
+        )
+        print(f"[Pipeline] ✓ Обложка вшита в первые 1.5 секунды видео!")
+
+    except Exception as e:
+        print(f"[Pipeline] Ошибка при обработке обложки: {e}")
 
     # ---------------------------------------------------------
     # 8. FINAL CHECK
