@@ -144,17 +144,30 @@ def generate_cover_image(
     brand_name: str = "dance_kids",
     is_landscape: bool = False,
     output_png_path: str | Path = "temp_downloads/cover_generated.png",
+    raw_source_video: str | Path | None = None,  # Чистый исходник без субтитров
 ) -> Path:
     out_path = resolve_path(str(output_png_path))
     temp_frame = out_path.parent / "temp_cover_bg.jpg"
 
-    # 1. Вырезаем СЛУЧАЙНЫЙ кадр из середины видео (от 2.0 до 5.0 сек)
-    random_offset = round(random.uniform(2.0, 5.0), 2)
-    extract_frame_from_video(video_path, temp_frame, time_offset=random_offset)
-    print(f"[Cover] Вырезан кадр для обложки с метки {random_offset}s")
+    # Если передан чистый исходник — берем из него, иначе пробуем из переданного файла
+    target_video_for_frame = raw_source_video or video_path
+    frame_extracted = False
 
+    if target_video_for_frame and Path(target_video_for_frame).exists():
+        try:
+            # Вырезаем случайный кадр (от 2.0 до 5.0 сек)
+            random_offset = round(random.uniform(2.0, 5.0), 2)
+            extract_frame_from_video(target_video_for_frame, temp_frame, time_offset=random_offset)
+            if temp_frame.exists() and temp_frame.stat().st_size > 0:
+                frame_extracted = True
+                print(f"[Cover] Вырезан чистый кадр из видео (метка {random_offset}s)")
+        except Exception as e:
+            print(f"[Cover] Ошибка вырезки кадра из видео: {e}")
+
+    # ФОЛЛБЭК: Если кадр не вырезался или видео повреждено — берем из папки backgrounds
     bg_path = temp_frame
-    if not temp_frame.exists() or temp_frame.stat().st_size == 0:
+    if not frame_extracted:
+        print("[Cover] Кадр из видео не получен. Переходим к фоллбэку из папки backgrounds...")
         bg_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}/backgrounds"
         if bg_dir.exists():
             bg_files = (
@@ -164,17 +177,17 @@ def generate_cover_image(
             )
             if bg_files:
                 bg_path = random.choice(bg_files)
+                print(f"[Cover] Выбран фоновый рисунок из библиотеки: {bg_path.name}")
 
-    # 2. Выбор логотипа
+    # 2. Выбор логотипа бренда
     brand_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}"
     logo_files = [
-        f
-        for f in brand_dir.glob("logo*.*")
+        f for f in brand_dir.glob("logo*.*")
         if f.suffix.lower() in [".png", ".jpg", ".jpeg", ".svg"]
     ]
     logo_path = random.choice(logo_files) if logo_files else ""
 
-    # 3. Выбор пула шаблонов под ориентацию экрана
+    # 3. Выбор шаблона обложки
     if is_landscape:
         cover_templates = ["cover_landscape_classic.html"]
     else:

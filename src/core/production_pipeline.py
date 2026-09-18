@@ -1053,9 +1053,6 @@ SCRIPT_SYSTEM_INSTRUCTION = """
 Не стремись заполнить лимит символов. 
 Лучше сделать текст короче, чем получить voiceover, 
 который не помещается в длительность ролика. 
- 
-Текст должен: 
-- соответствовать аудитории; 
 
 Текст должен:
 - соответствовать аудитории;
@@ -1095,7 +1092,7 @@ SCRIPT_SYSTEM_INSTRUCTION = """
 def generate_script_with_gemini(
     input_text: str,
     contract: dict,
-) -> str:
+) -> dict:
 
     duration_seconds = contract.get(
         "output",
@@ -1118,27 +1115,24 @@ def generate_script_with_gemini(
         "friendly",
     )
 
-    # Для русского TTS ориентируемся не на символы,
-# а на безопасный объём текста для заданной длительности.
-# ~2.0–2.2 слова/сек — нормальный рекламный темп с паузами.
     target_words = max(
-       8,
-       int(duration_seconds * 2.0),
+        8,
+        int(duration_seconds * 2.0),
     )
 
     max_words = max(
-       10,
-       int(duration_seconds * 2.2),
+        10,
+        int(duration_seconds * 2.2),
     )
 
     max_script_chars = max(
-       80,
-       int(max_words * 6.5),
+        80,
+        int(max_words * 6.5),
     )
 
     target_min_chars = max(
-       60,
-       int(max_script_chars * 0.70),
+        60,
+        int(max_script_chars * 0.70),
     )
 
     target_max_chars = max_script_chars
@@ -1207,22 +1201,13 @@ Production parameters:
 """
 
     proxy_url = VERCEL_PROXY_URL.rstrip("/")
-
-    endpoint = (
-        f"{proxy_url}/api/gemini"
-    )
+    endpoint = f"{proxy_url}/api/gemini"
 
     payload = {
         "action": "generateContent",
-
         "prompt": prompt,
-
-        "systemInstruction":
-            SCRIPT_SYSTEM_INSTRUCTION,
-
-        "responseMimeType":
-            "application/json",
-
+        "systemInstruction": SCRIPT_SYSTEM_INSTRUCTION,
+        "responseMimeType": "application/json",
         "temperature": 0.4,
     }
 
@@ -1230,56 +1215,74 @@ Production parameters:
     print("=" * 70)
     print(" SCRIPT GENERATOR")
     print("=" * 70)
-
-    print(
-        "[Pipeline] Отправка ТЗ в Script Generator..."
-    )
+    print("[Pipeline] Отправка ТЗ в Script Generator...")
 
     try:
-
         response = requests.post(
             endpoint,
             json=payload,
             timeout=120,
         )
-
     except requests.RequestException as e:
-
         raise RuntimeError(
-            "Ошибка соединения с Vercel/Gemini "
-            f"при генерации script: {e}"
+            f"Ошибка соединения с Vercel/Gemini при генерации script: {e}"
         ) from e
 
     if response.status_code != 200:
-
         body = response.text[:2000]
-
         raise RuntimeError(
-            "Script Generator вернул HTTP "
-            f"{response.status_code}.\n"
-            f"{body}"
+            f"Script Generator вернул HTTP {response.status_code}.\n{body}"
         )
 
     try:
-
         data = response.json()
-
     except ValueError as e:
+        raise RuntimeError("Script Generator вернул некорректный JSON response.") from e
 
-        raise RuntimeError(
-            "Script Generator вернул "
-            "некорректный JSON response."
-        ) from e
+    # Извлекаем текст ответа Vercel Proxy / Gemini API
+    raw_text = ""
+    if isinstance(data, dict):
+        if "text" in data:
+            raw_text = data["text"]
+        elif "candidates" in data and len(data["candidates"]) > 0:
+            parts = data["candidates"][0].get("content", {}).get("parts", [])
+            if parts:
+                raw_text = parts[0].get("text", "")
 
-    if not isinstance(
-        data,
-        dict,
-    ):
+    if not raw_text:
+        raw_text = str(data)
 
-        raise RuntimeError(
-            "Ответ Script Generator "
-            "имеет некорректную структуру."
-        )
+    # Очищаем ответ от возможного markdown-обрамления ```json ... ```
+    cleaned_text = raw_text.strip()
+    if cleaned_text.startswith("```"):
+        cleaned_text = cleaned_text.split("\n", 1)[-1]
+        if cleaned_text.endswith("```"):
+            cleaned_text = cleaned_text.rsplit("```", 1)[0]
+    cleaned_text = cleaned_text.strip()
+
+    # Парсим итоговый JSON от модели
+    result_json = {}
+    try:
+        result_json = json.loads(cleaned_text)
+    except Exception:
+        # Если модель отдала просто чистый текст сценария без JSON
+        result_json = {
+            "cover_hook": "РАЗВИТИЕ ЧЕРЕЗ ТАНЦЫ",
+            "script": cleaned_text
+        }
+
+    cover_hook = result_json.get("cover_hook", "").strip().upper()
+    script_text = result_json.get("script", "").strip()
+
+    print(f"[Script] Успешно сгенерирован хук: {cover_hook}")
+    print(f"[Script] Текст озвучки ({len(script_text)} симв.): {script_text[:60]}...")
+
+    # Возвращаем структурированный словарь
+    return {
+        "cover_hook": cover_hook,
+        "script": script_text,
+        "title": cover_hook
+    }
 
     # --------------------------------------------------------
     # EXTRACT GENERATED TEXT
@@ -2183,63 +2186,74 @@ def run_pipeline(
         ]
 
         if not video_files:
-            # Если нет финального файла, пробуем найти темповый
             video_files = list(output_dir.glob("*.mp4"))
 
         if not video_files:
             print("[Cover] Ошибка: Итоговый видеофайл в 07_OUTPUT не найден!")
         else:
-            # Берем самый свежий собранный ролик
             target_video = max(video_files, key=lambda f: f.stat().st_mtime)
             print(f"[Cover] Целевое видео для обложки: {target_video}")
 
-            # 2. Определяем ориентацию (landscape / vertical)
-            is_landscape = False
+            # 2. Извлекаем контекст и настройки бренда
             local_vars = locals()
             current_contract = local_vars.get("job_contract") or local_vars.get("contract", {})
+            
+            is_landscape = False
+            brand_name = "dance_kids"
             
             if isinstance(current_contract, dict):
                 is_landscape = (
                     current_contract.get("output", {}).get("format") == "landscape"
                 )
+                brand_name = (
+                    current_contract.get("brand", {}).get("name") 
+                    or current_contract.get("brand_name") 
+                    or "dance_kids"
+                )
 
-            # 3. Формируем сочный заголовок (с приоритетом cover_hook от Gemini)
+            # 3. Извлекаем заголовок обложки (приоритет cover_hook от Gemini)
             script_title = None
             if isinstance(current_contract, dict):
                 script_data = current_contract.get("script")
                 if isinstance(script_data, dict):
                     script_title = script_data.get("cover_hook") or script_data.get("title")
                 elif isinstance(script_data, str):
-                    # Если script в контракте сохранён как строка
                     script_title = current_contract.get("cover_hook")
 
-            # Если заголовка нет в контракте, берём из local_vars или генерируем запасной
             if not script_title or str(script_title).strip() in ["None", ""]:
                 script_title = local_vars.get("cover_hook")
 
             if not script_title or str(script_title).strip() in ["None", ""]:
                 script_text_var = local_vars.get("script_text")
                 if script_text_var:
-                    # Запасной вариант: первые 4 слова из текста озвучки
                     words = str(script_text_var).split()[:4]
                     script_title = " ".join(words)
                 else:
-                    script_title = "ТАНЦЫ ДЛЯ ДЕТЕЙ"
+                    script_title = "РАЗВИТИЕ ЧЕРЕЗ ТАНЦЫ"
 
             cover_title = str(script_title).strip(" .!,").upper()
             print(f"[Cover] Заголовок для обложки: {cover_title}")
 
-            # 4. Генерируем PNG-обложку из кадра видео
+            # 4. Находим чистый исходник (первый видеоклип до наложения субтитров)
+            raw_clean_video = None
+            editing_plan = current_contract.get("editing_plan", [])
+            if editing_plan and isinstance(editing_plan, list):
+                first_clip = editing_plan[0]
+                if isinstance(first_clip, dict):
+                    raw_clean_video = first_clip.get("file_path") or first_clip.get("path")
+
+            # 5. Генерируем PNG-обложку
             cover_png = generate_cover_image(
                 video_path=target_video,
                 cover_title=cover_title,
-                brand_name="dance_kids",
+                brand_name=brand_name,
                 is_landscape=is_landscape,
                 output_png_path="07_OUTPUT/video_cover.png",
+                raw_source_video=raw_clean_video,  # Передаем чистый файл без субтитров
             )
             print(f"[Pipeline] ✓ Сохранена статичная обложка: {cover_png}")
 
-            # 5. Накладываем обложку на первые 1.5 сек этого же ролика
+            # 6. Вшиваем обложку в первые 1.5 сек готового видео
             apply_cover_overlay(
                 input_video_path=target_video,
                 cover_image_path=cover_png,
