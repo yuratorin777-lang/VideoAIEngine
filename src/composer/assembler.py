@@ -142,14 +142,16 @@ def generate_cover_image(
     video_path: str | Path,
     cover_title: str,
     brand_name: str = "dance_kids",
-    is_landscape: bool = False,  # True для 16:9, False для 9:16
+    is_landscape: bool = False,
     output_png_path: str | Path = "temp_downloads/cover_generated.png",
 ) -> Path:
     out_path = resolve_path(str(output_png_path))
     temp_frame = out_path.parent / "temp_cover_bg.jpg"
 
-    # 1. Вырезаем кадр из видео
-    extract_frame_from_video(video_path, temp_frame)
+    # 1. Вырезаем СЛУЧАЙНЫЙ кадр из середины видео (от 2.0 до 5.0 сек)
+    random_offset = round(random.uniform(2.0, 5.0), 2)
+    extract_frame_from_video(video_path, temp_frame, time_offset=random_offset)
+    print(f"[Cover] Вырезан кадр для обложки с метки {random_offset}s")
 
     bg_path = temp_frame
     if not temp_frame.exists() or temp_frame.stat().st_size == 0:
@@ -183,6 +185,7 @@ def generate_cover_image(
         ]
 
     selected_template = random.choice(cover_templates)
+    print(f"[Cover] Шаблон обложки: {selected_template}")
 
     # 4. Рендер через Playwright
     generator = OverlayGenerator()

@@ -1020,7 +1020,7 @@ SCRIPT_SYSTEM_INSTRUCTION = """
 Ты — Script Generator внутри VideoAIEngine.
 
 Твоя задача — написать короткий текст закадровой
-озвучки для будущего короткого видеоролика.
+озвучки и цепляющий заголовок для обложки ролика.
 
 Работай строго на основании переданного ТЗ
 и Content Contract.
@@ -1075,9 +1075,18 @@ SCRIPT_SYSTEM_INSTRUCTION = """
 Не описывай визуал.
 Не добавляй технические инструкции.
 
+ТРЕБОВАНИЯ К cover_hook:
+- Не пересказывай сухие факты. Ищи БОЛЬ, ЖЕЛАНИЕ или ИНТРИГУ из исходного поста.
+- Длина: 2–4 слова, CAPS LOCK.
+- Примеры на основе постов:
+  * Пост про стеснение детей -> "РЕБЁНОК БОИТСЯ СЦЕНЫ?"
+  * Пост про осанку -> "СЕКРЕТ ИДЕАЛЬНОЙ ОСАНКИ"
+  * Пост про скидку/акцию -> "УСПЕЙ ДО КОНЦА НЕДЕЛИ!"
+
 Верни ТОЛЬКО JSON:
 
 {
+  "cover_hook": "СЕКРЕТ КРАСИВОЙ ОСАНКИ",
   "script": "текст озвучки"
 }
 """
@@ -1185,17 +1194,16 @@ Production parameters:
 Не добавляй вступительные фразы без смысловой ценности.
 
 ВАЖНО:
-Итоговый script НЕ ДОЛЖЕН превышать
-{target_max_chars} символов.
+Итоговый script НЕ ДОЛЖЕН превышать {target_max_chars} символов.
 
-Напиши текст закадровой озвучки.
+Напиши текст закадровой озвучки и придумай яркий, кликбейтный заголовок для обложки (cover_hook).
 
 Не описывай монтаж.
 Не выбирай кадры.
-Не описывай визуал.
+Не описывай визуализацию.
 Не добавляй технические инструкции.
 
-Верни только JSON указанного формата.
+Верни только JSON с полями "cover_hook" и "script".
 """
 
     proxy_url = VERCEL_PROXY_URL.rstrip("/")
@@ -2195,22 +2203,30 @@ def run_pipeline(
                     current_contract.get("output", {}).get("format") == "landscape"
                 )
 
-            # 3. Формируем сочный заголовок без None
+            # 3. Формируем сочный заголовок (с приоритетом cover_hook от Gemini)
             script_title = None
-            if isinstance(current_contract, dict) and current_contract.get("script"):
-                script_title = current_contract.get("script", {}).get("title")
+            if isinstance(current_contract, dict):
+                script_data = current_contract.get("script")
+                if isinstance(script_data, dict):
+                    script_title = script_data.get("cover_hook") or script_data.get("title")
+                elif isinstance(script_data, str):
+                    # Если script в контракте сохранён как строка
+                    script_title = current_contract.get("cover_hook")
 
-            # Если заголовка нет в контракте, извлекаем первые слова сценария/ТЗ
+            # Если заголовка нет в контракте, берём из local_vars или генерируем запасной
+            if not script_title or str(script_title).strip() in ["None", ""]:
+                script_title = local_vars.get("cover_hook")
+
             if not script_title or str(script_title).strip() in ["None", ""]:
                 script_text_var = local_vars.get("script_text")
                 if script_text_var:
-                    # Берём первые 4 слова из текста озвучки
+                    # Запасной вариант: первые 4 слова из текста озвучки
                     words = str(script_text_var).split()[:4]
-                    script_title = " ".join(words).upper()
+                    script_title = " ".join(words)
                 else:
                     script_title = "ТАНЦЫ ДЛЯ ДЕТЕЙ"
 
-            cover_title = str(script_title).strip(" .!,")
+            cover_title = str(script_title).strip(" .!,").upper()
             print(f"[Cover] Заголовок для обложки: {cover_title}")
 
             # 4. Генерируем PNG-обложку из кадра видео
