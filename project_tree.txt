@@ -1,4 +1,7 @@
 VideoAIEngine
+├── .github
+│   └── workflows
+│       └── pipeline.yml
 ├── .vscode
 │   └── settings.json
 ├── 00_SYSTEM
@@ -82,6 +85,12 @@ VideoAIEngine
 │   └── README.md
 ├── 07_OUTPUT
 │   ├── 14.09 горизонт.mp4
+│   ├── 17.09 горизонтальное.mp4
+│   ├── 17.09 сторис.mp4
+│   ├── 17.09.mp4
+│   ├── 18.09 02.mp4
+│   ├── 18.09 без озвучки.mp4
+│   ├── 18.09.mp4
 │   ├── открыт набор.mp4
 │   ├── README.md
 │   ├── temp_rendered_reel.mp4

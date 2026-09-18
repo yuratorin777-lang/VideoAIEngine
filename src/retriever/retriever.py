@@ -967,6 +967,7 @@ audio.subtitles = null
 
 {{
   "project_title": "Dance_Reel_Generated",
+  "cover_title": "КЛИКАБЕЛЬНЫЙ ЗАГОЛОВОК ОБЛОЖКИ (4-6 слов)",
   "subtitle_style": "auto",
   "content_profile": {{
     "audience": "",
@@ -1021,7 +1022,8 @@ audio.subtitles = null
 3. Суммарная длительность cuts = РОВНО {target_duration:.1f} секунд ±0.01.
 4. Первый cut имеет роль hook, последний — ending.
 5. output.duration_seconds = {target_duration:.1f}.
-6. JSON валидный, без разметки вне JSON.
+6. Поле cover_title содержит яркий, привлекающий внимание заголовок.
+7. JSON валидный, без разметки вне JSON.
 """
 
 

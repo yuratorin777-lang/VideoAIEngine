@@ -3,6 +3,7 @@ import json
 import shutil
 import subprocess
 import re
+import random
 from pathlib import Path
 from src.composer.branding import apply_brand_logo
 
@@ -31,6 +32,8 @@ from src.composer.subtitle_style_selector import (
     select_subtitle_style,
 )
 
+from src.graphics.overlay_generator import OverlayGenerator
+
 
 # ============================================================
 # BASE DIRECTORY
@@ -57,8 +60,6 @@ NORMALIZED_DIR = BASE_DIR / "temp_normalized"
 # SUBTITLE SYNC
 # ============================================================
 
-# ВАЖНО:
-# Не менять без отдельной проверки синхронизации.
 SUBTITLE_EARLY_OFFSET = 0.20
 
 
@@ -67,13 +68,8 @@ SUBTITLE_EARLY_OFFSET = 0.20
 # ============================================================
 
 VIDEO_CODEC = "libx264"
-
-# Более качественный encode.
 VIDEO_PRESET = "slow"
-
-# Высокое качество при разумном размере файла.
 VIDEO_CRF = "17"
-
 VIDEO_PIXEL_FORMAT = "yuv420p"
 
 AUDIO_CODEC = "aac"
@@ -103,6 +99,157 @@ def resolve_path(
         return BASE_DIR / path
 
     return path
+
+
+# ============================================================
+# FFmpeg RESOLVER
+# ============================================================
+
+def get_ffmpeg_path() -> str:
+    """Возвращает путь к FFmpeg от imageio_ffmpeg или системный."""
+    try:
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except Exception:
+        return "ffmpeg"
+
+
+# ============================================================
+# COVER & FRAME EXTRACTION PROCESSING
+# ============================================================
+
+def extract_frame_from_video(
+    video_path: str | Path,
+    output_frame_path: str | Path,
+    time_offset: float = 0.5,
+) -> Path:
+    """Вырезает кадр из видео для использования в качестве фона обложки."""
+    video = resolve_path(str(video_path))
+    output_frame = resolve_path(str(output_frame_path))
+    ffmpeg_bin = get_ffmpeg_path()
+
+    cmd = [
+        ffmpeg_bin, "-y",
+        "-ss", str(time_offset),
+        "-i", str(video),
+        "-vframes", "1",
+        "-q:v", "2",
+        str(output_frame)
+    ]
+    
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except Exception as e:
+        print(f"[FrameExtract] Ошибка при вырезании кадра: {e}")
+    
+    return output_frame
+
+
+def generate_cover_image(
+    video_path: str | Path,
+    cover_title: str,
+    brand_name: str = "dance_kids",
+    output_png_path: str | Path = "temp_downloads/cover_generated.png",
+) -> Path:
+    """Генерирует PNG обложку:
+
+    1. Пробует вырезать кадр из видео. 2. Если кадр не вырезался — ищет случайный
+    фон в 04_LIBRARY/brands/{brand_name}/backgrounds/ 3. Берёт логотип из
+    04_LIBRARY/brands/{brand_name}/logo.png (или logo_white.png) 4. Генерирует
+    PNG через OverlayGenerator
+    """
+    out_path = resolve_path(str(output_png_path))
+    temp_frame = out_path.parent / "temp_cover_bg.jpg"
+
+    # 1. Извлекаем кадр из видео
+    extract_frame_from_video(video_path, temp_frame)
+
+    bg_path = temp_frame
+    # 2. Если извлечь кадр не удалось, ищем запасные фоны в бренде
+    if not temp_frame.exists() or temp_frame.stat().st_size == 0:
+        bg_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}/backgrounds"
+        if bg_dir.exists():
+            bg_files = (
+                list(bg_dir.glob("*.png"))
+                + list(bg_dir.glob("*.jpg"))
+                + list(bg_dir.glob("*.jpeg"))
+            )
+            if bg_files:
+                bg_path = random.choice(bg_files)
+
+    # 3. Поиск логотипа бренда
+    brand_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}"
+    logo_path = brand_dir / "logo.png"
+    if not logo_path.exists():
+        logo_path = brand_dir / "logo_white.png"
+
+    # 4. Формирование контекста и запуск OverlayGenerator
+    generator = OverlayGenerator()
+    context = {
+        "background_path": bg_path,
+        "logo_path": logo_path if logo_path.exists() else "",
+        "title": cover_title,
+    }
+
+    generator.generate_image(
+        template_name="cover.html", context=context, output_path=str(out_path)
+    )
+
+    if temp_frame.exists():
+        temp_frame.unlink()
+
+    return out_path
+
+
+def apply_cover_overlay(
+    input_video_path: str | Path,
+    cover_image_path: str | Path,
+    output_video_path: str | Path,
+    duration: float = 3.0,
+) -> Path:
+    """
+    Накладывает PNG-обложку (cover_image_path) на первые duration секунд
+    готового видео (input_video_path) и сохраняет итог в output_video_path.
+    """
+    input_video = resolve_path(str(input_video_path))
+    cover_image = resolve_path(str(cover_image_path))
+    output_video = resolve_path(str(output_video_path))
+
+    if not cover_image.exists():
+        print(f"[CoverOverlay] Предупреждение: Файл обложки {cover_image} не найден. Пропуск.")
+        return input_video
+
+    ffmpeg_bin = get_ffmpeg_path()
+    
+    temp_output = output_video.parent / f"temp_cover_{output_video.name}"
+
+    filter_complex = f"[0:v][1:v]overlay=0:0:enable='between(t,0,{duration})'[v]"
+
+    cmd = [
+        ffmpeg_bin,
+        "-y",
+        "-i", str(input_video),
+        "-i", str(cover_image),
+        "-filter_complex", filter_complex,
+        "-map", "[v]",
+        "-map", "0:a?",
+        "-c:v", VIDEO_CODEC,
+        "-preset", VIDEO_PRESET,
+        "-crf", VIDEO_CRF,
+        "-pix_fmt", VIDEO_PIXEL_FORMAT,
+        "-c:a", "copy",
+        str(temp_output),
+    ]
+
+    print(f"[CoverOverlay] Наложение обложки на {duration} сек...")
+    subprocess.run(cmd, check=True)
+
+    if temp_output.exists():
+        if temp_output != output_video and input_video == output_video:
+            shutil.move(str(temp_output), str(output_video))
+        elif temp_output != output_video:
+            shutil.move(str(temp_output), str(output_video))
+
+    return output_video
 
 
 # ============================================================

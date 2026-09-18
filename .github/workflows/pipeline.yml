@@ -43,6 +43,10 @@ jobs:
           python -m pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
           python -m pip install --no-cache-dir -r requirements.txt
 
+      - name: 5.1. Установка Chromium и системных библиотек для Playwright
+        run: |
+          python -m playwright install chromium --with-deps
+
       - name: 6. Запуск пайплайна сборки видео
         env:
           VERCEL_PROXY_URL: ${{ secrets.VERCEL_PROXY_URL }}
