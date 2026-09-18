@@ -1035,10 +1035,15 @@ def call_gemini_text(
 
     endpoint = f"{proxy_url.rstrip('/')}/api/gemini"
 
+    # Если system_instruction не передан явно, генерируем дефолтный на 30 секунд
+    final_system_instruction = (
+        system_instruction if system_instruction is not None else get_system_instruction(30.0)
+    )
+
     payload = {
         "action": "generateContent",
         "prompt": prompt,
-        "systemInstruction": system_instruction or SYSTEM_INSTRUCTION,
+        "systemInstruction": final_system_instruction,
         "responseMimeType": "application/json",
         "temperature": 0.2,
     }
@@ -1129,7 +1134,6 @@ def call_gemini_text(
             raise RuntimeError(
                 f"Vercel вернул ошибку {response.status_code}: {response.text[:2000]}"
             ) from exc
-
 
 # ============================================================
 # JSON CLEANUP
