@@ -37,29 +37,58 @@ jobs:
         run: |
           python -m playwright install chromium --with-deps
 
-      - name: 5. Генерация PNG-сторис
+      - name: 5. Генерация PNG-сторис (с автоподбором логотипа и Gemini)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python -c "
+          import os
           import random
           from pathlib import Path
           from src.graphics.overlay_generator import OverlayGenerator
 
           generator = OverlayGenerator()
+          brand_dir = Path('04_LIBRARY/brands/dance_kids')
 
-          bg_dir = Path('04_LIBRARY/brands/dance_kids/backgrounds')
+          # 1. Случайный фон
+          bg_dir = brand_dir / 'backgrounds'
           bg_files = (
               list(bg_dir.glob('*.png'))
               + list(bg_dir.glob('*.jpg'))
               + list(bg_dir.glob('*.jpeg'))
-          )
-          
-          bg_path = random.choice(bg_files) if bg_files else ''
+          ) if bg_dir.exists() else []
+          bg_path = random.choice(bg_files).resolve().as_uri() if bg_files else ''
 
+          # 2. Динамический поиск любого логотипа (logo1, logo2, logo_white и т.д.)
+          logo_files = [
+              f for f in brand_dir.glob('logo*.*') 
+              if f.suffix.lower() in ['.png', '.jpg', '.jpeg', '.svg']
+          ]
+          logo_path = random.choice(logo_files).resolve().as_uri() if logo_files else ''
+
+          # 3. Генерация подзаголовка через Gemini (если поле в inputs пустое)
+          user_title = '''${{ inputs.story_title }}'''
+          user_body = '''${{ inputs.story_body }}'''.strip()
+
+          if not user_body:
+              try:
+                  import google.generativeai as genai
+                  api_key = os.environ.get('GEMINI_API_KEY')
+                  if api_key:
+                      genai.configure(api_key=api_key)
+                      model = genai.GenerativeModel('gemini-2.5-flash')
+                      prompt = f'Напиши 1 короткое, привлекательное предложение-призыв (до 8-10 слов) для сторис в соцсетях на тему: \"{user_title}\". Без кавычек и лишних символов.'
+                      response = model.generate_content(prompt)
+                      user_body = response.text.strip()
+              except Exception as e:
+                  print(f'Gemini fallback note: {e}')
+
+          # 4. Рендер картинки
           context = {
               'background_path': bg_path,
-              'logo_path': '04_LIBRARY/brands/dance_kids/logo.png',
-              'title': '${{ inputs.story_title }}',
-              'body_text': '${{ inputs.story_body }}'
+              'logo_path': logo_path,
+              'title': user_title,
+              'body_text': user_body
           }
 
           generator.generate_image(
