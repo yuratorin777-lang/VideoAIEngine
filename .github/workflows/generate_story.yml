@@ -77,14 +77,14 @@ jobs:
 
           user_body = ''
           if not raw_body:
+              # Формируем красивое название бренда из имени папки (dance_kids -> Dance Kids)
+              brand_name_str = brand_dir.name
+              brand_display_name = brand_name_str.replace('_', ' ').title()
+
               base_proxy_url = os.environ.get('VERCEL_PROXY_URL', 'https://video-ai-engine.vercel.app').rstrip('/')
               proxy_url = f'{base_proxy_url}/api/gemini'
               
-              # Формируем контекст бренда из имени папки (например, dance_kids -> Dance Kids)
-          brand_display_name = brand_name.replace('_', ' ').title()
-
-          prompt_text = f"""
-Ты — SMM-копирайтер проекта "{brand_display_name}".
+              prompt_text = f"""Ты — SMM-копирайтер проекта "{brand_display_name}".
 Напиши короткий подзаголовок-призыв для сторис на тему: "{user_title}".
 
 Правила:
@@ -92,8 +92,7 @@ jobs:
 2. Подзаголовок должен ДОПОЛНЯТЬ заголовок, а не повторять его другими словами.
 3. Не придумывай несуществующие детали (например, "прямой эфир", "онлайн", "скидка 50%"), если о них не сказано в заголовке.
 4. Пиши энергично, дружелюбно, по делу.
-5. Не используй кавычки и хэштеги. Напиши ТОЛЬКО текст призыва.
-""".strip()
+5. Не используй кавычки и хэштеги. Напиши ТОЛЬКО текст призыва.""".strip()
               
               try:
                   res = requests.post(
@@ -110,7 +109,7 @@ jobs:
 
               # Фолбэк, если Vercel Proxy не вернул текст
               if not user_body:
-                  user_body = 'Успейте записаться на пробное занятие!'
+                  user_body = 'Успейте записаться!'
           else:
               user_body = raw_body
 
