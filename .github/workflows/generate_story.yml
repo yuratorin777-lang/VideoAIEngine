@@ -39,7 +39,7 @@ jobs:
 
       - name: 5. Генерация PNG-сторис (рандом шаблонов + Vercel Proxy)
         env:
-          VERCEL_GEMINI_URL: ${{ secrets.VERCEL_GEMINI_URL }}
+          VERCEL_PROXY_URL: ${{ secrets.VERCEL_PROXY_URL }}
         run: |
           python -c "
           import os
@@ -77,14 +77,16 @@ jobs:
 
           user_body = ''
           if not raw_body:
-              proxy_url = os.environ.get('VERCEL_GEMINI_URL') or 'https://video-ai-engine.vercel.app/api/gemini'
+              base_proxy_url = os.environ.get('VERCEL_PROXY_URL', 'https://video-ai-engine.vercel.app').rstrip('/')
+              proxy_url = f'{base_proxy_url}/api/gemini'
+              
               prompt_text = f'Напиши 1 короткое, вовлекающее предложение-призыв (до 8 слов) для сторис в соцсетях на тему: \"{user_title}\". Без кавычек.'
               
               try:
                   res = requests.post(
                       proxy_url,
                       json={'prompt': prompt_text},
-                      timeout=15
+                      timeout=20
                   )
                   if res.status_code == 200:
                       user_body = res.json().get('text', '').strip()
@@ -92,10 +94,13 @@ jobs:
                       print(f'Vercel Proxy Status Error: {res.status_code}')
               except Exception as e:
                   print(f'Vercel Proxy Exception: {e}')
+
+              # Фолбэк, если Vercel Proxy не вернул текст
+              if not user_body:
+                  user_body = 'Успейте записаться на пробное занятие!'
           else:
               user_body = raw_body
 
-          # === ВОТ СЮДА ДОБАВЛЯЕМ ПРИНТЫ ДЛЯ ОТЛАДКИ ===
           print(f'Использован шаблон: {selected_template}')
           print(f'Заголовок: {user_title}')
           print(f'Подзаголовок (Gemini): {user_body}')
