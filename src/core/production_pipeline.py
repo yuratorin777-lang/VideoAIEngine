@@ -2162,48 +2162,63 @@ def run_pipeline(
     )
 
     try:
-        # Безопасно получаем контракт и локальные переменные без ошибок Pylance
-        local_vars = locals()
-        current_contract = local_vars.get("job_contract") or local_vars.get(
-            "contract", {}
+        from src.composer.assembler import (
+            apply_cover_overlay,
+            generate_cover_image,
         )
 
-        is_landscape = (
-            current_contract.get("output", {}).get("format") == "landscape"
-        )
+        # 1. Находим скомпонованный видеофайл в папке 07_OUTPUT
+        output_dir = Path("07_OUTPUT")
+        video_files = [
+            f for f in output_dir.glob("*.mp4") 
+            if not f.name.startswith("temp_")
+        ]
 
-        cover_title = (
-            current_contract.get("script", {}).get("title")
-            or "ОТКРЫТ НАБОР В НОВЫЕ ГРУППЫ!"
-        )
+        if not video_files:
+            # Если нет финального файла, пробуем найти темповый
+            video_files = list(output_dir.glob("*.mp4"))
 
-        target_video_path = local_vars.get("final_video_path") or local_vars.get(
-            "output_video_path"
-        )
+        if not video_files:
+            print("[Cover] Ошибка: Итоговый видеофайл в 07_OUTPUT не найден!")
+        else:
+            # Берем самый свежий собранный ролик
+            target_video = max(video_files, key=lambda f: f.stat().st_mtime)
+            print(f"[Cover] Целевое видео для обложки: {target_video}")
 
-        if not target_video_path:
-            raise ValueError(
-                "Не найден путь к скомпонованному видеофайлу для наложения обложки."
+            # 2. Определяем ориентацию (landscape / vertical)
+            is_landscape = False
+            local_vars = locals()
+            current_contract = local_vars.get("job_contract") or local_vars.get("contract", {})
+            
+            if isinstance(current_contract, dict):
+                is_landscape = (
+                    current_contract.get("output", {}).get("format") == "landscape"
+                )
+
+            cover_title = (
+                current_contract.get("script", {}).get("title")
+                if isinstance(current_contract, dict) and current_contract.get("script")
+                else "ОТКРЫТ НАБОР В НОВЫЕ ГРУППЫ!"
             )
 
-        # 1. Генерируем PNG-файл обложки
-        cover_png = generate_cover_image(
-            video_path=target_video_path,
-            cover_title=cover_title,
-            brand_name="dance_kids",
-            is_landscape=is_landscape,
-            output_png_path="07_OUTPUT/video_cover.png",
-        )
-        print(f"[Pipeline] ✓ Сохранена статичная обложка: {cover_png}")
+            # 3. Генерируем PNG-обложку из кадра видео
+            cover_png = generate_cover_image(
+                video_path=target_video,
+                cover_title=cover_title,
+                brand_name="dance_kids",
+                is_landscape=is_landscape,
+                output_png_path="07_OUTPUT/video_cover.png",
+            )
+            print(f"[Pipeline] ✓ Сохранена статичная обложка: {cover_png}")
 
-        # 2. Накладываем её на первые 1.5 сек самого ролика
-        apply_cover_overlay(
-            input_video_path=target_video_path,
-            cover_image_path=cover_png,
-            output_video_path=target_video_path,
-            duration=1.5,
-        )
-        print(f"[Pipeline] ✓ Обложка вшита в первые 1.5 секунды видео!")
+            # 4. Накладываем обложку на первые 1.5 сек этого же ролика
+            apply_cover_overlay(
+                input_video_path=target_video,
+                cover_image_path=cover_png,
+                output_video_path=target_video,
+                duration=1.5,
+            )
+            print(f"[Pipeline] ✓ Обложка успешно вшита в первые 1.5 секунды видео!")
 
     except Exception as e:
         print(f"[Pipeline] Ошибка при обработке обложки: {e}")
