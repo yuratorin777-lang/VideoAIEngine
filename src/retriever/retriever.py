@@ -42,6 +42,53 @@ MAX_CUT_DURATION_SECONDS = 6.0
 MIN_CUTS = 4
 MAX_CUTS = 8
 
+# ==============================================================================
+# БЛОК ИСТОРИИ И COOLDOWN (ОТДЫХ ИСХОДНИКОВ)
+# ==============================================================================
+HISTORY_FILE = Path("04_LIBRARY/history.json")
+COOLDOWN_RUNS = 3  # Пауза на 3 генерации
+
+def load_history() -> list[dict]:
+    if not HISTORY_FILE.exists():
+        return []
+    try:
+        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return []
+
+def save_history(history: list[dict]):
+    try:
+        HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
+        with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+            json.dump(history, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"[History Warning] Не удалось сохранить историю: {e}")
+
+def get_blocked_file_ids() -> set[str]:
+    """Возвращает set file_id, использовавшихся в последних COOLDOWN_RUNS генерациях."""
+    history = load_history()
+    recent_runs = history[-COOLDOWN_RUNS:] if len(history) >= COOLDOWN_RUNS else history
+    
+    blocked_ids = set()
+    for run in recent_runs:
+        for file_id in run.get("used_file_ids", []):
+            blocked_ids.add(file_id)
+    return blocked_ids
+
+def record_used_candidates(plan: dict):
+    """Записывает file_id из итогового монтажного плана в историю."""
+    used_ids = list({cut["file_id"] for cut in plan.get("cuts", []) if "file_id" in cut})
+    if not used_ids:
+        return
+        
+    history = load_history()
+    history.append({
+        "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+        "used_file_ids": used_ids
+    })
+    save_history(history[-20:])  # Храним историю за последние 20 генераций
+    print(f"[History] Записано {len(used_ids)} использованных видео в историю.")
 
 # ============================================================
 # PASSPORT LOADING
@@ -769,6 +816,20 @@ def retrieve_candidates(
     passports: list[dict[str, Any]],
     top_k: int = DEFAULT_TOP_K,
 ) -> list[dict[str, Any]]:
+
+    # --- ФИЛЬТР ПО ИСТОРИИ (COOLDOWN) ---
+    blocked_ids = get_blocked_file_ids()
+    if blocked_ids:
+        passports_before = len(passports)
+        passports = [
+            p for p in passports 
+            if p.get("file_id") not in blocked_ids 
+            and p.get("video", {}).get("file_id") not in blocked_ids
+        ]
+        print(
+            f"[Retriever] Файлы на отдыхе (были в прошлых {COOLDOWN_RUNS} генерациях): "
+            f"{len(blocked_ids)} шт. Исключено паспортов: {passports_before - len(passports)}"
+        )
 
     # --- ФИЛЬТРАЦИЯ ПО ДАТЕ ИЗ ТЗ ---
     target_date = extract_target_date(input_text)
@@ -2354,23 +2415,8 @@ end - start
         plan
     )
 
-    validate_plan_structure(
-        plan,
-    )
-
-    repair_plan_duration(
-        plan,
-    )
-
-    # После автоматического repair всё равно выполняем
-    # строгую финальную проверку.
-    validate_plan_duration(
-        plan,
-    )
-
-    save_plan(
-        plan
-    )
+    # --- СОХРАНЕНИЕ В ИСТОРИЮ И ЗАВЕРШЕНИЕ ---
+    record_used_candidates(plan)
 
     print(
         "[+] Retriever завершил работу успешно."
