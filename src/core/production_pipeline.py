@@ -2195,13 +2195,25 @@ def run_pipeline(
                     current_contract.get("output", {}).get("format") == "landscape"
                 )
 
-            cover_title = (
-                current_contract.get("script", {}).get("title")
-                if isinstance(current_contract, dict) and current_contract.get("script")
-                else "ОТКРЫТ НАБОР В НОВЫЕ ГРУППЫ!"
-            )
+            # 3. Формируем сочный заголовок без None
+            script_title = None
+            if isinstance(current_contract, dict) and current_contract.get("script"):
+                script_title = current_contract.get("script", {}).get("title")
 
-            # 3. Генерируем PNG-обложку из кадра видео
+            # Если заголовка нет в контракте, извлекаем первые слова сценария/ТЗ
+            if not script_title or str(script_title).strip() in ["None", ""]:
+                script_text_var = local_vars.get("script_text")
+                if script_text_var:
+                    # Берём первые 4 слова из текста озвучки
+                    words = str(script_text_var).split()[:4]
+                    script_title = " ".join(words).upper()
+                else:
+                    script_title = "ТАНЦЫ ДЛЯ ДЕТЕЙ"
+
+            cover_title = str(script_title).strip(" .!,")
+            print(f"[Cover] Заголовок для обложки: {cover_title}")
+
+            # 4. Генерируем PNG-обложку из кадра видео
             cover_png = generate_cover_image(
                 video_path=target_video,
                 cover_title=cover_title,
@@ -2211,7 +2223,7 @@ def run_pipeline(
             )
             print(f"[Pipeline] ✓ Сохранена статичная обложка: {cover_png}")
 
-            # 4. Накладываем обложку на первые 1.5 сек этого же ролика
+            # 5. Накладываем обложку на первые 1.5 сек этого же ролика
             apply_cover_overlay(
                 input_video_path=target_video,
                 cover_image_path=cover_png,

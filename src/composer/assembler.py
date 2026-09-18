@@ -1564,7 +1564,7 @@ def assemble_reel(
             )
 
             voice_clip = (
-                voice_clip.with_start(0)
+                voice_clip.with_start(1.5)
             )
 
             # Голос не должен создавать
@@ -1849,13 +1849,50 @@ def assemble_reel(
 
     if srt_path and srt_path.exists():
 
-        success = (
-            burn_subtitles_ffmpeg(
-                temp_raw_output,
-                srt_path,
-                output_path,
-                style_name=subtitle_style,
+        # === СДВИГ SRT НА 1.5 СЕК (Чистый Python) ===
+        offset_srt_path = srt_path.parent / "temp_offset_subtitles.srt"
+        try:
+            import re
+            from datetime import timedelta
+
+            def shift_srt_time(match, offset_sec=1.5):
+                # Формат SRT: HH:MM:SS,mmm
+                h, m, s, ms = map(int, match.groups())
+                td = timedelta(hours=h, minutes=m, seconds=s, milliseconds=ms) + timedelta(seconds=offset_sec)
+                
+                total_sec = int(td.total_seconds())
+                ms_rem = int(td.microseconds / 1000)
+                hours = total_sec // 3600
+                minutes = (total_sec % 3600) // 60
+                seconds = total_sec % 60
+                return f"{hours:02d}:{minutes:02d}:{seconds:02d},{ms_rem:03d}"
+
+            time_pattern = r"(\d{2}):(\d{2}):(\d{2}),(\d{3})"
+
+            with open(srt_path, "r", encoding="utf-8") as f:
+                srt_content = f.read()
+
+            shifted_content = re.sub(
+                time_pattern, 
+                lambda m: shift_srt_time(m, 1.5), 
+                srt_content
             )
+
+            with open(offset_srt_path, "w", encoding="utf-8") as f:
+                f.write(shifted_content)
+
+            srt_to_use = offset_srt_path
+            print("[Subtitles] ✓ SRT тайминги успешно сдвинуты на +1.5 сек")
+        except Exception as e:
+            print(f"[Subtitles] Ошибка при сдвиге SRT: {e}")
+            srt_to_use = srt_path
+        # ============================================
+
+        success = burn_subtitles_ffmpeg(
+            temp_raw_output,
+            srt_to_use,
+            output_path,
+            style_name=subtitle_style,
         )
 
         # ----------------------------------------------------
