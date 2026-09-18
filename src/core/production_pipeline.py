@@ -254,6 +254,15 @@ def detect_audio_mode(input_text: str) -> dict:
         "tts",
         "neural",
         "ru-ru-",
+        # --- ДОБАВЛЕННЫЕ КЛЮЧЕВЫЕ СЛОВА ---
+        "озвучка вкл",
+        "озвучка: вкл",
+        "озвучка:вкл",
+        "озвучка включена",
+        "озвучку вкл",
+        "voiceover on",
+        "voiceover: on",
+        "voiceover:on",
     ]
 
     voiceover_off_keywords = [

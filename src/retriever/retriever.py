@@ -34,7 +34,7 @@ DEFAULT_TOP_K = 12
 MIN_SCORE = 1.0
 REQUEST_TIMEOUT = 120
 
-TARGET_DURATION_SECONDS = 20.0
+TARGET_DURATION_SECONDS = 30.0
 DURATION_TOLERANCE_SECONDS = 0.01
 
 MIN_CUT_DURATION_SECONDS = 1.5
@@ -2106,6 +2106,7 @@ def generate_montage_plan(
 
     repair_plan_duration(
         plan,
+        target_duration=target_duration,
     )
 
     # После автоматического repair всё равно выполняем
