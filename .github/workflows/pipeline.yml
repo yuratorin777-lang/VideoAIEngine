@@ -55,3 +55,12 @@ jobs:
           name: final-video-output
           path: 07_OUTPUT/*.mp4
           retention-days: 7
+
+      - name: 8. Сохранение и коммит файла истории в Git
+        if: always()
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add 04_LIBRARY/history.json || true
+          git commit -m "chore: update video history log [skip ci]" || echo "Нет изменений в истории"
+          git push

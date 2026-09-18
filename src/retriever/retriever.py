@@ -45,7 +45,20 @@ MAX_CUTS = 8
 # ==============================================================================
 # БЛОК ИСТОРИИ И COOLDOWN (ОТДЫХ ИСХОДНИКОВ)
 # ==============================================================================
-HISTORY_FILE = Path("04_LIBRARY/history.json")
+# ==============================================================================
+# БЛОК ИСТОРИИ И COOLDOWN (ОТДЫХ ИСХОДНИКОВ)
+# ==============================================================================
+
+def _find_project_root() -> Path:
+    """Находит корень проекта по наличию папки 04_LIBRARY или .git."""
+    current = Path(__file__).resolve().parent
+    for parent in [current] + list(current.parents):
+        if (parent / "04_LIBRARY").exists() or (parent / ".git").exists():
+            return parent
+    return Path.cwd()
+
+PROJECT_ROOT = _find_project_root()
+HISTORY_FILE = PROJECT_ROOT / "04_LIBRARY" / "history.json"
 COOLDOWN_RUNS = 3  # Пауза на 3 генерации
 
 def load_history() -> list[dict]:
@@ -54,7 +67,8 @@ def load_history() -> list[dict]:
     try:
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    except Exception:
+    except Exception as e:
+        print(f"[History Warning] Ошибка чтения истории: {e}")
         return []
 
 def save_history(history: list[dict]):
@@ -62,8 +76,9 @@ def save_history(history: list[dict]):
         HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
         with open(HISTORY_FILE, "w", encoding="utf-8") as f:
             json.dump(history, f, ensure_ascii=False, indent=2)
+        print(f"[History] Файл истории успешно сохранен: {HISTORY_FILE}")
     except Exception as e:
-        print(f"[History Warning] Не удалось сохранить историю: {e}")
+        print(f"[History Warning] Не удалось сохранить историю в {HISTORY_FILE}: {e}")
 
 def get_blocked_file_ids() -> set[str]:
     """Возвращает set file_id, использовавшихся в последних COOLDOWN_RUNS генерациях."""
