@@ -8,9 +8,9 @@ on:
         required: true
         default: 'Открыт набор в новые группы!'
       story_body:
-        description: 'Основной текст / Описание'
+        description: 'Основной текст / Описание (оставьте пустым для автогенерации через Gemini)'
         required: false
-        default: 'Занятия по вторникам и четвергам. Первое занятие бесплатно!'
+        default: ''
 
 permissions:
   contents: read
