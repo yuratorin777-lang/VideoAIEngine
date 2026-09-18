@@ -1277,12 +1277,16 @@ Production parameters:
     print(f"[Script] Успешно сгенерирован хук: {cover_hook}")
     print(f"[Script] Текст озвучки ({len(script_text)} симв.): {script_text[:60]}...")
 
-    # Возвращаем структурированный словарь
-    return {
-        "cover_hook": cover_hook,
-        "script": script_text,
-        "title": cover_hook
-    }
+    # Сохраняем данные для обложки прямо в контракт
+    if isinstance(contract, dict):
+        contract["cover_hook"] = cover_hook
+        if "script" not in contract or not isinstance(contract["script"], dict):
+            contract["script"] = {}
+        contract["script"]["cover_hook"] = cover_hook
+        contract["script"]["title"] = cover_hook
+
+    # Возвращаем СТРОКУ, чтобы run_voiceover и regex не падали!
+    return script_text
 
     # --------------------------------------------------------
     # EXTRACT GENERATED TEXT

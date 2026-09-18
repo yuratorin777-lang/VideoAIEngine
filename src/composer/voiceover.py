@@ -896,7 +896,17 @@ async def generate_voiceover_async(
     voice: str = DEFAULT_VOICE,
     voice_style: str = DEFAULT_PROSODY_STYLE,
 ):
+    # ========================================================
+    # ЗАЩИТНАЯ ПРОВЕРКА ТИПА ДАННЫХ (НОВОЕ)
+    # ========================================================
+    if isinstance(text, dict):
+        text = text.get("script") or text.get("text") or str(text)
+    elif not isinstance(text, str):
+        text = str(text)
 
+    # --------------------------------------------------------
+    # Далее идет ваш существующий код:
+    # --------------------------------------------------------
     output_mp3_path.parent.mkdir(
         parents=True,
         exist_ok=True,
@@ -929,7 +939,7 @@ async def generate_voiceover_async(
     )
 
     phrases = split_into_phrases(text)
-
+    
     if not phrases:
         raise RuntimeError(
             "Не удалось выделить фразы из текста."
