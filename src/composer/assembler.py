@@ -143,11 +143,22 @@ def generate_cover_image(
     cover_title: str,
     brand_name: str = "dance_kids",
     is_landscape: bool = False,
-    output_png_path: str | Path = "temp_downloads/cover_generated.png",
-    raw_source_video: str | Path | None = None,  # Чистый исходник без субтитров
+    output_png_path: str | Path | None = None,
+    raw_source_video: str | Path | None = None,
 ) -> Path:
-    out_path = resolve_path(str(output_png_path))
-    temp_frame = out_path.parent / "temp_cover_bg.jpg"
+    """Генерирует обложку для видео с использованием HTML/CSS-шаблонов Playwright."""
+
+    # Если путь не передан, сохраняем по умолчанию в output/covers/
+    if output_png_path is None:
+        video_stem = Path(video_path).stem
+        output_dir = BASE_DIR / "output" / "covers"
+        output_dir.mkdir(parents=True, exist_ok=True)  # Автоматически создает папку, если ее нет
+        out_path = output_dir / f"cover_{video_stem}.png"
+    else:
+        out_path = resolve_path(str(output_png_path))
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    temp_frame = out_path.parent / f"temp_bg_{out_path.stem}.jpg"
 
     # Если передан чистый исходник — берем из него, иначе пробуем из переданного файла
     target_video_for_frame = raw_source_video or video_path

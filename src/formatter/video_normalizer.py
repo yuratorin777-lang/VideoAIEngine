@@ -3,6 +3,7 @@ import math
 import re
 import shutil
 import subprocess
+import gc
 from pathlib import Path
 
 from .format_profiles import get_format_profile
@@ -998,6 +999,9 @@ class VideoNormalizer:
                 "но decision разрешён"
             )
 
+        del analyses
+        gc.collect()
+
         return decision
 
     # =========================================================
@@ -1545,6 +1549,8 @@ class VideoNormalizer:
             f"@ {output_probe['fps']:.3f} FPS"
         )
 
+        gc.collect()
+
         return output_path
 
     # =========================================================
@@ -1758,6 +1764,8 @@ class VideoNormalizer:
             normalized_paths.append(
                 output_path
             )
+
+            gc.collect()
 
         print()
         print("=" * 60)
