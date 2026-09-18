@@ -2238,13 +2238,33 @@ def run_pipeline(
             cover_title = str(script_title).strip(" .!,").upper()
             print(f"[Cover] Заголовок для обложки: {cover_title}")
 
-            # 4. Находим чистый исходник (первый видеоклип до наложения субтитров)
+            # 4. Находим чистый исходник без субтитров
             raw_clean_video = None
-            editing_plan = current_contract.get("editing_plan", [])
-            if editing_plan and isinstance(editing_plan, list):
-                first_clip = editing_plan[0]
-                if isinstance(first_clip, dict):
-                    raw_clean_video = first_clip.get("file_path") or first_clip.get("path")
+
+            # Вариант А: Проверяем normalized файлы (они стандартизированы, но БЕЗ субтитров)
+            normalized_dir = Path("temp_normalized")
+            if normalized_dir.exists():
+                norm_files = sorted(list(normalized_dir.glob("*.mp4")))
+                if norm_files:
+                    raw_clean_video = str(norm_files[0])
+
+            # Вариант Б: Проверяем сырые скачанные файлы
+            if not raw_clean_video:
+                downloads_dir = Path("temp_downloads")
+                if downloads_dir.exists():
+                    down_files = sorted(list(downloads_dir.glob("*.mp4")))
+                    if down_files:
+                        raw_clean_video = str(down_files[0])
+
+            # Вариант В: Фолбэк на editing_plan
+            if not raw_clean_video:
+                editing_plan = current_contract.get("editing_plan", [])
+                if editing_plan and isinstance(editing_plan, list):
+                    first_clip = editing_plan[0]
+                    if isinstance(first_clip, dict):
+                        raw_clean_video = first_clip.get("file_path") or first_clip.get("path")
+
+            print(f"[Cover] Чистый исходник для обложки: {raw_clean_video}")
 
             # 5. Генерируем PNG-обложку
             cover_png = generate_cover_image(
