@@ -212,6 +212,7 @@ def generate_cover_image(
         template_name=selected_template,
         context=context,
         output_path=str(out_path),
+        is_landscape=is_landscape,  # <-- ПЕРЕДАЕМ ФЛАГ ЗДЕСЬ
     )
 
     if temp_frame.exists():
@@ -224,27 +225,24 @@ def apply_cover_overlay(
     input_video_path: str | Path,
     cover_image_path: str | Path,
     output_video_path: str | Path,
-    duration: float = 1.5,  # Держать обложку на первых 1.5 сек роликах
+    duration: float = 1.5,
 ) -> Path:
-    """Накладывает PNG-обложку (cover_image_path) на первые duration секунд
-
-    готового видео (input_video_path) и сохраняет итог в output_video_path.
-    """
     input_video = resolve_path(str(input_video_path))
     cover_image = resolve_path(str(cover_image_path))
     output_video = resolve_path(str(output_video_path))
 
     if not cover_image.exists():
-        print(
-            f"[CoverOverlay] Предупреждение: Файл обложки {cover_image} не найден. Пропуск."
-        )
+        print(f"[CoverOverlay] Предупреждение: Файл обложки {cover_image} не найден. Пропуск.")
         return input_video
 
     ffmpeg_bin = get_ffmpeg_path()
-
     temp_output = output_video.parent / f"temp_cover_{output_video.name}"
 
-    filter_complex = f"[0:v][1:v]overlay=0:0:enable='between(t,0,{duration})'[v]"
+    # Масштабируем оверлей [1:v] под точный размер основного видео [0:v] перед наложением
+    filter_complex = (
+        f"[1:v][0:v]scale2ref=w=iw:h=ih[cover][main];"
+        f"[main][cover]overlay=0:0:enable='between(t,0,{duration})'[v]"
+    )
 
     cmd = [
         ffmpeg_bin,
@@ -272,12 +270,8 @@ def apply_cover_overlay(
         str(temp_output),
     ]
 
-    print(
-        f"[CoverOverlay] Автоматическое наложение обложки на первые {duration} сек..."
-    )
-    subprocess.run(
-        cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
-    )
+    print(f"[CoverOverlay] Автоматическое наложение обложки на первые {duration} сек...")
+    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
     if temp_output.exists():
         shutil.move(str(temp_output), str(output_video))

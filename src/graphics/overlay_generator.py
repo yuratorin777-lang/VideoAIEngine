@@ -11,7 +11,8 @@ class OverlayGenerator:
         template_name: str,
         context: dict,
         output_path: str,
-        viewport: dict = {"width": 1080, "height": 1920}
+        viewport: dict | None = None,
+        is_landscape: bool = False,
     ) -> str:
         """
         Принимает название шаблона (cover.html/story.html),
@@ -40,11 +41,24 @@ class OverlayGenerator:
         temp_html = output_file.with_suffix(".html")
         temp_html.write_text(html_content, encoding="utf-8")
 
+        # Определение размеров viewport по ориентации, если параметр viewport не передан явно
+        if viewport is None:
+            if is_landscape:
+                viewport = {"width": 1920, "height": 1080}
+            else:
+                viewport = {"width": 1080, "height": 1920}
+
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
             page = browser.new_page(viewport=viewport)
             page.goto(temp_html.resolve().as_uri())
-            page.screenshot(path=str(output_file), type="png")
+            
+            # Делаем скриншот с полным совпадением clip по размерам кадра
+            page.screenshot(
+                path=str(output_file),
+                type="png",
+                clip={"x": 0, "y": 0, "width": viewport["width"], "height": viewport["height"]}
+            )
             browser.close()
 
         if temp_html.exists():
