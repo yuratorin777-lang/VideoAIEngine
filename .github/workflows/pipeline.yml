@@ -9,6 +9,10 @@ on:
         default: 'Собери динамичный ролик из лучших моментов'
         type: string
 
+# Выдаем права на запись для успешного git push из GitHub Actions
+permissions:
+  contents: write
+
 jobs:
   build-and-render:
     runs-on: ubuntu-latest
@@ -61,6 +65,10 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add 04_LIBRARY/history.json || true
-          git commit -m "chore: update video history log [skip ci]" || echo "Нет изменений в истории"
-          git push
+          if [ -f "04_LIBRARY/history.json" ]; then
+            git add 04_LIBRARY/history.json
+            git commit -m "chore: update video history log [skip ci]" || echo "Нет изменений для коммита"
+            git push
+          else
+            echo "Файл истории не найден, пропускаем коммит."
+          fi

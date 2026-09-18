@@ -1402,17 +1402,10 @@ def validate_plan(
 ) -> None:
 
     if "cuts" not in plan:
-        raise RuntimeError(
-            "В montage plan отсутствует cuts."
-        )
+        raise RuntimeError("В montage plan отсутствует cuts.")
 
-    if not isinstance(
-        plan["cuts"],
-        list,
-    ):
-        raise RuntimeError(
-            "Поле cuts должно быть массивом."
-        )
+    if not isinstance(plan["cuts"], list):
+        raise RuntimeError("Поле cuts должно быть массивом.")
 
     candidate_by_file_id = {
         item["file_id"]: item
@@ -1420,134 +1413,111 @@ def validate_plan(
         if item.get("file_id")
     }
 
-    candidate_by_filename = {
-        item["filename"]: item
-        for item in candidates
-        if item.get("filename")
-    }
-
-    for index, cut in enumerate(
-        plan["cuts"]
-    ):
+    for index, cut in enumerate(plan["cuts"]):
 
         if not isinstance(cut, dict):
-            raise RuntimeError(
-                f"Cut #{index + 1} не является объектом."
-            )
+            raise RuntimeError(f"Cut #{index + 1} не является объектом.")
 
-        file_id = cut.get(
-            "file_id"
-        )
-
-        filename = cut.get(
-            "filename"
-        )
-
-        start = cut.get(
-            "start"
-        )
-
-        end = cut.get(
-            "end"
-        )
+        file_id = cut.get("file_id")
+        filename = cut.get("filename")
+        start = cut.get("start")
+        end = cut.get("end")
 
         if not file_id:
-            raise RuntimeError(
-                f"Cut #{index + 1}: отсутствует file_id."
-            )
+            raise RuntimeError(f"Cut #{index + 1}: отсутствует file_id.")
 
         if not filename:
-            raise RuntimeError(
-                f"Cut #{index + 1}: отсутствует filename."
-            )
+            raise RuntimeError(f"Cut #{index + 1}: отсутствует filename.")
 
         if file_id not in candidate_by_file_id:
-            raise RuntimeError(
-                f"Cut #{index + 1}: file_id "
-                f"{file_id} отсутствует среди кандидатов."
-            )
+            raise RuntimeError(f"Cut #{index + 1}: file_id {file_id} отсутствует среди кандидатов.")
 
-        candidate = candidate_by_file_id[
-            file_id
-        ]
+        candidate = candidate_by_file_id[file_id]
 
-        if candidate["filename"] != filename:
-            raise RuntimeError(
-                f"Cut #{index + 1}: file_id и filename "
-                f"не принадлежат одному кандидату."
-            )
+        if candidate.get("filename") != filename:
+            raise RuntimeError(f"Cut #{index + 1}: file_id и filename не принадлежат одному кандидату.")
 
-        if not isinstance(
-            start,
-            (int, float),
-        ):
-            raise RuntimeError(
-                f"Cut #{index + 1}: start должен быть числом."
-            )
+        if not isinstance(start, (int, float)):
+            raise RuntimeError(f"Cut #{index + 1}: start должен быть числом.")
 
-        if not isinstance(
-            end,
-            (int, float),
-        ):
-            raise RuntimeError(
-                f"Cut #{index + 1}: end должен быть числом."
-            )
+        if not isinstance(end, (int, float)):
+            raise RuntimeError(f"Cut #{index + 1}: end должен быть числом.")
 
+        # --- КОРРЕКТИРОВКА ДЛИТЕЛЬНОСТИ ---
         if end <= start:
-                print(f"[Warning] Cut #{index + 1} has invalid duration (start={start}, end={end}). Auto-correcting...")
-                # Ставим end = start + 2.0 секунды
-                end = round(start + 2.0, 2)
-                cut["end"] = end
+            print(f"[Warning] Cut #{index + 1} duration invalid ({start}-{end}). Auto-correcting...")
+            end = round(start + 2.0, 2)
+            cut["end"] = end
 
-            # Ограничиваем end максимальной длительностью исходника (если она известна)
-        max_dur = candidate.get("duration", 999.0) if 'candidate' in locals() else 999.0
+        max_dur = float(candidate.get("duration", 999.0))
         if end > max_dur:
-                cut["end"] = max_dur
-                if cut["start"] >= max_dur:
-                    cut["start"] = max(0.0, max_dur - 2.0)
+            print(f"[Warning] Cut #{index + 1} end ({end}s) exceeds video duration ({max_dur}s). Clamping...")
+            cut["end"] = max_dur
+            if cut["start"] >= max_dur:
+                cut["start"] = max(0.0, max_dur - 2.0)
+            start = cut["start"]
+            end = cut["end"]
 
-        relevant_segments = candidate.get(
-            "relevant_segments",
-            [],
-        )
+        # --- АВТО-ПОДГОН И ВАЛИДАЦИЯ РЕЛЕВАНТНЫХ СЕГМЕНТОВ ---
+        relevant_segments = candidate.get("relevant_segments", [])
+        
+        if relevant_segments:
+            segment_valid = False
+            
+            # 1. Проверяем точное попадание
+            for segment in relevant_segments:
+                seg_start = float(segment.get("start", 0))
+                seg_end = float(segment.get("end", 0))
+                if start >= seg_start and end <= seg_end:
+                    segment_valid = True
+                    break
 
-        segment_valid = False
+            # 2. Если не попали строго, делаем мягкую подгонку (Clamping)
+            if not segment_valid:
+                best_segment = None
+                best_overlap = -1.0
 
-        for segment in relevant_segments:
+                for segment in relevant_segments:
+                    seg_start = float(segment.get("start", 0))
+                    seg_end = float(segment.get("end", 0))
+                    
+                    # Находим пересечение отрезков
+                    overlap_start = max(start, seg_start)
+                    overlap_end = min(end, seg_end)
+                    overlap = overlap_end - overlap_start
 
-            segment_start = float(
-                segment.get(
-                    "start",
-                    0,
-                )
-            )
+                    if overlap > best_overlap:
+                        best_overlap = overlap
+                        best_segment = (seg_start, seg_end)
 
-            segment_end = float(
-                segment.get(
-                    "end",
-                    0,
-                )
-            )
+                if best_segment and best_overlap > 0:
+                    seg_start, seg_end = best_segment
+                    print(
+                        f"[Retriever Auto-Fix] Cut #{index + 1} ({filename}): "
+                        f"таймкод {start}-{end}s скорректирован под границы сегмента [{seg_start}-{seg_end}s]"
+                    )
+                    new_start = max(start, seg_start)
+                    new_end = min(end, seg_end)
+                    
+                    # Если отрезок получился слишком коротким (меньше 1.0 сек), расширяем по сегменту
+                    if (new_end - new_start) < 1.0:
+                        new_start = seg_start
+                        new_end = min(seg_end, seg_start + max(2.0, end - start))
 
-            if (
-                start >= segment_start
-                and end <= segment_end
-            ):
-                segment_valid = True
-                break
-
-        if not segment_valid:
-            raise RuntimeError(
-                f"Cut #{index + 1}: диапазон "
-                f"{start}-{end} не находится "
-                f"в одном из релевантных сегментов "
-                f"кандидата {filename}."
-            )
+                    cut["start"] = round(new_start, 2)
+                    cut["end"] = round(new_end, 2)
+                else:
+                    # Если пересечений с сегментами совсем нет, привязываем к первому релевантному сегменту
+                    seg_start, seg_end = float(relevant_segments[0].get("start", 0)), float(relevant_segments[0].get("end", 0))
+                    print(
+                        f"[Retriever Auto-Fix] Cut #{index + 1} ({filename}): "
+                        f"таймкод {start}-{end}s перенесен в первый релевантный сегмент [{seg_start}-{seg_end}s]"
+                    )
+                    cut["start"] = seg_start
+                    cut["end"] = seg_end if seg_end > seg_start else round(seg_start + 2.0, 2)
 
     if not plan["cuts"]:
-        raise RuntimeError(
-            "Gemini не выбрал ни одного cut."
-        )
+        raise RuntimeError("Gemini не выбрал ни одного cut.")
 
 # ============================================================
 # PLAN DURATION REPAIR
