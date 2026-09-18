@@ -54,67 +54,6 @@ jobs:
           # 1. Выбор случайного шаблона из 3 доступных
           templates = ['story.html', 'story_minimal.html', 'story_accent.html']
           selected_template = random.choice(templates)
-          print(f'Выбран шаблон: {selected_template}')
-
-          # 2. Случайный фон
-          bg_dir = brand_dir / 'backgrounds'
-          bg_files = (
-              list(bg_dir.glob('*.png'))
-              + list(bg_dir.glob('*.jpg'))
-              + list(bg_dir.glob('*.jpeg'))
-          ) if bg_dir.exists() else []
-          bg_path = random.choice(bg_files).resolve().as_uri() if bg_files else ''
-
-          # 3. Случайный логотип
-          logo_files = [
-              f for f in brand_dir.glob('logo*.*') 
-              if f.suffix.lower() in ['.png', '.jpg', '.jpeg', '.svg']
-          ]
-          logo_path = random.choice(logo_files).resolve().as_uri() if logo_files else ''
-
-          # 4. Генерация подзаголовка через Vercel Proxy
-          user_title = '''${{ inputs.story_title }}'''.strip()
-          raw_body = '''${{ inputs.story_body }}'''.strip()
-
-          # Если пользователь не ввёл описание руками — запрашиваем у Gemini
-          if not raw_body:
-              proxy_url = os.environ.get(
-                  'VERCEL_GEMINI_URL'
-              ) or 'https://your-vercel-domain.vercel.app/api/gemini'
-              prompt_text = f'Напиши 1 короткое, вовлекающее предложение-призыв (до 8 слов) для сторис в соцсетях на тему: "{user_title}". Без кавычек.'
-
-              try:
-                  res = requests.post(
-                      proxy_url, json={'prompt': prompt_text}, timeout=15
-                  )
-                  if res.status_code == 200:
-                      user_body = res.json().get('text', '').strip()
-                  else:
-                      print(f'Vercel Proxy Status Error: {res.status_code}')
-                      user_body = ''
-              except Exception as e:
-                  print(f'Vercel Proxy Exception: {e}')
-                  user_body = ''
-          else:
-              user_body = raw_body
-
-          - name: 5. Генерация PNG-сторис (рандом шаблонов + Vercel Proxy)
-        env:
-          VERCEL_GEMINI_URL: ${{ secrets.VERCEL_GEMINI_URL }}
-        run: |
-          python -c "
-          import os
-          import random
-          import requests
-          from pathlib import Path
-          from src.graphics.overlay_generator import OverlayGenerator
-
-          generator = OverlayGenerator()
-          brand_dir = Path('04_LIBRARY/brands/dance_kids')
-
-          # 1. Выбор случайного шаблона из 3 доступных
-          templates = ['story.html', 'story_minimal.html', 'story_accent.html']
-          selected_template = random.choice(templates)
 
           # 2. Случайный фон
           bg_dir = brand_dir / 'backgrounds'
@@ -138,7 +77,7 @@ jobs:
 
           user_body = ''
           if not raw_body:
-              proxy_url = os.environ.get('VERCEL_GEMINI_URL') or 'https://your-vercel-domain.vercel.app/api/gemini'
+              proxy_url = os.environ.get('VERCEL_GEMINI_URL') or 'https://video-ai-engine.vercel.app/api/gemini'
               prompt_text = f'Напиши 1 короткое, вовлекающее предложение-призыв (до 8 слов) для сторис в соцсетях на тему: \"{user_title}\". Без кавычек.'
               
               try:
