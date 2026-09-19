@@ -2096,10 +2096,10 @@ def generate_montage_plan(
         target_duration=target_duration,
     )
 
-    # После автоматического repair всё равно выполняем
-    # строгую финальную проверку.
+    # Передаем target_duration в валидатор, чтобы он проверял нужные 20 сек!
     validate_plan_duration(
         plan,
+        target_duration=target_duration,
     )
 
     save_plan(
