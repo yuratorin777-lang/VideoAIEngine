@@ -999,7 +999,6 @@ class VideoNormalizer:
                 "но decision разрешён"
             )
 
-        del analyses
         gc.collect()
 
         return decision
@@ -1202,6 +1201,7 @@ class VideoNormalizer:
         index: int,
         profile,
         color_stats: dict | None = None,
+        keep_source_audio: bool = False,  # <--- Добавлен параметр с дефолтом False
     ) -> Path:
         source_path = self.download_dir / filename
 
@@ -1311,8 +1311,6 @@ class VideoNormalizer:
 
         # -----------------------------------------------------
         # 2. Matched aspect — PROTECTED
-        #
-        # Если исходник уже 16:9, вообще не режем его.
         # -----------------------------------------------------
 
         aspect_difference = abs(
@@ -1342,10 +1340,6 @@ class VideoNormalizer:
         else:
             # -------------------------------------------------
             # 3. Smart Framing
-            #
-            # Для rotation 90/270 detector не запускаем:
-            # координаты CV были бы в raw orientation.
-            # FFmpeg autorotate обработает кадр перед vf.
             # -------------------------------------------------
 
             smart_decision = None
@@ -1455,43 +1449,49 @@ class VideoNormalizer:
         # FFmpeg
         # -----------------------------------------------------
 
+        # Собираем инпуты и временные сдвиги
         command = [
             "ffmpeg",
             "-y",
-
-            # Быстрая перемотка ДО открытия входного файла (-i)
-            "-ss",
-            str(start),
-
-            "-i",
-            str(source_path),
-
-            "-t",
-            str(duration),
-
-            "-vf",
-            vf,
-
-            "-r",
-            str(profile.fps),
-
-            # Normalized cut не содержит source audio.
-            "-an",
-
-            "-c:v",
-            "libx264",
-
-            "-preset",
-            "slow",
-
-            "-crf",
-            "17",
-
-            "-pix_fmt",
-            "yuv420p",
-
-            str(output_path),
+            "-i", str(source_path),
+            "-ss", str(start),
         ]
+
+        # Добавляем генератор тишины, если оригинальный звук выключен
+        if not keep_source_audio:
+            command.extend([
+                "-f", "lavfi",
+                "-i", "anullsrc=channel_layout=stereo:sample_rate=44100",
+            ])
+
+        # Параметры видео и ограничение длительности
+        command.extend([
+            "-t", str(duration),
+            "-vf", vf,
+            "-r", str(profile.fps),
+            "-c:v", "libx264",
+            "-preset", "slow",
+            "-crf", "17",
+            "-pix_fmt", "yuv420p",
+        ])
+
+        # Обработка аудиопотока и явный маппинг
+        if keep_source_audio:
+            command.extend([
+                "-map", "0:v:0",   # Видео из первого файла (source_path)
+                "-map", "0:a:0?",  # Аудио из первого файла (если есть)
+                "-c:a", "aac",
+                "-b:a", "192k",
+            ])
+        else:
+            command.extend([
+                "-map", "0:v:0",   # Видео из первого файла (source_path)
+                "-map", "1:a:0",   # Аудио из второго файла (anullsrc)
+                "-c:a", "aac",
+                "-shortest",
+            ])
+
+        command.append(str(output_path))
 
         result = subprocess.run(
             command,
@@ -1548,8 +1548,6 @@ class VideoNormalizer:
             f"{output_probe['height']} "
             f"@ {output_probe['fps']:.3f} FPS"
         )
-
-        gc.collect()
 
         return output_path
 
