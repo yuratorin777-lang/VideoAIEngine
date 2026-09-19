@@ -20,7 +20,7 @@ DEFAULT_VOICEOVER = "02_PROCESSING/temp_audio/voiceover.mp3"
 DEFAULT_SUBTITLES = "02_PROCESSING/temp_audio/subtitles.srt"
 
 DEFAULT_DURATION_SECONDS = 20
-MAX_DURATION_OVERRUN_SECONDS = 1.5
+MAX_DURATION_OVERRUN_SECONDS = 2.5
 VOICEOVER_TAIL_SECONDS = 0.20
 
 MONTAGE_PLAN_PATH = (
@@ -1687,10 +1687,6 @@ def speed_up_audio_file(audio_path: Path, speed_factor: float) -> Path:
         print(f"[Duration] ⚠️ Не удалось ускорить аудио через ffmpeg, оставляем оригинал.")
         return audio_path
 
-VOICEOVER_TARGET_RATIO = 0.90  # Идеально: аудио занимает 90% от длительности ролика
-VOICEOVER_MAX_RATIO = 0.95     # Порог: аудио не должно превышать 95% от видео
-MAX_ALLOWED_SPEEDUP = 1.30     # Максимально допустимый коэффициент ускорения (30%)
-
 def reconcile_plan_duration_with_voiceover(
     plan_path: Path,
     voiceover_path: Path | None,
@@ -1699,48 +1695,12 @@ def reconcile_plan_duration_with_voiceover(
     if not voiceover_path or not voiceover_path.exists():
         return
 
-    voiceover_duration = get_media_duration_seconds(voiceover_path)
-
-    # 1. Динамический расчет целей в процентах
-    ideal_voiceover_duration = target_duration * VOICEOVER_TARGET_RATIO  # Например 27.0s при цели 30.0s
-    max_allowed_voiceover = target_duration * VOICEOVER_MAX_RATIO       # Например 28.5s при цели 30.0s
-
-    print(
-        f"[Duration Check] Видео: {target_duration:.3f}s | "
-        f"Цель аудио ({int(VOICEOVER_TARGET_RATIO*100)}%): {ideal_voiceover_duration:.3f}s | "
-        f"Фактическое аудио: {voiceover_duration:.3f}s"
+    voiceover_duration = get_media_duration_seconds(
+        voiceover_path
     )
 
-    # 2. Если аудио длиннее допустимого процента — мягко подгоняем его темп
-    if voiceover_duration > max_allowed_voiceover:
-        speed_factor = voiceover_duration / ideal_voiceover_duration
-
-        if speed_factor > MAX_ALLOWED_SPEEDUP:
-            raise RuntimeError(
-                f"Voiceover слишком длинный для ролика {target_duration:.1f}s! "
-                f"Требуется ускорение x{speed_factor:.2f} (максимум x{MAX_ALLOWED_SPEEDUP:.2f}). "
-                f"Сократите текст сценария."
-            )
-
-        print(
-            f"[Duration] ⚠️ Озвучка ({voiceover_duration:.3f}s) превышает "
-            f"{int(VOICEOVER_MAX_RATIO*100)}% длины ролика. "
-            f"Применяем авто-ускорение x{speed_factor:.2f}..."
-        )
-
-        speed_up_audio_file(voiceover_path, speed_factor)
-        # Пересчитываем фактическую длительность после сжатия
-        voiceover_duration = get_media_duration_seconds(voiceover_path)
-        print(f"[Duration] ✓ Новая длительность аудио: {voiceover_duration:.3f}s")
-
-    # 3. Рассчитываем, нужно ли подтягивать Montage Plan
-    required_duration = max(
-        target_duration,
-        min(
-            voiceover_duration,
-            target_duration + (MAX_DURATION_OVERRUN_SECONDS if 'MAX_DURATION_OVERRUN_SECONDS' in globals() else 1.5),
-        ),
-    )
+    # Максимальный допуск превышения по умолчанию (если переменная не задана глобально)
+    max_overrun = globals().get("MAX_DURATION_OVERRUN_SECONDS", 2.5)
 
     if voiceover_duration <= target_duration + 0.01:
         print(
@@ -1749,13 +1709,32 @@ def reconcile_plan_duration_with_voiceover(
         )
         return
 
-    # 4. Ваша логика растягивания кадров Montage Plan (без изменений)
-    with plan_path.open("r", encoding="utf-8") as f:
+    if voiceover_duration > target_duration + max_overrun:
+        raise RuntimeError(
+            "Voiceover слишком длинный для допустимой погрешности: "
+            f"{voiceover_duration:.3f}s при цели {target_duration:.3f}s "
+            f"(максимум {target_duration + max_overrun:.3f}s)."
+        )
+
+    required_duration = max(
+        target_duration,
+        min(
+            voiceover_duration,
+            target_duration + max_overrun,
+        ),
+    )
+
+    with plan_path.open(
+        "r",
+        encoding="utf-8",
+    ) as f:
         plan = json.load(f)
 
     cuts = plan.get("cuts")
     if not isinstance(cuts, list) or not cuts:
-        raise RuntimeError("Невозможно согласовать длительность: cuts отсутствуют.")
+        raise RuntimeError(
+            "Невозможно согласовать длительность: cuts отсутствуют."
+        )
 
     current_duration = sum(
         float(cut["end"]) - float(cut["start"])
@@ -1813,12 +1792,17 @@ def reconcile_plan_duration_with_voiceover(
             f"не хватает {remaining:.3f}s доступного видеоматериала."
         )
 
-    plan.setdefault("output", {})["duration_seconds"] = round(
+    plan.setdefault("output", {})[
+        "duration_seconds"
+    ] = round(
         required_duration,
         3,
     )
 
-    with plan_path.open("w", encoding="utf-8") as f:
+    with plan_path.open(
+        "w",
+        encoding="utf-8",
+    ) as f:
         json.dump(
             plan,
             f,
@@ -1832,10 +1816,18 @@ def reconcile_plan_duration_with_voiceover(
     )
 
     print()
-    print(f"[Duration] Voiceover: {voiceover_duration:.3f}s")
-    print(f"[Duration] Цель: {target_duration:.3f}s")
-    print(f"[Duration] Видеоряд расширен до: {actual_duration:.3f}s")
-    print("[Duration] ✓ Озвучка и субтитры не будут обрезаны.")
+    print(
+        f"[Duration] Voiceover: {voiceover_duration:.3f}s"
+    )
+    print(
+        f"[Duration] Цель: {target_duration:.3f}s"
+    )
+    print(
+        f"[Duration] Видеоряд расширен до: {actual_duration:.3f}s"
+    )
+    print(
+        "[Duration] ✓ Озвучка и субтитры не будут обрезаны."
+    )
 
 
 # ============================================================
