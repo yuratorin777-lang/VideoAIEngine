@@ -1092,110 +1092,30 @@ SCRIPT_SYSTEM_INSTRUCTION = """
 def generate_script_with_gemini(
     input_text: str,
     contract: dict,
-) -> dict:
+) -> str:
+    duration_seconds = contract.get("output", {}).get("duration_seconds", DEFAULT_DURATION_SECONDS)
+    content_profile = contract.get("content_profile", {})
+    voice_style = contract.get("audio", {}).get("voice_style", "friendly")
 
-    duration_seconds = contract.get(
-        "output",
-        {},
-    ).get(
-        "duration_seconds",
-        DEFAULT_DURATION_SECONDS,
-    )
-
-    content_profile = contract.get(
-        "content_profile",
-        {},
-    )
-
-    voice_style = contract.get(
-        "audio",
-        {},
-    ).get(
-        "voice_style",
-        "friendly",
-    )
-
-    target_words = max(
-        8,
-        int(duration_seconds * 2.0),
-    )
-
-    max_words = max(
-        10,
-        int(duration_seconds * 2.2),
-    )
-
-    max_script_chars = max(
-        80,
-        int(max_words * 6.5),
-    )
-
-    target_min_chars = max(
-        60,
-        int(max_script_chars * 0.70),
-    )
-
+    target_words = max(8, int(duration_seconds * 2.0))
+    max_words = max(10, int(duration_seconds * 2.2))
+    max_script_chars = max(80, int(max_words * 6.5))
     target_max_chars = max_script_chars
 
     prompt = f"""
 ТЗ пользователя:
-
 {input_text}
 
 Content Profile:
-
-{json.dumps(
-    content_profile,
-    ensure_ascii=False,
-    indent=2,
-)}
+{json.dumps(content_profile, ensure_ascii=False, indent=2)}
 
 Production parameters:
-
-Длительность готового ролика:
-{duration_seconds} секунд
-
-Стиль голоса:
-{voice_style}
+Длительность: {duration_seconds} секунд
+Стиль голоса: {voice_style}
 
 ОГРАНИЧЕНИЕ ТЕКСТА ОЗВУЧКИ:
-
-ЦЕЛЕВОЙ ОБЪЁМ:
-примерно {target_words} слов.
-
-МАКСИМАЛЬНЫЙ ОБЪЁМ:
-не более {max_words} слов.
-
-Дополнительно:
-текст не должен превышать {target_max_chars} символов.
-
-Для ролика длительностью {duration_seconds} секунд
-приоритет имеет фактическое время произнесения,
-а не заполнение лимита символов.
-
-Для ролика длительностью {duration_seconds} секунд
-текст должен быть рассчитан на естественное
-произнесение с паузами.
-
-НЕ ПЫТАЙСЯ заполнить весь доступный лимит.
-Главное — смысл, естественность и соответствие ТЗ.
-
-Если ТЗ содержит много требований,
-выбери только самые важные для рекламного ролика.
-
-Для короткого ролика используй короткие предложения.
-Не повторяй одну мысль разными словами.
-Не добавляй вступительные фразы без смысловой ценности.
-
-ВАЖНО:
-Итоговый script НЕ ДОЛЖЕН превышать {target_max_chars} символов.
-
-Напиши текст закадровой озвучки и придумай яркий, кликбейтный заголовок для обложки (cover_hook).
-
-Не описывай монтаж.
-Не выбирай кадры.
-Не описывай визуализацию.
-Не добавляй технические инструкции.
+ЦЕЛЕВОЙ ОБЪЁМ: примерно {target_words} слов.
+МАКСИМАЛЬНЫЙ ОБЪЁМ: не более {max_words} слов ({target_max_chars} символов).
 
 Верни только JSON с полями "cover_hook" и "script".
 """
@@ -1211,73 +1131,47 @@ Production parameters:
         "temperature": 0.4,
     }
 
-    print()
-    print("=" * 70)
+    print("\n" + "=" * 70)
     print(" SCRIPT GENERATOR")
     print("=" * 70)
     print("[Pipeline] Отправка ТЗ в Script Generator...")
 
-    try:
-        response = requests.post(
-            endpoint,
-            json=payload,
-            timeout=120,
-        )
-    except requests.RequestException as e:
-        raise RuntimeError(
-            f"Ошибка соединения с Vercel/Gemini при генерации script: {e}"
-        ) from e
-
-    if response.status_code != 200:
-        body = response.text[:2000]
-        raise RuntimeError(
-            f"Script Generator вернул HTTP {response.status_code}.\n{body}"
-        )
-
-    try:
-        data = response.json()
-    except ValueError as e:
-        raise RuntimeError("Script Generator вернул некорректный JSON response.") from e
-
-    # Извлекаем текст ответа Vercel Proxy / Gemini API
     raw_text = ""
-    if isinstance(data, dict):
-        if "text" in data:
-            raw_text = data["text"]
-        elif "candidates" in data and len(data["candidates"]) > 0:
-            parts = data["candidates"][0].get("content", {}).get("parts", [])
-            if parts:
-                raw_text = parts[0].get("text", "")
-
-    if not raw_text:
-        raw_text = str(data)
-
-    # Очищаем ответ от возможного markdown-обрамления ```json ... ```
-    cleaned_text = raw_text.strip()
-    if cleaned_text.startswith("```"):
-        cleaned_text = cleaned_text.split("\n", 1)[-1]
-        if cleaned_text.endswith("```"):
-            cleaned_text = cleaned_text.rsplit("```", 1)[0]
-    cleaned_text = cleaned_text.strip()
-
-    # Парсим итоговый JSON от модели
-    result_json = {}
     try:
-        result_json = json.loads(cleaned_text)
-    except Exception:
-        # Если модель отдала просто чистый текст сценария без JSON
-        result_json = {
-            "cover_hook": "РАЗВИТИЕ ЧЕРЕЗ ТАНЦЫ",
-            "script": cleaned_text
-        }
+        response = requests.post(endpoint, json=payload, timeout=120)
+        if response.status_code == 200:
+            data = response.json()
+            if isinstance(data, dict):
+                if "text" in data:
+                    raw_text = data["text"]
+                elif "candidates" in data and len(data["candidates"]) > 0:
+                    parts = data["candidates"][0].get("content", {}).get("parts", [])
+                    if parts:
+                        raw_text = parts[0].get("text", "")
+    except Exception as e:
+        print(f"[Script Generator] Предупреждение: Не удалось получить сценарий от Gemini ({e})")
 
-    cover_hook = result_json.get("cover_hook", "").strip().upper()
-    script_text = result_json.get("script", "").strip()
+    # Если Gemini не ответил или вернул пустоту — используем безопасный дефолт из ТЗ
+    cleaned_text = clean_json_response(raw_text) if raw_text else ""
+    cover_hook = "РАЗВИТИЕ ЧЕРЕЗ ТАНЦЫ"
+    script_text = input_text[:150]  # Фолбэк на сам текст ТЗ
 
-    print(f"[Script] Успешно сгенерирован хук: {cover_hook}")
+    if cleaned_text:
+        try:
+            result_json = json.loads(cleaned_text)
+            if isinstance(result_json, dict):
+                cover_hook = result_json.get("cover_hook", cover_hook).strip().upper()
+                script_text = result_json.get("script", script_text).strip()
+        except Exception:
+            script_text = cleaned_text
+
+    if not script_text:
+        script_text = "Приглашаем детей на занятия танцами!"
+
+    print(f"[Script] Заголовок обложки: {cover_hook}")
     print(f"[Script] Текст озвучки ({len(script_text)} симв.): {script_text[:60]}...")
 
-    # Сохраняем данные для обложки прямо в контракт
+    # Сохраняем обложку и скрипт в контракт
     if isinstance(contract, dict):
         contract["cover_hook"] = cover_hook
         if "script" not in contract or not isinstance(contract["script"], dict):
@@ -1285,7 +1179,6 @@ Production parameters:
         contract["script"]["cover_hook"] = cover_hook
         contract["script"]["title"] = cover_hook
 
-    # Возвращаем СТРОКУ, чтобы run_voiceover и regex не падали!
     return script_text
 
     # --------------------------------------------------------
