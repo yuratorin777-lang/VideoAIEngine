@@ -255,45 +255,57 @@ def apply_cover_overlay(
         return input_video
 
     ffmpeg_bin = get_ffmpeg_path()
-    temp_output = output_video.parent / f"temp_cover_{output_video.name}"
+    
+    # Создаем временный файл в сторонней папке или с уникальным именем
+    temp_output = output_video.parent / f"temp_final_{output_video.name}"
 
-    # Масштабируем оверлей [1:v] под точный размер основного видео [0:v] перед наложением
+    # Надежный фильтр:
+    # 1. Берем обложку [1:v] и закольцовываем
+    # 2. Масштабируем обложку [1:v] под точные W x H основного видео [0:v]
+    # 3. Накладываем обложку на видео на первые N секунд
     filter_complex = (
-        f"[1:v][0:v]scale2ref=w=iw:h=ih[cover][main];"
-        f"[main][cover]overlay=0:0:enable='between(t,0,{duration})'[v]"
+        f"[1:v]loop=loop=-1:size=1:start=0[cover_loop];"
+        f"[cover_loop][0:v]scale2ref=w=iw:h=ih[cover_scaled][main];"
+        f"[main][cover_scaled]overlay=0:0:enable='between(t,0,{duration})':shortest=1[v]"
     )
 
     cmd = [
         ffmpeg_bin,
         "-y",
-        "-i",
-        str(input_video),
-        "-i",
-        str(cover_image),
-        "-filter_complex",
-        filter_complex,
-        "-map",
-        "[v]",
-        "-map",
-        "0:a?",
-        "-c:v",
-        VIDEO_CODEC,
-        "-preset",
-        VIDEO_PRESET,
-        "-crf",
-        VIDEO_CRF,
-        "-pix_fmt",
-        VIDEO_PIXEL_FORMAT,
-        "-c:a",
-        "copy",
+        "-i", str(input_video),
+        "-i", str(cover_image),
+        "-filter_complex", filter_complex,
+        "-map", "[v]",
+        "-map", "0:a?",  # Сохраняем аудио из исходного видео
+        "-c:v", VIDEO_CODEC,
+        "-preset", VIDEO_PRESET,
+        "-crf", str(VIDEO_CRF),
+        "-pix_fmt", VIDEO_PIXEL_FORMAT,
+        "-c:a", "copy",
         str(temp_output),
     ]
 
     print(f"[CoverOverlay] Автоматическое наложение обложки на первые {duration} сек...")
-    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    
+    # Запускаем БЕЗ DEVNULL, чтобы в случае ошибки увидеть лог
+    result = subprocess.run(cmd, capture_output=True, text=True)
 
-    if temp_output.exists():
+    if result.returncode != 0:
+        print(f"[CoverOverlay] ❌ Ошибка FFmpeg при наложении обложки:\n{result.stderr}")
+        print("[CoverOverlay] Возвращаем исходное видео без обложки.")
+        return input_video
+
+    # Если всё прошло успешно, подменяем целевой файл
+    if temp_output.exists() and temp_output.stat().st_size > 1000000: # проверяем что файл больше 1МБ
+        if output_video.exists() and output_video != input_video:
+            output_video.unlink()
         shutil.move(str(temp_output), str(output_video))
+        print(f"[CoverOverlay] ✓ Обложка успешно наложена, размер: {output_video.stat().st_size / (1024*1024):.2f} MB")
+    else:
+        print("[CoverOverlay] ⚠️ Итоговый файл получился слишком маленьким или не создался. Откат к исходнику.")
+        if temp_output.exists():
+            temp_output.unlink()
+        return input_video
 
     return output_video
 
