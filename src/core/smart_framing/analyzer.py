@@ -265,13 +265,12 @@ class SmartFramingAnalyzer:
         y = int(round(desired_center_y - crop_height / 2))
 
         # 3. ГАРАНТИЯ ГОЛОВЫ (Headroom Protection)
-        # safe_region.y1 — это верхняя граница объекта (голова).
-        # Добавляем 8% от высоты кадра на "воздух" над головой.
+        # safe_region.y — это верхняя граница объекта (макушка/голова).
         headroom = int(crop_height * 0.08) 
         
-        # Если наша центрированная рамка съехала ниже макушки — поднимаем её!
-        if y > (safe_region.y1 - headroom):
-            y = safe_region.y1 - headroom
+        # Если центрированная рамка опущена ниже макушки — подтягиваем её вверх
+        if y > (safe_region.y - headroom):
+            y = safe_region.y - headroom
 
         # 4. BOUNDS CLAMP: Зажимаем X и Y строго в пределах кадра
         x = max(0, min(x, max_x))
