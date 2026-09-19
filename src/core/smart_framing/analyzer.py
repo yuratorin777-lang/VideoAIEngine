@@ -253,22 +253,27 @@ class SmartFramingAnalyzer:
         crop_width: int,
         crop_height: int,
     ) -> Tuple[int, int]:
-        """
-        Вычисляет оптимальные координаты X и Y для кропа с защитой от вылета за границы (Bounds Clamp).
-        """
         max_x = source_width - crop_width
         max_y = source_height - crop_height
 
-        # 1. Центрирование по горизонтали относительно безопасной зоны
+        # 1. Горизонталь: строго по центру масс
         desired_center_x = safe_region.center_x
         x = int(round(desired_center_x - crop_width / 2))
 
-        # 2. Вычисление Y с ориентиром на нижнюю границу объекта (чтобы не резать ноги/пол)
-        # target_bottom — это y2 в вашей структуре BoundingBox (эквивалент safe_region.bottom)
-        target_bottom = safe_region.y2
-        y = target_bottom - crop_height + int(crop_height * 0.10)
+        # 2. Вертикаль: сначала пробуем центрировать по всей фигуре
+        desired_center_y = safe_region.center_y
+        y = int(round(desired_center_y - crop_height / 2))
 
-        # 3. BOUNDS CLAMP: Зажимаем X и Y строго в пределах кадра [0, max]
+        # 3. ГАРАНТИЯ ГОЛОВЫ (Headroom Protection)
+        # safe_region.y1 — это верхняя граница объекта (голова).
+        # Добавляем 8% от высоты кадра на "воздух" над головой.
+        headroom = int(crop_height * 0.08) 
+        
+        # Если наша центрированная рамка съехала ниже макушки — поднимаем её!
+        if y > (safe_region.y1 - headroom):
+            y = safe_region.y1 - headroom
+
+        # 4. BOUNDS CLAMP: Зажимаем X и Y строго в пределах кадра
         x = max(0, min(x, max_x))
         y = max(0, min(y, max_y))
 

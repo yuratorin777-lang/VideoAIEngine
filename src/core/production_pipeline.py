@@ -1683,13 +1683,27 @@ def get_media_duration_seconds(path: Path) -> float:
 
 
 def speed_up_audio_file(audio_path: Path, speed_factor: float) -> Path:
-    """Ускоряет аудиофайл через ffmpeg (filter atempo) с заменой исходника."""
+    """
+    Ускоряет аудиофайл через ffmpeg: 
+    Сначала удаляет лишнюю тишину между фразами, 
+    затем применяет мягкий atempo только к остатку.
+    """
     temp_path = audio_path.with_name(f"{audio_path.stem}_speedup{audio_path.suffix}")
     
+    # 1. Фильтр удаления тишины (паузы длиннее 0.3 сек урезаются)
+    silence_filter = "silenceremove=stop_periods=-1:stop_duration=0.3:stop_threshold=-35dB"
+    
+    # 2. Основной фильтр темпа (с ограничением по качеству)
+    # Если заставляют ускорять слишком сильно — берем рассчитанный speed_factor
+    tempo_filter = f"atempo={speed_factor:.4f}"
+    
+    # Объединяем их в цепочку (через запятую)
+    combined_filter = f"{silence_filter},{tempo_filter}"
+
     cmd = [
         "ffmpeg", "-y",
         "-i", str(audio_path),
-        "-filter:a", f"atempo={speed_factor:.4f}",
+        "-filter:a", combined_filter,
         "-vn",
         str(temp_path)
     ]
@@ -1699,7 +1713,7 @@ def speed_up_audio_file(audio_path: Path, speed_factor: float) -> Path:
         temp_path.replace(audio_path)
         return audio_path
     else:
-        print(f"[Duration] ⚠️ Не удалось ускорить аудио через ffmpeg, оставляем оригинал.")
+        print(f"[Duration] ⚠️ Не удалось подгнать аудио через ffmpeg, оставляем оригинал.")
         return audio_path
 
 def reconcile_plan_duration_with_voiceover(

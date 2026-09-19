@@ -109,8 +109,8 @@ class VideoNormalizer:
             text_margin_ratio=0.08,
             # Приоритет отдаем голове и верхней части туловища
             face_weight=2.0,
-            head_weight=2.0,
-            person_weight=5.0,
+            head_weight=3.5,
+            person_weight=4.0,
             text_weight=2.0,
             logo_weight=1.0,
             minimum_decision_score=0.4,
