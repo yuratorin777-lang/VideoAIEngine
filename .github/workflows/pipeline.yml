@@ -16,10 +16,23 @@ permissions:
 jobs:
   build-and-render:
     runs-on: ubuntu-latest
+    # Общий таймаут на весь workflow (90 минут — максимальный лимит GitHub для public/free)
+    timeout-minutes: 90
 
     steps:
       - name: 1. Чтение кода из Git
         uses: actions/checkout@v4
+
+      - name: 1.1. Оптимизация диска и увеличение Swap (Защита от OOM при рендеринге обложки)
+        run: |
+          sudo swapoff -a
+          sudo rm -f /swapfile
+          sudo fallocate -l 4G /swapfile
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+          echo "=== SWAP CONFIGURED ==="
+          free -h
 
       - name: 2. Установка Python 3.11
         uses: actions/setup-python@v5
@@ -37,7 +50,7 @@ jobs:
             echo "=== MEMORY & TOP PROCESSES ==="
             free -h
             ps aux --sort=-%mem | head -n 6
-            sleep 3
+            sleep 10
           done &
 
       - name: 4. Воссоздание service_account.json из Secrets
@@ -57,11 +70,15 @@ jobs:
           python -m playwright install chromium --with-deps
 
       - name: 6. Запуск пайплайна сборки видео
+        # Выставляем явный таймаут 60 минут конкретно на сборку
+        timeout-minutes: 60
         env:
           VERCEL_PROXY_URL: ${{ secrets.VERCEL_PROXY_URL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PYTHONUNBUFFERED: "1"
           PYTHONPATH: "."
+          # Флаги для предотвращения крашей Playwright / Chromium при генерации горизонтальной обложки
+          PLAYWRIGHT_CHROMIUM_ARGS: "--no-sandbox --disable-dev-shm-usage --disable-gpu"
         run: |
           python -m src.core.production_pipeline "${{ inputs.prompt_text }}"
 
