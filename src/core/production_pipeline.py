@@ -1097,9 +1097,13 @@ def generate_script_with_gemini(
     content_profile = contract.get("content_profile", {})
     voice_style = contract.get("audio", {}).get("voice_style", "friendly")
 
-    target_words = max(8, int(duration_seconds * 2.0))
-    max_words = max(10, int(duration_seconds * 2.2))
-    max_script_chars = max(80, int(max_words * 6.5))
+# Оставляем ~3 секунды на обложку (1.5s) и финальную паузу под логотип (1.5s)
+    speaking_time = max(5.0, duration_seconds - 3.0) 
+
+# Средняя скорость комфортной речи: ~13 символов в секунду
+    max_script_chars = int(speaking_time * 13) 
+    target_words = int(speaking_time * 2.0)
+    max_words = int(speaking_time * 2.3)
     target_max_chars = max_script_chars
 
     prompt = f"""
@@ -1178,6 +1182,17 @@ Production parameters:
             contract["script"] = {}
         contract["script"]["cover_hook"] = cover_hook
         contract["script"]["title"] = cover_hook
+
+    # Программный предохранитель: если Gemini все равно сгенерировал длинный текст
+    if len(script_text) > target_max_chars:
+        print(f"[Script Warning] Текст слишком длинный ({len(script_text)} симв.). Подрезаем до последнего предложения...")
+        # Обрезаем по символам и ищем последнюю точку/восклицательный знак
+        truncated = script_text[:target_max_chars]
+        last_punct = max(truncated.rfind('.'), truncated.rfind('!'), truncated.rfind('?'))
+        if last_punct > 50:
+            script_text = truncated[:last_punct + 1]
+        else:
+            script_text = truncated.strip()
 
     return script_text
 
@@ -1695,11 +1710,22 @@ def reconcile_plan_duration_with_voiceover(
     if not voiceover_path or not voiceover_path.exists():
         return
 
-    voiceover_duration = get_media_duration_seconds(
-        voiceover_path
-    )
+    # 1. Измеряем точную длительность озвучки
+    voiceover_duration = get_media_duration_seconds(voiceover_path)
 
-    # Максимальный допуск превышения по умолчанию (если переменная не задана глобально)
+    # 2. АВТО-УСКОРЕНИЕ: Желаемая длина озвучки (видео минус обложка 1.5s и минус пауза под логотип 1.0s)
+    ideal_speech_duration = max(5.0, target_duration - 2.5)
+
+    if voiceover_duration > ideal_speech_duration:
+        speed_factor = voiceover_duration / ideal_speech_duration
+        # Ускоряем только если нужно сжать не более чем на 15% (чтобы голос звучал естественно)
+        if speed_factor <= 1.15:
+            print(f"[Duration] ⚡ Озвучка ({voiceover_duration:.2f}s) длиннее нормы. Ускоряем в {speed_factor:.2f}x раз...")
+            speed_up_audio_file(voiceover_path, speed_factor)
+            # Обновляем длительность после ускорения
+            voiceover_duration = get_media_duration_seconds(voiceover_path)
+
+    # 3. Допуск превышения
     max_overrun = globals().get("MAX_DURATION_OVERRUN_SECONDS", 3)
 
     if voiceover_duration <= target_duration + 0.01:
@@ -1747,8 +1773,7 @@ def reconcile_plan_duration_with_voiceover(
 
     remaining = delta
 
-    # Сначала расширяем последний кадр, затем предыдущие.
-    # Расширение разрешено только внутри relevant_segment и до 6 секунд.
+    # 4. Расширяем видеоряд под обновленную озвучку
     for cut in reversed(cuts):
         if remaining <= 0.01:
             break
