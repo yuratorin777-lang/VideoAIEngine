@@ -256,26 +256,22 @@ class SmartFramingAnalyzer:
         max_x = source_width - crop_width
         max_y = source_height - crop_height
 
-        # 1. Горизонталь: строго по центру масс
+        # 1. Горизонталь: по центру масс
         desired_center_x = safe_region.center_x
         x = int(round(desired_center_x - crop_width / 2))
 
-        # 2. Вертикаль: сначала пробуем центрировать по всей фигуре
+        # 2. Вертикаль: по центру фигуры
         desired_center_y = safe_region.center_y
         y = int(round(desired_center_y - crop_height / 2))
 
-        # 3. ГАРАНТИЯ ГОЛОВЫ (Headroom Protection)
-        # safe_region.y — это верхняя граница объекта (голова/макушка).
-        headroom = int(crop_height * 0.10) # Увеличиваем отступ до 10% для запаса
+        # 3. Мягкая защита головы (возвращаем 8% воздуха)
+        # safe_region.y — верхняя граница головы
+        headroom = int(crop_height * 0.08)
         
-        # Жесткий потолок: верхний край кадрирования Y НЕ ДОЛЖЕН быть ниже, 
-        # чем самая верхняя точка объекта плюс отступ под воздух.
-        max_allowed_y = safe_region.y - headroom
+        if y > (safe_region.y - headroom):
+            y = safe_region.y - headroom
 
-        if y > max_allowed_y:
-            y = max_allowed_y
-
-        # 4. BOUNDS CLAMP: Зажимаем X и Y строго в пределах кадра
+        # 4. Зажим в пределах кадра [0, max]
         x = max(0, min(x, max_x))
         y = max(0, min(y, max_y))
 
