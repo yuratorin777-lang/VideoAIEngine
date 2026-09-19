@@ -1482,72 +1482,64 @@ def assemble_reel(
         )
 
     # ========================================================
-    # CONCAT VIDEO
+    # SMART TIME-SCALING & PACKSHOT PROTECTION
     # ========================================================
+    
+    num_clips = len(video_clips)
+    
+    # Защищенный финал (пэкшот/логотип) — берем последние 3 секунды или всю длину последнего клипа, если он короче
+    PACKSHOT_MIN_DURATION = 2.5
+    PACKSHOT_TARGET_DURATION = 3.0
 
-    final_video = concatenate_videoclips(
-        video_clips,
-        method="chain",
-    )
+    if num_clips == 1:
+        # Если кадр всего один, аккуратно подгоняем его под target_duration
+        final_video = video_clips[0].subclipped(0, min(video_clips[0].duration, target_duration))
+    else:
+        # Разделяем клипы на промежуточные (body) и финальный (packshot)
+        body_clips = video_clips[:-1]
+        last_clip = video_clips[-1]
+        
+        # Определяем длительность финального кадра
+        packshot_duration = min(last_clip.duration, PACKSHOT_TARGET_DURATION)
+        packshot_duration = max(packshot_duration, PACKSHOT_MIN_DURATION)
+        
+        # Рассчитываем, сколько времени остается на все промежуточные кадры
+        available_body_time = max(1.0, target_duration - packshot_duration)
+        
+        total_raw_body_duration = sum(c.duration for c in body_clips)
+        
+        processed_clips = []
+        
+        if total_raw_body_duration > 0:
+            # Пропорционально ужимаем/растягиваем каждый промежуточный клип
+            for clip in body_clips:
+                ratio = clip.duration / total_raw_body_duration
+                target_clip_dur = ratio * available_body_time
+                
+                # Забираем нужную длительность из клипа без нарушения воспроизведения
+                if clip.duration >= target_clip_dur:
+                    scaled_clip = clip.subclipped(0, target_clip_dur)
+                else:
+                    # Если исходный фрагмент короче, чем нужно — используем его целиком
+                    scaled_clip = clip
+                processed_clips.append(scaled_clip)
+        else:
+            processed_clips = body_clips
 
-    actual_video_duration = (
-        float(final_video.duration)
-    )
+        # Подготавливаем и добавляем финальный защищенный кадр
+        final_packshot_clip = last_clip.subclipped(0, min(last_clip.duration, packshot_duration))
+        processed_clips.append(final_packshot_clip)
 
-    print(
-        f"⏱️ Итоговая длина "
-        f"видеоряда: "
-        f"{actual_video_duration:.3f} сек."
-    )
+        # Склеиваем пересчитанные клипы
+        final_video = concatenate_videoclips(processed_clips, method="chain")
 
-    # ========================================================
-    # IMPORTANT:
-    # DO NOT FREEZE LAST FRAME
-    # ========================================================
+    # Страховочная проверка длительности (без обрезания хвоста)
+    actual_video_duration = float(final_video.duration)
+    print(f"⏱️ Итоговая адаптивная длина видеоряда: {actual_video_duration:.3f} сек.")
 
     if actual_video_duration > target_duration:
-
-        print(
-            f"✂️ Видеоряд длиннее цели "
-            f"на "
-            f"{actual_video_duration - target_duration:.3f}s"
-        )
-
-        final_video = final_video.subclipped(
-            0,
-            target_duration,
-        )
-
-        actual_video_duration = (
-            float(final_video.duration)
-        )
-
-        print(
-            f"   → Обрезано до "
-            f"{actual_video_duration:.3f}s"
-        )
-
-    elif (
-        actual_video_duration
-        < target_duration - 0.05
-    ):
-
-        print(
-            f"⚠️ Видеоряд короче цели "
-            f"на "
-            f"{target_duration - actual_video_duration:.3f}s"
-        )
-
-        print(
-            "⚠️ Последний кадр НЕ будет "
-            "искусственно удерживаться."
-        )
-
-        print(
-            "⚠️ Исправление длительности "
-            "должно происходить "
-            "на уровне montage_plan."
-        )
+        # Если из-за округления кадров вылезли микросекунды, мягко подрезаем без потери финала
+        final_video = final_video.subclipped(0, target_duration)
 
     # ========================================================
     # AUDIO
@@ -1747,11 +1739,11 @@ def assemble_reel(
     preset_name = plan.get("brand_preset")
 
     # Применяем наложение логотипа
-    #final_video = apply_brand_logo(
-    #    final_video,
-    #    project_id=project_id,
-    #    preset_name=preset_name
-    #)
+    final_video = apply_brand_logo(
+        final_video,
+       project_id=project_id,
+        preset_name=preset_name
+    )
 
     # ========================================================
     # BASE RENDER

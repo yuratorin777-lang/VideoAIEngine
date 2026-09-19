@@ -1868,18 +1868,11 @@ def run_retriever(
     print(" RETRIEVER + GEMINI")
     print("=" * 70)
 
-    print(
-        "[Pipeline] ТЗ:"
-    )
-
+    print("[Pipeline] ТЗ:")
     print(input_text)
-
     print()
 
-    print(
-        "[Pipeline] Job / Content Contract:"
-    )
-
+    print("[Pipeline] Job / Content Contract:")
     print(
         json.dumps(
             contract,
@@ -1896,10 +1889,12 @@ def run_retriever(
         generate_montage_plan,
     )
 
+    # Передаем contract в аргумент job_contract!
     generate_montage_plan(
         input_text=input_text,
         is_post=True,
         top_k=12,
+        job_contract=contract,  # <-- ВОТ ЕДИНСТВЕННОЕ ИЗМЕНЕНИЕ, КОТОРОЕ НУЖНО ДОБАВИТЬ
     )
 
     plan_path = (
@@ -1909,10 +1904,8 @@ def run_retriever(
     )
 
     if not plan_path.exists():
-
         raise RuntimeError(
-            f"Retriever не создал "
-            f"montage_plan.json: {plan_path}"
+            f"Retriever не создал montage_plan.json: {plan_path}"
         )
 
     # --------------------------------------------------------
@@ -1924,10 +1917,7 @@ def run_retriever(
         contract=contract,
     )
 
-    print(
-        f"[Pipeline] ✓ Montage plan создан: "
-        f"{plan_path}"
-    )
+    print(f"[Pipeline] ✓ Montage plan создан: {plan_path}")
 
 
 # ============================================================
