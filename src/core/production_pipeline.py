@@ -2052,7 +2052,6 @@ def run_pipeline(
     # ---------------------------------------------------------
     # 7. ASSEMBLER
     # ---------------------------------------------------------
-
     run_command(
         [
             sys.executable,
@@ -2062,135 +2061,84 @@ def run_pipeline(
         "ASSEMBLER",
     )
 
-    # ДОБАВЬТЕ ЭТУ ПРОВЕРКУ (3 строчки) — она ничего не ломает:
     output_mp4s = list(Path("07_OUTPUT").glob("*.mp4"))
     print(f"[DEBUG] Файлы в 07_OUTPUT после Assembler: {output_mp4s}")
-    if not output_mp4s:
-        print("[CRITICAL] Assembler завершился с кодом 0, но .mp4 файл НЕ появился в 07_OUTPUT!")
 
     # ---------------------------------------------------------
-# 7.1 COVER GENERATOR & OVERLAY (Генерация и вклейка обложки)
-# ---------------------------------------------------------
-print("\n======================================================================")
-print(" COVER GENERATOR & OVERLAY")
-print("======================================================================")
+    # 7.1 COVER GENERATOR & OVERLAY
+    # ---------------------------------------------------------
+    print("\n======================================================================")
+    print(" COVER GENERATOR & OVERLAY")
+    print("======================================================================")
 
-try:
-    from src.composer.assembler import (
-        apply_cover_overlay,
-        generate_cover_image,
-    )
+    try:
+        from src.composer.assembler import generate_cover_image, apply_cover_overlay
 
-    output_dir = Path("07_OUTPUT")
-    
-    # Исключаем любые временные файлы из поиска
-    video_files = [
-        f for f in output_dir.glob("*.mp4") 
-        if not f.name.startswith("temp_") and not f.name.endswith("_with_cover.mp4")
-    ]
+        output_dir = BASE_DIR / "07_OUTPUT"
+        target_video = output_dir / "rendered_reel.mp4"
 
-    if not video_files:
-        print("[Cover] Ошибка: Итоговый видеофайл в 07_OUTPUT не найден! Проверьте предыдущий шаг сборки (assembler).")
-    else:
-        # Берем самый свежий собранный файл
-        target_video = max(video_files, key=lambda f: f.stat().st_mtime)
-        print(f"[Cover] Целевое видео для обложки: {target_video}")
+        if not target_video.exists():
+            print(f"[Cover] Ошибка: Файл {target_video} не найден!")
+        else:
+            print(f"[Cover] Целевое видео для обложки: {target_video}")
 
-        # 2. Извлекаем контекст и настройки бренда
-        local_vars = locals()
-        current_contract = local_vars.get("job_contract") or local_vars.get("contract", {})
-        
-        is_landscape = False
-        brand_name = "dance_kids"
-        
-        if isinstance(current_contract, dict):
-            is_landscape = (
-                current_contract.get("output", {}).get("format") == "landscape"
-            )
-            brand_name = (
-                current_contract.get("brand", {}).get("name") 
-                or current_contract.get("brand_name") 
-                or "dance_kids"
-            )
-
-        # 3. Извлекаем заголовок обложки (приоритет cover_hook)
-        script_title = None
-        if isinstance(current_contract, dict):
-            script_data = current_contract.get("script")
+            # 1. Извлекаем данные для заголовка и бренда
+            brand_name = contract.get("brand", {}).get("name") or contract.get("brand_name") or "dance_kids"
+            is_landscape = contract.get("output", {}).get("format") == "landscape"
+            
+            script_data = contract.get("script", {})
             if isinstance(script_data, dict):
-                script_title = script_data.get("cover_hook") or script_data.get("title")
-            elif isinstance(script_data, str):
-                script_title = current_contract.get("cover_hook")
-
-        if not script_title or str(script_title).strip() in ["None", ""]:
-            script_title = local_vars.get("cover_hook")
-
-        if not script_title or str(script_title).strip() in ["None", ""]:
-            script_text_var = local_vars.get("script_text")
-            if script_text_var:
-                words = str(script_text_var).split()[:4]
-                script_title = " ".join(words)
+                cover_title = script_data.get("cover_hook") or script_data.get("title")
             else:
-                script_title = "РАЗВИТИЕ ЧЕРЕЗ ТАНЦЫ"
+                cover_title = contract.get("cover_hook")
 
-        cover_title = str(script_title).strip(" .!,").upper()
-        print(f"[Cover] Заголовок для обложки: {cover_title}")
+            if not cover_title or str(cover_title).strip() in ["None", ""]:
+                cover_title = "ТАНЦЫ ДЛЯ ДЕТЕЙ"
 
-        # 4. Находим чистый исходник без субтитров
-        raw_clean_video = None
+            cover_title = str(cover_title).strip(" .!,").upper()
+            print(f"[Cover] Заголовок для обложки: {cover_title}")
 
-        normalized_dir = Path("temp_normalized")
-        if normalized_dir.exists():
-            norm_files = sorted(list(normalized_dir.glob("*.mp4")))
-            if norm_files:
-                raw_clean_video = str(norm_files[0])
-
-        if not raw_clean_video:
-            downloads_dir = Path("temp_downloads")
+            # 2. Ищем чистый исходник (так как temp_normalized был очищен, ищем в temp_downloads)
+            raw_clean_video = None
+            downloads_dir = BASE_DIR / "temp_downloads"
             if downloads_dir.exists():
-                down_files = sorted(list(downloads_dir.glob("*.mp4")))
+                down_files = sorted(list(downloads_dir.glob("*.mp4")) + list(downloads_dir.glob("*.MOV")))
                 if down_files:
                     raw_clean_video = str(down_files[0])
 
-        if not raw_clean_video:
-            editing_plan = current_contract.get("editing_plan", [])
-            if editing_plan and isinstance(editing_plan, list):
-                first_clip = editing_plan[0]
-                if isinstance(first_clip, dict):
-                    raw_clean_video = first_clip.get("file_path") or first_clip.get("path")
+            print(f"[Cover] Исходник без субтитров: {raw_clean_video}")
 
-        print(f"[Cover] Чистый исходник для обложки: {raw_clean_video}")
+            # 3. Генерируем PNG
+            cover_png_path = output_dir / "video_cover.png"
+            cover_png = generate_cover_image(
+                video_path=str(target_video),
+                cover_title=cover_title,
+                brand_name=brand_name,
+                is_landscape=is_landscape,
+                output_png_path=str(cover_png_path),
+                raw_source_video=raw_clean_video,
+            )
+            print(f"[Pipeline] ✓ PNG обложка создана: {cover_png}")
 
-        # 5. Генерируем PNG-обложку
-        cover_png_path = output_dir / "video_cover.png"
-        cover_png = generate_cover_image(
-            video_path=str(target_video),
-            cover_title=cover_title,
-            brand_name=brand_name,
-            is_landscape=is_landscape,
-            output_png_path=str(cover_png_path),
-            raw_source_video=raw_clean_video,
-        )
-        print(f"[Pipeline] ✓ Сохранена статичная обложка: {cover_png}")
+            # 4. Накладываем обложку на первые 1.5 сек видео
+            temp_output = output_dir / "rendered_reel_with_cover.mp4"
+            apply_cover_overlay(
+                input_video_path=str(target_video),
+                cover_image_path=str(cover_png),
+                output_video_path=str(temp_output),
+                duration=1.5,
+            )
 
-        # 6. Вшиваем обложку во временный файл, затем заменяем оригинал
-        temp_output_video = target_video.parent / f"temp_cover_{target_video.name}"
-        
-        apply_cover_overlay(
-            input_video_path=str(target_video),
-            cover_image_path=str(cover_png),
-            output_video_path=str(temp_output_video),
-            duration=1.5,
-        )
-        
-        # Безопасная замена файла после успешной рендер-обработки
-        if temp_output_video.exists():
-            target_video.unlink(missing_ok=True)  # Удаляем старый без обложки
-            temp_output_video.rename(target_video) # Переименовываем новый
-            print(f"[Pipeline] ✓ Обложка успешно вшита в первые 1.5 секунды видео!")
+            # Переименовываем обратно в rendered_reel.mp4
+            if temp_output.exists():
+                target_video.unlink(missing_ok=True)
+                temp_output.rename(target_video)
+                print(f"[Pipeline] ✓ Обложка успешно вшита в {target_video.name}!")
 
-except Exception as e:
-    print(f"[Pipeline] Ошибка при обработке обложки: {e}")
+    except Exception as e:
+        print(f"[Pipeline] ❌ Ошибка при генерации обложки: {e}")
+        import traceback
+        traceback.print_exc()
 
     # ---------------------------------------------------------
     # 8. FINAL CHECK
