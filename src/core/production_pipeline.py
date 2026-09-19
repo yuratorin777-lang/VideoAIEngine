@@ -20,7 +20,7 @@ DEFAULT_VOICEOVER = "02_PROCESSING/temp_audio/voiceover.mp3"
 DEFAULT_SUBTITLES = "02_PROCESSING/temp_audio/subtitles.srt"
 
 DEFAULT_DURATION_SECONDS = 20
-MAX_DURATION_OVERRUN_SECONDS = 2.5
+MAX_DURATION_OVERRUN_SECONDS = 3
 VOICEOVER_TAIL_SECONDS = 0.20
 
 MONTAGE_PLAN_PATH = (
@@ -1700,7 +1700,7 @@ def reconcile_plan_duration_with_voiceover(
     )
 
     # Максимальный допуск превышения по умолчанию (если переменная не задана глобально)
-    max_overrun = globals().get("MAX_DURATION_OVERRUN_SECONDS", 2.5)
+    max_overrun = globals().get("MAX_DURATION_OVERRUN_SECONDS", 3)
 
     if voiceover_duration <= target_duration + 0.01:
         print(
