@@ -138,6 +138,9 @@ def extract_frame_from_video(
     return output_frame
 
 
+import random
+from pathlib import Path
+
 def generate_cover_image(
     video_path: str | Path,
     cover_title: str,
@@ -145,91 +148,96 @@ def generate_cover_image(
     is_landscape: bool = False,
     output_png_path: str | Path | None = None,
     raw_source_video: str | Path | None = None,
-) -> Path:
+) -> Path | None:
     """Генерирует обложку для видео с использованием HTML/CSS-шаблонов Playwright."""
 
-    # Если путь не передан, сохраняем по умолчанию в output/covers/
-    if output_png_path is None:
-        video_stem = Path(video_path).stem
-        output_dir = BASE_DIR / "output" / "covers"
-        output_dir.mkdir(parents=True, exist_ok=True)  # Автоматически создает папку, если ее нет
-        out_path = output_dir / f"cover_{video_stem}.png"
-    else:
-        out_path = resolve_path(str(output_png_path))
-        out_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        # Если путь не передан, сохраняем по умолчанию в output/covers/
+        if output_png_path is None:
+            video_stem = Path(video_path).stem
+            output_dir = BASE_DIR / "output" / "covers"
+            output_dir.mkdir(parents=True, exist_ok=True)  # Автоматически создает папку, если ее нет
+            out_path = output_dir / f"cover_{video_stem}.png"
+        else:
+            out_path = resolve_path(str(output_png_path))
+            out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    temp_frame = out_path.parent / f"temp_bg_{out_path.stem}.jpg"
+        temp_frame = out_path.parent / f"temp_bg_{out_path.stem}.jpg"
 
-    # Если передан чистый исходник — берем из него, иначе пробуем из переданного файла
-    target_video_for_frame = raw_source_video or video_path
-    frame_extracted = False
+        # Если передан чистый исходник — берем из него, иначе пробуем из переданного файла
+        target_video_for_frame = raw_source_video or video_path
+        frame_extracted = False
 
-    if target_video_for_frame and Path(target_video_for_frame).exists():
-        try:
-            # Вырезаем случайный кадр (от 2.0 до 5.0 сек)
-            random_offset = round(random.uniform(2.0, 5.0), 2)
-            extract_frame_from_video(target_video_for_frame, temp_frame, time_offset=random_offset)
-            if temp_frame.exists() and temp_frame.stat().st_size > 0:
-                frame_extracted = True
-                print(f"[Cover] Вырезан чистый кадр из видео (метка {random_offset}s)")
-        except Exception as e:
-            print(f"[Cover] Ошибка вырезки кадра из видео: {e}")
+        if target_video_for_frame and Path(target_video_for_frame).exists():
+            try:
+                # Вырезаем случайный кадр (от 2.0 до 5.0 сек)
+                random_offset = round(random.uniform(2.0, 5.0), 2)
+                extract_frame_from_video(target_video_for_frame, temp_frame, time_offset=random_offset)
+                if temp_frame.exists() and temp_frame.stat().st_size > 0:
+                    frame_extracted = True
+                    print(f"[Cover] Вырезан чистый кадр из видео (метка {random_offset}s)")
+            except Exception as e:
+                print(f"[Cover] Ошибка вырезки кадра из видео: {e}")
 
-    # ФОЛЛБЭК: Если кадр не вырезался или видео повреждено — берем из папки backgrounds
-    bg_path = temp_frame
-    if not frame_extracted:
-        print("[Cover] Кадр из видео не получен. Переходим к фоллбэку из папки backgrounds...")
-        bg_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}/backgrounds"
-        if bg_dir.exists():
-            bg_files = (
-                list(bg_dir.glob("*.png"))
-                + list(bg_dir.glob("*.jpg"))
-                + list(bg_dir.glob("*.jpeg"))
-            )
-            if bg_files:
-                bg_path = random.choice(bg_files)
-                print(f"[Cover] Выбран фоновый рисунок из библиотеки: {bg_path.name}")
+        # ФОЛЛБЭК: Если кадр не вырезался или видео повреждено — берем из папки backgrounds
+        bg_path = temp_frame
+        if not frame_extracted:
+            print("[Cover] Кадр из видео не получен. Переходим к фоллбэку из папки backgrounds...")
+            bg_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}/backgrounds"
+            if bg_dir.exists():
+                bg_files = (
+                    list(bg_dir.glob("*.png"))
+                    + list(bg_dir.glob("*.jpg"))
+                    + list(bg_dir.glob("*.jpeg"))
+                )
+                if bg_files:
+                    bg_path = random.choice(bg_files)
+                    print(f"[Cover] Выбран фоновый рисунок из библиотеки: {bg_path.name}")
 
-    # 2. Выбор логотипа бренда
-    brand_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}"
-    logo_files = [
-        f for f in brand_dir.glob("logo*.*")
-        if f.suffix.lower() in [".png", ".jpg", ".jpeg", ".svg"]
-    ]
-    logo_path = random.choice(logo_files) if logo_files else ""
-
-    # 3. Выбор шаблона обложки
-    if is_landscape:
-        cover_templates = ["cover_landscape_classic.html"]
-    else:
-        cover_templates = [
-            "cover_classic.html",
-            "cover_badge.html",
-            "cover_bold.html",
+        # 2. Выбор логотипа бренда
+        brand_dir = BASE_DIR / f"04_LIBRARY/brands/{brand_name}"
+        logo_files = [
+            f for f in brand_dir.glob("logo*.*")
+            if f.suffix.lower() in [".png", ".jpg", ".jpeg", ".svg"]
         ]
+        logo_path = random.choice(logo_files) if logo_files else ""
 
-    selected_template = random.choice(cover_templates)
-    print(f"[Cover] Шаблон обложки: {selected_template}")
+        # 3. Выбор шаблона обложки
+        if is_landscape:
+            cover_templates = ["cover_landscape_classic.html"]
+        else:
+            cover_templates = [
+                "cover_classic.html",
+                "cover_badge.html",
+                "cover_bold.html",
+            ]
 
-    # 4. Рендер через Playwright
-    generator = OverlayGenerator()
-    context = {
-        "background_path": bg_path,
-        "logo_path": logo_path,
-        "title": cover_title,
-    }
+        selected_template = random.choice(cover_templates)
+        print(f"[Cover] Шаблон обложки: {selected_template}")
 
-    generator.generate_image(
-        template_name=selected_template,
-        context=context,
-        output_path=str(out_path),
-        is_landscape=is_landscape,  # <-- ПЕРЕДАЕМ ФЛАГ ЗДЕСЬ
-    )
+        # 4. Рендер через Playwright
+        generator = OverlayGenerator()
+        context = {
+            "background_path": bg_path,
+            "logo_path": logo_path,
+            "title": cover_title,
+        }
 
-    if temp_frame.exists():
-        temp_frame.unlink()
+        generator.generate_image(
+            template_name=selected_template,
+            context=context,
+            output_path=str(out_path),
+            is_landscape=is_landscape,  # <-- ПЕРЕДАЕМ ФЛАГ ЗДЕСЬ
+        )
 
-    return out_path
+        if temp_frame.exists():
+            temp_frame.unlink()
+
+        return out_path
+
+    except Exception as e:
+        print(f"[Cover Generator] Ошибка генерации обложки, пропускаем: {e}")
+        return None
 
 
 def apply_cover_overlay(
@@ -1727,11 +1735,11 @@ def assemble_reel(
     preset_name = plan.get("brand_preset")
 
     # Применяем наложение логотипа
-    final_video = apply_brand_logo(
-        final_video,
-        project_id=project_id,
-        preset_name=preset_name
-    )
+    #final_video = apply_brand_logo(
+    #    final_video,
+    #    project_id=project_id,
+    #    preset_name=preset_name
+    #)
 
     # ========================================================
     # BASE RENDER

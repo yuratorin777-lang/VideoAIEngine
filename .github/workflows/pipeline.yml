@@ -61,7 +61,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: final-video-output
-          path: 07_OUTPUT/*.mp4
+          path: |
+            07_OUTPUT/
           retention-days: 7
 
       - name: 8. Сохранение и коммит файла истории в Git
