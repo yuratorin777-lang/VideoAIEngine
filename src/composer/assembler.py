@@ -1475,7 +1475,7 @@ def assemble_reel(
 
     final_video = concatenate_videoclips(
         video_clips,
-        method="compose",
+        method="chain",
     )
 
     actual_video_duration = (
