@@ -31,6 +31,15 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg libgl1 libegl1 libgles2 libglib2.0-0
 
+      - name: 3.1. Запуск детального мониторинга оперативной памяти
+        run: |
+          while true; do
+            echo "=== MEMORY & TOP PROCESSES ==="
+            free -h
+            ps aux --sort=-%mem | head -n 6
+            sleep 3
+          done &
+
       - name: 4. Воссоздание service_account.json из Secrets
         env:
           SERVICE_ACCOUNT_DATA: ${{ secrets.SERVICE_ACCOUNT_JSON }}
