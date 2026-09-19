@@ -1,6 +1,7 @@
 VideoAIEngine
 ├── .github
 │   └── workflows
+│       ├── generate_story.yml
 │       └── pipeline.yml
 ├── .vscode
 │   └── settings.json
@@ -29,6 +30,23 @@ VideoAIEngine
 │   │   └── upbeat.mp3
 │   ├── brands
 │   │   └── dance_kids
+│   │       ├── backgrounds
+│   │       │   ├── индив главный блок.jpg
+│   │       │   ├── индивидуальные2.jpg
+│   │       │   ├── индивидуальные3.jpg
+│   │       │   ├── индивидуальные4.jpg
+│   │       │   ├── photo_2025-09-10_15-17-16.jpg
+│   │       │   ├── photo_2025-11-16_15-40-47.jpg
+│   │       │   ├── photo_2025-11-19_07-55-40.jpg
+│   │       │   ├── photo_2025-11-19_08-10-49.jpg
+│   │       │   ├── photo_2025-11-19_12-59-13.jpg
+│   │       │   ├── photo_2025-11-19_13-27-54.jpg
+│   │       │   ├── photo_2025-11-19_13-42-28.jpg
+│   │       │   ├── photo_2025-11-19_14-32-00.jpg
+│   │       │   ├── photo_2025-11-19_16-27-23.jpg
+│   │       │   ├── photo_2025-11-20_13-03-18.jpg
+│   │       │   ├── photo_2025-11-20_13-03-27.jpg
+│   │       │   └── photo_2025-11-20_13-03-32.jpg
 │   │       ├── brand_config.json
 │   │       ├── logo1 .png
 │   │       └── logo2.png
@@ -76,6 +94,7 @@ VideoAIEngine
 │   │   ├── passport_1XgTbyQqpor_jUgZWAlowomCOkpk1-Emb.json
 │   │   └── passport_1z9n6fUnKvCOqjdeYxLdxNPR95LQO5c0E.json
 │   ├── document_5375407404965992403_passport.json
+│   ├── history.json
 │   ├── README.md
 │   └── video_2025-08-28_07-45-21_passport.json
 ├── 05_RETRIEVER
@@ -84,13 +103,16 @@ VideoAIEngine
 │   ├── montage_plan.json
 │   └── README.md
 ├── 07_OUTPUT
-│   ├── 14.09 горизонт.mp4
 │   ├── 17.09 горизонтальное.mp4
 │   ├── 17.09 сторис.mp4
 │   ├── 17.09.mp4
 │   ├── 18.09 02.mp4
+│   ├── 18.09 03.mp4
+│   ├── 18.09 04.mp4
 │   ├── 18.09 без озвучки.mp4
+│   ├── 18.09 клас.mp4
 │   ├── 18.09.mp4
+│   ├── 19.09.mp4
 │   ├── открыт набор.mp4
 │   ├── README.md
 │   ├── temp_rendered_reel.mp4
@@ -152,6 +174,16 @@ VideoAIEngine
 │   │   ├── README.md
 │   │   ├── test_gemini.py
 │   │   └── vercel_client.py
+│   ├── graphics
+│   │   ├── templates
+│   │   │   ├── cover_badge.html
+│   │   │   ├── cover_bold.html
+│   │   │   ├── cover_classic.html
+│   │   │   ├── cover_landscape_classic.html
+│   │   │   ├── story_accent.html
+│   │   │   ├── story_minimal.html
+│   │   │   └── story.html
+│   │   └── overlay_generator.py
 │   ├── library
 │   │   ├── __init__.py
 │   │   ├── passport_store.py
@@ -185,9 +217,14 @@ VideoAIEngine
 │   ├── 1WoJTEKvO0Z94NW8qaKggXM7F13doQhuC.mp4
 │   ├── 1xfwQfuloN01dBD4RB2O2ZGp7UCGeyONZ.mp4
 │   ├── 1XgTbyQqpor_jUgZWAlowomCOkpk1-Emb.mp4
-│   └── 1z9n6fUnKvCOqjdeYxLdxNPR95LQO5c0E.MOV
+│   ├── 1z9n6fUnKvCOqjdeYxLdxNPR95LQO5c0E.MOV
+│   └── test_story_result.html
 ├── temp_normalized
-│   └── cut_001.mp4
+│   ├── generated_story3.png
+│   ├── generated_story4.png
+│   ├── generated_story5.png
+│   ├── generated_story6.png
+│   └── generated_story7.png
 ├── test_media
 │   └── problem.mp4
 ├── .env
@@ -203,4 +240,5 @@ VideoAIEngine
 ├── service_account.json
 ├── test_proxy_video.py
 ├── test_smart_framing.py
+├── test_story.py
 └── test_video.MOV

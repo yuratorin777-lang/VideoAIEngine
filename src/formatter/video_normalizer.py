@@ -67,7 +67,7 @@ class VideoNormalizer:
     # Smart Framing не должен создавать кадр,
     # который заметно меньше максимально возможного
     # target-AR crop.
-    MIN_SMART_CROP_AREA_RATIO = 0.78
+    MIN_SMART_CROP_AREA_RATIO = 0.50
 
     PROTECT_MATCHED_ASPECT = True
 
@@ -108,9 +108,9 @@ class VideoNormalizer:
             person_margin_ratio=0.15,
             text_margin_ratio=0.08,
             # Приоритет отдаем голове и верхней части туловища
-            face_weight=4.0,
-            head_weight=5.0,
-            person_weight=2.0,
+            face_weight=2.0,
+            head_weight=2.0,
+            person_weight=5.0,
             text_weight=2.0,
             logo_weight=1.0,
             minimum_decision_score=0.4,
@@ -603,7 +603,7 @@ class VideoNormalizer:
                 "force_original_aspect_ratio=increase,"
                 f"crop={target_width}:{target_height}:"
                 "(in_w-out_w)/2:"
-                "(in_h-out_h)*0.2"  # Было /2. Смещение к верху кадра!
+                "(in_h-out_h)/2"  # Было /2. Смещение к верху кадра!
             )
 
             return (
@@ -622,7 +622,7 @@ class VideoNormalizer:
                 "force_original_aspect_ratio=increase,"
                 f"crop={target_width}:{target_height}:"
                 "(in_w-out_w)/2:"
-                "(in_h-out_h)*0.2"  # Было /2. Смещение к верху кадра!
+                "(in_h-out_h)/2"  # Было /2. Смещение к верху кадра!
             )
 
             return (
@@ -640,7 +640,7 @@ class VideoNormalizer:
             "force_original_aspect_ratio=increase,"
             f"crop={target_width}:{target_height}:"
             "(in_w-out_w)/2:"
-            "(in_h-out_h)*0.2"  # Было /2
+            "(in_h-out_h)/2"  # Было /2
         )
 
         return (

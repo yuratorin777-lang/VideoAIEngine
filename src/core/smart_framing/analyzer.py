@@ -1,3 +1,5 @@
+# src/core/smart_framing/analyzer.py
+
 from __future__ import annotations
 
 from typing import Iterable, List, Tuple
@@ -16,17 +18,7 @@ from .models import (
 class SmartFramingAnalyzer:
     """
     Converts visual detections into a stable crop decision.
-
-    Level 2:
-        - people awareness;
-        - face/head awareness when available;
-        - text/logo awareness when available;
-        - safe crop region;
-        - multi-frame aggregation.
-
-    Important:
-        The analyzer does NOT modify video.
-        It only decides WHAT should be cropped.
+    Optimized for dance performance tracking with floor and body preservation.
     """
 
     def __init__(
@@ -41,15 +33,15 @@ class SmartFramingAnalyzer:
         target_width: int,
         target_height: int,
     ) -> CropDecision:
-        analyses = list(analyses)
+        analyses_list = list(analyses)
 
-        if not analyses:
+        if not analyses_list:
             raise ValueError(
                 "Smart Framing requires at least one frame analysis."
             )
 
-        source_width = analyses[0].frame_width
-        source_height = analyses[0].frame_height
+        source_width = analyses_list[0].frame_width
+        source_height = analyses_list[0].frame_height
 
         crop_width, crop_height = self._calculate_crop_size(
             source_width=source_width,
@@ -58,7 +50,8 @@ class SmartFramingAnalyzer:
             target_height=target_height,
         )
 
-        detections = self._aggregate_detections(analyses)
+        # Выделяем и фильтруем ключевые детекции для танца
+        detections = self._aggregate_and_filter_detections(analyses_list)
 
         if not detections:
             return self._center_crop_decision(
@@ -109,34 +102,21 @@ class SmartFramingAnalyzer:
             target_height=target_height,
             strategy=strategy,
             score=score,
-            reason=(
-                "Stable multi-frame crop selected around "
-                "detected visual subjects."
-            ),
+            reason="Stable multi-frame crop focused on main dancers and movement area.",
             detected_people=sum(
-                1
-                for d in detections
-                if d.detection_type == DetectionType.PERSON
+                1 for d in detections if d.detection_type == DetectionType.PERSON
             ),
             detected_faces=sum(
-                1
-                for d in detections
-                if d.detection_type == DetectionType.FACE
+                1 for d in detections if d.detection_type == DetectionType.FACE
             ),
             detected_heads=sum(
-                1
-                for d in detections
-                if d.detection_type == DetectionType.HEAD
+                1 for d in detections if d.detection_type == DetectionType.HEAD
             ),
             detected_text_regions=sum(
-                1
-                for d in detections
-                if d.detection_type == DetectionType.TEXT
+                1 for d in detections if d.detection_type == DetectionType.TEXT
             ),
             detected_logos=sum(
-                1
-                for d in detections
-                if d.detection_type == DetectionType.LOGO
+                1 for d in detections if d.detection_type == DetectionType.LOGO
             ),
         )
 
@@ -161,24 +141,44 @@ class SmartFramingAnalyzer:
 
         return crop_width, crop_height
 
-    def _aggregate_detections(
+    def _aggregate_and_filter_detections(
         self,
         analyses: List[FrameAnalysis],
     ) -> List[Detection]:
         """
-        Convert detections from multiple frames into a stable
-        representation.
-
-        For the first implementation we use all detections as
-        constraints. Later this can become temporal clustering.
+        Фильтрует мелкий шум и фокусируется на главном танцоре / объекте в кадре.
         """
-
-        result: List[Detection] = []
+        filtered_detections: List[Detection] = []
 
         for analysis in analyses:
-            result.extend(analysis.detections)
+            persons = [
+                d for d in analysis.detections 
+                if d.detection_type == DetectionType.PERSON
+            ]
+            
+            if persons:
+                # Находим ведущего танцора на кадре по площади и уверенности
+                primary_person = max(
+                    persons,
+                    key=lambda p: (p.bbox.width * p.bbox.height) * getattr(p, 'confidence', 1.0)
+                )
+                primary_area = primary_person.bbox.width * primary_person.bbox.height
+                
+                # Оставляем только значимые детекции людей (≥ 20% площади главного объекта)
+                valid_persons = [
+                    p for p in persons 
+                    if (p.bbox.width * p.bbox.height) >= primary_area * 0.20
+                ]
+                filtered_detections.extend(valid_persons)
+            
+            # Добавляем лица, головы, текст и логотипы для сохранения контекста
+            other_detections = [
+                d for d in analysis.detections 
+                if d.detection_type != DetectionType.PERSON
+            ]
+            filtered_detections.extend(other_detections)
 
-        return result
+        return filtered_detections
 
     def _calculate_safe_region(
         self,
@@ -186,12 +186,6 @@ class SmartFramingAnalyzer:
         source_width: int,
         source_height: int,
     ) -> BoundingBox:
-        """
-        Build a bounding region that should remain visible.
-
-        The region is deliberately expanded around semantic objects.
-        """
-
         if not detections:
             return BoundingBox(
                 x=0,
@@ -207,25 +201,34 @@ class SmartFramingAnalyzer:
 
         for detection in detections:
             bbox = detection.bbox
-
-            margin_ratio = self._margin_for_detection(
-                detection.detection_type
-            )
+            margin_ratio = self._margin_for_detection(detection.detection_type)
 
             margin_x = int(bbox.width * margin_ratio)
-            margin_y = int(bbox.height * margin_ratio)
+            
+            # Для людей закладываем запас снизу для защиты ног и паркета
+            if detection.detection_type == DetectionType.PERSON:
+                margin_y_top = int(bbox.height * self.config.head_margin_ratio)
+                margin_y_bottom = int(bbox.height * margin_ratio * 1.5)
+            else:
+                margin_y_top = int(bbox.height * margin_ratio)
+                margin_y_bottom = margin_y_top
 
             min_x = min(min_x, bbox.x - margin_x)
-            min_y = min(min_y, bbox.y - margin_y)
+            min_y = min(min_y, bbox.y - margin_y_top)
 
             max_x = max(max_x, bbox.x2 + margin_x)
-            max_y = max(max_y, bbox.y2 + margin_y)
+            max_y = max(max_y, bbox.y2 + margin_y_bottom)
+
+        safe_x = max(0, min_x)
+        safe_y = max(0, min_y)
+        safe_w = min(source_width, max_x) - safe_x
+        safe_h = min(source_height, max_y) - safe_y
 
         return BoundingBox(
-            x=max(0, min_x),
-            y=max(0, min_y),
-            width=min(source_width, max_x) - max(0, min_x),
-            height=min(source_height, max_y) - max(0, min_y),
+            x=safe_x,
+            y=safe_y,
+            width=safe_w,
+            height=safe_h,
         )
 
     def _margin_for_detection(
@@ -234,16 +237,12 @@ class SmartFramingAnalyzer:
     ) -> float:
         if detection_type == DetectionType.FACE:
             return self.config.face_margin_ratio
-
         if detection_type == DetectionType.HEAD:
             return self.config.head_margin_ratio
-
         if detection_type == DetectionType.TEXT:
             return self.config.text_margin_ratio
-
         if detection_type == DetectionType.PERSON:
             return self.config.person_margin_ratio
-
         return self.config.person_margin_ratio
 
     def _find_best_crop_position(
@@ -255,19 +254,21 @@ class SmartFramingAnalyzer:
         crop_height: int,
     ) -> Tuple[int, int]:
         """
-        Find a crop window that contains as much of the safe region
-        as possible while staying inside the source frame.
+        Вычисляет оптимальные координаты X и Y для кропа с защитой от вылета за границы (Bounds Clamp).
         """
-
         max_x = source_width - crop_width
         max_y = source_height - crop_height
 
+        # 1. Центрирование по горизонтали относительно безопасной зоны
         desired_center_x = safe_region.center_x
-        desired_center_y = safe_region.center_y
-
         x = int(round(desired_center_x - crop_width / 2))
-        y = int(round(desired_center_y - crop_height / 2))
 
+        # 2. Вычисление Y с ориентиром на нижнюю границу объекта (чтобы не резать ноги/пол)
+        # target_bottom — это y2 в вашей структуре BoundingBox (эквивалент safe_region.bottom)
+        target_bottom = safe_region.y2
+        y = target_bottom - crop_height + int(crop_height * 0.10)
+
+        # 3. BOUNDS CLAMP: Зажимаем X и Y строго в пределах кадра [0, max]
         x = max(0, min(x, max_x))
         y = max(0, min(y, max_y))
 
@@ -283,13 +284,6 @@ class SmartFramingAnalyzer:
         source_width: int,
         source_height: int,
     ) -> float:
-        """
-        Score how well the crop preserves detected objects.
-
-        1.0 = all important objects safely inside.
-        0.0 = important objects heavily cut.
-        """
-
         crop = BoundingBox(
             x=crop_x,
             y=crop_y,
@@ -301,21 +295,12 @@ class SmartFramingAnalyzer:
         preserved_weight = 0.0
 
         for detection in detections:
-            weight = self._weight_for_detection(
-                detection.detection_type
-            )
-
+            weight = self._weight_for_detection(detection.detection_type)
             total_weight += weight
 
-            if self._contains_with_margin(
-                crop=crop,
-                bbox=detection.bbox,
-            ):
+            if self._contains_with_margin(crop=crop, bbox=detection.bbox):
                 preserved_weight += weight
-            elif self._intersects(
-                crop,
-                detection.bbox,
-            ):
+            elif self._intersects(crop, detection.bbox):
                 preserved_weight += weight * 0.35
 
         if total_weight <= 0:
@@ -356,41 +341,28 @@ class SmartFramingAnalyzer:
     ) -> float:
         if detection_type == DetectionType.FACE:
             return self.config.face_weight
-
         if detection_type == DetectionType.HEAD:
             return self.config.head_weight
-
         if detection_type == DetectionType.PERSON:
             return self.config.person_weight
-
         if detection_type == DetectionType.TEXT:
             return self.config.text_weight
-
         if detection_type == DetectionType.LOGO:
             return self.config.logo_weight
-
         return 1.0
 
     def _select_strategy(
         self,
         detections: List[Detection],
     ) -> CropStrategy:
-        types = {
-            detection.detection_type
-            for detection in detections
-        }
-
-        if DetectionType.FACE in types:
-            return CropStrategy.SMART_FACE_CROP
-
-        if DetectionType.HEAD in types:
-            return CropStrategy.SMART_FACE_CROP
-
-        if DetectionType.TEXT in types or DetectionType.LOGO in types:
-            return CropStrategy.SMART_TEXT_CROP
+        types = {detection.detection_type for detection in detections}
 
         if DetectionType.PERSON in types:
             return CropStrategy.SMART_PERSON_CROP
+        if DetectionType.FACE in types or DetectionType.HEAD in types:
+            return CropStrategy.SMART_FACE_CROP
+        if DetectionType.TEXT in types or DetectionType.LOGO in types:
+            return CropStrategy.SMART_TEXT_CROP
 
         return CropStrategy.SMART_COMPOSITION_CROP
 
