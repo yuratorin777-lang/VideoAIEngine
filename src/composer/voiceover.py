@@ -555,14 +555,27 @@ def concat_audio_files(
 # ГЕНЕРАЦИЯ ОДНОЙ ФРАЗЫ
 # ============================================================
 
+import asyncio
+import logging
+
+def clean_text_for_tts(text: str) -> str:
+    """Очищает текст от коварных символов, ломающих WebSocket edge-tts."""
+    text = text.replace("—", "-").replace("–", "-")
+    text = text.replace('"', '').replace("'", "")
+    text = " ".join(text.split())  # удаляет \n, \r, \t и двойные пробелы
+    return text.strip()
+
+
 async def generate_phrase_audio(
     phrase: str,
     voice: str,
     prosody: ProsodyProfile,
     output_path: Path,
+    retries: int = 3,
 ) -> list[dict]:
-
-    word_boundaries = []
+    
+    # 1. Очищаем текст перед отправкой
+    clean_phrase = clean_text_for_tts(phrase)
 
     async def _fetch_chunks(comm: edge_tts.Communicate) -> list[dict]:
         boundaries = []
@@ -580,30 +593,33 @@ async def generate_phrase_audio(
                     )
         return boundaries
 
-    # 1-я попытка: с тонкими настройками prosody (pitch/rate/volume)
-    communicate = edge_tts.Communicate(
-        phrase,
-        voice,
-        rate=prosody.rate,
-        volume=prosody.volume,
-        pitch=prosody.pitch,
-        boundary="WordBoundary",
-    )
+    # 2. Варианты параметров: сначала с тонкой настройкой, затем стандартные
+    attempts_params = [
+        {"rate": prosody.rate, "volume": prosody.volume, "pitch": prosody.pitch},
+        {"rate": "+0%", "volume": "+0%", "pitch": "+0Hz"}  # Fallback
+    ]
 
-    try:
-        word_boundaries = await _fetch_chunks(communicate)
-    except Exception as e:
-        print(f"[!] Ошибка edge-tts ({e}) при генерации фразы. Перезапускаем без pitch/rate...")
-        
-        # 2-я попытка (Fallback): чистый запрос без падающих параметров prosody
-        fallback_communicate = edge_tts.Communicate(
-            phrase,
-            voice,
-            boundary="WordBoundary",
-        )
-        word_boundaries = await _fetch_chunks(fallback_communicate)
+    for attempt in range(1, retries + 1):
+        for params in attempts_params:
+            try:
+                communicate = edge_tts.Communicate(
+                    clean_phrase,
+                    voice,
+                    rate=params["rate"],
+                    volume=params["volume"],
+                    pitch=params["pitch"],
+                    boundary="WordBoundary",
+                )
+                
+                word_boundaries = await _fetch_chunks(communicate)
+                if word_boundaries:
+                    return word_boundaries
+                    
+            except Exception as e:
+                print(f"[!] Ошибка edge-tts ({e}) на попытке {attempt} (params={params}). Ожидание 2 сек...")
+                await asyncio.sleep(2)
 
-    return word_boundaries
+    raise RuntimeError(f"Не удалось сгенерировать озвучку для фразы: '{clean_phrase}' после {retries} попыток.")
 
 
 # ============================================================
