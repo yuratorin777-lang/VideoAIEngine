@@ -102,15 +102,15 @@ class VideoNormalizer:
         self.smart_framing_config = SmartFramingConfig(
             sample_count=7,
             person_confidence=0.35,
-            # Компактные отступы, чтобы рамка не раздувалась за пределы кадра
-            face_margin_ratio=0.15,
-            head_margin_ratio=0.20,
-            person_margin_ratio=0.15,
+            # 1. Увеличиваем отступы человека и головы, чтобы расширить рамку и отъехать дальше:
+            face_margin_ratio=0.35,
+            head_margin_ratio=0.25,     # было 0.20 (добавили воздуха вокруг головы)
+            person_margin_ratio=0.30,   # было 0.15 (увеличили отступ в 2 раза — зум станет заметно дальше)
             text_margin_ratio=0.08,
-            # Приоритет отдаем голове и верхней части туловища
+            # 2. Корректируем веса: добавляем голове, снижаем туловищу:
             face_weight=2.0,
-            head_weight=3.5,
-            person_weight=4.0,
+            head_weight=3.5,            # оставляем высоким приоритет головы
+            person_weight=3.0,          # снизили с 4.0 до 3.0 (камера перестанет тянуть кадр к животу)
             text_weight=2.0,
             logo_weight=1.0,
             minimum_decision_score=0.4,
