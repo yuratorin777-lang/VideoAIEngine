@@ -59,7 +59,7 @@ def _find_project_root() -> Path:
 
 PROJECT_ROOT = _find_project_root()
 HISTORY_FILE = PROJECT_ROOT / "04_LIBRARY" / "history.json"
-COOLDOWN_RUNS = 3  # Пауза на 3 генерации
+COOLDOWN_RUNS = 8 # Пауза на 3 генерации
 
 def load_history() -> list[dict]:
     if not HISTORY_FILE.exists():
