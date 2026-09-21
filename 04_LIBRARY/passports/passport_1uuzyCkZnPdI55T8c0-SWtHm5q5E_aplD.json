@@ -1,0 +1,277 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T06:14:17.436707+00:00",
+  "updated_at": "2026-09-21T06:14:17.436736+00:00",
+  "video": {
+    "file_id": "1uuzyCkZnPdI55T8c0-SWtHm5q5E_aplD",
+    "filename": "video_2025-08-28_07-46-24.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Ну что, да? Ну, давай сюда. Повыше, мягонькая здесь, мягонькая, соловей. Ну зачем ты шею нажимаешь, скажи мне, пожалуйста? Я тебя прошу ногу поднять, а не дожать. А на ум мы говорили напротив неделю, по часу.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 16.0,
+        "speaker": "Хореограф",
+        "text": "Ну что, да? Ну, давай сюда. Повыше, мягонькая здесь, мягонькая, соловей. Ну зачем ты шею нажимаешь, скажи мне, пожалуйста? Я тебя прошу ногу поднять, а не дожать."
+      },
+      {
+        "start": 19.0,
+        "end": 24.0,
+        "speaker": "Хореограф",
+        "text": "А на ум мы говорили напротив неделю, по часу."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "speech",
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая музыка, речь хореографа и звуки помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Присутствует речь хореографа, фоновая музыка и звуки репетиции в зале.",
+    "music_description": "Фоновая лирическая вокальная музыка.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 64.0,
+      "duration": 64.0,
+      "description": "Хореограф занимается с детьми в танцевальном зале, объясняет и поправляет движения.",
+      "subjects": [
+        "хореограф",
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "вытянутые руки в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "исправление осанки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "построение в линию",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "вытянутые руки в стороны",
+        "исправление осанки",
+        "построение в линию"
+      ],
+      "dance_elements": [],
+      "camera": "статичный план с небольшим движением",
+      "composition": "общий план танцевального зала",
+      "emotion": [
+        "сосредоточенность",
+        "обучение"
+      ],
+      "location": [],
+      "interaction": "хореограф взаимодействует с учениками",
+      "visual_tags": [
+        "танцевальный класс",
+        "дети",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "хореограф занимается с детьми в зале",
+        "репетиция танцев для детей",
+        "тренировка по хореографии"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 64.0,
+      "duration": 64.0,
+      "semantic_description": "Хореограф занимается с детьми в танцевальном зале, объясняет и поправляет движения.",
+      "subjects": [
+        "хореограф",
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "вытянутые руки в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "исправление осанки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "построение в линию",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "обучение"
+      ],
+      "camera": "статичный план с небольшим движением",
+      "visual_tags": [
+        "танцевальный класс",
+        "дети",
+        "тренировка"
+      ],
+      "search_tags": [
+        "танцевальный класс",
+        "дети",
+        "тренировка",
+        "вытянутые руки в стороны",
+        "исправление осанки",
+        "построение в линию",
+        "хореограф",
+        "сосредоточенность",
+        "обучение"
+      ],
+      "search_phrases": [
+        "хореограф занимается с детьми в зале",
+        "репетиция танцев для детей",
+        "тренировка по хореографии"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 16.0,
+          "speaker": "Хореограф",
+          "text": "Ну что, да? Ну, давай сюда. Повыше, мягонькая здесь, мягонькая, соловей. Ну зачем ты шею нажимаешь, скажи мне, пожалуйста? Я тебя прошу ногу поднять, а не дожать."
+        },
+        {
+          "start": 19.0,
+          "end": 24.0,
+          "speaker": "Хореограф",
+          "text": "А на ум мы говорили напротив неделю, по часу."
+        }
+      ],
+      "spoken_text": "Ну что, да? Ну, давай сюда. Повыше, мягонькая здесь, мягонькая, соловей. Ну зачем ты шею нажимаешь, скажи мне, пожалуйста? Я тебя прошу ногу поднять, а не дожать. А на ум мы говорили напротив неделю, по часу.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": true
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "video_2025-08-28_07-46-24.mp4",
+    "keywords": [
+      "танцевальный класс",
+      "дети",
+      "тренировка",
+      "хореограф",
+      "вытянутые руки в стороны",
+      "исправление осанки",
+      "построение в линию",
+      "сосредоточенность",
+      "обучение"
+    ],
+    "actions": [
+      "вытянутые руки в стороны",
+      "исправление осанки",
+      "построение в линию"
+    ],
+    "spoken_text": "Ну что, да? Ну, давай сюда. Повыше, мягонькая здесь, мягонькая, соловей. Ну зачем ты шею нажимаешь, скажи мне, пожалуйста? Я тебя прошу ногу поднять, а не дожать. А на ум мы говорили напротив неделю, по часу.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "обучение"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "хореограф занимается с детьми в зале",
+      "репетиция танцев для детей",
+      "тренировка по хореографии"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": true,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

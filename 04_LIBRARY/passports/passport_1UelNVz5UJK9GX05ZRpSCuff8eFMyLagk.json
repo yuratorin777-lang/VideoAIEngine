@@ -1,0 +1,361 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T05:59:18.542697+00:00",
+  "updated_at": "2026-09-21T05:59:18.543266+00:00",
+  "video": {
+    "file_id": "1UelNVz5UJK9GX05ZRpSCuff8eFMyLagk",
+    "filename": "document_5197459153181777139.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "lifestyle",
+    "confidence": 0.9,
+    "categories": [],
+    "secondary_categories": [
+      "promotional",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "montage_source",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": true,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "ambient",
+      "detected_categories": [
+        "ambient",
+        "noise"
+      ],
+      "confidence_notes": "Присутствует звук работающего фена или машинки для стрижки."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Звук работающего электроприбора (фена/машинки) и фоновый шум помещения.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 4.0,
+      "duration": 4.0,
+      "description": "Маленькому мальчику сушат волосы феном в парикмахерской, он улыбается.",
+      "subjects": [
+        "мальчик",
+        "парикмахер"
+      ],
+      "actions": [
+        {
+          "action": "улыбка",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот головы",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "улыбка",
+        "поворот головы"
+      ],
+      "dance_elements": [],
+      "camera": "средний план",
+      "composition": "портретная композиция",
+      "emotion": [
+        "радость",
+        "удовольствие"
+      ],
+      "location": [],
+      "interaction": "мастер сушит волосы клиенту",
+      "visual_tags": [
+        "парикмахерская",
+        "ребенок",
+        "стрижка"
+      ],
+      "search_phrases": [
+        "мальчику сушат волосы феном в парикмахерской",
+        "ребенок улыбается на стрижке"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 4.0,
+      "end": 15.0,
+      "duration": 11.0,
+      "description": "Смена кадра: другой ребенок сидит в парикмахерском кресле, мастер завязывает волосы в хвост.",
+      "subjects": [
+        "ребенок",
+        "парикмахер"
+      ],
+      "actions": [
+        {
+          "action": "манипуляции с волосами",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "сидит в кресле",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "манипуляции с волосами",
+        "сидит в кресле"
+      ],
+      "dance_elements": [],
+      "camera": "общий и средний план",
+      "composition": "панорамный вид парикмахерской",
+      "emotion": [
+        "спокойствие"
+      ],
+      "location": [],
+      "interaction": "мастер делает прическу ребенку",
+      "visual_tags": [
+        "парикмахерская",
+        "детская стрижка",
+        "прическа"
+      ],
+      "search_phrases": [
+        "мастер делает прическу ребенку в парикмахерской",
+        "детский парикмахер завязывает волосы"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 4.0,
+      "duration": 4.0,
+      "semantic_description": "Маленькому мальчику сушат волосы феном в парикмахерской, он улыбается.",
+      "subjects": [
+        "мальчик",
+        "парикмахер"
+      ],
+      "actions": [
+        {
+          "action": "улыбка",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "поворот головы",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "радость",
+        "удовольствие"
+      ],
+      "camera": "средний план",
+      "visual_tags": [
+        "парикмахерская",
+        "ребенок",
+        "стрижка"
+      ],
+      "search_tags": [
+        "парикмахерская",
+        "ребенок",
+        "стрижка",
+        "улыбка",
+        "поворот головы",
+        "мальчик",
+        "парикмахер",
+        "радость",
+        "удовольствие"
+      ],
+      "search_phrases": [
+        "мальчику сушат волосы феном в парикмахерской",
+        "ребенок улыбается на стрижке"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": true,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 4.0,
+      "end": 15.0,
+      "duration": 11.0,
+      "semantic_description": "Смена кадра: другой ребенок сидит в парикмахерском кресле, мастер завязывает волосы в хвост.",
+      "subjects": [
+        "ребенок",
+        "парикмахер"
+      ],
+      "actions": [
+        {
+          "action": "манипуляции с волосами",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "сидит в кресле",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "спокойствие"
+      ],
+      "camera": "общий и средний план",
+      "visual_tags": [
+        "парикмахерская",
+        "детская стрижка",
+        "прическа"
+      ],
+      "search_tags": [
+        "парикмахерская",
+        "детская стрижка",
+        "прическа",
+        "манипуляции с волосами",
+        "сидит в кресле",
+        "ребенок",
+        "парикмахер",
+        "спокойствие"
+      ],
+      "search_phrases": [
+        "мастер делает прическу ребенку в парикмахерской",
+        "детский парикмахер завязывает волосы"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": true,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777139.mp4",
+    "keywords": [
+      "парикмахерская",
+      "ребенок",
+      "стрижка",
+      "мальчик",
+      "парикмахер",
+      "детская стрижка",
+      "прическа",
+      "улыбка",
+      "поворот головы",
+      "радость",
+      "удовольствие",
+      "манипуляции с волосами",
+      "сидит в кресле",
+      "спокойствие"
+    ],
+    "actions": [
+      "улыбка",
+      "поворот головы",
+      "манипуляции с волосами",
+      "сидит в кресле"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": true,
+    "preserve_original_audio": false,
+    "segment_count": 2,
+    "locations": [],
+    "emotions": [
+      "радость",
+      "удовольствие",
+      "спокойствие"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "мальчику сушат волосы феном в парикмахерской",
+      "ребенок улыбается на стрижке",
+      "мастер делает прическу ребенку в парикмахерской",
+      "детский парикмахер завязывает волосы"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T06:14:54.036356+00:00",
+  "updated_at": "2026-09-21T06:14:54.036387+00:00",
+  "video": {
+    "file_id": "1zXHM_pn4EmShOt8-jK_jOZ-CuOM-SbC5",
+    "filename": "video_2025-08-28_07-45-44.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "behind_the_scenes",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Ну, теперь смотрите. Пошла вот этого направление. Наверх. И два три четыре раз, и два три четыре раз, и два три четыре раз, и два три... Ребят, не забывайте форму, теперь. Чет, ча-раз, и два три, ча-раз, и два три, ча-раз, и два три... Равномерней. Запоминайте форму. Треть. Чет, ча-раз, и два три, ча-раз, и два три, ча-раз, и два три. Не надо пятками. Раз, два, три, ча-раз, и два, три... [неразборчиво]",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 26.0,
+        "speaker": "Тренер",
+        "text": "Ну, теперь смотрите. Пошла вот этого направление. Наверх. И два три четыре раз, и два три четыре раз, и два три четыре раз, и два три..."
+      },
+      {
+        "start": 30.0,
+        "end": 56.0,
+        "speaker": "Тренер",
+        "text": "Ребят, не забывайте форму, теперь. Чет, ча-раз, и два три, ча-раз, и два три, ча-раз, и два три... Равномерней. Запоминайте форму."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Голос тренера в зале с естественной акустикой помещения"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Речь тренера, считающего и объясняющего движения под счет в просторном зале",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": "Оригинальный звук тренировки"
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 161.0,
+      "duration": 161.0,
+      "description": "Тренер ведет занятие по хореографии с группой детей в танцевальном зале, показывая движения и объясняя технику",
+      "subjects": [
+        "Тренер",
+        "Дети"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "демонстрация шагов",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги в сторону",
+        "взаимодействие в паре",
+        "демонстрация шагов",
+        "синхронное движение ног",
+        "жестикуляция"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера",
+      "composition": "Общий план танцевального зала",
+      "emotion": [
+        "сосредоточенность",
+        "усердие"
+      ],
+      "location": [],
+      "interaction": "Тренер обучает детей танцевальным элементам",
+      "visual_tags": [
+        "танец",
+        "хореография",
+        "тренировка",
+        "дети"
+      ],
+      "search_phrases": [
+        "тренер обучает детей танцам в зале",
+        "детская хореография урок"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 161.0,
+      "duration": 161.0,
+      "semantic_description": "Тренер ведет занятие по хореографии с группой детей в танцевальном зале, показывая движения и объясняя технику",
+      "subjects": [
+        "Тренер",
+        "Дети"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "взаимодействие в паре",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "демонстрация шагов",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "усердие"
+      ],
+      "camera": "Статичная камера",
+      "visual_tags": [
+        "танец",
+        "хореография",
+        "тренировка",
+        "дети"
+      ],
+      "search_tags": [
+        "танец",
+        "хореография",
+        "тренировка",
+        "дети",
+        "ритмичные шаги в сторону",
+        "взаимодействие в паре",
+        "демонстрация шагов",
+        "синхронное движение ног",
+        "жестикуляция",
+        "Тренер",
+        "Дети",
+        "сосредоточенность",
+        "усердие"
+      ],
+      "search_phrases": [
+        "тренер обучает детей танцам в зале",
+        "детская хореография урок"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 26.0,
+          "speaker": "Тренер",
+          "text": "Ну, теперь смотрите. Пошла вот этого направление. Наверх. И два три четыре раз, и два три четыре раз, и два три четыре раз, и два три..."
+        },
+        {
+          "start": 30.0,
+          "end": 56.0,
+          "speaker": "Тренер",
+          "text": "Ребят, не забывайте форму, теперь. Чет, ча-раз, и два три, ча-раз, и два три, ча-раз, и два три... Равномерней. Запоминайте форму."
+        }
+      ],
+      "spoken_text": "Ну, теперь смотрите. Пошла вот этого направление. Наверх. И два три четыре раз, и два три четыре раз, и два три четыре раз, и два три... Ребят, не забывайте форму, теперь. Чет, ча-раз, и два три, ча-раз, и два три, ча-раз, и два три... Равномерней. Запоминайте форму.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "video_2025-08-28_07-45-44.mp4",
+    "keywords": [
+      "танец",
+      "хореография",
+      "тренировка",
+      "дети",
+      "Тренер",
+      "Дети",
+      "ритмичные шаги в сторону",
+      "взаимодействие в паре",
+      "демонстрация шагов",
+      "синхронное движение ног",
+      "жестикуляция",
+      "сосредоточенность",
+      "усердие"
+    ],
+    "actions": [
+      "ритмичные шаги в сторону",
+      "взаимодействие в паре",
+      "демонстрация шагов",
+      "синхронное движение ног",
+      "жестикуляция"
+    ],
+    "spoken_text": "Ну, теперь смотрите. Пошла вот этого направление. Наверх. И два три четыре раз, и два три четыре раз, и два три четыре раз, и два три... Ребят, не забывайте форму, теперь. Чет, ча-раз, и два три, ча-раз, и два три, ча-раз, и два три... Равномерней. Запоминайте форму. Треть. Чет, ча-раз, и два три, ча-раз, и два три, ча-раз, и два три. Не надо пятками. Раз, два, три, ча-раз, и два, три... [неразборчиво]",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "усердие"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "тренер обучает детей танцам в зале",
+      "детская хореография урок"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

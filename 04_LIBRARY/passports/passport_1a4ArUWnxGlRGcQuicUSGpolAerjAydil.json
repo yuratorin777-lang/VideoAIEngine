@@ -1,0 +1,298 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T06:15:11.702712+00:00",
+  "updated_at": "2026-09-21T06:15:11.702742+00:00",
+  "video": {
+    "file_id": "1a4ArUWnxGlRGcQuicUSGpolAerjAydil",
+    "filename": "video_2025-08-28_07-43-24.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "левое плечо ставим колени. Два. Ноги хорошо здесь сожми и наклонися ровно.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 3.0,
+        "speaker": "Тренер",
+        "text": "левое плечо ставим колени."
+      },
+      {
+        "start": 3.0,
+        "end": 6.0,
+        "speaker": "Тренер",
+        "text": "Два."
+      },
+      {
+        "start": 8.0,
+        "end": 13.0,
+        "speaker": "Тренер",
+        "text": "Ноги хорошо здесь сожми и наклонися ровно."
+      }
+    ],
+    "segment_count": 3
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Голос тренера в зале с легким акустическим эхом помещения"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Запись голоса тренера, дающего указания занимающимся детям в помещении.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 13.0,
+      "duration": 13.0,
+      "description": "Дети под руководством тренера выполняют танцевальные шаги и наклоны в зале.",
+      "subjects": [
+        "дети",
+        "тренер"
+      ],
+      "actions": [
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "наклон корпуса",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание равновесия",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "шаги в сторону",
+        "наклон корпуса",
+        "синхронное движение",
+        "удержание равновесия"
+      ],
+      "dance_elements": [],
+      "camera": "статичная съемка с рук с небольшим движением",
+      "composition": "диагональный план группы детей в перспективе",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "тренер руководит процессом, дети повторяют движения",
+      "visual_tags": [
+        "танцевальный класс",
+        "тренировка",
+        "дети"
+      ],
+      "search_phrases": [
+        "дети на тренировке по танцам",
+        "тренер объясняет движения в зале",
+        "детская хореография занятие"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 13.0,
+      "duration": 13.0,
+      "semantic_description": "Дети под руководством тренера выполняют танцевальные шаги и наклоны в зале.",
+      "subjects": [
+        "дети",
+        "тренер"
+      ],
+      "actions": [
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "наклон корпуса",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание равновесия",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная съемка с рук с небольшим движением",
+      "visual_tags": [
+        "танцевальный класс",
+        "тренировка",
+        "дети"
+      ],
+      "search_tags": [
+        "танцевальный класс",
+        "тренировка",
+        "дети",
+        "шаги в сторону",
+        "наклон корпуса",
+        "синхронное движение",
+        "удержание равновесия",
+        "тренер",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети на тренировке по танцам",
+        "тренер объясняет движения в зале",
+        "детская хореография занятие"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 3.0,
+          "speaker": "Тренер",
+          "text": "левое плечо ставим колени."
+        },
+        {
+          "start": 3.0,
+          "end": 6.0,
+          "speaker": "Тренер",
+          "text": "Два."
+        },
+        {
+          "start": 8.0,
+          "end": 13.0,
+          "speaker": "Тренер",
+          "text": "Ноги хорошо здесь сожми и наклонися ровно."
+        }
+      ],
+      "spoken_text": "левое плечо ставим колени. Два. Ноги хорошо здесь сожми и наклонися ровно.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "video_2025-08-28_07-43-24.mp4",
+    "keywords": [
+      "танцевальный класс",
+      "тренировка",
+      "дети",
+      "тренер",
+      "шаги в сторону",
+      "наклон корпуса",
+      "синхронное движение",
+      "удержание равновесия",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "шаги в сторону",
+      "наклон корпуса",
+      "синхронное движение",
+      "удержание равновесия"
+    ],
+    "spoken_text": "левое плечо ставим колени. Два. Ноги хорошо здесь сожми и наклонися ровно.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети на тренировке по танцам",
+      "тренер объясняет движения в зале",
+      "детская хореография занятие"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T05:37:18.225769+00:00",
+  "updated_at": "2026-09-21T05:37:18.226291+00:00",
+  "video": {
+    "file_id": "1BUFuaTFg6wrqwtVw-ZmKQY-wzReN7rvb",
+    "filename": "VID_20260914_172045.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Раз, два, три, четыре, раз, два, три, четыре, раз, два, три, четыре",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 6.0,
+        "speaker": "Speaker 1",
+        "text": "Раз, два, три, четыре"
+      },
+      {
+        "start": 6.0,
+        "end": 13.0,
+        "speaker": "Speaker 1",
+        "text": "Раз, два, три, четыре"
+      },
+      {
+        "start": 13.0,
+        "end": 21.0,
+        "speaker": "Speaker 1",
+        "text": "Раз, два, три, четыре"
+      }
+    ],
+    "segment_count": 3
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышен голос тренера, отсчитывающего такт, и акустика помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос тренера, ведущего счет занятию.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "description": "Дети в танцевальном зале под руководством тренера отрабатывают шаги и движения под счет.",
+      "subjects": [
+        "дети",
+        "тренер"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "приседания",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "постановка рук на пояс",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги",
+        "приседания",
+        "постановка рук на пояс"
+      ],
+      "dance_elements": [],
+      "camera": "статичный средний план",
+      "composition": "центрированная композиция",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "групповое занятие танцами",
+      "visual_tags": [
+        "танцевальный класс",
+        "дети",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "дети на уроке хореографии",
+        "танцевальная тренировка в зале",
+        "дети занимаются танцами"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "educational"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "semantic_description": "Дети в танцевальном зале под руководством тренера отрабатывают шаги и движения под счет.",
+      "subjects": [
+        "дети",
+        "тренер"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "приседания",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "постановка рук на пояс",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичный средний план",
+      "visual_tags": [
+        "танцевальный класс",
+        "дети",
+        "тренировка"
+      ],
+      "search_tags": [
+        "танцевальный класс",
+        "дети",
+        "тренировка",
+        "ритмичные шаги",
+        "приседания",
+        "постановка рук на пояс",
+        "тренер",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети на уроке хореографии",
+        "танцевальная тренировка в зале",
+        "дети занимаются танцами"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 6.0,
+          "speaker": "Speaker 1",
+          "text": "Раз, два, три, четыре"
+        },
+        {
+          "start": 6.0,
+          "end": 13.0,
+          "speaker": "Speaker 1",
+          "text": "Раз, два, три, четыре"
+        },
+        {
+          "start": 13.0,
+          "end": 21.0,
+          "speaker": "Speaker 1",
+          "text": "Раз, два, три, четыре"
+        }
+      ],
+      "spoken_text": "Раз, два, три, четыре Раз, два, три, четыре Раз, два, три, четыре",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20260914_172045.mp4",
+    "keywords": [
+      "танцевальный класс",
+      "дети",
+      "тренировка",
+      "тренер",
+      "ритмичные шаги",
+      "приседания",
+      "постановка рук на пояс",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "ритмичные шаги",
+      "приседания",
+      "постановка рук на пояс"
+    ],
+    "spoken_text": "Раз, два, три, четыре, раз, два, три, четыре, раз, два, три, четыре",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети на уроке хореографии",
+      "танцевальная тренировка в зале",
+      "дети занимаются танцами"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

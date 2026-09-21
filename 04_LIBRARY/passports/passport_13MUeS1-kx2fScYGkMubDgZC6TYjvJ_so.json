@@ -1,0 +1,313 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T06:13:33.984376+00:00",
+  "updated_at": "2026-09-21T06:13:33.984890+00:00",
+  "video": {
+    "file_id": "13MUeS1-kx2fScYGkMubDgZC6TYjvJ_so",
+    "filename": "video_2025-08-28_07-50-50.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "educational",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "dance",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Выпрямляем коленочку, ставим подушку предплечья... Бедро ведем вот сюда. Бедро — это вот эта штука, не вот это, а вот это. Ведем сюда бедро и переступаем левой ногой. Два. И то же самое в другую сторону. Здесь пятка на полу... и та же самая коленка.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 8.0,
+        "speaker": "Хореограф",
+        "text": "Выпрямляем коленочку, ставим подушку предплечья..."
+      },
+      {
+        "start": 8.0,
+        "end": 22.0,
+        "speaker": "Хореограф",
+        "text": "Бедро ведем вот сюда. Бедро — это вот эта штука, не вот это, а вот это. Ведем сюда бедро и переступаем левой ногой. Два."
+      },
+      {
+        "start": 22.0,
+        "end": 34.0,
+        "speaker": "Хореограф",
+        "text": "И то же самое в другую сторону. Здесь пятка на полу... и та же самая коленка."
+      }
+    ],
+    "segment_count": 3
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Запись голоса хореографа в помещении с естественной акустикой."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос хореографа, объясняющего движения, и звуки шагов детей в хореографическом зале.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 34.0,
+      "duration": 34.0,
+      "description": "Хореограф объясняет детям правильное выполнение движений ног и бедер в танцевальном зале.",
+      "subjects": [
+        "Хореограф",
+        "Дети"
+      ],
+      "actions": [
+        {
+          "action": "выпрямление коленей",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "работа бедрами",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "постановка стопы на пятку",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "выпрямление коленей",
+        "работа бедрами",
+        "шаги в сторону",
+        "постановка стопы на пятку"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера",
+      "composition": "Общий план хореографического зала с детьми и преподавателем",
+      "emotion": [
+        "сосредоточенность",
+        "обучение"
+      ],
+      "location": [],
+      "interaction": "Преподаватель инструктирует учеников",
+      "visual_tags": [
+        "дети",
+        "хореография",
+        "танец",
+        "тренировка",
+        "зал"
+      ],
+      "search_phrases": [
+        "хореограф обучает детей танцам в зале",
+        "дети на уроке хореографии",
+        "преподаватель объясняет танцевальные движения"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "speech"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 34.0,
+      "duration": 34.0,
+      "semantic_description": "Хореограф объясняет детям правильное выполнение движений ног и бедер в танцевальном зале.",
+      "subjects": [
+        "Хореограф",
+        "Дети"
+      ],
+      "actions": [
+        {
+          "action": "выпрямление коленей",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "работа бедрами",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "постановка стопы на пятку",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "обучение"
+      ],
+      "camera": "Статичная камера",
+      "visual_tags": [
+        "дети",
+        "хореография",
+        "танец",
+        "тренировка",
+        "зал"
+      ],
+      "search_tags": [
+        "дети",
+        "хореография",
+        "танец",
+        "тренировка",
+        "зал",
+        "выпрямление коленей",
+        "работа бедрами",
+        "шаги в сторону",
+        "постановка стопы на пятку",
+        "Хореограф",
+        "Дети",
+        "сосредоточенность",
+        "обучение"
+      ],
+      "search_phrases": [
+        "хореограф обучает детей танцам в зале",
+        "дети на уроке хореографии",
+        "преподаватель объясняет танцевальные движения"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 8.0,
+          "speaker": "Хореограф",
+          "text": "Выпрямляем коленочку, ставим подушку предплечья..."
+        },
+        {
+          "start": 8.0,
+          "end": 22.0,
+          "speaker": "Хореограф",
+          "text": "Бедро ведем вот сюда. Бедро — это вот эта штука, не вот это, а вот это. Ведем сюда бедро и переступаем левой ногой. Два."
+        },
+        {
+          "start": 22.0,
+          "end": 34.0,
+          "speaker": "Хореограф",
+          "text": "И то же самое в другую сторону. Здесь пятка на полу... и та же самая коленка."
+        }
+      ],
+      "spoken_text": "Выпрямляем коленочку, ставим подушку предплечья... Бедро ведем вот сюда. Бедро — это вот эта штука, не вот это, а вот это. Ведем сюда бедро и переступаем левой ногой. Два. И то же самое в другую сторону. Здесь пятка на полу... и та же самая коленка.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "video_2025-08-28_07-50-50.mp4",
+    "keywords": [
+      "дети",
+      "хореография",
+      "танец",
+      "тренировка",
+      "зал",
+      "Хореограф",
+      "Дети",
+      "выпрямление коленей",
+      "работа бедрами",
+      "шаги в сторону",
+      "постановка стопы на пятку",
+      "сосредоточенность",
+      "обучение"
+    ],
+    "actions": [
+      "выпрямление коленей",
+      "работа бедрами",
+      "шаги в сторону",
+      "постановка стопы на пятку"
+    ],
+    "spoken_text": "Выпрямляем коленочку, ставим подушку предплечья... Бедро ведем вот сюда. Бедро — это вот эта штука, не вот это, а вот это. Ведем сюда бедро и переступаем левой ногой. Два. И то же самое в другую сторону. Здесь пятка на полу... и та же самая коленка.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "обучение"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "хореограф обучает детей танцам в зале",
+      "дети на уроке хореографии",
+      "преподаватель объясняет танцевальные движения"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

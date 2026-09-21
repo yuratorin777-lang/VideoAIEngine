@@ -1,0 +1,257 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T06:04:16.795980+00:00",
+  "updated_at": "2026-09-21T06:04:16.796016+00:00",
+  "video": {
+    "file_id": "1T_VfkjfQASOrduDCSFNLDwd1m4c9f1wT",
+    "filename": "video_2025-08-28_07-45-21.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "dance"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Фоновая ритмичная музыка и звуки шагов в танцевальном зале."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая ритмичная музыка для тренировки",
+    "music_description": "Ритмичная тренировочная музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 22.0,
+      "duration": 22.0,
+      "description": "Хореограф проводит занятие в зале, дети повторяют движения в шеренге.",
+      "subjects": [
+        "хореограф",
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение рук и ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повторение движений за тренером",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "синхронное движение рук и ног",
+        "шаги в сторону",
+        "повторение движений за тренером"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера, общий план",
+      "composition": "Люди в центре кадра, паркетный пол занимает нижнюю часть",
+      "emotion": [
+        "сосредоточенность",
+        "увлеченность"
+      ],
+      "location": [],
+      "interaction": "Тренер обучает группу детей танцу",
+      "visual_tags": [
+        "танец",
+        "тренировка",
+        "дети",
+        "хореограф",
+        "зал"
+      ],
+      "search_phrases": [
+        "хореограф обучает детей танцу в зале",
+        "детская танцевальная тренировка",
+        "группа детей повторяет движения за тренером"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 22.0,
+      "duration": 22.0,
+      "semantic_description": "Хореограф проводит занятие в зале, дети повторяют движения в шеренге.",
+      "subjects": [
+        "хореограф",
+        "дети"
+      ],
+      "actions": [
+        {
+          "action": "синхронное движение рук и ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повторение движений за тренером",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "увлеченность"
+      ],
+      "camera": "Статичная камера, общий план",
+      "visual_tags": [
+        "танец",
+        "тренировка",
+        "дети",
+        "хореограф",
+        "зал"
+      ],
+      "search_tags": [
+        "танец",
+        "тренировка",
+        "дети",
+        "хореограф",
+        "зал",
+        "синхронное движение рук и ног",
+        "шаги в сторону",
+        "повторение движений за тренером",
+        "сосредоточенность",
+        "увлеченность"
+      ],
+      "search_phrases": [
+        "хореограф обучает детей танцу в зале",
+        "детская танцевальная тренировка",
+        "группа детей повторяет движения за тренером"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "video_2025-08-28_07-45-21.mp4",
+    "keywords": [
+      "танец",
+      "тренировка",
+      "дети",
+      "хореограф",
+      "зал",
+      "синхронное движение рук и ног",
+      "шаги в сторону",
+      "повторение движений за тренером",
+      "сосредоточенность",
+      "увлеченность"
+    ],
+    "actions": [
+      "синхронное движение рук и ног",
+      "шаги в сторону",
+      "повторение движений за тренером"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "увлеченность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "хореограф обучает детей танцу в зале",
+      "детская танцевальная тренировка",
+      "группа детей повторяет движения за тренером"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

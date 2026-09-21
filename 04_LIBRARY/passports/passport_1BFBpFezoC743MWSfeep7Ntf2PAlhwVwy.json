@@ -1,0 +1,408 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T05:38:01.464414+00:00",
+  "updated_at": "2026-09-21T05:38:01.464440+00:00",
+  "video": {
+    "file_id": "1BFBpFezoC743MWSfeep7Ntf2PAlhwVwy",
+    "filename": "document_5197459153181777140.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "event",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "social_media",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая танцевальная музыка и легкий гул помещения"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая ритмичная танцевальная музыка и звуки зала",
+    "music_description": "Ритмичная музыка для бальных танцев",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 13.0,
+      "duration": 13.0,
+      "description": "Дети в бальных костюмах исполняют танцевальные движения в зале под руководством тренеров и под наблюдением жюри.",
+      "subjects": [
+        "дети",
+        "танцоры",
+        "судьи"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позиции рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание осанки",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги в сторону",
+        "позиции рук",
+        "удержание осанки"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера, общий план",
+      "composition": "центральная композиция с группой танцующих детей",
+      "emotion": [
+        "сконцентрированность",
+        "серьезность"
+      ],
+      "location": [],
+      "interaction": "дети танцуют синхронно, взрослые наблюдают на заднем плане",
+      "visual_tags": [
+        "бальные танцы",
+        "дети",
+        "соревнования",
+        "паркет"
+      ],
+      "search_phrases": [
+        "дети танцуют бальные танцы в зале",
+        "детские танцевальные соревнования"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 13.0,
+      "end": 32.0,
+      "duration": 19.0,
+      "description": "Панорамный общий план танцевального зала, дети продолжают двигаться в такт музыке, на заднем плане жюри и зрители фиксируют выступления.",
+      "subjects": [
+        "дети",
+        "танцоры",
+        "судьи",
+        "зрители"
+      ],
+      "actions": [
+        {
+          "action": "передвижение по площадке",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "демонстрация хореографии",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "передвижение по площадке",
+        "повороты",
+        "демонстрация хореографии"
+      ],
+      "dance_elements": [],
+      "camera": "панорамный общий план",
+      "composition": "широкий угол обзора танцевального зала",
+      "emotion": [
+        "усердие",
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "дети выполняют элементы танца на площадке",
+      "visual_tags": [
+        "турнир по танцам",
+        "детский танец",
+        "хореография"
+      ],
+      "search_phrases": [
+        "общий план детских танцевальных соревнований",
+        "дети на паркете танцевального зала"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 13.0,
+      "duration": 13.0,
+      "semantic_description": "Дети в бальных костюмах исполняют танцевальные движения в зале под руководством тренеров и под наблюдением жюри.",
+      "subjects": [
+        "дети",
+        "танцоры",
+        "судьи"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позиции рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание осанки",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированность",
+        "серьезность"
+      ],
+      "camera": "статичная камера, общий план",
+      "visual_tags": [
+        "бальные танцы",
+        "дети",
+        "соревнования",
+        "паркет"
+      ],
+      "search_tags": [
+        "бальные танцы",
+        "дети",
+        "соревнования",
+        "паркет",
+        "ритмичные шаги в сторону",
+        "позиции рук",
+        "удержание осанки",
+        "танцоры",
+        "судьи",
+        "сконцентрированность",
+        "серьезность"
+      ],
+      "search_phrases": [
+        "дети танцуют бальные танцы в зале",
+        "детские танцевальные соревнования"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 13.0,
+      "end": 32.0,
+      "duration": 19.0,
+      "semantic_description": "Панорамный общий план танцевального зала, дети продолжают двигаться в такт музыке, на заднем плане жюри и зрители фиксируют выступления.",
+      "subjects": [
+        "дети",
+        "танцоры",
+        "судьи",
+        "зрители"
+      ],
+      "actions": [
+        {
+          "action": "передвижение по площадке",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "демонстрация хореографии",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "усердие",
+        "сосредоточенность"
+      ],
+      "camera": "панорамный общий план",
+      "visual_tags": [
+        "турнир по танцам",
+        "детский танец",
+        "хореография"
+      ],
+      "search_tags": [
+        "турнир по танцам",
+        "детский танец",
+        "хореография",
+        "передвижение по площадке",
+        "повороты",
+        "демонстрация хореографии",
+        "дети",
+        "танцоры",
+        "судьи",
+        "зрители",
+        "усердие",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "общий план детских танцевальных соревнований",
+        "дети на паркете танцевального зала"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777140.mp4",
+    "keywords": [
+      "бальные танцы",
+      "дети",
+      "соревнования",
+      "паркет",
+      "танцоры",
+      "судьи",
+      "турнир по танцам",
+      "детский танец",
+      "хореография",
+      "зрители",
+      "ритмичные шаги в сторону",
+      "позиции рук",
+      "удержание осанки",
+      "сконцентрированность",
+      "серьезность",
+      "передвижение по площадке",
+      "повороты",
+      "демонстрация хореографии",
+      "усердие",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "ритмичные шаги в сторону",
+      "позиции рук",
+      "удержание осанки",
+      "передвижение по площадке",
+      "повороты",
+      "демонстрация хореографии"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 2,
+    "locations": [],
+    "emotions": [
+      "сконцентрированность",
+      "серьезность",
+      "усердие",
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети танцуют бальные танцы в зале",
+      "детские танцевальные соревнования",
+      "общий план детских танцевальных соревнований",
+      "дети на паркете танцевального зала"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

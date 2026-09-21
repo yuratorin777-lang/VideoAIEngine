@@ -1,128 +1,151 @@
 {
-  "passport_version": "1.0",
+  "passport_version": "3.0",
   "created_at": "2026-08-18T04:49:17.923132Z",
+  "updated_at": "2026-09-21T06:00:00.294389+00:00",
   "video": {
     "file_id": "1Io5-Zp9JxGv__1b_YnZ_BCP5mh-wjORt",
     "filename": "document_5197459153181777137.mp4",
     "drive_url": "",
     "size_bytes": 0,
-    "created_at": ""
+    "created_at": "",
+    "mime_type": "video/mp4",
+    "modified_at": ""
   },
   "classification": {
     "project": "Pending_Classification",
-    "content_type": "raw_footage"
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "event",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "dance",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "competition_content",
+      "behind_the_scenes",
+      "event"
+    ]
   },
   "transcription": {
     "has_speech": true,
     "language": "ru",
+    "full_text": "Алиса... Наконец-то Клепикова на четвертом месте, Калинина София на третьем месте... Грига Мишель... На втором месте Нестерова София и победитель Меляева Дарина.",
     "segments": [
       {
         "start": 0.0,
-        "end": 0.091,
-        "speaker": "UNKNOWN",
-        "text": "Алиса"
-      },
-      {
-        "start": 0.091,
-        "end": 0.581,
-        "speaker": "UNKNOWN",
-        "text": "На втором месте"
-      },
-      {
-        "start": 0.581,
-        "end": 0.821,
-        "speaker": "UNKNOWN",
-        "text": "Яровая"
-      },
-      {
-        "start": 0.821,
-        "end": 1.151,
-        "speaker": "UNKNOWN",
-        "text": "Дарьята"
-      },
-      {
-        "start": 2.291,
-        "end": 2.761,
-        "speaker": "UNKNOWN",
-        "text": "на первом месте"
-      },
-      {
-        "start": 2.761,
-        "end": 3.491,
-        "speaker": "UNKNOWN",
-        "text": "Калина София"
-      },
-      {
-        "start": 4.091,
-        "end": 4.601,
-        "speaker": "UNKNOWN",
-        "text": "На третьем месте"
-      },
-      {
-        "start": 4.601,
-        "end": 5.251,
-        "speaker": "UNKNOWN",
-        "text": "Грига Мишель"
-      },
-      {
-        "start": 6.041,
-        "end": 6.541,
-        "speaker": "UNKNOWN",
-        "text": "София"
-      },
-      {
-        "start": 6.841,
-        "end": 7.371,
-        "speaker": "UNKNOWN",
-        "text": "и победитель"
-      },
-      {
-        "start": 8.161,
-        "end": 8.741,
-        "speaker": "UNKNOWN",
-        "text": "Дарина"
+        "end": 14.0,
+        "speaker": "Ведущая",
+        "text": "Алиса... Наконец-то Клепикова на четвертом месте, Калинина София на третьем месте... Грига Мишель... На втором месте Нестерова София и победитель Меляева Дарина."
       }
-    ]
+    ],
+    "segment_count": 1
   },
   "audio": {
     "has_audio": true,
     "has_speech": true,
+    "has_voice_over": false,
     "has_music": false,
     "has_ambient_sound": true,
-    "preserve_original_audio": true
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна речь ведущей через микрофон и звуки зала (аплодисменты, шаги)."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Речь ведущей в микрофон, звуки зала, шаги, фоновый шум помещения.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
   },
   "scenes": [
     {
+      "id": "scene_001",
       "start": 0.0,
-      "end": 19.333,
-      "description": "This is a video of children in a dancing competition, waiting for the results on the stage, and then they are awarded medals and certificates. They are smiling and looking happy.",
+      "end": 19.0,
+      "duration": 19.0,
+      "description": "Церемония награждения детей на спортивно-танцевальном турнире: ведущая объявляет результаты, дети в нарядных костюмах выходят на пьедестал почета.",
       "subjects": [
-        "children",
-        "adults",
-        "audience"
+        "дети",
+        "ведущая",
+        "родители"
       ],
       "actions": [
-        "standing",
-        "walking",
-        "giving medals",
-        "receiving medals",
-        "clapping"
+        {
+          "action": "аплодисменты зрителей",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ходьба по залу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подъем на пьедестал",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "вручение медалей и дипломов",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция ведущей",
+          "start": 0.0,
+          "end": 0.0
+        }
       ],
-      "camera": "medium_shot",
+      "action_elements": [
+        "аплодисменты зрителей",
+        "ходьба по залу",
+        "подъем на пьедестал",
+        "вручение медалей и дипломов",
+        "жестикуляция ведущей"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера с панорамированием вслед за идущим ребенком",
+      "composition": "Общий и средний план",
       "emotion": [
-        "happy",
-        "excited",
-        "proud"
+        "радость",
+        "волнение",
+        "гордость"
       ],
+      "location": [],
+      "interaction": "Взаимодействие ведущей, участников соревнований и организаторов",
       "visual_tags": [
-        "dancing competition",
-        "awards ceremony",
-        "medals",
-        "certificates",
-        "stage",
-        "children in colorful dresses",
-        "audience",
-        "sports hall"
+        "награждение",
+        "дети",
+        "танцы",
+        "соревнования",
+        "пьедестал",
+        "медали"
+      ],
+      "search_phrases": [
+        "награждение детей на соревнованиях",
+        "дети на пьедестале почета с медалями",
+        "ведущая объявляет результаты турнира",
+        "детский танцевальный турнир награждение"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "competition_content"
       ]
     }
   ],
@@ -130,23 +153,165 @@
     {
       "id": "seg_001",
       "start": 0.0,
-      "end": 19.333,
-      "semantic_description": "This is a video of children in a dancing competition, waiting for the results on the stage, and then they are awarded medals and certificates. They are smiling and looking happy.",
+      "end": 19.0,
+      "duration": 19.0,
+      "semantic_description": "Церемония награждения детей на спортивно-танцевальном турнире: ведущая объявляет результаты, дети в нарядных костюмах выходят на пьедестал почета.",
+      "subjects": [
+        "дети",
+        "ведущая",
+        "родители"
+      ],
+      "actions": [
+        {
+          "action": "аплодисменты зрителей",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ходьба по залу",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подъем на пьедестал",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "вручение медалей и дипломов",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция ведущей",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "радость",
+        "волнение",
+        "гордость"
+      ],
+      "camera": "Статичная камера с панорамированием вслед за идущим ребенком",
+      "visual_tags": [
+        "награждение",
+        "дети",
+        "танцы",
+        "соревнования",
+        "пьедестал",
+        "медали"
+      ],
       "search_tags": [
-        "dancing competition",
-        "awards ceremony",
-        "medals",
-        "certificates",
-        "stage",
-        "children in colorful dresses",
-        "audience",
-        "sports hall",
-        "standing",
-        "walking",
-        "giving medals",
-        "receiving medals",
-        "clapping"
-      ]
+        "награждение",
+        "дети",
+        "танцы",
+        "соревнования",
+        "пьедестал",
+        "медали",
+        "аплодисменты зрителей",
+        "ходьба по залу",
+        "подъем на пьедестал",
+        "вручение медалей и дипломов",
+        "жестикуляция ведущей",
+        "ведущая",
+        "родители",
+        "радость",
+        "волнение",
+        "гордость"
+      ],
+      "search_phrases": [
+        "награждение детей на соревнованиях",
+        "дети на пьедестале почета с медалями",
+        "ведущая объявляет результаты турнира",
+        "детский танцевальный турнир награждение"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 14.0,
+          "speaker": "Ведущая",
+          "text": "Алиса... Наконец-то Клепикова на четвертом месте, Калинина София на третьем месте... Грига Мишель... На втором месте Нестерова София и победитель Меляева Дарина."
+        }
+      ],
+      "spoken_text": "Алиса... Наконец-то Клепикова на четвертом месте, Калинина София на третьем месте... Грига Мишель... На втором месте Нестерова София и победитель Меляева Дарина.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
     }
-  ]
+  ],
+  "search_index": {
+    "filename": "document_5197459153181777137.mp4",
+    "keywords": [
+      "награждение",
+      "дети",
+      "танцы",
+      "соревнования",
+      "пьедестал",
+      "медали",
+      "ведущая",
+      "родители",
+      "аплодисменты зрителей",
+      "ходьба по залу",
+      "подъем на пьедестал",
+      "вручение медалей и дипломов",
+      "жестикуляция ведущей",
+      "радость",
+      "волнение",
+      "гордость"
+    ],
+    "actions": [
+      "аплодисменты зрителей",
+      "ходьба по залу",
+      "подъем на пьедестал",
+      "вручение медалей и дипломов",
+      "жестикуляция ведущей"
+    ],
+    "spoken_text": "Алиса... Наконец-то Клепикова на четвертом месте, Калинина София на третьем месте... Грига Мишель... На втором месте Нестерова София и победитель Меляева Дарина.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "радость",
+      "волнение",
+      "гордость"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "награждение детей на соревнованиях",
+      "дети на пьедестале почета с медалями",
+      "ведущая объявляет результаты турнира",
+      "детский танцевальный турнир награждение"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
 }

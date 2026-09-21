@@ -1,0 +1,277 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T06:02:42.293161+00:00",
+  "updated_at": "2026-09-21T06:02:42.293196+00:00",
+  "video": {
+    "file_id": "1P52jTTmxXj2h85DSBRMMLd2MgJmmJ_3I",
+    "filename": "IMG_6717.MOV",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Раз, два, три, четыре, пять, шесть, семь, восемь.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 4.0,
+        "speaker": "Тренер",
+        "text": "Раз, два, три, четыре, пять, шесть, семь, восемь."
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Голос человека за кадром, ведущего счет, и акустика помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Закадровый счет под упражнения",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "description": "Дети в студии повторяют движения рук и туловища под счет тренера",
+      "subjects": [
+        "дети",
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "подъем рук вверх",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "круговые движения рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "наклоны туловища в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронные движения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "подъем рук вверх",
+        "круговые движения рук",
+        "наклоны туловища в сторону",
+        "синхронные движения"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера, легкое панорамирование",
+      "composition": "общий план группы детей в помещении",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "дети выполняют упражнения вслед за тренером за кадром",
+      "visual_tags": [
+        "дети",
+        "разминка",
+        "тренировка",
+        "танцевальный зал"
+      ],
+      "search_phrases": [
+        "дети делают разминку в зале",
+        "девочки занимаются танцами",
+        "детская хореография тренировка"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 21.0,
+      "duration": 21.0,
+      "semantic_description": "Дети в студии повторяют движения рук и туловища под счет тренера",
+      "subjects": [
+        "дети",
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "подъем рук вверх",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "круговые движения рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "наклоны туловища в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронные движения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера, легкое панорамирование",
+      "visual_tags": [
+        "дети",
+        "разминка",
+        "тренировка",
+        "танцевальный зал"
+      ],
+      "search_tags": [
+        "дети",
+        "разминка",
+        "тренировка",
+        "танцевальный зал",
+        "подъем рук вверх",
+        "круговые движения рук",
+        "наклоны туловища в сторону",
+        "синхронные движения",
+        "девочки",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети делают разминку в зале",
+        "девочки занимаются танцами",
+        "детская хореография тренировка"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 4.0,
+          "speaker": "Тренер",
+          "text": "Раз, два, три, четыре, пять, шесть, семь, восемь."
+        }
+      ],
+      "spoken_text": "Раз, два, три, четыре, пять, шесть, семь, восемь.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "IMG_6717.MOV",
+    "keywords": [
+      "дети",
+      "разминка",
+      "тренировка",
+      "танцевальный зал",
+      "девочки",
+      "подъем рук вверх",
+      "круговые движения рук",
+      "наклоны туловища в сторону",
+      "синхронные движения",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "подъем рук вверх",
+      "круговые движения рук",
+      "наклоны туловища в сторону",
+      "синхронные движения"
+    ],
+    "spoken_text": "Раз, два, три, четыре, пять, шесть, семь, восемь.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети делают разминку в зале",
+      "девочки занимаются танцами",
+      "детская хореография тренировка"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

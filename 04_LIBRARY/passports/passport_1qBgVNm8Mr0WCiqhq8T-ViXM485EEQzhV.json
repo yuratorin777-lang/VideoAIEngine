@@ -1,0 +1,254 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T06:13:51.580791+00:00",
+  "updated_at": "2026-09-21T06:13:51.580819+00:00",
+  "video": {
+    "file_id": "1qBgVNm8Mr0WCiqhq8T-ViXM485EEQzhV",
+    "filename": "video_2025-08-28_07-46-32.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая музыка и звуки шагов/атмосфера зала"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка в танцевальном зале",
+    "music_description": "Ритмичная музыка для занятий танцами",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 18.0,
+      "duration": 18.0,
+      "description": "Группа детей выполняет танцевальные движения и шаги в зале под руководством или синхронно.",
+      "subjects": [
+        "дети",
+        "девочка в розовой футболке"
+      ],
+      "actions": [
+        {
+          "action": "танцевальные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "перемещение по залу",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "танцевальные шаги",
+        "синхронное движение ног",
+        "перемещение по залу"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера, съемка с руки",
+      "composition": "общий план танцевального зала",
+      "emotion": [
+        "увлеченность",
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "групповые занятия танцами",
+      "visual_tags": [
+        "дети",
+        "танцы",
+        "хореография",
+        "зал"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "группа детей на хореографии",
+        "танцевальная тренировка детей"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 18.0,
+      "duration": 18.0,
+      "semantic_description": "Группа детей выполняет танцевальные движения и шаги в зале под руководством или синхронно.",
+      "subjects": [
+        "дети",
+        "девочка в розовой футболке"
+      ],
+      "actions": [
+        {
+          "action": "танцевальные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "перемещение по залу",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "увлеченность",
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера, съемка с руки",
+      "visual_tags": [
+        "дети",
+        "танцы",
+        "хореография",
+        "зал"
+      ],
+      "search_tags": [
+        "дети",
+        "танцы",
+        "хореография",
+        "зал",
+        "танцевальные шаги",
+        "синхронное движение ног",
+        "перемещение по залу",
+        "девочка в розовой футболке",
+        "увлеченность",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "группа детей на хореографии",
+        "танцевальная тренировка детей"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "video_2025-08-28_07-46-32.mp4",
+    "keywords": [
+      "дети",
+      "танцы",
+      "хореография",
+      "зал",
+      "девочка в розовой футболке",
+      "танцевальные шаги",
+      "синхронное движение ног",
+      "перемещение по залу",
+      "увлеченность",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "танцевальные шаги",
+      "синхронное движение ног",
+      "перемещение по залу"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "увлеченность",
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами в зале",
+      "группа детей на хореографии",
+      "танцевальная тренировка детей"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-21T06:02:03.813375+00:00",
+  "updated_at": "2026-09-21T06:02:03.813403+00:00",
+  "video": {
+    "file_id": "1petOHrGYsUjFWNh_eqfeogYEw2D3UyIo",
+    "filename": "IMG_6726.MOV",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Фоновая музыка сопровождает видеоряд."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка с ритмичным битом.",
+    "music_description": "Ритмичная современная музыка для танцев.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "description": "Дети танцуют в зале под музыку.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги в сторону",
+        "жестикуляция руками"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "средний план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "танцы",
+        "дети"
+      ],
+      "search_phrases": [
+        "дети танцуют в зале"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 10.0,
+      "end": 20.0,
+      "duration": 10.0,
+      "description": "Продолжение танцевальной тренировки.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение рук",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "поворот через плечо",
+        "синхронное движение рук"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "уверенность"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "танцы",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "танцевальная тренировка детей"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "start": 20.0,
+      "end": 35.0,
+      "duration": 15.0,
+      "description": "Девочки отрабатывают движения в разных ракурсах.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "шаги в сторону",
+        "позирование"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "средний план",
+      "emotion": [
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "танец",
+        "упражнения"
+      ],
+      "search_phrases": [
+        "девочки на уроке танцев"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    },
+    {
+      "id": "scene_004",
+      "start": 35.0,
+      "end": 53.0,
+      "duration": 18.0,
+      "description": "Финальная часть танцевального видео.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "финальная поза",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движение рук",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "финальная поза",
+        "движение рук"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "радость"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "танец",
+        "финал"
+      ],
+      "search_phrases": [
+        "финал танца в зале"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "semantic_description": "Дети танцуют в зале под музыку.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "танцы",
+        "дети"
+      ],
+      "search_tags": [
+        "танцы",
+        "дети",
+        "ритмичные шаги в сторону",
+        "жестикуляция руками",
+        "девочки",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети танцуют в зале"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 10.0,
+      "end": 20.0,
+      "duration": 10.0,
+      "semantic_description": "Продолжение танцевальной тренировки.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение рук",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "уверенность"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "танцы",
+        "тренировка"
+      ],
+      "search_tags": [
+        "танцы",
+        "тренировка",
+        "поворот через плечо",
+        "синхронное движение рук",
+        "девочки",
+        "уверенность"
+      ],
+      "search_phrases": [
+        "танцевальная тренировка детей"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_003",
+      "start": 20.0,
+      "end": 35.0,
+      "duration": 15.0,
+      "semantic_description": "Девочки отрабатывают движения в разных ракурсах.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "позирование",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "концентрация"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "танец",
+        "упражнения"
+      ],
+      "search_tags": [
+        "танец",
+        "упражнения",
+        "шаги в сторону",
+        "позирование",
+        "девочки",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "девочки на уроке танцев"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_004",
+      "start": 35.0,
+      "end": 53.0,
+      "duration": 18.0,
+      "semantic_description": "Финальная часть танцевального видео.",
+      "subjects": [
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "финальная поза",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движение рук",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "радость"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "танец",
+        "финал"
+      ],
+      "search_tags": [
+        "танец",
+        "финал",
+        "финальная поза",
+        "движение рук",
+        "девочки",
+        "радость"
+      ],
+      "search_phrases": [
+        "финал танца в зале"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "IMG_6726.MOV",
+    "keywords": [
+      "танцы",
+      "дети",
+      "девочки",
+      "тренировка",
+      "танец",
+      "упражнения",
+      "финал",
+      "ритмичные шаги в сторону",
+      "жестикуляция руками",
+      "сосредоточенность",
+      "поворот через плечо",
+      "синхронное движение рук",
+      "уверенность",
+      "шаги в сторону",
+      "позирование",
+      "концентрация",
+      "финальная поза",
+      "движение рук",
+      "радость"
+    ],
+    "actions": [
+      "ритмичные шаги в сторону",
+      "жестикуляция руками",
+      "поворот через плечо",
+      "синхронное движение рук",
+      "шаги в сторону",
+      "позирование",
+      "финальная поза",
+      "движение рук"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 4,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "уверенность",
+      "концентрация",
+      "радость"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети танцуют в зале",
+      "танцевальная тренировка детей",
+      "девочки на уроке танцев",
+      "финал танца в зале"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}
