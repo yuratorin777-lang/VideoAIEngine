@@ -101,16 +101,16 @@ class VideoNormalizer:
 
         self.smart_framing_config = SmartFramingConfig(
             sample_count=7,
-            person_confidence=0.35,
+            person_confidence=0.5,
             # Компактные отступы, чтобы рамка не раздувалась за пределы кадра
             face_margin_ratio=0.35,
-            head_margin_ratio=0.20,
-            person_margin_ratio=0.35,
+            head_margin_ratio=0.40,
+            person_margin_ratio=0.2,
             text_margin_ratio=0.08,
             # Приоритет отдаем голове и верхней части туловища
-            face_weight=2.0,
+            face_weight=4.0,
             head_weight=3.5,
-            person_weight=3.5,
+            person_weight=1,
             text_weight=2.0,
             logo_weight=1.0,
             minimum_decision_score=0.4,
