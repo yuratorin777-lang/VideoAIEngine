@@ -603,7 +603,7 @@ class VideoNormalizer:
                 "force_original_aspect_ratio=increase,"
                 f"crop={target_width}:{target_height}:"
                 "(in_w-out_w)/2:"
-                "(in_h-out_h)*2"  # Было /2. Смещение к верху кадра!
+                "(in_h-out_h)*0.1"  # Было /2. Смещение к верху кадра!
             )
 
             return (
@@ -622,7 +622,7 @@ class VideoNormalizer:
                 "force_original_aspect_ratio=increase,"
                 f"crop={target_width}:{target_height}:"
                 "(in_w-out_w)/2:"
-                "(in_h-out_h)*2"  # Было /2. Смещение к верху кадра!
+                "(in_h-out_h)*0.12"  # Было /2. Смещение к верху кадра!
             )
 
             return (
@@ -640,7 +640,7 @@ class VideoNormalizer:
             "force_original_aspect_ratio=increase,"
             f"crop={target_width}:{target_height}:"
             "(in_w-out_w)/2:"
-            "(in_h-out_h)*2"  # Было /2
+            "(in_h-out_h)*0.1"  # Было /2
         )
 
         return (
