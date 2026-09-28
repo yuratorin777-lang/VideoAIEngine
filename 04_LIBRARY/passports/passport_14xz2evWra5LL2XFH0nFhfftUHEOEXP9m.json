@@ -1,0 +1,288 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-09-24T08:31:16.293593+00:00",
+  "updated_at": "2026-09-24T08:31:16.294154+00:00",
+  "video": {
+    "file_id": "14xz2evWra5LL2XFH0nFhfftUHEOEXP9m",
+    "filename": "VID_20260923_174200.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "dance",
+      "educational",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "И раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь. Семь, раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 8.0,
+        "speaker": "Voice Over",
+        "text": "И раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь."
+      },
+      {
+        "start": 14.5,
+        "end": 28.0,
+        "speaker": "Voice Over",
+        "text": "Семь, раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Закадровый счет инструктора"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Закадровый голос ведет счет для танцевальных движений",
+    "music_description": "",
+    "voice_over_description": "Мужской голос ведет счет под движения",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 28.0,
+      "duration": 28.0,
+      "description": "Девочка выполняет танцевальные элементы под счет в пустом зале",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "позиция рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты корпуса",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "фиксация поз",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "позиция рук",
+        "шаги в сторону",
+        "повороты корпуса",
+        "фиксация поз"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "центральная композиция, съемка в полный рост",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "нет",
+      "visual_tags": [
+        "танец",
+        "ребенок",
+        "зал",
+        "тренировка"
+      ],
+      "search_phrases": [
+        "девочка танцует в зале",
+        "ребенок выполняет танцевальные упражнения",
+        "тренировка по танцам"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": true,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 28.0,
+      "duration": 28.0,
+      "semantic_description": "Девочка выполняет танцевальные элементы под счет в пустом зале",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "позиция рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты корпуса",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "фиксация поз",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "танец",
+        "ребенок",
+        "зал",
+        "тренировка"
+      ],
+      "search_tags": [
+        "танец",
+        "ребенок",
+        "зал",
+        "тренировка",
+        "позиция рук",
+        "шаги в сторону",
+        "повороты корпуса",
+        "фиксация поз",
+        "девочка",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "девочка танцует в зале",
+        "ребенок выполняет танцевальные упражнения",
+        "тренировка по танцам"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 8.0,
+          "speaker": "Voice Over",
+          "text": "И раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь."
+        },
+        {
+          "start": 14.5,
+          "end": 28.0,
+          "speaker": "Voice Over",
+          "text": "Семь, раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь."
+        }
+      ],
+      "spoken_text": "И раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь. Семь, раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20260923_174200.mp4",
+    "keywords": [
+      "танец",
+      "ребенок",
+      "зал",
+      "тренировка",
+      "девочка",
+      "позиция рук",
+      "шаги в сторону",
+      "повороты корпуса",
+      "фиксация поз",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "позиция рук",
+      "шаги в сторону",
+      "повороты корпуса",
+      "фиксация поз"
+    ],
+    "spoken_text": "И раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь. Семь, раз, и два, и три, и четыре, и пять, и шесть, и семь, и восемь.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка танцует в зале",
+      "ребенок выполняет танцевальные упражнения",
+      "тренировка по танцам"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}
