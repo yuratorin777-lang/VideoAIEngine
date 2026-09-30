@@ -79,19 +79,19 @@ class VoiceDirection:
 PROSODY_PROFILES = {
     "energetic": {
         "hook": ProsodyProfile(
-            rate="+7%",
+            rate="+0%",
             pitch="+2Hz",
             volume="+0%",
             pause_after=0.16,
         ),
         "body": ProsodyProfile(
-            rate="+2%",
+            rate="+0%",
             pitch="+0Hz",
             volume="+0%",
             pause_after=0.11,
         ),
         "cta": ProsodyProfile(
-            rate="+5%",
+            rate="+0%",
             pitch="+2Hz",
             volume="+0%",
             pause_after=0.18,
