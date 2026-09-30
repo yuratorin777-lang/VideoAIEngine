@@ -1702,14 +1702,18 @@ def assemble_reel(
             )
         )
 
-        # === ТО САМОЕ МЕСТО: Подгоняем общую длину видео под озвучку ===
+        # === БЕЗОПАСНАЯ ПРОВЕРКА ДЛИНЫ ВИДЕО И ОЗВУЧКИ ===
         if voiceover_rel and 'voice_clip' in locals():
-            real_audio_end = voice_clip.start + voice_clip.duration  # Например: 1.5 + 30.0 = 31.5 сек.
+            real_audio_end = voice_clip.start + voice_clip.duration  # Например: 1.5 + 37.2 = 38.7 сек.
             
-            # Если видео длиннее (например, 40 сек), обрезаем лишнее видео в конце
-            if final_video.duration > real_audio_end:
-                print(f"[Audio Sync] ✂️ Видеоряд ({final_video.duration:.2f}s) длиннее озвучки. Подрезаем до {real_audio_end + 0.5:.2f}s")
-                final_video = final_video.subclipped(0, real_audio_end + 0.5)
+            # Подрезаем видео ТОЛЬКО если видеоряд существенно длиннее озвучки (больше чем на 3 секунды)
+            if final_video.duration - real_audio_end > 3.0:
+                # Берем то, что меньше: желаемый хвостик или реальную длину видео
+                target_cut_time = min(real_audio_end + 1.0, final_video.duration)
+                print(f"[Audio Sync] ✂️ Видео сильно длиннее речи. Подрезаем с {final_video.duration:.2f}s до {target_cut_time:.2f}s")
+                final_video = final_video.subclipped(0, target_cut_time)
+            else:
+                print(f"[Audio Sync] ✓ Длительность видео ({final_video.duration:.2f}s) и озвучки ({real_audio_end:.2f}s) в норме.")
 
     # ========================================================
     # OUTPUT
