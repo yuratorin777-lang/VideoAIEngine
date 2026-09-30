@@ -1702,19 +1702,21 @@ def assemble_reel(
             )
         )
 
-        # === БЕЗОПАСНАЯ ПРОВЕРКА ДЛИНЫ ВИДЕО И ОЗВУЧКИ ===
+        # === ДИНАМИЧЕСКАЯ УСТАНОВКА ДЛИНЫ РЕНДЕРА И ПОДРЕЗКА ===
         if voiceover_rel and 'voice_clip' in locals():
-            real_audio_end = voice_clip.start + voice_clip.duration  # Например: 1.5 + 37.2 = 38.7 сек.
+            # Настоящий конец речи (старт 1.5с + длительность озвучки)
+            real_audio_end = voice_clip.start + voice_clip.duration  # В нашем логе: ~37.12s
             
-            # Подрезаем видео ТОЛЬКО если видеоряд существенно длиннее озвучки (больше чем на 3 секунды)
-            if final_video.duration - real_audio_end > 3.0:
-                # Берем то, что меньше: желаемый хвостик или реальную длину видео
-                target_cut_time = min(real_audio_end + 1.0, final_video.duration)
-                print(f"[Audio Sync] ✂️ Видео сильно длиннее речи. Подрезаем с {final_video.duration:.2f}s до {target_cut_time:.2f}s")
-                final_video = final_video.subclipped(0, target_cut_time)
-            else:
-                print(f"[Audio Sync] ✓ Длительность видео ({final_video.duration:.2f}s) и озвучки ({real_audio_end:.2f}s) в норме.")
-
+            # Точка идеального финала (конец речи + 0.8 сек запаса на затухание)
+            ideal_end = real_audio_end + 0.8
+            
+            # Подрезаем видео до конца речи, чтобы не было "застывших" кадра на 40-й секунде
+            target_cut_time = min(ideal_end, final_video.duration)
+            
+            print(f"[Audio Sync] ✂️ Корректируем итоговую длину видео под озвучку: {target_cut_time:.2f}s (исходное видео было {final_video.duration:.2f}s)")
+            
+            final_video = final_video.subclipped(0, target_cut_time)
+            final_video.duration = target_cut_time
     # ========================================================
     # OUTPUT
     # ========================================================
