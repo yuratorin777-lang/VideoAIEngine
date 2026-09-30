@@ -1602,17 +1602,10 @@ def assemble_reel(
 
             # Голос не должен создавать
             # длительность видео сам по себе.
-            if (
-                voice_clip.duration
-                > target_duration
-            ):
-
-                voice_clip = (
-                    voice_clip.subclipped(
-                        0,
-                        target_duration,
-                    )
-                )
+            # Озвучка должна звучать полностью! Если голос длиннее target_duration, расширяем ролик
+            if voice_clip.duration + 1.5 > target_duration:
+                target_duration = voice_clip.duration + 1.5
+                print(f"[Audio] ⚠️ Увеличиваем длительность ролика под озвучку: {target_duration:.2f} сек.")
 
             audio_tracks.append(
                 voice_clip
@@ -1708,6 +1701,15 @@ def assemble_reel(
                 composite_audio
             )
         )
+
+        # === ТО САМОЕ МЕСТО: Подгоняем общую длину видео под озвучку ===
+        if voiceover_rel and 'voice_clip' in locals():
+            real_audio_end = voice_clip.start + voice_clip.duration  # Например: 1.5 + 30.0 = 31.5 сек.
+            
+            # Если видео длиннее (например, 40 сек), обрезаем лишнее видео в конце
+            if final_video.duration > real_audio_end:
+                print(f"[Audio Sync] ✂️ Видеоряд ({final_video.duration:.2f}s) длиннее озвучки. Подрезаем до {real_audio_end + 0.5:.2f}s")
+                final_video = final_video.subclipped(0, real_audio_end + 0.5)
 
     # ========================================================
     # OUTPUT
