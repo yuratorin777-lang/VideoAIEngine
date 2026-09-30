@@ -44,7 +44,7 @@ NORMALIZED_DIR = BASE_DIR / "temp_normalized"
 # SUBTITLE SYNC
 # ============================================================
 
-SUBTITLE_EARLY_OFFSET = 0.20
+SUBTITLE_EARLY_OFFSET = 0.0
 
 
 # ============================================================
@@ -418,7 +418,7 @@ def srt_to_ass(
     6. генерация ASS.
 
     Синхронизация сохраняется:
-        SUBTITLE_EARLY_OFFSET = 0.20
+        SUBTITLE_EARLY_OFFSET = 0.0
     """
 
     # --------------------------------------------------------

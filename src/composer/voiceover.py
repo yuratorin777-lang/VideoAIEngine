@@ -673,7 +673,7 @@ def merge_phrase_word_boundaries(
 
         timeline_offset += result["duration"]
 
-        timeline_offset += result["pause_after"]
+
 
     return merged
 
