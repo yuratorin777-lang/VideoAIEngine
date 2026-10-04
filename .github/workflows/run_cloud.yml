@@ -22,7 +22,7 @@ jobs:
       - name: Install System Dependencies for OpenCV & MoviePy
         run: |
           sudo apt-get update
-          sudo apt-get install -y ffmpeg libsm6 libxext6 libgl1-mesa-glx
+          sudo apt-get install -y ffmpeg libsm6 libxext6 libgl1
 
       - name: Install dependencies
         run: |
