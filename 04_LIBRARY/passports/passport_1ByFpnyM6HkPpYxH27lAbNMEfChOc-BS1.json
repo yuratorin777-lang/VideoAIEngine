@@ -1,7 +1,7 @@
 {
   "passport_version": "3.0",
   "created_at": "2026-10-04T07:53:10.349216+00:00",
-  "updated_at": "2026-10-04T07:53:10.349226+00:00",
+  "updated_at": "2026-10-04T08:29:25.278153+00:00",
   "video": {
     "file_id": "1ByFpnyM6HkPpYxH27lAbNMEfChOc-BS1",
     "filename": "VID_20261003_105944.mp4",
@@ -29,8 +29,8 @@
     ]
   },
   "transcription": {
-    "has_speech": true,
-    "language": "ru",
+    "has_speech": false,
+    "language": "",
     "full_text": "И раз два три и раз два три и и сами раз два три и раз два три и стоп замедлили голову подняли",
     "segments": [
       {
@@ -43,24 +43,21 @@
     "segment_count": 1
   },
   "audio": {
-    "has_audio": true,
-    "has_speech": true,
+    "has_audio": false,
+    "has_speech": false,
     "has_voice_over": false,
     "has_music": false,
-    "has_ambient_sound": true,
+    "has_ambient_sound": false,
     "has_noise": false,
     "has_silence": false,
     "audio_type": "unknown",
     "sound_classification": {
       "primary_category": "speech",
-      "detected_categories": [
-        "speech",
-        "ambient"
-      ],
-      "confidence_notes": "Записан голос тренера за кадром и легкий окружающий звук помещения"
+      "detected_categories": [],
+      "confidence_notes": ""
     },
-    "original_audio_present": true,
-    "preserve_original_audio": true,
+    "original_audio_present": false,
+    "preserve_original_audio": false,
     "audio_description": "Голос тренера, считающего ритм упражнения",
     "music_description": "",
     "voice_over_description": "",
@@ -203,13 +200,13 @@
       "spoken_text": "И раз два три и раз два три и и сами раз два три и раз два три и стоп замедлили голову подняли",
       "has_speech": true,
       "audio_usage": {
-        "has_audio": true,
+        "has_audio": false,
         "has_speech": true,
         "has_music": false,
-        "has_ambient_sound": true,
+        "has_ambient_sound": false,
         "has_noise": false,
-        "can_use_original_audio": true,
-        "can_use_original_speech": true,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
         "can_use_original_music": false
       }
     }
@@ -236,12 +233,12 @@
     ],
     "spoken_text": "И раз два три и раз два три и и сами раз два три и раз два три и стоп замедлили голову подняли",
     "has_visual_content": true,
-    "has_audio": true,
-    "has_speech": true,
+    "has_audio": false,
+    "has_speech": false,
     "has_music": false,
-    "has_ambient_sound": true,
+    "has_ambient_sound": false,
     "has_noise": false,
-    "preserve_original_audio": true,
+    "preserve_original_audio": false,
     "segment_count": 1,
     "locations": [],
     "emotions": [
@@ -258,16 +255,16 @@
   },
   "usage": {
     "can_use_visual": true,
-    "can_use_audio": true,
-    "can_use_speech": true,
+    "can_use_audio": false,
+    "can_use_speech": false,
     "can_use_music": false,
-    "can_use_ambient_sound": true,
-    "preserve_original_audio": true
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
   },
   "processing": {
     "analysis_provider": "gemini",
     "analysis_status": "completed",
     "passport_status": "ready",
-    "transcription_status": "completed"
+    "transcription_status": "no_speech_detected"
   }
 }
