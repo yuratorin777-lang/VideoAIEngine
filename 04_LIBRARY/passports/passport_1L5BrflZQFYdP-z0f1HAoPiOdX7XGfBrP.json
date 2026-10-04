@@ -1,0 +1,267 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-04T08:19:34.803431+00:00",
+  "updated_at": "2026-10-04T08:19:34.803445+00:00",
+  "video": {
+    "file_id": "1L5BrflZQFYdP-z0f1HAoPiOdX7XGfBrP",
+    "filename": "VID_20261003_105727.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, и два, три, ча-ча. И раз, и два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. Шустрые ноги. И раз, два, три, ча-ча. И раз, два, три, ча-ча. Стоп.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 31.0,
+        "speaker": "Speaker 1",
+        "text": "И раз, два, три, ча-ча..."
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": false,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "music"
+      ],
+      "confidence_notes": "Преобладает голос тренера, считающего под музыку."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос человека, ведущего счет для танца, на фоне играет ритмичная музыка.",
+    "music_description": "Ритмичная фоновая музыка для танцевальных тренировок.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 31.0,
+      "duration": 31.0,
+      "description": "Две девочки танцуют в зале под счет тренера",
+      "subjects": [
+        "девочки",
+        "танцоры"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты корпуса",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги в сторону",
+        "синхронное движение рук",
+        "повороты корпуса"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "сконцентрированные",
+        "увлеченные"
+      ],
+      "location": [],
+      "interaction": "синхронное выполнение упражнений в паре",
+      "visual_tags": [
+        "танцы",
+        "тренировка",
+        "дети"
+      ],
+      "search_phrases": [
+        "девочки танцуют в зале",
+        "танцевальная тренировка детей",
+        "упражнения под счет"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": false,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 31.0,
+      "duration": 31.0,
+      "semantic_description": "Две девочки танцуют в зале под счет тренера",
+      "subjects": [
+        "девочки",
+        "танцоры"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты корпуса",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированные",
+        "увлеченные"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "танцы",
+        "тренировка",
+        "дети"
+      ],
+      "search_tags": [
+        "танцы",
+        "тренировка",
+        "дети",
+        "ритмичные шаги в сторону",
+        "синхронное движение рук",
+        "повороты корпуса",
+        "девочки",
+        "танцоры",
+        "сконцентрированные",
+        "увлеченные"
+      ],
+      "search_phrases": [
+        "девочки танцуют в зале",
+        "танцевальная тренировка детей",
+        "упражнения под счет"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 31.0,
+          "speaker": "Speaker 1",
+          "text": "И раз, два, три, ча-ча..."
+        }
+      ],
+      "spoken_text": "И раз, два, три, ча-ча...",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": true,
+        "has_ambient_sound": false,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": true
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261003_105727.mp4",
+    "keywords": [
+      "танцы",
+      "тренировка",
+      "дети",
+      "девочки",
+      "танцоры",
+      "ритмичные шаги в сторону",
+      "синхронное движение рук",
+      "повороты корпуса",
+      "сконцентрированные",
+      "увлеченные"
+    ],
+    "actions": [
+      "ритмичные шаги в сторону",
+      "синхронное движение рук",
+      "повороты корпуса"
+    ],
+    "spoken_text": "И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. И раз, и два, три, ча-ча. И раз, и два, три, ча-ча. И раз, два, три, ча-ча. И раз, два, три, ча-ча. Шустрые ноги. И раз, два, три, ча-ча. И раз, два, три, ча-ча. Стоп.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": true,
+    "has_ambient_sound": false,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сконцентрированные",
+      "увлеченные"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочки танцуют в зале",
+      "танцевальная тренировка детей",
+      "упражнения под счет"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": true,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

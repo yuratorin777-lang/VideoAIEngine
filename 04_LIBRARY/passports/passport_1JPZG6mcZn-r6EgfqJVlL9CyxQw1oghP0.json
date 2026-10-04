@@ -1,0 +1,285 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-04T08:17:20.943774+00:00",
+  "updated_at": "2026-10-04T08:17:20.943784+00:00",
+  "video": {
+    "file_id": "1JPZG6mcZn-r6EgfqJVlL9CyxQw1oghP0",
+    "filename": "VID_20261003_100859.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "educational",
+      "social_media",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Локоть прямой. И раз. Ой какие колени то у Полины, молодец.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 2.0,
+        "speaker": "Тренер",
+        "text": "Локоть прямой."
+      },
+      {
+        "start": 8.0,
+        "end": 14.0,
+        "speaker": "Тренер",
+        "text": "И раз. Ой какие колени то у Полины, молодец."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышны голоса детей и тренера в помещении"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Запись голоса тренера и детей в помещении",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 13.0,
+      "duration": 13.0,
+      "description": "Дети в зале выполняют наклоны туловища в сторону под руководством тренера",
+      "subjects": [
+        "Дети",
+        "Тренер"
+      ],
+      "actions": [
+        {
+          "action": "наклон туловища в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "вытягивание руки над головой",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание баланса",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "наклон туловища в сторону",
+        "вытягивание руки над головой",
+        "удержание баланса"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера",
+      "composition": "Общий план помещения",
+      "emotion": [
+        "сосредоточенность",
+        "старание"
+      ],
+      "location": [],
+      "interaction": "Тренировочный процесс под руководством наставника",
+      "visual_tags": [
+        "дети",
+        "тренировка",
+        "растяжка",
+        "зал"
+      ],
+      "search_phrases": [
+        "дети на тренировке делают наклоны",
+        "занятие танцами или гимнастикой в зале",
+        "тренер занимается с детьми"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 13.0,
+      "duration": 13.0,
+      "semantic_description": "Дети в зале выполняют наклоны туловища в сторону под руководством тренера",
+      "subjects": [
+        "Дети",
+        "Тренер"
+      ],
+      "actions": [
+        {
+          "action": "наклон туловища в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "вытягивание руки над головой",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание баланса",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "старание"
+      ],
+      "camera": "Статичная камера",
+      "visual_tags": [
+        "дети",
+        "тренировка",
+        "растяжка",
+        "зал"
+      ],
+      "search_tags": [
+        "дети",
+        "тренировка",
+        "растяжка",
+        "зал",
+        "наклон туловища в сторону",
+        "вытягивание руки над головой",
+        "удержание баланса",
+        "Дети",
+        "Тренер",
+        "сосредоточенность",
+        "старание"
+      ],
+      "search_phrases": [
+        "дети на тренировке делают наклоны",
+        "занятие танцами или гимнастикой в зале",
+        "тренер занимается с детьми"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "speaker": "Тренер",
+          "text": "Локоть прямой."
+        },
+        {
+          "start": 8.0,
+          "end": 14.0,
+          "speaker": "Тренер",
+          "text": "И раз. Ой какие колени то у Полины, молодец."
+        }
+      ],
+      "spoken_text": "Локоть прямой. И раз. Ой какие колени то у Полины, молодец.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261003_100859.mp4",
+    "keywords": [
+      "дети",
+      "тренировка",
+      "растяжка",
+      "зал",
+      "Дети",
+      "Тренер",
+      "наклон туловища в сторону",
+      "вытягивание руки над головой",
+      "удержание баланса",
+      "сосредоточенность",
+      "старание"
+    ],
+    "actions": [
+      "наклон туловища в сторону",
+      "вытягивание руки над головой",
+      "удержание баланса"
+    ],
+    "spoken_text": "Локоть прямой. И раз. Ой какие колени то у Полины, молодец.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "старание"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети на тренировке делают наклоны",
+      "занятие танцами или гимнастикой в зале",
+      "тренер занимается с детьми"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

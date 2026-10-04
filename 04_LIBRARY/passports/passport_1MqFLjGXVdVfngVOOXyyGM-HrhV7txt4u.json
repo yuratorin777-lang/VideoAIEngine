@@ -1,0 +1,278 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-04T08:19:14.496899+00:00",
+  "updated_at": "2026-10-04T08:19:14.496908+00:00",
+  "video": {
+    "file_id": "1MqFLjGXVdVfngVOOXyyGM-HrhV7txt4u",
+    "filename": "VID_20261003_101825.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "behind_the_scenes"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "и раз два глаза вперед и раз два на пятках вес раз и раз два три и раз два три и раз голова выше три богдан сильнее колени и раз не плохо три и раз два три и раз два три и раз два три и раз два три",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 32.0,
+        "speaker": "Инструктор",
+        "text": "и раз два глаза вперед и раз два на пятках вес раз и раз два три и раз два три и раз голова выше три богдан сильнее колени и раз не плохо три и раз два три и раз два три и раз два три и раз два три"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышен голос тренера, считающего ритм и дающего указания, а также акустика помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос тренера за кадром или в помещении, ведущего счет занятию.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 32.0,
+      "duration": 32.0,
+      "description": "Дети стоят шеренгой лицом к стене, опираясь руками о стену, и выполняют упражнения на ноги под счет тренера.",
+      "subjects": [
+        "дети",
+        "группа детей"
+      ],
+      "actions": [
+        {
+          "action": "опора руками о стену",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "перенос веса на пятки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты стопы",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "опора руками о стену",
+        "движение ног",
+        "перенос веса на пятки",
+        "повороты стопы"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера, общий план",
+      "composition": "дети выстроены по диагонали справа налево вдоль стены",
+      "emotion": [
+        "сконцентрированность"
+      ],
+      "location": [],
+      "interaction": "дети выполняют упражнение синхронно под указания тренера",
+      "visual_tags": [
+        "тренировка",
+        "дети",
+        "хореография",
+        "зал"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами у стены",
+        "хореографическая тренировка детей",
+        "упражнения под счет в зале"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 32.0,
+      "duration": 32.0,
+      "semantic_description": "Дети стоят шеренгой лицом к стене, опираясь руками о стену, и выполняют упражнения на ноги под счет тренера.",
+      "subjects": [
+        "дети",
+        "группа детей"
+      ],
+      "actions": [
+        {
+          "action": "опора руками о стену",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движение ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "перенос веса на пятки",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты стопы",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сконцентрированность"
+      ],
+      "camera": "статичная камера, общий план",
+      "visual_tags": [
+        "тренировка",
+        "дети",
+        "хореография",
+        "зал"
+      ],
+      "search_tags": [
+        "тренировка",
+        "дети",
+        "хореография",
+        "зал",
+        "опора руками о стену",
+        "движение ног",
+        "перенос веса на пятки",
+        "повороты стопы",
+        "группа детей",
+        "сконцентрированность"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами у стены",
+        "хореографическая тренировка детей",
+        "упражнения под счет в зале"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 32.0,
+          "speaker": "Инструктор",
+          "text": "и раз два глаза вперед и раз два на пятках вес раз и раз два три и раз два три и раз голова выше три богдан сильнее колени и раз не плохо три и раз два три и раз два три и раз два три и раз два три"
+        }
+      ],
+      "spoken_text": "и раз два глаза вперед и раз два на пятках вес раз и раз два три и раз два три и раз голова выше три богдан сильнее колени и раз не плохо три и раз два три и раз два три и раз два три и раз два три",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261003_101825.mp4",
+    "keywords": [
+      "тренировка",
+      "дети",
+      "хореография",
+      "зал",
+      "группа детей",
+      "опора руками о стену",
+      "движение ног",
+      "перенос веса на пятки",
+      "повороты стопы",
+      "сконцентрированность"
+    ],
+    "actions": [
+      "опора руками о стену",
+      "движение ног",
+      "перенос веса на пятки",
+      "повороты стопы"
+    ],
+    "spoken_text": "и раз два глаза вперед и раз два на пятках вес раз и раз два три и раз два три и раз голова выше три богдан сильнее колени и раз не плохо три и раз два три и раз два три и раз два три и раз два три",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сконцентрированность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами у стены",
+      "хореографическая тренировка детей",
+      "упражнения под счет в зале"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}
