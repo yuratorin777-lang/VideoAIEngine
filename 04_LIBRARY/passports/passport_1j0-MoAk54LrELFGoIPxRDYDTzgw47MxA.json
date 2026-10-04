@@ -1,0 +1,278 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-04T07:52:50.063335+00:00",
+  "updated_at": "2026-10-04T07:52:50.063346+00:00",
+  "video": {
+    "file_id": "1j0-MoAk54LrELFGoIPxRDYDTzgw47MxA",
+    "filename": "VID_20261003_105815.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "И раз два три. Ча-ча раз два три. Ча-ча выше руки. Три. Ча-ча мой счёт. Слушай. Ча-ча раз два три. Где основной? Два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Вытянись. Два три. Ча-ча раз два три. Ча-ча раз два",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 22.0,
+        "speaker": "Тренер",
+        "text": "И раз два три. Ча-ча раз два три. Ча-ча выше руки. Три. Ча-ча мой счёт. Слушай. Ча-ча раз два три. Где основной? Два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Вытянись. Два три. Ча-ча раз два три. Ча-ча раз два"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Голос тренера за кадром ведет счет, слышна акустика помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Запись голоса тренера, отсчитывающего ритм и дающего указания.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 22.0,
+      "duration": 22.0,
+      "description": "Мальчик выполняет танцевальные шаги и движения под счет тренера в танцевальном зале.",
+      "subjects": [
+        "ребенок",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты корпуса",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание равновесия",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "ритмичные шаги",
+        "движения руками",
+        "повороты корпуса",
+        "удержание равновесия"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "ребенок в центре кадра",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "выполнение инструкций тренера",
+      "visual_tags": [
+        "танец",
+        "ребенок",
+        "разминка",
+        "зал"
+      ],
+      "search_phrases": [
+        "мальчик занимается танцами в зале",
+        "детская хореография разминка",
+        "ребенок выполняет танцевальные движения под счет"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 22.0,
+      "duration": 22.0,
+      "semantic_description": "Мальчик выполняет танцевальные шаги и движения под счет тренера в танцевальном зале.",
+      "subjects": [
+        "ребенок",
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "ритмичные шаги",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты корпуса",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "удержание равновесия",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "танец",
+        "ребенок",
+        "разминка",
+        "зал"
+      ],
+      "search_tags": [
+        "танец",
+        "ребенок",
+        "разминка",
+        "зал",
+        "ритмичные шаги",
+        "движения руками",
+        "повороты корпуса",
+        "удержание равновесия",
+        "мальчик",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "мальчик занимается танцами в зале",
+        "детская хореография разминка",
+        "ребенок выполняет танцевальные движения под счет"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 22.0,
+          "speaker": "Тренер",
+          "text": "И раз два три. Ча-ча раз два три. Ча-ча выше руки. Три. Ча-ча мой счёт. Слушай. Ча-ча раз два три. Где основной? Два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Вытянись. Два три. Ча-ча раз два три. Ча-ча раз два"
+        }
+      ],
+      "spoken_text": "И раз два три. Ча-ча раз два три. Ча-ча выше руки. Три. Ча-ча мой счёт. Слушай. Ча-ча раз два три. Где основной? Два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Вытянись. Два три. Ча-ча раз два три. Ча-ча раз два",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261003_105815.mp4",
+    "keywords": [
+      "танец",
+      "ребенок",
+      "разминка",
+      "зал",
+      "мальчик",
+      "ритмичные шаги",
+      "движения руками",
+      "повороты корпуса",
+      "удержание равновесия",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "ритмичные шаги",
+      "движения руками",
+      "повороты корпуса",
+      "удержание равновесия"
+    ],
+    "spoken_text": "И раз два три. Ча-ча раз два три. Ча-ча выше руки. Три. Ча-ча мой счёт. Слушай. Ча-ча раз два три. Где основной? Два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Ча-ча раз два три. Вытянись. Два три. Ча-ча раз два три. Ча-ча раз два",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "мальчик занимается танцами в зале",
+      "детская хореография разминка",
+      "ребенок выполняет танцевальные движения под счет"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

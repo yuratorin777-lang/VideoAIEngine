@@ -1,0 +1,280 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-04T07:53:42.926886+00:00",
+  "updated_at": "2026-10-04T07:53:42.926896+00:00",
+  "video": {
+    "file_id": "1PYRpWyBug5Hkt1ptzLa9DrSWHijZbyQS",
+    "filename": "VID_20261003_110008.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Раз, два, три, и. Богдан, внимательнее. Раз, два, три, и.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 3.0,
+        "speaker": "Тренер",
+        "text": "Раз, два, три, и."
+      },
+      {
+        "start": 6.5,
+        "end": 14.5,
+        "speaker": "Тренер",
+        "text": "Богдан, внимательнее. Раз, два, три, и."
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышен голос тренера и акустика помещения"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос тренера, считающего ритм и дающего указания в помещении",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": "Присутствует естественная акустика зала"
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 15.0,
+      "duration": 15.0,
+      "description": "Дети под руководством тренера выполняют упражнение на координацию и баланс в хореографическом зале.",
+      "subjects": [
+        "дети",
+        "девочка",
+        "мальчики"
+      ],
+      "actions": [
+        {
+          "action": "удержание равновесия на одной ноге",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "постановка рук на пояс",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "удержание равновесия на одной ноге",
+        "синхронное движение",
+        "постановка рук на пояс"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "дети расположены треугольником, по центру девочка на переднем плане",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "дети повторяют движения за кадром (тренером)",
+      "visual_tags": [
+        "дети",
+        "танец",
+        "разминка",
+        "зал"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "разминка в хореографической студии",
+        "дети выполняют упражнение на баланс"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 15.0,
+      "duration": 15.0,
+      "semantic_description": "Дети под руководством тренера выполняют упражнение на координацию и баланс в хореографическом зале.",
+      "subjects": [
+        "дети",
+        "девочка",
+        "мальчики"
+      ],
+      "actions": [
+        {
+          "action": "удержание равновесия на одной ноге",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "постановка рук на пояс",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "дети",
+        "танец",
+        "разминка",
+        "зал"
+      ],
+      "search_tags": [
+        "дети",
+        "танец",
+        "разминка",
+        "зал",
+        "удержание равновесия на одной ноге",
+        "синхронное движение",
+        "постановка рук на пояс",
+        "девочка",
+        "мальчики",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "разминка в хореографической студии",
+        "дети выполняют упражнение на баланс"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 3.0,
+          "speaker": "Тренер",
+          "text": "Раз, два, три, и."
+        },
+        {
+          "start": 6.5,
+          "end": 14.5,
+          "speaker": "Тренер",
+          "text": "Богдан, внимательнее. Раз, два, три, и."
+        }
+      ],
+      "spoken_text": "Раз, два, три, и. Богдан, внимательнее. Раз, два, три, и.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261003_110008.mp4",
+    "keywords": [
+      "дети",
+      "танец",
+      "разминка",
+      "зал",
+      "девочка",
+      "мальчики",
+      "удержание равновесия на одной ноге",
+      "синхронное движение",
+      "постановка рук на пояс",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "удержание равновесия на одной ноге",
+      "синхронное движение",
+      "постановка рук на пояс"
+    ],
+    "spoken_text": "Раз, два, три, и. Богдан, внимательнее. Раз, два, три, и.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами в зале",
+      "разминка в хореографической студии",
+      "дети выполняют упражнение на баланс"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

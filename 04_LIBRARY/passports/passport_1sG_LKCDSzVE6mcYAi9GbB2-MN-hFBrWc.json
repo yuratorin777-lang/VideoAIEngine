@@ -1,0 +1,632 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-04T07:54:05.770095+00:00",
+  "updated_at": "2026-10-04T07:54:05.770105+00:00",
+  "video": {
+    "file_id": "1sG_LKCDSzVE6mcYAi9GbB2-MN-hFBrWc",
+    "filename": "VID_20261003_110114.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "edited_video",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "educational",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "И раз и два и три и четыре пять и шесть и семь и восемь...",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 32.0,
+        "speaker": "Voice Over",
+        "text": "И раз и два и три и четыре пять и шесть и семь и восемь..."
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Закадровый счет под ритм движений с фоновым звуком помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Закадровый счет тренера, отсчитывающего ритм танца.",
+    "music_description": "",
+    "voice_over_description": "Мужской голос за кадром считает танцевальные шаги.",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 8.0,
+      "duration": 8.0,
+      "description": "Две девочки синхронно выполняют танцевальные позиции рук и ног в светлом зале.",
+      "subjects": [
+        "девочки-танцовщицы"
+      ],
+      "actions": [
+        {
+          "action": "позиции рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "позиции рук",
+        "шаги в сторону",
+        "синхронное движение ног"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "фронтальный ракурс, полный рост",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "парное синхронное выполнение движений",
+      "visual_tags": [
+        "танцевальный зал",
+        "дети",
+        "танцы"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "синхронные движения танцоров"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": true,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "montage_source"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 8.0,
+      "end": 16.0,
+      "duration": 8.0,
+      "description": "Девочка в черном платье выполняет сольный элемент с поворотом, вторая девочка на заднем плане.",
+      "subjects": [
+        "девочка в черном платье"
+      ],
+      "actions": [
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "поворот через плечо",
+        "жестикуляция руками"
+      ],
+      "dance_elements": [],
+      "camera": "динамичный средний план",
+      "composition": "ракурс с приближением",
+      "emotion": [
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "сольное исполнение",
+      "visual_tags": [
+        "сольный танец",
+        "движение"
+      ],
+      "search_phrases": [
+        "девочка танцует соло в зале",
+        "танцевальный элемент с поворотом"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": true,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "montage_source"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "start": 16.0,
+      "end": 22.0,
+      "duration": 6.0,
+      "description": "Девочки перемещаются по диагонали зала, выполняя шаги.",
+      "subjects": [
+        "девочки-танцовщицы"
+      ],
+      "actions": [
+        {
+          "action": "перемещение",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги по диагонали",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "перемещение",
+        "шаги по диагонали"
+      ],
+      "dance_elements": [],
+      "camera": "общий план",
+      "composition": "диагональная композиция",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "парное движение",
+      "visual_tags": [
+        "перемещение в зале",
+        "танцевальная тренировка"
+      ],
+      "search_phrases": [
+        "танцоры перемещаются по залу",
+        "тренировка шагов"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": true,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "montage_source"
+      ]
+    },
+    {
+      "id": "scene_004",
+      "start": 22.0,
+      "end": 32.0,
+      "duration": 10.0,
+      "description": "Девочки продолжают выполнять хореографические элементы под счет.",
+      "subjects": [
+        "девочки-танцовщицы"
+      ],
+      "actions": [
+        {
+          "action": "синхронные движения",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "синхронные движения",
+        "повороты"
+      ],
+      "dance_elements": [],
+      "camera": "общий план",
+      "composition": "фронтальный ракурс",
+      "emotion": [
+        "уверенность"
+      ],
+      "location": [],
+      "interaction": "синхронное исполнение",
+      "visual_tags": [
+        "финал тренировки",
+        "танец"
+      ],
+      "search_phrases": [
+        "финальные элементы танца",
+        "дети на тренировке"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": true,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "montage_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 8.0,
+      "duration": 8.0,
+      "semantic_description": "Две девочки синхронно выполняют танцевальные позиции рук и ног в светлом зале.",
+      "subjects": [
+        "девочки-танцовщицы"
+      ],
+      "actions": [
+        {
+          "action": "позиции рук",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги в сторону",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "танцевальный зал",
+        "дети",
+        "танцы"
+      ],
+      "search_tags": [
+        "танцевальный зал",
+        "дети",
+        "танцы",
+        "позиции рук",
+        "шаги в сторону",
+        "синхронное движение ног",
+        "девочки-танцовщицы",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "синхронные движения танцоров"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 32.0,
+          "speaker": "Voice Over",
+          "text": "И раз и два и три и четыре пять и шесть и семь и восемь..."
+        }
+      ],
+      "spoken_text": "И раз и два и три и четыре пять и шесть и семь и восемь...",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 8.0,
+      "end": 16.0,
+      "duration": 8.0,
+      "semantic_description": "Девочка в черном платье выполняет сольный элемент с поворотом, вторая девочка на заднем плане.",
+      "subjects": [
+        "девочка в черном платье"
+      ],
+      "actions": [
+        {
+          "action": "поворот через плечо",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "концентрация"
+      ],
+      "camera": "динамичный средний план",
+      "visual_tags": [
+        "сольный танец",
+        "движение"
+      ],
+      "search_tags": [
+        "сольный танец",
+        "движение",
+        "поворот через плечо",
+        "жестикуляция руками",
+        "девочка в черном платье",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "девочка танцует соло в зале",
+        "танцевальный элемент с поворотом"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 32.0,
+          "speaker": "Voice Over",
+          "text": "И раз и два и три и четыре пять и шесть и семь и восемь..."
+        }
+      ],
+      "spoken_text": "И раз и два и три и четыре пять и шесть и семь и восемь...",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_003",
+      "start": 16.0,
+      "end": 22.0,
+      "duration": 6.0,
+      "semantic_description": "Девочки перемещаются по диагонали зала, выполняя шаги.",
+      "subjects": [
+        "девочки-танцовщицы"
+      ],
+      "actions": [
+        {
+          "action": "перемещение",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "шаги по диагонали",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "общий план",
+      "visual_tags": [
+        "перемещение в зале",
+        "танцевальная тренировка"
+      ],
+      "search_tags": [
+        "перемещение в зале",
+        "танцевальная тренировка",
+        "перемещение",
+        "шаги по диагонали",
+        "девочки-танцовщицы",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "танцоры перемещаются по залу",
+        "тренировка шагов"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 32.0,
+          "speaker": "Voice Over",
+          "text": "И раз и два и три и четыре пять и шесть и семь и восемь..."
+        }
+      ],
+      "spoken_text": "И раз и два и три и четыре пять и шесть и семь и восемь...",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_004",
+      "start": 22.0,
+      "end": 32.0,
+      "duration": 10.0,
+      "semantic_description": "Девочки продолжают выполнять хореографические элементы под счет.",
+      "subjects": [
+        "девочки-танцовщицы"
+      ],
+      "actions": [
+        {
+          "action": "синхронные движения",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "повороты",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "уверенность"
+      ],
+      "camera": "общий план",
+      "visual_tags": [
+        "финал тренировки",
+        "танец"
+      ],
+      "search_tags": [
+        "финал тренировки",
+        "танец",
+        "синхронные движения",
+        "повороты",
+        "девочки-танцовщицы",
+        "уверенность"
+      ],
+      "search_phrases": [
+        "финальные элементы танца",
+        "дети на тренировке"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 32.0,
+          "speaker": "Voice Over",
+          "text": "И раз и два и три и четыре пять и шесть и семь и восемь..."
+        }
+      ],
+      "spoken_text": "И раз и два и три и четыре пять и шесть и семь и восемь...",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261003_110114.mp4",
+    "keywords": [
+      "танцевальный зал",
+      "дети",
+      "танцы",
+      "девочки-танцовщицы",
+      "сольный танец",
+      "движение",
+      "девочка в черном платье",
+      "перемещение в зале",
+      "танцевальная тренировка",
+      "финал тренировки",
+      "танец",
+      "позиции рук",
+      "шаги в сторону",
+      "синхронное движение ног",
+      "сосредоточенность",
+      "поворот через плечо",
+      "жестикуляция руками",
+      "концентрация",
+      "перемещение",
+      "шаги по диагонали",
+      "синхронные движения",
+      "повороты",
+      "уверенность"
+    ],
+    "actions": [
+      "позиции рук",
+      "шаги в сторону",
+      "синхронное движение ног",
+      "поворот через плечо",
+      "жестикуляция руками",
+      "перемещение",
+      "шаги по диагонали",
+      "синхронные движения",
+      "повороты"
+    ],
+    "spoken_text": "И раз и два и три и четыре пять и шесть и семь и восемь...",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 4,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "концентрация",
+      "уверенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами в зале",
+      "синхронные движения танцоров",
+      "девочка танцует соло в зале",
+      "танцевальный элемент с поворотом",
+      "танцоры перемещаются по залу",
+      "тренировка шагов",
+      "финальные элементы танца",
+      "дети на тренировке"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

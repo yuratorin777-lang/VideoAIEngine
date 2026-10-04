@@ -1,0 +1,338 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-04T07:54:33.978760+00:00",
+  "updated_at": "2026-10-04T07:54:33.978770+00:00",
+  "video": {
+    "file_id": "1Yb1x7ozr6cZAHLf7g09gZnmV5eUdGl-3",
+    "filename": "VID_20261003_110227.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "И раз и два и три и четыре и пять и шесть и семь и восемь. И раз и головы, три и четыре и пять и шесть и семь. И раз и раз и раз два три и все одинаково делаем. Подскоки раз два, голова Женери три четыре и раз и раз и раз два три и подтянулись. Ноги.",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 9.0,
+        "speaker": "Speaker 1",
+        "text": "И раз и два и три и четыре и пять и шесть и семь и восемь."
+      },
+      {
+        "start": 9.0,
+        "end": 17.0,
+        "speaker": "Speaker 1",
+        "text": "И раз и головы, три и четыре и пять и шесть и семь."
+      },
+      {
+        "start": 17.0,
+        "end": 26.0,
+        "speaker": "Speaker 1",
+        "text": "И раз и раз и раз два три и все одинаково делаем. Подскоки раз два,"
+      },
+      {
+        "start": 26.0,
+        "end": 37.0,
+        "speaker": "Speaker 1",
+        "text": "голова Женери три четыре и раз и раз и раз два три и подтянулись. Ноги."
+      }
+    ],
+    "segment_count": 4
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Голос тренера ведет счет упражнений, на фоне слышна музыка и звуки шагов в помещении"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос тренера, считающего ритм и дающего указания детям, фоновая ритмичная музыка и акустика зала",
+    "music_description": "Ритмичная детская фоновая музыка для занятий хореографией",
+    "voice_over_description": "",
+    "notes": "Оригинальный звук содержит важные команды тренера"
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 37.0,
+      "duration": 37.0,
+      "description": "Дети в зале выполняют танцевальные упражнения под счет тренера",
+      "subjects": [
+        "дети",
+        "мальчики",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "баланс на одной ноге",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "наклоны головы",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "хлопки в ладоши",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные движения ногами",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подскоки",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "баланс на одной ноге",
+        "наклоны головы",
+        "хлопки в ладоши",
+        "ритмичные движения ногами",
+        "подскоки"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера с общего плана",
+      "composition": "Групповой портрет в полный рост",
+      "emotion": [
+        "сосредоточенность",
+        "старание"
+      ],
+      "location": [],
+      "interaction": "Дети повторяют движения за кадром",
+      "visual_tags": [
+        "дети",
+        "танец",
+        "тренировка",
+        "хореография"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "детская хореографическая тренировка",
+        "дети выполняют упражнения под счет"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 37.0,
+      "duration": 37.0,
+      "semantic_description": "Дети в зале выполняют танцевальные упражнения под счет тренера",
+      "subjects": [
+        "дети",
+        "мальчики",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "баланс на одной ноге",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "наклоны головы",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "хлопки в ладоши",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные движения ногами",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подскоки",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "старание"
+      ],
+      "camera": "Статичная камера с общего плана",
+      "visual_tags": [
+        "дети",
+        "танец",
+        "тренировка",
+        "хореография"
+      ],
+      "search_tags": [
+        "дети",
+        "танец",
+        "тренировка",
+        "хореография",
+        "баланс на одной ноге",
+        "наклоны головы",
+        "хлопки в ладоши",
+        "ритмичные движения ногами",
+        "подскоки",
+        "мальчики",
+        "девочка",
+        "сосредоточенность",
+        "старание"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "детская хореографическая тренировка",
+        "дети выполняют упражнения под счет"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 9.0,
+          "speaker": "Speaker 1",
+          "text": "И раз и два и три и четыре и пять и шесть и семь и восемь."
+        },
+        {
+          "start": 9.0,
+          "end": 17.0,
+          "speaker": "Speaker 1",
+          "text": "И раз и головы, три и четыре и пять и шесть и семь."
+        },
+        {
+          "start": 17.0,
+          "end": 26.0,
+          "speaker": "Speaker 1",
+          "text": "И раз и раз и раз два три и все одинаково делаем. Подскоки раз два,"
+        },
+        {
+          "start": 26.0,
+          "end": 37.0,
+          "speaker": "Speaker 1",
+          "text": "голова Женери три четыре и раз и раз и раз два три и подтянулись. Ноги."
+        }
+      ],
+      "spoken_text": "И раз и два и три и четыре и пять и шесть и семь и восемь. И раз и головы, три и четыре и пять и шесть и семь. И раз и раз и раз два три и все одинаково делаем. Подскоки раз два, голова Женери три четыре и раз и раз и раз два три и подтянулись. Ноги.",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": true
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261003_110227.mp4",
+    "keywords": [
+      "дети",
+      "танец",
+      "тренировка",
+      "хореография",
+      "мальчики",
+      "девочка",
+      "баланс на одной ноге",
+      "наклоны головы",
+      "хлопки в ладоши",
+      "ритмичные движения ногами",
+      "подскоки",
+      "сосредоточенность",
+      "старание"
+    ],
+    "actions": [
+      "баланс на одной ноге",
+      "наклоны головы",
+      "хлопки в ладоши",
+      "ритмичные движения ногами",
+      "подскоки"
+    ],
+    "spoken_text": "И раз и два и три и четыре и пять и шесть и семь и восемь. И раз и головы, три и четыре и пять и шесть и семь. И раз и раз и раз два три и все одинаково делаем. Подскоки раз два, голова Женери три четыре и раз и раз и раз два три и подтянулись. Ноги.",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "старание"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами в зале",
+      "детская хореографическая тренировка",
+      "дети выполняют упражнения под счет"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": true,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}
