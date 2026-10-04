@@ -1,9 +1,7 @@
 name: Run Cloud Video Indexer (Passport Generation)
 
 on:
-  # Можно запускать вручную из вкладки Actions
   workflow_dispatch:
-  # Или настроить запуск по расписанию (например, каждые 30 минут)
   # schedule:
   #   - cron: '*/30 * * * *'
 
@@ -21,14 +19,21 @@ jobs:
           python-version: '3.10'
           cache: 'pip'
 
+      - name: Install System Dependencies for OpenCV & MoviePy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libsm6 libxext6 libgl1-mesa-glx
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Restore service_account.json from Secret
+        env:
+          SERVICE_ACCOUNT_JSON: ${{ secrets.SERVICE_ACCOUNT_JSON }}
         run: |
-          echo "${{ secrets.SERVICE_ACCOUNT_JSON }}" > service_account.json
+          echo "$SERVICE_ACCOUNT_JSON" > service_account.json
 
       - name: Run Cloud Indexer
         env:
@@ -40,6 +45,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add 01_DATABASE/ # Укажи папку, куда PassportStore сохраняет json-паспорта
+          git add 04_LIBRARY/passports/
           git commit -m "auto: update video passports from run_cloud" || echo "No changes to commit"
           git push
