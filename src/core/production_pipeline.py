@@ -239,6 +239,9 @@ def detect_audio_mode(input_text: str) -> dict:
 
     voiceover = False
 
+    # Приводим входной текст к нижнему регистру один раз
+    text_lower = text.lower()
+
     voiceover_on_keywords = [
         "с озвучкой",
         "с закадровой озвучкой",
@@ -257,22 +260,27 @@ def detect_audio_mode(input_text: str) -> dict:
         "ru-ru-",
         # --- ДОБАВЛЕННЫЕ КЛЮЧЕВЫЕ СЛОВА ---
         "озвучка вкл",
+        "[озвучка вкл]",
         "озвучка: вкл",
         "озвучка:вкл",
         "озвучка включена",
         "озвучку вкл",
         "voiceover on",
+        "[voiceover on]",
         "voiceover: on",
         "voiceover:on",
     ]
 
     voiceover_off_keywords = [
         "без озвучки",
+        "без закадровой озвучки",
         "без закадровой озвучкой",
         "без голоса",
         "озвучка не нужна",
         "без диктора",
         "voiceover off",
+        "[озвучка выкл]",
+        "[voiceover off]",
     ]
 
     # 1. Включаем, если найдено любое из ключевых слов озвучки или нейроголоса
