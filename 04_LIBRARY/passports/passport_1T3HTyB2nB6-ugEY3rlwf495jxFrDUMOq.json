@@ -1,0 +1,258 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-11T07:47:46.239421+00:00",
+  "updated_at": "2026-10-11T07:47:46.239431+00:00",
+  "video": {
+    "file_id": "1T3HTyB2nB6-ugEY3rlwf495jxFrDUMOq",
+    "filename": "VID_20261007_170922.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "sports_action",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "sports_action",
+      "b_roll_source",
+      "social_media"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "Раз, два, три, четыре, пять, шесть, семь, восемь, девять, десять...",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 16.0,
+        "speaker": "Тренер",
+        "text": "Раз, два, три, четыре, пять, шесть, семь, восемь, девять, десять..."
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышен счет голосом и звуки прыжков в помещении."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Запись голоса за кадром или за камерой, считающего прыжки, и звуки приземления при прыжках.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 16.0,
+      "duration": 16.0,
+      "description": "Девочка ритмично прыгает на месте в помещении под счет.",
+      "subjects": [
+        "ребенок",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "прыжки на месте",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичное движение",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "прыжки на месте",
+        "ритмичное движение"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера средний план",
+      "composition": "центральная композиция",
+      "emotion": [
+        "сосредоточенность",
+        "усердие"
+      ],
+      "location": [],
+      "interaction": "выполнение упражнения под счет",
+      "visual_tags": [
+        "спорт",
+        "тренировка",
+        "дети",
+        "фитнес"
+      ],
+      "search_phrases": [
+        "девочка прыгает на месте",
+        "ребенок выполняет спортивное упражнение",
+        "тренировка в зале"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 16.0,
+      "duration": 16.0,
+      "semantic_description": "Девочка ритмично прыгает на месте в помещении под счет.",
+      "subjects": [
+        "ребенок",
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "прыжки на месте",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичное движение",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "усердие"
+      ],
+      "camera": "статичная камера средний план",
+      "visual_tags": [
+        "спорт",
+        "тренировка",
+        "дети",
+        "фитнес"
+      ],
+      "search_tags": [
+        "спорт",
+        "тренировка",
+        "дети",
+        "фитнес",
+        "прыжки на месте",
+        "ритмичное движение",
+        "ребенок",
+        "девочка",
+        "сосредоточенность",
+        "усердие"
+      ],
+      "search_phrases": [
+        "девочка прыгает на месте",
+        "ребенок выполняет спортивное упражнение",
+        "тренировка в зале"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 16.0,
+          "speaker": "Тренер",
+          "text": "Раз, два, три, четыре, пять, шесть, семь, восемь, девять, десять..."
+        }
+      ],
+      "spoken_text": "Раз, два, три, четыре, пять, шесть, семь, восемь, девять, десять...",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261007_170922.mp4",
+    "keywords": [
+      "спорт",
+      "тренировка",
+      "дети",
+      "фитнес",
+      "ребенок",
+      "девочка",
+      "прыжки на месте",
+      "ритмичное движение",
+      "сосредоточенность",
+      "усердие"
+    ],
+    "actions": [
+      "прыжки на месте",
+      "ритмичное движение"
+    ],
+    "spoken_text": "Раз, два, три, четыре, пять, шесть, семь, восемь, девять, десять...",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "усердие"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка прыгает на месте",
+      "ребенок выполняет спортивное упражнение",
+      "тренировка в зале"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

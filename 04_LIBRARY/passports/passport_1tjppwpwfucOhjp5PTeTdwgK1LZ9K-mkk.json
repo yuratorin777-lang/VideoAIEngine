@@ -1,0 +1,266 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-11T07:46:18.437459+00:00",
+  "updated_at": "2026-10-11T07:46:18.437469+00:00",
+  "video": {
+    "file_id": "1tjppwpwfucOhjp5PTeTdwgK1LZ9K-mkk",
+    "filename": "VID_20261007_170618.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "educational",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "lifestyle",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "и семь, и восемь, и прокачать, раз и, два",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 4.0,
+        "speaker": "Speaker 1",
+        "text": "и семь, и восемь, и прокачать"
+      },
+      {
+        "start": 4.0,
+        "end": 6.8,
+        "speaker": "Speaker 1",
+        "text": "раз и, два"
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Записан голос человека в комнате"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос ребенка, считающего вслух",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 6.8,
+      "duration": 6.8,
+      "description": "Ребенок стоит в комнате и выполняет движения руками под счет.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "подсчет вслух",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "стойка в комнате",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "подсчет вслух",
+        "движения руками",
+        "стойка в комнате"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "ребенок",
+        "комната",
+        "упражнение"
+      ],
+      "search_phrases": [
+        "ребенок выполняет упражнение в комнате",
+        "девочка считает вслух в помещении"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "original_audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 6.8,
+      "duration": 6.8,
+      "semantic_description": "Ребенок стоит в комнате и выполняет движения руками под счет.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "подсчет вслух",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "движения руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "стойка в комнате",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "ребенок",
+        "комната",
+        "упражнение"
+      ],
+      "search_tags": [
+        "ребенок",
+        "комната",
+        "упражнение",
+        "подсчет вслух",
+        "движения руками",
+        "стойка в комнате",
+        "девочка",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "ребенок выполняет упражнение в комнате",
+        "девочка считает вслух в помещении"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 4.0,
+          "speaker": "Speaker 1",
+          "text": "и семь, и восемь, и прокачать"
+        },
+        {
+          "start": 4.0,
+          "end": 6.8,
+          "speaker": "Speaker 1",
+          "text": "раз и, два"
+        }
+      ],
+      "spoken_text": "и семь, и восемь, и прокачать раз и, два",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261007_170618.mp4",
+    "keywords": [
+      "ребенок",
+      "комната",
+      "упражнение",
+      "девочка",
+      "подсчет вслух",
+      "движения руками",
+      "стойка в комнате",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "подсчет вслух",
+      "движения руками",
+      "стойка в комнате"
+    ],
+    "spoken_text": "и семь, и восемь, и прокачать, раз и, два",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "ребенок выполняет упражнение в комнате",
+      "девочка считает вслух в помещении"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

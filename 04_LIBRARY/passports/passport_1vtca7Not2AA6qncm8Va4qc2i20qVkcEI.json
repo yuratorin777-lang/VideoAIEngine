@@ -1,0 +1,359 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-11T07:45:47.548410+00:00",
+  "updated_at": "2026-10-11T07:45:47.548419+00:00",
+  "video": {
+    "file_id": "1vtca7Not2AA6qncm8Va4qc2i20qVkcEI",
+    "filename": "VID_20261007_170537.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "educational",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "sports_action",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "educational",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 12.0,
+        "speaker": "Девочка",
+        "text": "1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Записан голос ребенка, считающего вслух, и фоновый шум помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос ребенка, выполняющего упражнение и ведущего счет.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 6.0,
+      "duration": 6.0,
+      "description": "Девочка вытянула руки вперед и совершает разминочные движения под счет.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "вытягивание рук вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подсчет вслух",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "вытягивание рук вперед",
+        "подсчет вслух"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "нет",
+      "visual_tags": [
+        "разминка",
+        "ребенок"
+      ],
+      "search_phrases": [
+        "девочка делает разминку рук",
+        "ребенок считает во время зарядки"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 6.0,
+      "end": 12.0,
+      "duration": 6.0,
+      "description": "Девочка разводит руки в стороны и продолжает упражнение.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "разведение рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "продолжение подсчета",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "разведение рук в стороны",
+        "продолжение подсчета"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "общий план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "нет",
+      "visual_tags": [
+        "разминка",
+        "упражнение"
+      ],
+      "search_phrases": [
+        "девочка разводит руки в стороны",
+        "зарядка для рук"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 6.0,
+      "duration": 6.0,
+      "semantic_description": "Девочка вытянула руки вперед и совершает разминочные движения под счет.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "вытягивание рук вперед",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подсчет вслух",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "разминка",
+        "ребенок"
+      ],
+      "search_tags": [
+        "разминка",
+        "ребенок",
+        "вытягивание рук вперед",
+        "подсчет вслух",
+        "девочка",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "девочка делает разминку рук",
+        "ребенок считает во время зарядки"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "speaker": "Девочка",
+          "text": "1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2"
+        }
+      ],
+      "spoken_text": "1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 6.0,
+      "end": 12.0,
+      "duration": 6.0,
+      "semantic_description": "Девочка разводит руки в стороны и продолжает упражнение.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "разведение рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "продолжение подсчета",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "разминка",
+        "упражнение"
+      ],
+      "search_tags": [
+        "разминка",
+        "упражнение",
+        "разведение рук в стороны",
+        "продолжение подсчета",
+        "девочка",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "девочка разводит руки в стороны",
+        "зарядка для рук"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 12.0,
+          "speaker": "Девочка",
+          "text": "1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2"
+        }
+      ],
+      "spoken_text": "1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261007_170537.mp4",
+    "keywords": [
+      "разминка",
+      "ребенок",
+      "девочка",
+      "упражнение",
+      "вытягивание рук вперед",
+      "подсчет вслух",
+      "сосредоточенность",
+      "разведение рук в стороны",
+      "продолжение подсчета"
+    ],
+    "actions": [
+      "вытягивание рук вперед",
+      "подсчет вслух",
+      "разведение рук в стороны",
+      "продолжение подсчета"
+    ],
+    "spoken_text": "1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 2,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка делает разминку рук",
+      "ребенок считает во время зарядки",
+      "девочка разводит руки в стороны",
+      "зарядка для рук"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

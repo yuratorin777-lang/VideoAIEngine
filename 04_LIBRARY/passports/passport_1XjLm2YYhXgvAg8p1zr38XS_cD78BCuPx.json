@@ -1,0 +1,388 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-11T07:47:29.101781+00:00",
+  "updated_at": "2026-10-11T07:47:29.101791+00:00",
+  "video": {
+    "file_id": "1XjLm2YYhXgvAg8p1zr38XS_cD78BCuPx",
+    "filename": "VID_20261007_170834.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational"
+    ],
+    "possible_use_cases": [
+      "dance",
+      "educational",
+      "b_roll_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "и два и три и четыре и пять и шесть и семь и восемь раз и два и раз и два и раз и два и раз и два и раз",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 11.5,
+        "speaker": "Speaker 1",
+        "text": "и два и три и четыре и пять и шесть и семь и восемь"
+      },
+      {
+        "start": 11.5,
+        "end": 18.0,
+        "speaker": "Speaker 1",
+        "text": "раз и два и раз и два и раз и два и раз и два и раз"
+      }
+    ],
+    "segment_count": 2
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Записан голос человека, ведущего счет, и акустика помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Голос человека, считающего такты упражнения в помещении с естественной реверберацией.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 11.5,
+      "duration": 11.5,
+      "description": "Девочка стоит в танцевальном зале с руками на поясе и слушает счет.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "стойка прямо",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "руки на поясе",
+        "стойка прямо"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "центральная композиция",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "отсутствует",
+      "visual_tags": [
+        "танцевальный зал",
+        "ребенок",
+        "разминка"
+      ],
+      "search_phrases": [
+        "ребенок стоит в танцевальном зале",
+        "девочка готовится к разминке"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    },
+    {
+      "id": "scene_002",
+      "start": 11.5,
+      "end": 18.0,
+      "duration": 6.5,
+      "description": "Девочка выполняет пружинящие движения ног на полупальцах.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "полуприседания",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "пружинящие движения ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "работа на полупальцах",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "полуприседания",
+        "пружинящие движения ног",
+        "работа на полупальцах"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "центральная композиция",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "отсутствует",
+      "visual_tags": [
+        "разминка ног",
+        "хореография",
+        "девочка занимается"
+      ],
+      "search_phrases": [
+        "девочка делает разминку ног в зале",
+        "упражнение для ног под счет"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "audio"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 11.5,
+      "duration": 11.5,
+      "semantic_description": "Девочка стоит в танцевальном зале с руками на поясе и слушает счет.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "стойка прямо",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "танцевальный зал",
+        "ребенок",
+        "разминка"
+      ],
+      "search_tags": [
+        "танцевальный зал",
+        "ребенок",
+        "разминка",
+        "руки на поясе",
+        "стойка прямо",
+        "девочка",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "ребенок стоит в танцевальном зале",
+        "девочка готовится к разминке"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 11.5,
+          "speaker": "Speaker 1",
+          "text": "и два и три и четыре и пять и шесть и семь и восемь"
+        }
+      ],
+      "spoken_text": "и два и три и четыре и пять и шесть и семь и восемь",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    },
+    {
+      "id": "seg_002",
+      "start": 11.5,
+      "end": 18.0,
+      "duration": 6.5,
+      "semantic_description": "Девочка выполняет пружинящие движения ног на полупальцах.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "полуприседания",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "пружинящие движения ног",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "работа на полупальцах",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "разминка ног",
+        "хореография",
+        "девочка занимается"
+      ],
+      "search_tags": [
+        "разминка ног",
+        "хореография",
+        "девочка занимается",
+        "полуприседания",
+        "пружинящие движения ног",
+        "работа на полупальцах",
+        "девочка",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "девочка делает разминку ног в зале",
+        "упражнение для ног под счет"
+      ],
+      "speech": [
+        {
+          "start": 11.5,
+          "end": 18.0,
+          "speaker": "Speaker 1",
+          "text": "раз и два и раз и два и раз и два и раз и два и раз"
+        }
+      ],
+      "spoken_text": "раз и два и раз и два и раз и два и раз и два и раз",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261007_170834.mp4",
+    "keywords": [
+      "танцевальный зал",
+      "ребенок",
+      "разминка",
+      "девочка",
+      "разминка ног",
+      "хореография",
+      "девочка занимается",
+      "руки на поясе",
+      "стойка прямо",
+      "сосредоточенность",
+      "полуприседания",
+      "пружинящие движения ног",
+      "работа на полупальцах"
+    ],
+    "actions": [
+      "руки на поясе",
+      "стойка прямо",
+      "полуприседания",
+      "пружинящие движения ног",
+      "работа на полупальцах"
+    ],
+    "spoken_text": "и два и три и четыре и пять и шесть и семь и восемь раз и два и раз и два и раз и два и раз и два и раз",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 2,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "ребенок стоит в танцевальном зале",
+      "девочка готовится к разминке",
+      "девочка делает разминку ног в зале",
+      "упражнение для ног под счет"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}
