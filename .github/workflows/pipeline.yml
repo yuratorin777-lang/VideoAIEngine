@@ -67,7 +67,10 @@ jobs:
 
       - name: 5.1. Установка Chromium и системных библиотек для Playwright
         run: |
-          python -m playwright install chromium --with-deps
+          python -m pip install --upgrade pip
+          python -m pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install --no-cache-dir -r requirements.txt
+          python -m pip install --upgrade edge-tts
 
       - name: 6. Запуск пайплайна сборки видео
         # Выставляем явный таймаут 60 минут конкретно на сборку
