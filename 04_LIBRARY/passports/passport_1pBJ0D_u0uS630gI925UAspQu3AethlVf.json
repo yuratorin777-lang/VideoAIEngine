@@ -1,0 +1,246 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-14T07:31:00.226853+00:00",
+  "updated_at": "2026-10-14T07:31:00.226865+00:00",
+  "video": {
+    "file_id": "1pBJ0D_u0uS630gI925UAspQu3AethlVf",
+    "filename": "VID_20261013_180709.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "educational"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна ритмичная музыка и фоновый шум помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Ритмичная музыка и атмосфера танцевального класса",
+    "music_description": "Электронная ритмичная фоновая музыка",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 9.0,
+      "duration": 9.0,
+      "description": "Дети в танцевальном зале выполняют движения под музыку.",
+      "subjects": [
+        "дети",
+        "мальчики",
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "покачивание в такт музыке",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "руки на поясе",
+        "покачивание в такт музыке",
+        "синхронное движение ног"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера, общий план",
+      "composition": "группа детей расположена по диагонали в помещении",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "групповое занятие",
+      "visual_tags": [
+        "дети",
+        "танцевальный зал",
+        "упражнения"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "дети выполняют упражнения под музыку"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 9.0,
+      "duration": 9.0,
+      "semantic_description": "Дети в танцевальном зале выполняют движения под музыку.",
+      "subjects": [
+        "дети",
+        "мальчики",
+        "девочки"
+      ],
+      "actions": [
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "покачивание в такт музыке",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "синхронное движение ног",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера, общий план",
+      "visual_tags": [
+        "дети",
+        "танцевальный зал",
+        "упражнения"
+      ],
+      "search_tags": [
+        "дети",
+        "танцевальный зал",
+        "упражнения",
+        "руки на поясе",
+        "покачивание в такт музыке",
+        "синхронное движение ног",
+        "мальчики",
+        "девочки",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "дети занимаются танцами в зале",
+        "дети выполняют упражнения под музыку"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261013_180709.mp4",
+    "keywords": [
+      "дети",
+      "танцевальный зал",
+      "упражнения",
+      "мальчики",
+      "девочки",
+      "руки на поясе",
+      "покачивание в такт музыке",
+      "синхронное движение ног",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "руки на поясе",
+      "покачивание в такт музыке",
+      "синхронное движение ног"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети занимаются танцами в зале",
+      "дети выполняют упражнения под музыку"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

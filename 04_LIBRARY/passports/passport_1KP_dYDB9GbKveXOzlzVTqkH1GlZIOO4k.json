@@ -1,0 +1,251 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-14T07:29:48.033207+00:00",
+  "updated_at": "2026-10-14T07:29:48.033220+00:00",
+  "video": {
+    "file_id": "1KP_dYDB9GbKveXOzlzVTqkH1GlZIOO4k",
+    "filename": "VID_20261013_180309.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "lifestyle",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "dance",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "b_roll_source",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая ритмичная музыка и окружающая обстановка."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая музыка с четким ритмом под танец и звуки комнаты.",
+    "music_description": "Ритмичная детская/развлекательная музыка.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 6.8,
+      "duration": 6.8,
+      "description": "Мальчик стоит в комнате и под музыку двигает плечами и руками в такт.",
+      "subjects": [
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "движения плечами",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "улыбка в камеру",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "движения плечами",
+        "жестикуляция руками",
+        "улыбка в камеру"
+      ],
+      "dance_elements": [],
+      "camera": "Статичная камера",
+      "composition": "Средний план",
+      "emotion": [
+        "радость",
+        "игривость",
+        "удовольствие"
+      ],
+      "location": [],
+      "interaction": "взаимодействие со зрителем (взгляд в камеру)",
+      "visual_tags": [
+        "ребенок",
+        "танец",
+        "комната"
+      ],
+      "search_phrases": [
+        "мальчик танцует под музыку",
+        "ребенок делает движения под музыку в комнате"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 6.8,
+      "duration": 6.8,
+      "semantic_description": "Мальчик стоит в комнате и под музыку двигает плечами и руками в такт.",
+      "subjects": [
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "движения плечами",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "улыбка в камеру",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "радость",
+        "игривость",
+        "удовольствие"
+      ],
+      "camera": "Статичная камера",
+      "visual_tags": [
+        "ребенок",
+        "танец",
+        "комната"
+      ],
+      "search_tags": [
+        "ребенок",
+        "танец",
+        "комната",
+        "движения плечами",
+        "жестикуляция руками",
+        "улыбка в камеру",
+        "мальчик",
+        "радость",
+        "игривость",
+        "удовольствие"
+      ],
+      "search_phrases": [
+        "мальчик танцует под музыку",
+        "ребенок делает движения под музыку в комнате"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261013_180309.mp4",
+    "keywords": [
+      "ребенок",
+      "танец",
+      "комната",
+      "мальчик",
+      "движения плечами",
+      "жестикуляция руками",
+      "улыбка в камеру",
+      "радость",
+      "игривость",
+      "удовольствие"
+    ],
+    "actions": [
+      "движения плечами",
+      "жестикуляция руками",
+      "улыбка в камеру"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "радость",
+      "игривость",
+      "удовольствие"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "мальчик танцует под музыку",
+      "ребенок делает движения под музыку в комнате"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}

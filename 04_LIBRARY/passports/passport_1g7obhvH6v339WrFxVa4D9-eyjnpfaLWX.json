@@ -1,0 +1,259 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-14T07:28:18.499086+00:00",
+  "updated_at": "2026-10-14T07:28:18.499097+00:00",
+  "video": {
+    "file_id": "1g7obhvH6v339WrFxVa4D9-eyjnpfaLWX",
+    "filename": "VID_20261013_180146.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "dance",
+      "educational"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышна фоновая ритмичная музыка и легкий гул помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Фоновая ритмичная музыка.",
+    "music_description": "Ритмичная фоновая композиция.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 19.0,
+      "duration": 19.0,
+      "description": "Трое детей стоят в ряд в зале с руками на поясе и смотрят в сторону.",
+      "subjects": [
+        "дети",
+        "девочка",
+        "мальчики"
+      ],
+      "actions": [
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "стояние в стойке",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ожидание",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "руки на поясе",
+        "стояние в стойке",
+        "ожидание"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "центральная композиция, дети стоят шеренгой",
+      "emotion": [
+        "сосредоточенность",
+        "спокойствие"
+      ],
+      "location": [],
+      "interaction": "дети стоят рядом без активного взаимодействия",
+      "visual_tags": [
+        "дети",
+        "зал",
+        "тренировка",
+        "стойка"
+      ],
+      "search_phrases": [
+        "дети стоят в зале с руками на поясе",
+        "дети на тренировке в танцевальном зале",
+        "группа детей в спортивной студии"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 19.0,
+      "duration": 19.0,
+      "semantic_description": "Трое детей стоят в ряд в зале с руками на поясе и смотрят в сторону.",
+      "subjects": [
+        "дети",
+        "девочка",
+        "мальчики"
+      ],
+      "actions": [
+        {
+          "action": "руки на поясе",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "стояние в стойке",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ожидание",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность",
+        "спокойствие"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "дети",
+        "зал",
+        "тренировка",
+        "стойка"
+      ],
+      "search_tags": [
+        "дети",
+        "зал",
+        "тренировка",
+        "стойка",
+        "руки на поясе",
+        "стояние в стойке",
+        "ожидание",
+        "девочка",
+        "мальчики",
+        "сосредоточенность",
+        "спокойствие"
+      ],
+      "search_phrases": [
+        "дети стоят в зале с руками на поясе",
+        "дети на тренировке в танцевальном зале",
+        "группа детей в спортивной студии"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261013_180146.mp4",
+    "keywords": [
+      "дети",
+      "зал",
+      "тренировка",
+      "стойка",
+      "девочка",
+      "мальчики",
+      "руки на поясе",
+      "стояние в стойке",
+      "ожидание",
+      "сосредоточенность",
+      "спокойствие"
+    ],
+    "actions": [
+      "руки на поясе",
+      "стояние в стойке",
+      "ожидание"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность",
+      "спокойствие"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети стоят в зале с руками на поясе",
+      "дети на тренировке в танцевальном зале",
+      "группа детей в спортивной студии"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}
