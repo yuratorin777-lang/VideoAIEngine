@@ -1,0 +1,285 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-15T05:19:57.388060+00:00",
+  "updated_at": "2026-10-15T05:19:57.388069+00:00",
+  "video": {
+    "file_id": "1nIK_pUNw2tYt-JUNhKf44Z4wtEjx-suH",
+    "filename": "VID_20261012_170611.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "educational",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "dance",
+      "lifestyle"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "educational",
+      "montage_source"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "два, три, четыре, на месте раз",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 4.1,
+        "speaker": "Speaker 1",
+        "text": "два, три, четыре, на месте раз"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Записан голос за кадром или тренера, считающего упражнение, и фоновые звуки помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Счет тренера и естественные звуки тренировки в помещении.",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 4.1,
+      "duration": 4.1,
+      "description": "Девочка в бирюзовом платье делает наклон вниз, касаясь пола, затем выпрямляется и поднимает руки вверх под счет.",
+      "subjects": [
+        "девочка в бирюзовом платье",
+        "девочка в розовой футболке"
+      ],
+      "actions": [
+        {
+          "action": "наклон вниз",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подъем рук вверх",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "детская разминка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "наклон вниз",
+        "подъем рук вверх",
+        "жестикуляция",
+        "детская разминка"
+      ],
+      "dance_elements": [],
+      "camera": "статичный общий план",
+      "composition": "фигура девочки в центре кадра на фоне светлой стены",
+      "emotion": [
+        "усердие",
+        "концентрация"
+      ],
+      "location": [],
+      "interaction": "выполнение упражнений детьми по инструкции",
+      "visual_tags": [
+        "дети",
+        "разминка",
+        "тренировка",
+        "танец"
+      ],
+      "search_phrases": [
+        "дети делают разминку в зале",
+        "ребенок выполняет наклоны",
+        "детская танцевальная тренировка"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 4.1,
+      "duration": 4.1,
+      "semantic_description": "Девочка в бирюзовом платье делает наклон вниз, касаясь пола, затем выпрямляется и поднимает руки вверх под счет.",
+      "subjects": [
+        "девочка в бирюзовом платье",
+        "девочка в розовой футболке"
+      ],
+      "actions": [
+        {
+          "action": "наклон вниз",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "подъем рук вверх",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "жестикуляция",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "детская разминка",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "усердие",
+        "концентрация"
+      ],
+      "camera": "статичный общий план",
+      "visual_tags": [
+        "дети",
+        "разминка",
+        "тренировка",
+        "танец"
+      ],
+      "search_tags": [
+        "дети",
+        "разминка",
+        "тренировка",
+        "танец",
+        "наклон вниз",
+        "подъем рук вверх",
+        "жестикуляция",
+        "детская разминка",
+        "девочка в бирюзовом платье",
+        "девочка в розовой футболке",
+        "усердие",
+        "концентрация"
+      ],
+      "search_phrases": [
+        "дети делают разминку в зале",
+        "ребенок выполняет наклоны",
+        "детская танцевальная тренировка"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 4.1,
+          "speaker": "Speaker 1",
+          "text": "два, три, четыре, на месте раз"
+        }
+      ],
+      "spoken_text": "два, три, четыре, на месте раз",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261012_170611.mp4",
+    "keywords": [
+      "дети",
+      "разминка",
+      "тренировка",
+      "танец",
+      "девочка в бирюзовом платье",
+      "девочка в розовой футболке",
+      "наклон вниз",
+      "подъем рук вверх",
+      "жестикуляция",
+      "детская разминка",
+      "усердие",
+      "концентрация"
+    ],
+    "actions": [
+      "наклон вниз",
+      "подъем рук вверх",
+      "жестикуляция",
+      "детская разминка"
+    ],
+    "spoken_text": "два, три, четыре, на месте раз",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "усердие",
+      "концентрация"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "дети делают разминку в зале",
+      "ребенок выполняет наклоны",
+      "детская танцевальная тренировка"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}
