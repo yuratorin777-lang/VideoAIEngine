@@ -59,18 +59,16 @@ jobs:
         run: |
           echo "$SERVICE_ACCOUNT_DATA" > service_account.json
 
-      - name: 5. Установка зависимостей Python
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
-          python -m pip install --no-cache-dir -r requirements.txt
-
-      - name: 5.1. Установка Chromium и системных библиотек для Playwright
+      - name: 5. Установка зависимостей Python (включая edge-tts)
         run: |
           python -m pip install --upgrade pip
           python -m pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
           python -m pip install --no-cache-dir -r requirements.txt
           python -m pip install --upgrade edge-tts
+
+      - name: 5.1. Установка Chromium и системных библиотек для Playwright
+        run: |
+          python -m playwright install chromium --with-deps
 
       - name: 6. Запуск пайплайна сборки видео
         # Выставляем явный таймаут 60 минут конкретно на сборку
