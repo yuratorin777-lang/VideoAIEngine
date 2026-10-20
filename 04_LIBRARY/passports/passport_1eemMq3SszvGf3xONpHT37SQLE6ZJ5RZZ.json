@@ -1,0 +1,254 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-14T07:29:05.682595+00:00",
+  "updated_at": "2026-10-14T07:29:05.682607+00:00",
+  "video": {
+    "file_id": "1eemMq3SszvGf3xONpHT37SQLE6ZJ5RZZ",
+    "filename": "VID_20261013_180255.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "educational",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "lifestyle",
+      "sports_action"
+    ],
+    "possible_use_cases": [
+      "b_roll_source",
+      "educational"
+    ]
+  },
+  "transcription": {
+    "has_speech": true,
+    "language": "ru",
+    "full_text": "4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8",
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 10.0,
+        "speaker": "Тренер",
+        "text": "4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8"
+      }
+    ],
+    "segment_count": 1
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": true,
+    "has_voice_over": false,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "speech",
+      "detected_categories": [
+        "speech",
+        "ambient"
+      ],
+      "confidence_notes": "Слышен голос человека, ведущего счет, и фоновые звуки помещения"
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": true,
+    "audio_description": "Запись голоса за кадром или тренера, ведущего счет упражнений, и акустика помещения",
+    "music_description": "",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "description": "Мальчик стоит в комнате и выполняет упражнения для рук под счет",
+      "subjects": [
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "удержание рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "сгибание рук к груди",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "выпрямление рук вперед",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "удержание рук в стороны",
+        "сгибание рук к груди",
+        "выпрямление рук вперед"
+      ],
+      "dance_elements": [],
+      "camera": "статичная",
+      "composition": "средний план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "",
+      "visual_tags": [
+        "тренировка",
+        "дети",
+        "упражнения"
+      ],
+      "search_phrases": [
+        "ребенок выполняет упражнения на тренировке",
+        "мальчик делает зарядку"
+      ],
+      "audio_in_scene": {
+        "speech": true,
+        "voice_over": false,
+        "music": false,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 10.0,
+      "duration": 10.0,
+      "semantic_description": "Мальчик стоит в комнате и выполняет упражнения для рук под счет",
+      "subjects": [
+        "мальчик"
+      ],
+      "actions": [
+        {
+          "action": "удержание рук в стороны",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "сгибание рук к груди",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "выпрямление рук вперед",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная",
+      "visual_tags": [
+        "тренировка",
+        "дети",
+        "упражнения"
+      ],
+      "search_tags": [
+        "тренировка",
+        "дети",
+        "упражнения",
+        "удержание рук в стороны",
+        "сгибание рук к груди",
+        "выпрямление рук вперед",
+        "мальчик",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "ребенок выполняет упражнения на тренировке",
+        "мальчик делает зарядку"
+      ],
+      "speech": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "speaker": "Тренер",
+          "text": "4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8"
+        }
+      ],
+      "spoken_text": "4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8",
+      "has_speech": true,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": true,
+        "has_music": false,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": true,
+        "can_use_original_speech": true,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261013_180255.mp4",
+    "keywords": [
+      "тренировка",
+      "дети",
+      "упражнения",
+      "мальчик",
+      "удержание рук в стороны",
+      "сгибание рук к груди",
+      "выпрямление рук вперед",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "удержание рук в стороны",
+      "сгибание рук к груди",
+      "выпрямление рук вперед"
+    ],
+    "spoken_text": "4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8. 1, 2, 3, 4, 5, 6, 7, 8",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": true,
+    "has_music": false,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": true,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "ребенок выполняет упражнения на тренировке",
+      "мальчик делает зарядку"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": true,
+    "can_use_music": false,
+    "can_use_ambient_sound": true,
+    "preserve_original_audio": true
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "completed"
+  }
+}

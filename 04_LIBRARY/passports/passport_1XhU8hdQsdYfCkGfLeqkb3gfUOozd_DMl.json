@@ -1,0 +1,229 @@
+{
+  "passport_version": "3.0",
+  "created_at": "2026-10-14T07:30:09.715293+00:00",
+  "updated_at": "2026-10-14T07:30:09.715305+00:00",
+  "video": {
+    "file_id": "1XhU8hdQsdYfCkGfLeqkb3gfUOozd_DMl",
+    "filename": "VID_20261013_180325.mp4",
+    "drive_url": "",
+    "mime_type": "video/mp4",
+    "size_bytes": 0,
+    "created_at": "",
+    "modified_at": ""
+  },
+  "classification": {
+    "project": "Pending_Classification",
+    "content_type": "raw_footage",
+    "status": "pending",
+    "primary_category": "dance",
+    "confidence": 0.95,
+    "categories": [],
+    "secondary_categories": [
+      "educational",
+      "social_media"
+    ],
+    "possible_use_cases": [
+      "social_media",
+      "b_roll_source",
+      "educational"
+    ]
+  },
+  "transcription": {
+    "has_speech": false,
+    "language": "ru",
+    "full_text": "",
+    "segments": [],
+    "segment_count": 0
+  },
+  "audio": {
+    "has_audio": true,
+    "has_speech": false,
+    "has_voice_over": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "has_silence": false,
+    "audio_type": "unknown",
+    "sound_classification": {
+      "primary_category": "music",
+      "detected_categories": [
+        "music",
+        "ambient"
+      ],
+      "confidence_notes": "Слышны ритмичные звуки, похожие на музыку или счет, и фоновый шум помещения."
+    },
+    "original_audio_present": true,
+    "preserve_original_audio": false,
+    "audio_description": "Ритмичные звуки и фоновый шум в комнате.",
+    "music_description": "Ритмичное музыкальное сопровождение или счет.",
+    "voice_over_description": "",
+    "notes": ""
+  },
+  "scenes": [
+    {
+      "id": "scene_001",
+      "start": 0.0,
+      "end": 6.0,
+      "duration": 6.0,
+      "description": "Девочка в комнате выполняет движения руками под музыку.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные движения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "action_elements": [
+        "жестикуляция руками",
+        "ритмичные движения"
+      ],
+      "dance_elements": [],
+      "camera": "статичная камера",
+      "composition": "средний план",
+      "emotion": [
+        "сосредоточенность"
+      ],
+      "location": [],
+      "interaction": "нет",
+      "visual_tags": [
+        "ребенок",
+        "девочка",
+        "танцы",
+        "упражнения"
+      ],
+      "search_phrases": [
+        "девочка делает упражнения руками",
+        "ребенок танцует в комнате"
+      ],
+      "audio_in_scene": {
+        "speech": false,
+        "voice_over": false,
+        "music": true,
+        "ambient_sound": true,
+        "original_audio_present": true
+      },
+      "recommended_source_use": [
+        "visual",
+        "b_roll_source"
+      ]
+    }
+  ],
+  "segments": [
+    {
+      "id": "seg_001",
+      "start": 0.0,
+      "end": 6.0,
+      "duration": 6.0,
+      "semantic_description": "Девочка в комнате выполняет движения руками под музыку.",
+      "subjects": [
+        "девочка"
+      ],
+      "actions": [
+        {
+          "action": "жестикуляция руками",
+          "start": 0.0,
+          "end": 0.0
+        },
+        {
+          "action": "ритмичные движения",
+          "start": 0.0,
+          "end": 0.0
+        }
+      ],
+      "dance_elements": [],
+      "emotions": [
+        "сосредоточенность"
+      ],
+      "camera": "статичная камера",
+      "visual_tags": [
+        "ребенок",
+        "девочка",
+        "танцы",
+        "упражнения"
+      ],
+      "search_tags": [
+        "ребенок",
+        "девочка",
+        "танцы",
+        "упражнения",
+        "жестикуляция руками",
+        "ритмичные движения",
+        "сосредоточенность"
+      ],
+      "search_phrases": [
+        "девочка делает упражнения руками",
+        "ребенок танцует в комнате"
+      ],
+      "speech": [],
+      "spoken_text": "",
+      "has_speech": false,
+      "audio_usage": {
+        "has_audio": true,
+        "has_speech": false,
+        "has_music": true,
+        "has_ambient_sound": true,
+        "has_noise": false,
+        "can_use_original_audio": false,
+        "can_use_original_speech": false,
+        "can_use_original_music": false
+      }
+    }
+  ],
+  "search_index": {
+    "filename": "VID_20261013_180325.mp4",
+    "keywords": [
+      "ребенок",
+      "девочка",
+      "танцы",
+      "упражнения",
+      "жестикуляция руками",
+      "ритмичные движения",
+      "сосредоточенность"
+    ],
+    "actions": [
+      "жестикуляция руками",
+      "ритмичные движения"
+    ],
+    "spoken_text": "",
+    "has_visual_content": true,
+    "has_audio": true,
+    "has_speech": false,
+    "has_music": true,
+    "has_ambient_sound": true,
+    "has_noise": false,
+    "preserve_original_audio": false,
+    "segment_count": 1,
+    "locations": [],
+    "emotions": [
+      "сосредоточенность"
+    ],
+    "dance_elements": [],
+    "speech_topics": [],
+    "important_phrases": [
+      "девочка делает упражнения руками",
+      "ребенок танцует в комнате"
+    ]
+  },
+  "usage": {
+    "can_use_visual": true,
+    "can_use_audio": true,
+    "can_use_speech": false,
+    "can_use_music": false,
+    "can_use_ambient_sound": false,
+    "preserve_original_audio": false
+  },
+  "processing": {
+    "analysis_provider": "gemini",
+    "analysis_status": "completed",
+    "passport_status": "ready",
+    "transcription_status": "no_speech_detected"
+  }
+}
